@@ -1,0 +1,33 @@
+{
+  "loss": {
+    "signinv": 1.3686466217041016,
+    "brute_force": 1.368646633763733,
+    "after_flipping_one_structure_mode": 1.3686466217041016,
+    "mse": 2.341581344604492,
+    "pass": true
+  },
+  "edges": {
+    "samples": 3,
+    "pass": true
+  },
+  "amp": {
+    "structures": 50,
+    "deck_max_and_support_rowmax_1": true,
+    "median_corr_deck_amplitude_vs_abs_phi_at_mode_bin": {
+      "B1": 0.9998391710329279,
+      "T1": 0.99967216651901,
+      "B2": 0.9974263617739749,
+      "T2": 0.9996583069949363
+    },
+    "pass": true
+  },
+  "trainer": {
+    "rc": 0,
+    "reference": "EC_comments/runs/ec_t13_coh_K4_N600",
+    "pass": true,
+    "epochs_compared": 2,
+    "n_diffs": 0,
+    "first_diffs": []
+  },
+  "pass": true
+}

@@ -1,0 +1,17 @@
+{
+  "copy_reproduces_E2": {
+    "pass": true,
+    "rows": 36,
+    "max_abs_diff": 0.0,
+    "inputs": "legacy raw sensor order (E2's)"
+  },
+  "torch_threads": 14,
+  "inputs": {
+    "features": "Final_results_for_paper/data/field_inputs_v2/phase3_corrected",
+    "field_sensor_swap": [
+      6,
+      8
+    ]
+  },
+  "pass": true
+}

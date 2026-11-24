@@ -1,0 +1,4019 @@
+{
+ "gates": {
+  "e16_ceiling": {
+   "rows_matched": 18000,
+   "rows_expected": 18000,
+   "max_abs_diff": 0.0,
+   "tol": 1e-06,
+   "pass": true
+  },
+  "resim_vs_stored_x_psd": {
+   "max_abs_diff": 6.365675331299059e-08,
+   "tol": 1e-06,
+   "pass": true
+  },
+  "pass": true
+ },
+ "per_sample": [
+  {
+   "sample": "sample_1250_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 42,
+   "n_deck": 38,
+   "x_psd_resim_maxdiff": 1.1493492824143914e-09,
+   "seconds": 1.2
+  },
+  {
+   "sample": "sample_1251_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 58,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 3.3006064548146696e-10,
+   "seconds": 1.4
+  },
+  {
+   "sample": "sample_1252_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 50,
+   "n_deck": 46,
+   "x_psd_resim_maxdiff": 1.3048528924031189e-10,
+   "seconds": 1.4
+  },
+  {
+   "sample": "sample_1253_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 58,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 2.2219903694775667e-10,
+   "seconds": 1.5
+  },
+  {
+   "sample": "sample_1254_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 39,
+   "n_deck": 35,
+   "x_psd_resim_maxdiff": 7.69475427819799e-10,
+   "seconds": 1.2
+  },
+  {
+   "sample": "sample_1255_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 56,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 4.2817993595178905e-10,
+   "seconds": 1.5
+  },
+  {
+   "sample": "sample_1256_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 42,
+   "n_deck": 38,
+   "x_psd_resim_maxdiff": 1.2534118187801369e-10,
+   "seconds": 1.6
+  },
+  {
+   "sample": "sample_1257_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 40,
+   "n_deck": 36,
+   "x_psd_resim_maxdiff": 7.894351838899638e-12,
+   "seconds": 1.6
+  },
+  {
+   "sample": "sample_1258_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 2.813939359302964e-10,
+   "seconds": 1.7
+  },
+  {
+   "sample": "sample_1259_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 52,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 1.3674661403229038e-10,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1260_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 1.0096068425724525e-10,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1261_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 54,
+   "n_deck": 50,
+   "x_psd_resim_maxdiff": 5.195791019652063e-11,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1262_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 42,
+   "n_deck": 38,
+   "x_psd_resim_maxdiff": 2.830624623584299e-11,
+   "seconds": 1.7
+  },
+  {
+   "sample": "sample_1263_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 56,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 7.692713965834486e-10,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1264_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 42,
+   "n_deck": 38,
+   "x_psd_resim_maxdiff": 8.50597925428076e-11,
+   "seconds": 1.8
+  },
+  {
+   "sample": "sample_1265_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 56,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 2.304902935179598e-10,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1266_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 1.021496387476617e-09,
+   "seconds": 1.7
+  },
+  {
+   "sample": "sample_1267_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 5.802517355490977e-10,
+   "seconds": 1.5
+  },
+  {
+   "sample": "sample_1268_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 3.509870172280216e-11,
+   "seconds": 1.4
+  },
+  {
+   "sample": "sample_1269_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 52,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 2.521656355947144e-10,
+   "seconds": 1.5
+  },
+  {
+   "sample": "sample_1270_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 56,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 6.82213036062862e-10,
+   "seconds": 1.5
+  },
+  {
+   "sample": "sample_1271_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 46,
+   "n_deck": 42,
+   "x_psd_resim_maxdiff": 2.6631982175118196e-09,
+   "seconds": 1.6
+  },
+  {
+   "sample": "sample_1272_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 48,
+   "n_deck": 44,
+   "x_psd_resim_maxdiff": 1.0821933349447477e-09,
+   "seconds": 1.6
+  },
+  {
+   "sample": "sample_1273_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 48,
+   "n_deck": 44,
+   "x_psd_resim_maxdiff": 7.77437059173991e-10,
+   "seconds": 1.6
+  },
+  {
+   "sample": "sample_1274_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 2.1022183993579802e-10,
+   "seconds": 1.5
+  },
+  {
+   "sample": "sample_1275_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 46,
+   "n_deck": 42,
+   "x_psd_resim_maxdiff": 1.692579409962036e-11,
+   "seconds": 1.5
+  },
+  {
+   "sample": "sample_1276_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 39,
+   "n_deck": 35,
+   "x_psd_resim_maxdiff": 9.624838703814476e-10,
+   "seconds": 1.4
+  },
+  {
+   "sample": "sample_1277_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 46,
+   "n_deck": 42,
+   "x_psd_resim_maxdiff": 1.3171072565931752e-10,
+   "seconds": 1.6
+  },
+  {
+   "sample": "sample_1278_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 52,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 1.2512291203137238e-10,
+   "seconds": 1.8
+  },
+  {
+   "sample": "sample_1279_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 54,
+   "n_deck": 50,
+   "x_psd_resim_maxdiff": 1.764857870956149e-09,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1280_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 62,
+   "n_deck": 58,
+   "x_psd_resim_maxdiff": 1.0591696963935249e-10,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1281_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 54,
+   "n_deck": 50,
+   "x_psd_resim_maxdiff": 1.453746178992077e-09,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1282_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 56,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 7.711919991493232e-11,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1283_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 66,
+   "n_deck": 62,
+   "x_psd_resim_maxdiff": 3.942015935898269e-09,
+   "seconds": 2.5
+  },
+  {
+   "sample": "sample_1284_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 36,
+   "n_deck": 32,
+   "x_psd_resim_maxdiff": 3.489963873448687e-11,
+   "seconds": 1.6
+  },
+  {
+   "sample": "sample_1285_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 52,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 8.204159573921288e-11,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1286_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 50,
+   "n_deck": 46,
+   "x_psd_resim_maxdiff": 1.3807721632730363e-10,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1287_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 53,
+   "n_deck": 49,
+   "x_psd_resim_maxdiff": 4.0138126156108456e-10,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_1288_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 54,
+   "n_deck": 50,
+   "x_psd_resim_maxdiff": 7.477615748818778e-11,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_1289_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 36,
+   "n_deck": 32,
+   "x_psd_resim_maxdiff": 8.023262609846427e-10,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1290_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 40,
+   "n_deck": 36,
+   "x_psd_resim_maxdiff": 1.429255602758417e-10,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1291_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 1.4780127122193676e-10,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1292_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 51,
+   "n_deck": 47,
+   "x_psd_resim_maxdiff": 7.9393719376597e-10,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1293_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 46,
+   "n_deck": 42,
+   "x_psd_resim_maxdiff": 1.5181433887789808e-10,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1294_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 5.419932003203343e-10,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1295_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 46,
+   "n_deck": 42,
+   "x_psd_resim_maxdiff": 1.9798285233463275e-10,
+   "seconds": 1.8
+  },
+  {
+   "sample": "sample_1296_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 42,
+   "n_deck": 38,
+   "x_psd_resim_maxdiff": 2.863707160294382e-09,
+   "seconds": 1.6
+  },
+  {
+   "sample": "sample_1297_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 48,
+   "n_deck": 44,
+   "x_psd_resim_maxdiff": 8.204225354635497e-10,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1298_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 56,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 1.2304773033822158e-09,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_1299_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 46,
+   "n_deck": 42,
+   "x_psd_resim_maxdiff": 7.0256855888573e-10,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1300_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 46,
+   "n_deck": 42,
+   "x_psd_resim_maxdiff": 1.8092882747566819e-10,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1301_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 56,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 1.192558829465895e-10,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_1302_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 41,
+   "n_deck": 37,
+   "x_psd_resim_maxdiff": 4.980638124152392e-10,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1303_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 5.894122689920067e-10,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1304_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 50,
+   "n_deck": 46,
+   "x_psd_resim_maxdiff": 3.6282976623169816e-11,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_1305_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 50,
+   "n_deck": 46,
+   "x_psd_resim_maxdiff": 7.505818189201818e-11,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_1306_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 56,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 2.7906799093813106e-10,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_1307_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 52,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 6.488540260640718e-11,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_1308_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 54,
+   "n_deck": 50,
+   "x_psd_resim_maxdiff": 1.1091005891472605e-10,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1309_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 42,
+   "n_deck": 38,
+   "x_psd_resim_maxdiff": 2.3265378512604684e-10,
+   "seconds": 1.7
+  },
+  {
+   "sample": "sample_1310_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 50,
+   "n_deck": 46,
+   "x_psd_resim_maxdiff": 3.065826481574163e-10,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1311_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 36,
+   "n_deck": 32,
+   "x_psd_resim_maxdiff": 3.1182360166193135e-10,
+   "seconds": 1.6
+  },
+  {
+   "sample": "sample_1312_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 46,
+   "n_deck": 42,
+   "x_psd_resim_maxdiff": 2.1200041722124752e-11,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1313_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 38,
+   "n_deck": 34,
+   "x_psd_resim_maxdiff": 6.971778709896626e-11,
+   "seconds": 1.7
+  },
+  {
+   "sample": "sample_1314_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 52,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 8.601486189974139e-11,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1315_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 45,
+   "n_deck": 41,
+   "x_psd_resim_maxdiff": 2.1777687431168147e-09,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1316_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 48,
+   "n_deck": 44,
+   "x_psd_resim_maxdiff": 1.747563205256597e-10,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1317_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 62,
+   "n_deck": 58,
+   "x_psd_resim_maxdiff": 1.4463741315751122e-10,
+   "seconds": 2.7
+  },
+  {
+   "sample": "sample_1318_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 56,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 2.1021129281706408e-10,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1319_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 6.314375244897974e-09,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1320_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 50,
+   "n_deck": 46,
+   "x_psd_resim_maxdiff": 1.2693879281044929e-10,
+   "seconds": 2.6
+  },
+  {
+   "sample": "sample_1321_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 50,
+   "n_deck": 46,
+   "x_psd_resim_maxdiff": 5.530731428393665e-11,
+   "seconds": 2.6
+  },
+  {
+   "sample": "sample_1322_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 56,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 3.280184457388202e-11,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_1323_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 46,
+   "n_deck": 42,
+   "x_psd_resim_maxdiff": 2.2313859093792132e-10,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_1324_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 1.238418256832574e-10,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_1325_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 53,
+   "n_deck": 49,
+   "x_psd_resim_maxdiff": 2.6698399047120347e-09,
+   "seconds": 2.5
+  },
+  {
+   "sample": "sample_1326_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 48,
+   "n_deck": 44,
+   "x_psd_resim_maxdiff": 7.785090627709934e-10,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1327_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 52,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 4.597144886986371e-11,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1328_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 3.983841034838065e-11,
+   "seconds": 1.8
+  },
+  {
+   "sample": "sample_1329_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 54,
+   "n_deck": 50,
+   "x_psd_resim_maxdiff": 6.817518771740083e-10,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1330_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 52,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 5.691860149870109e-09,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1331_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 48,
+   "n_deck": 44,
+   "x_psd_resim_maxdiff": 6.237921290619397e-11,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1332_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 40,
+   "n_deck": 36,
+   "x_psd_resim_maxdiff": 1.9842838483441483e-10,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1333_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 58,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 1.2146161854076354e-10,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1334_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 48,
+   "n_deck": 44,
+   "x_psd_resim_maxdiff": 5.432475580491314e-10,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1335_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 58,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 3.2771019231603304e-10,
+   "seconds": 2.6
+  },
+  {
+   "sample": "sample_1336_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 3.067174292326058e-11,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1337_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 49,
+   "n_deck": 45,
+   "x_psd_resim_maxdiff": 2.684532596219924e-10,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_1338_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 50,
+   "n_deck": 46,
+   "x_psd_resim_maxdiff": 6.702441934791636e-10,
+   "seconds": 2.5
+  },
+  {
+   "sample": "sample_1339_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 54,
+   "n_deck": 50,
+   "x_psd_resim_maxdiff": 6.186362533355805e-11,
+   "seconds": 2.7
+  },
+  {
+   "sample": "sample_1340_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 40,
+   "n_deck": 36,
+   "x_psd_resim_maxdiff": 4.4735959381370094e-10,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1341_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 38,
+   "n_deck": 34,
+   "x_psd_resim_maxdiff": 6.356190573875153e-11,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1342_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 1.4296508421551835e-10,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1343_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 58,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 7.428769821515857e-10,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_1344_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 54,
+   "n_deck": 50,
+   "x_psd_resim_maxdiff": 1.217654310714522e-10,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1345_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 58,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 3.3060187920597173e-10,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1346_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 48,
+   "n_deck": 44,
+   "x_psd_resim_maxdiff": 1.907602964479338e-10,
+   "seconds": 1.8
+  },
+  {
+   "sample": "sample_1347_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 50,
+   "n_deck": 46,
+   "x_psd_resim_maxdiff": 9.53925827218427e-11,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1348_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 56,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 1.6336831887286962e-09,
+   "seconds": 2.6
+  },
+  {
+   "sample": "sample_1349_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 40,
+   "n_deck": 36,
+   "x_psd_resim_maxdiff": 1.0337686262573698e-10,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1350_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 3.2512498249204214e-10,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1351_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 46,
+   "n_deck": 42,
+   "x_psd_resim_maxdiff": 1.2608808441783026e-10,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_1352_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 58,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 1.4041379170492974e-10,
+   "seconds": 2.7
+  },
+  {
+   "sample": "sample_1353_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 38,
+   "n_deck": 34,
+   "x_psd_resim_maxdiff": 4.8742010427815785e-11,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1354_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 54,
+   "n_deck": 50,
+   "x_psd_resim_maxdiff": 4.8540838015753707e-11,
+   "seconds": 2.6
+  },
+  {
+   "sample": "sample_1355_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 1.6706507011132743e-10,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_1356_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 42,
+   "n_deck": 38,
+   "x_psd_resim_maxdiff": 4.4935394294398634e-10,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1357_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 1.1433959334894439e-10,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1358_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 58,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 5.5560556155853646e-11,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_1359_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 50,
+   "n_deck": 46,
+   "x_psd_resim_maxdiff": 1.1234175811836167e-09,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1360_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 54,
+   "n_deck": 50,
+   "x_psd_resim_maxdiff": 8.352971092584482e-11,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1361_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 42,
+   "n_deck": 38,
+   "x_psd_resim_maxdiff": 8.156220143717974e-11,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1362_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 48,
+   "n_deck": 44,
+   "x_psd_resim_maxdiff": 1.1888662276859918e-09,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1363_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 5.727425755885918e-10,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1364_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 52,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 2.0618151630458215e-10,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_1365_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 38,
+   "n_deck": 34,
+   "x_psd_resim_maxdiff": 3.6434782968441937e-10,
+   "seconds": 1.9
+  },
+  {
+   "sample": "sample_1366_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 56,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 1.4178895835215144e-09,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_1367_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 38,
+   "n_deck": 34,
+   "x_psd_resim_maxdiff": 6.811790020933017e-11,
+   "seconds": 2.0
+  },
+  {
+   "sample": "sample_1368_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 50,
+   "n_deck": 46,
+   "x_psd_resim_maxdiff": 7.123135414843773e-11,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_1369_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 46,
+   "n_deck": 42,
+   "x_psd_resim_maxdiff": 1.9274692952819805e-11,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_1370_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 54,
+   "n_deck": 50,
+   "x_psd_resim_maxdiff": 4.8275550224019526e-11,
+   "seconds": 2.5
+  },
+  {
+   "sample": "sample_1371_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 56,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 2.177497071542689e-10,
+   "seconds": 2.5
+  },
+  {
+   "sample": "sample_1372_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 44,
+   "n_deck": 40,
+   "x_psd_resim_maxdiff": 4.127576058721161e-11,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_1373_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 60,
+   "n_deck": 56,
+   "x_psd_resim_maxdiff": 1.9822179453399258e-09,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_1374_Ng2_phase1_gnn",
+   "Ng": 2,
+   "n_nodes": 36,
+   "n_deck": 32,
+   "x_psd_resim_maxdiff": 1.0203660139040949e-10,
+   "seconds": 1.8
+  },
+  {
+   "sample": "sample_2625_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 59,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 1.1351355411193254e-09,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_2626_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 101,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 4.5635972778512723e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_2627_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 59,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 7.392697565222761e-11,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_2628_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 77,
+   "n_deck": 72,
+   "x_psd_resim_maxdiff": 8.313438826235142e-11,
+   "seconds": 3.1
+  },
+  {
+   "sample": "sample_2629_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 96,
+   "n_deck": 91,
+   "x_psd_resim_maxdiff": 6.018744391766973e-10,
+   "seconds": 4.1
+  },
+  {
+   "sample": "sample_2630_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 63,
+   "n_deck": 58,
+   "x_psd_resim_maxdiff": 1.4373715551130317e-09,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_2631_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 62,
+   "n_deck": 57,
+   "x_psd_resim_maxdiff": 1.085996848004811e-10,
+   "seconds": 2.9
+  },
+  {
+   "sample": "sample_2632_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 77,
+   "n_deck": 72,
+   "x_psd_resim_maxdiff": 1.5132117781035959e-10,
+   "seconds": 3.7
+  },
+  {
+   "sample": "sample_2633_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 70,
+   "n_deck": 65,
+   "x_psd_resim_maxdiff": 1.82180196484083e-08,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_2634_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 74,
+   "n_deck": 69,
+   "x_psd_resim_maxdiff": 7.08320402331708e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_2635_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 84,
+   "n_deck": 79,
+   "x_psd_resim_maxdiff": 4.0767045295098114e-10,
+   "seconds": 3.8
+  },
+  {
+   "sample": "sample_2636_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 74,
+   "n_deck": 69,
+   "x_psd_resim_maxdiff": 1.7235246563274131e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_2637_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 69,
+   "n_deck": 64,
+   "x_psd_resim_maxdiff": 1.4555256999670974e-10,
+   "seconds": 3.2
+  },
+  {
+   "sample": "sample_2638_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 74,
+   "n_deck": 69,
+   "x_psd_resim_maxdiff": 1.1048419956694033e-09,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_2639_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 59,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 6.99919011637462e-11,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_2640_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 54,
+   "n_deck": 49,
+   "x_psd_resim_maxdiff": 1.3906175100331097e-09,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_2641_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 81,
+   "n_deck": 76,
+   "x_psd_resim_maxdiff": 3.622067090702785e-10,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_2642_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 85,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 6.500709415213635e-10,
+   "seconds": 2.7
+  },
+  {
+   "sample": "sample_2643_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 54,
+   "n_deck": 49,
+   "x_psd_resim_maxdiff": 2.836980650400278e-10,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_2644_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 72,
+   "n_deck": 67,
+   "x_psd_resim_maxdiff": 1.1487777396013144e-09,
+   "seconds": 2.7
+  },
+  {
+   "sample": "sample_2645_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 75,
+   "n_deck": 70,
+   "x_psd_resim_maxdiff": 5.931684587956454e-10,
+   "seconds": 3.0
+  },
+  {
+   "sample": "sample_2646_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 62,
+   "n_deck": 57,
+   "x_psd_resim_maxdiff": 2.1664458005332676e-09,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_2647_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 54,
+   "n_deck": 49,
+   "x_psd_resim_maxdiff": 6.375812100500866e-10,
+   "seconds": 2.7
+  },
+  {
+   "sample": "sample_2648_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 83,
+   "n_deck": 78,
+   "x_psd_resim_maxdiff": 1.2802381377241545e-10,
+   "seconds": 4.0
+  },
+  {
+   "sample": "sample_2649_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 95,
+   "n_deck": 90,
+   "x_psd_resim_maxdiff": 1.4881584853299046e-10,
+   "seconds": 4.1
+  },
+  {
+   "sample": "sample_2650_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 77,
+   "n_deck": 72,
+   "x_psd_resim_maxdiff": 3.5959513144945277e-10,
+   "seconds": 3.6
+  },
+  {
+   "sample": "sample_2651_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 71,
+   "n_deck": 66,
+   "x_psd_resim_maxdiff": 1.0833264285636801e-09,
+   "seconds": 3.4
+  },
+  {
+   "sample": "sample_2652_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 62,
+   "n_deck": 57,
+   "x_psd_resim_maxdiff": 5.581447526381567e-10,
+   "seconds": 3.2
+  },
+  {
+   "sample": "sample_2653_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 72,
+   "n_deck": 67,
+   "x_psd_resim_maxdiff": 1.5543533127271303e-10,
+   "seconds": 3.4
+  },
+  {
+   "sample": "sample_2654_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 86,
+   "n_deck": 81,
+   "x_psd_resim_maxdiff": 6.768233751230923e-10,
+   "seconds": 3.8
+  },
+  {
+   "sample": "sample_2655_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 74,
+   "n_deck": 69,
+   "x_psd_resim_maxdiff": 4.1211170032084965e-09,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_2656_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 65,
+   "n_deck": 60,
+   "x_psd_resim_maxdiff": 2.2486246198383242e-10,
+   "seconds": 2.6
+  },
+  {
+   "sample": "sample_2657_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 84,
+   "n_deck": 79,
+   "x_psd_resim_maxdiff": 1.70726599524329e-10,
+   "seconds": 3.0
+  },
+  {
+   "sample": "sample_2658_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 83,
+   "n_deck": 78,
+   "x_psd_resim_maxdiff": 7.124127954227788e-10,
+   "seconds": 2.9
+  },
+  {
+   "sample": "sample_2659_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 75,
+   "n_deck": 70,
+   "x_psd_resim_maxdiff": 1.0440358577668007e-09,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_2660_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 59,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 6.997469270686452e-11,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_2661_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 90,
+   "n_deck": 85,
+   "x_psd_resim_maxdiff": 3.1377123121956174e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_2662_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 83,
+   "n_deck": 78,
+   "x_psd_resim_maxdiff": 1.1322809356784092e-10,
+   "seconds": 3.2
+  },
+  {
+   "sample": "sample_2663_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 80,
+   "n_deck": 75,
+   "x_psd_resim_maxdiff": 5.14982501087502e-11,
+   "seconds": 3.4
+  },
+  {
+   "sample": "sample_2664_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 80,
+   "n_deck": 75,
+   "x_psd_resim_maxdiff": 1.6304135819211751e-10,
+   "seconds": 3.2
+  },
+  {
+   "sample": "sample_2665_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 95,
+   "n_deck": 90,
+   "x_psd_resim_maxdiff": 4.723655910865432e-10,
+   "seconds": 4.1
+  },
+  {
+   "sample": "sample_2666_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 84,
+   "n_deck": 79,
+   "x_psd_resim_maxdiff": 2.1064539001969251e-10,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_2667_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 83,
+   "n_deck": 78,
+   "x_psd_resim_maxdiff": 4.168833056539256e-10,
+   "seconds": 4.0
+  },
+  {
+   "sample": "sample_2668_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 89,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 1.4365231226776132e-09,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_2669_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 60,
+   "n_deck": 55,
+   "x_psd_resim_maxdiff": 1.4452183894064774e-10,
+   "seconds": 3.2
+  },
+  {
+   "sample": "sample_2670_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 78,
+   "n_deck": 73,
+   "x_psd_resim_maxdiff": 2.8095259452243226e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_2671_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 65,
+   "n_deck": 60,
+   "x_psd_resim_maxdiff": 4.6097037298409305e-10,
+   "seconds": 3.4
+  },
+  {
+   "sample": "sample_2672_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 78,
+   "n_deck": 73,
+   "x_psd_resim_maxdiff": 5.403799629988271e-11,
+   "seconds": 3.4
+  },
+  {
+   "sample": "sample_2673_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 80,
+   "n_deck": 75,
+   "x_psd_resim_maxdiff": 2.543754096251405e-10,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_2674_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 78,
+   "n_deck": 73,
+   "x_psd_resim_maxdiff": 4.374158368847247e-09,
+   "seconds": 2.9
+  },
+  {
+   "sample": "sample_2675_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 54,
+   "n_deck": 49,
+   "x_psd_resim_maxdiff": 1.8574908278168323e-10,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_2676_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 59,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 1.5199363989637504e-10,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_2677_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 60,
+   "n_deck": 55,
+   "x_psd_resim_maxdiff": 5.83996184744251e-11,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_2678_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 93,
+   "n_deck": 88,
+   "x_psd_resim_maxdiff": 1.2239254054691173e-10,
+   "seconds": 3.9
+  },
+  {
+   "sample": "sample_2679_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 59,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 1.5778045536762875e-10,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_2680_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 80,
+   "n_deck": 75,
+   "x_psd_resim_maxdiff": 3.722631092273332e-10,
+   "seconds": 3.8
+  },
+  {
+   "sample": "sample_2681_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 85,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 4.122589936095267e-09,
+   "seconds": 4.1
+  },
+  {
+   "sample": "sample_2682_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 88,
+   "n_deck": 83,
+   "x_psd_resim_maxdiff": 1.2944214589083458e-09,
+   "seconds": 4.1
+  },
+  {
+   "sample": "sample_2683_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 84,
+   "n_deck": 79,
+   "x_psd_resim_maxdiff": 3.2998193066902104e-10,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_2684_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 84,
+   "n_deck": 79,
+   "x_psd_resim_maxdiff": 9.893685870565605e-10,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_2685_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 74,
+   "n_deck": 69,
+   "x_psd_resim_maxdiff": 8.176537225068614e-11,
+   "seconds": 3.8
+  },
+  {
+   "sample": "sample_2686_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 56,
+   "n_deck": 51,
+   "x_psd_resim_maxdiff": 5.5241922147786227e-11,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_2687_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 83,
+   "n_deck": 78,
+   "x_psd_resim_maxdiff": 5.489342314035639e-11,
+   "seconds": 4.0
+  },
+  {
+   "sample": "sample_2688_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 59,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 8.638175730268927e-10,
+   "seconds": 3.1
+  },
+  {
+   "sample": "sample_2689_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 72,
+   "n_deck": 67,
+   "x_psd_resim_maxdiff": 3.173812324064329e-10,
+   "seconds": 3.0
+  },
+  {
+   "sample": "sample_2690_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 53,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 3.1201821681925423e-10,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_2691_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 59,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 6.431810639639934e-11,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_2692_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 83,
+   "n_deck": 78,
+   "x_psd_resim_maxdiff": 2.1232032798579326e-10,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_2693_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 57,
+   "n_deck": 52,
+   "x_psd_resim_maxdiff": 2.3374702173839523e-10,
+   "seconds": 2.2
+  },
+  {
+   "sample": "sample_2694_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 53,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 5.13913134270183e-10,
+   "seconds": 2.6
+  },
+  {
+   "sample": "sample_2695_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 64,
+   "n_deck": 59,
+   "x_psd_resim_maxdiff": 9.689828939229983e-10,
+   "seconds": 3.0
+  },
+  {
+   "sample": "sample_2696_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 72,
+   "n_deck": 67,
+   "x_psd_resim_maxdiff": 1.0340228673300089e-10,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_2697_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 74,
+   "n_deck": 69,
+   "x_psd_resim_maxdiff": 8.091045611280379e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_2698_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 68,
+   "n_deck": 63,
+   "x_psd_resim_maxdiff": 4.93857288397237e-10,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_2699_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 77,
+   "n_deck": 72,
+   "x_psd_resim_maxdiff": 9.169945913711786e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_2700_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 84,
+   "n_deck": 79,
+   "x_psd_resim_maxdiff": 9.71580038644504e-10,
+   "seconds": 3.6
+  },
+  {
+   "sample": "sample_2701_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 67,
+   "n_deck": 62,
+   "x_psd_resim_maxdiff": 7.231365506399356e-10,
+   "seconds": 3.1
+  },
+  {
+   "sample": "sample_2702_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 59,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 9.11410169557314e-10,
+   "seconds": 2.9
+  },
+  {
+   "sample": "sample_2703_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 83,
+   "n_deck": 78,
+   "x_psd_resim_maxdiff": 2.2555257661593942e-10,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_2704_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 59,
+   "n_deck": 54,
+   "x_psd_resim_maxdiff": 3.989538921445046e-09,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_2705_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 88,
+   "n_deck": 83,
+   "x_psd_resim_maxdiff": 2.843667412655293e-09,
+   "seconds": 2.6
+  },
+  {
+   "sample": "sample_2706_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 68,
+   "n_deck": 63,
+   "x_psd_resim_maxdiff": 1.313018582749237e-10,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_2707_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 68,
+   "n_deck": 63,
+   "x_psd_resim_maxdiff": 1.6361476617987591e-09,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_2708_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 80,
+   "n_deck": 75,
+   "x_psd_resim_maxdiff": 1.826614415278982e-10,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_2709_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 89,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 2.871914817070831e-09,
+   "seconds": 3.8
+  },
+  {
+   "sample": "sample_2710_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 88,
+   "n_deck": 83,
+   "x_psd_resim_maxdiff": 7.111327304798465e-09,
+   "seconds": 3.8
+  },
+  {
+   "sample": "sample_2711_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 90,
+   "n_deck": 85,
+   "x_psd_resim_maxdiff": 7.988124606228553e-10,
+   "seconds": 3.8
+  },
+  {
+   "sample": "sample_2712_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 85,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 3.2970272068055806e-09,
+   "seconds": 3.7
+  },
+  {
+   "sample": "sample_2713_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 71,
+   "n_deck": 66,
+   "x_psd_resim_maxdiff": 9.773086506736917e-10,
+   "seconds": 3.4
+  },
+  {
+   "sample": "sample_2714_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 68,
+   "n_deck": 63,
+   "x_psd_resim_maxdiff": 5.432295724361325e-10,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_2715_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 91,
+   "n_deck": 86,
+   "x_psd_resim_maxdiff": 8.077137292339387e-09,
+   "seconds": 3.8
+  },
+  {
+   "sample": "sample_2716_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 78,
+   "n_deck": 73,
+   "x_psd_resim_maxdiff": 7.035874105554285e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_2717_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 96,
+   "n_deck": 91,
+   "x_psd_resim_maxdiff": 2.474843663335946e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_2718_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 82,
+   "n_deck": 77,
+   "x_psd_resim_maxdiff": 4.683932131044344e-10,
+   "seconds": 3.1
+  },
+  {
+   "sample": "sample_2719_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 82,
+   "n_deck": 77,
+   "x_psd_resim_maxdiff": 8.255921501998387e-10,
+   "seconds": 3.1
+  },
+  {
+   "sample": "sample_2720_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 75,
+   "n_deck": 70,
+   "x_psd_resim_maxdiff": 2.2773676278120547e-09,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_2721_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 64,
+   "n_deck": 59,
+   "x_psd_resim_maxdiff": 2.2474311300868521e-10,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_2722_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 75,
+   "n_deck": 70,
+   "x_psd_resim_maxdiff": 5.220904819580596e-10,
+   "seconds": 2.9
+  },
+  {
+   "sample": "sample_2723_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 96,
+   "n_deck": 91,
+   "x_psd_resim_maxdiff": 2.2398383148214407e-10,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_2724_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 91,
+   "n_deck": 86,
+   "x_psd_resim_maxdiff": 3.6834824079789996e-10,
+   "seconds": 4.1
+  },
+  {
+   "sample": "sample_2725_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 80,
+   "n_deck": 75,
+   "x_psd_resim_maxdiff": 1.97364569132219e-10,
+   "seconds": 3.8
+  },
+  {
+   "sample": "sample_2726_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 102,
+   "n_deck": 97,
+   "x_psd_resim_maxdiff": 3.1296978342254533e-09,
+   "seconds": 4.4
+  },
+  {
+   "sample": "sample_2727_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 62,
+   "n_deck": 57,
+   "x_psd_resim_maxdiff": 2.694336975750389e-10,
+   "seconds": 3.0
+  },
+  {
+   "sample": "sample_2728_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 69,
+   "n_deck": 64,
+   "x_psd_resim_maxdiff": 6.265497010105037e-10,
+   "seconds": 3.1
+  },
+  {
+   "sample": "sample_2729_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 83,
+   "n_deck": 78,
+   "x_psd_resim_maxdiff": 1.263090743108819e-10,
+   "seconds": 3.6
+  },
+  {
+   "sample": "sample_2730_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 70,
+   "n_deck": 65,
+   "x_psd_resim_maxdiff": 2.4920066010736264e-10,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_2731_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 64,
+   "n_deck": 59,
+   "x_psd_resim_maxdiff": 1.0850046416877035e-09,
+   "seconds": 3.0
+  },
+  {
+   "sample": "sample_2732_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 60,
+   "n_deck": 55,
+   "x_psd_resim_maxdiff": 1.5274331799375318e-10,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_2733_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 74,
+   "n_deck": 69,
+   "x_psd_resim_maxdiff": 1.4979684159754925e-10,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_2734_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 90,
+   "n_deck": 85,
+   "x_psd_resim_maxdiff": 8.612922597350803e-10,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_2735_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 78,
+   "n_deck": 73,
+   "x_psd_resim_maxdiff": 4.407169074127637e-10,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_2736_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 73,
+   "n_deck": 68,
+   "x_psd_resim_maxdiff": 2.899110951304351e-10,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_2737_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 53,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 1.495117363248255e-10,
+   "seconds": 2.4
+  },
+  {
+   "sample": "sample_2738_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 53,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 1.799395077384247e-10,
+   "seconds": 2.3
+  },
+  {
+   "sample": "sample_2739_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 91,
+   "n_deck": 86,
+   "x_psd_resim_maxdiff": 1.867190513316075e-09,
+   "seconds": 4.0
+  },
+  {
+   "sample": "sample_2740_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 81,
+   "n_deck": 76,
+   "x_psd_resim_maxdiff": 3.6727348939891158e-09,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_2741_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 68,
+   "n_deck": 63,
+   "x_psd_resim_maxdiff": 3.730675768309766e-10,
+   "seconds": 3.1
+  },
+  {
+   "sample": "sample_2742_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 60,
+   "n_deck": 55,
+   "x_psd_resim_maxdiff": 5.205944564323772e-09,
+   "seconds": 2.9
+  },
+  {
+   "sample": "sample_2743_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 71,
+   "n_deck": 66,
+   "x_psd_resim_maxdiff": 2.4663604492047853e-11,
+   "seconds": 3.1
+  },
+  {
+   "sample": "sample_2744_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 74,
+   "n_deck": 69,
+   "x_psd_resim_maxdiff": 8.490441683051131e-11,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_2745_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 64,
+   "n_deck": 59,
+   "x_psd_resim_maxdiff": 1.2744560962119067e-10,
+   "seconds": 3.1
+  },
+  {
+   "sample": "sample_2746_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 85,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 2.7069457786410567e-10,
+   "seconds": 3.1
+  },
+  {
+   "sample": "sample_2747_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 75,
+   "n_deck": 70,
+   "x_psd_resim_maxdiff": 4.2460590599091574e-11,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_2748_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 53,
+   "n_deck": 48,
+   "x_psd_resim_maxdiff": 4.769440398177949e-11,
+   "seconds": 2.1
+  },
+  {
+   "sample": "sample_2749_Ng3_phase1_gnn",
+   "Ng": 3,
+   "n_nodes": 89,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 1.7657009188098982e-10,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_4000_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 102,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 1.6925770784936844e-09,
+   "seconds": 3.0
+  },
+  {
+   "sample": "sample_4001_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 74,
+   "n_deck": 68,
+   "x_psd_resim_maxdiff": 2.2685175959935577e-10,
+   "seconds": 2.6
+  },
+  {
+   "sample": "sample_4002_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 79,
+   "n_deck": 73,
+   "x_psd_resim_maxdiff": 6.703677613018044e-10,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_4003_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 114,
+   "n_deck": 108,
+   "x_psd_resim_maxdiff": 2.1599522170845376e-10,
+   "seconds": 5.2
+  },
+  {
+   "sample": "sample_4004_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 98,
+   "n_deck": 92,
+   "x_psd_resim_maxdiff": 4.125507713226284e-10,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_4005_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 104,
+   "n_deck": 98,
+   "x_psd_resim_maxdiff": 7.963076864569985e-10,
+   "seconds": 4.5
+  },
+  {
+   "sample": "sample_4006_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 96,
+   "n_deck": 90,
+   "x_psd_resim_maxdiff": 6.61156129844187e-10,
+   "seconds": 4.4
+  },
+  {
+   "sample": "sample_4007_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 94,
+   "n_deck": 88,
+   "x_psd_resim_maxdiff": 5.371330047410083e-10,
+   "seconds": 4.3
+  },
+  {
+   "sample": "sample_4008_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 108,
+   "n_deck": 102,
+   "x_psd_resim_maxdiff": 8.512696103579742e-10,
+   "seconds": 4.9
+  },
+  {
+   "sample": "sample_4009_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 90,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 2.4326509695526966e-09,
+   "seconds": 4.6
+  },
+  {
+   "sample": "sample_4010_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 116,
+   "n_deck": 110,
+   "x_psd_resim_maxdiff": 7.965866855030868e-11,
+   "seconds": 5.2
+  },
+  {
+   "sample": "sample_4011_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 128,
+   "n_deck": 122,
+   "x_psd_resim_maxdiff": 1.8250811972819747e-10,
+   "seconds": 5.1
+  },
+  {
+   "sample": "sample_4012_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 110,
+   "n_deck": 104,
+   "x_psd_resim_maxdiff": 5.254224055839529e-09,
+   "seconds": 4.7
+  },
+  {
+   "sample": "sample_4013_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 82,
+   "n_deck": 76,
+   "x_psd_resim_maxdiff": 3.357350841781681e-09,
+   "seconds": 3.9
+  },
+  {
+   "sample": "sample_4014_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 90,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 4.947573462033006e-10,
+   "seconds": 3.7
+  },
+  {
+   "sample": "sample_4015_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 96,
+   "n_deck": 90,
+   "x_psd_resim_maxdiff": 3.8293890280982623e-10,
+   "seconds": 2.9
+  },
+  {
+   "sample": "sample_4016_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 96,
+   "n_deck": 90,
+   "x_psd_resim_maxdiff": 1.162191565207138e-09,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_4017_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 113,
+   "n_deck": 107,
+   "x_psd_resim_maxdiff": 8.533260764664874e-10,
+   "seconds": 3.7
+  },
+  {
+   "sample": "sample_4018_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 74,
+   "n_deck": 68,
+   "x_psd_resim_maxdiff": 1.1608760619452596e-09,
+   "seconds": 2.8
+  },
+  {
+   "sample": "sample_4019_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 90,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 1.2014699235507464e-09,
+   "seconds": 3.6
+  },
+  {
+   "sample": "sample_4020_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 78,
+   "n_deck": 72,
+   "x_psd_resim_maxdiff": 2.9304708659694256e-09,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_4021_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 74,
+   "n_deck": 68,
+   "x_psd_resim_maxdiff": 4.041261769671678e-10,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_4022_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 80,
+   "n_deck": 74,
+   "x_psd_resim_maxdiff": 1.2369156809910464e-09,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_4023_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 102,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 1.392019388646304e-09,
+   "seconds": 4.4
+  },
+  {
+   "sample": "sample_4024_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 90,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 2.651594499525345e-10,
+   "seconds": 3.9
+  },
+  {
+   "sample": "sample_4025_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 94,
+   "n_deck": 88,
+   "x_psd_resim_maxdiff": 5.542700881600027e-10,
+   "seconds": 4.1
+  },
+  {
+   "sample": "sample_4026_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 90,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 8.516980454231771e-10,
+   "seconds": 3.9
+  },
+  {
+   "sample": "sample_4027_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 78,
+   "n_deck": 72,
+   "x_psd_resim_maxdiff": 2.7415314463041796e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_4028_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 78,
+   "n_deck": 72,
+   "x_psd_resim_maxdiff": 1.0558529606186084e-09,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_4029_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 115,
+   "n_deck": 109,
+   "x_psd_resim_maxdiff": 5.262796864968777e-10,
+   "seconds": 4.3
+  },
+  {
+   "sample": "sample_4030_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 90,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 9.771189413143588e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_4031_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 74,
+   "n_deck": 68,
+   "x_psd_resim_maxdiff": 1.7606980318163323e-09,
+   "seconds": 3.0
+  },
+  {
+   "sample": "sample_4032_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 80,
+   "n_deck": 74,
+   "x_psd_resim_maxdiff": 5.942042968776207e-10,
+   "seconds": 3.2
+  },
+  {
+   "sample": "sample_4033_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 86,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 8.723005651134486e-10,
+   "seconds": 3.1
+  },
+  {
+   "sample": "sample_4034_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 126,
+   "n_deck": 120,
+   "x_psd_resim_maxdiff": 2.8689117748115223e-10,
+   "seconds": 4.0
+  },
+  {
+   "sample": "sample_4035_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 118,
+   "n_deck": 112,
+   "x_psd_resim_maxdiff": 5.503494326930536e-10,
+   "seconds": 4.0
+  },
+  {
+   "sample": "sample_4036_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 114,
+   "n_deck": 108,
+   "x_psd_resim_maxdiff": 9.700217573627157e-10,
+   "seconds": 5.3
+  },
+  {
+   "sample": "sample_4037_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 95,
+   "n_deck": 89,
+   "x_psd_resim_maxdiff": 1.2215238820445506e-09,
+   "seconds": 4.4
+  },
+  {
+   "sample": "sample_4038_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 102,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 1.643336577927812e-10,
+   "seconds": 4.4
+  },
+  {
+   "sample": "sample_4039_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 98,
+   "n_deck": 92,
+   "x_psd_resim_maxdiff": 3.097611389613064e-09,
+   "seconds": 4.4
+  },
+  {
+   "sample": "sample_4040_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 98,
+   "n_deck": 92,
+   "x_psd_resim_maxdiff": 5.506753386619323e-10,
+   "seconds": 4.7
+  },
+  {
+   "sample": "sample_4041_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 100,
+   "n_deck": 94,
+   "x_psd_resim_maxdiff": 3.7959491105965526e-10,
+   "seconds": 4.7
+  },
+  {
+   "sample": "sample_4042_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 74,
+   "n_deck": 68,
+   "x_psd_resim_maxdiff": 6.365675331299059e-08,
+   "seconds": 3.6
+  },
+  {
+   "sample": "sample_4043_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 92,
+   "n_deck": 86,
+   "x_psd_resim_maxdiff": 1.4498202638435487e-10,
+   "seconds": 4.3
+  },
+  {
+   "sample": "sample_4044_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 110,
+   "n_deck": 104,
+   "x_psd_resim_maxdiff": 6.882949765696367e-10,
+   "seconds": 4.7
+  },
+  {
+   "sample": "sample_4045_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 94,
+   "n_deck": 88,
+   "x_psd_resim_maxdiff": 1.817965777917152e-10,
+   "seconds": 4.1
+  },
+  {
+   "sample": "sample_4046_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 115,
+   "n_deck": 109,
+   "x_psd_resim_maxdiff": 2.3653364683573486e-10,
+   "seconds": 3.9
+  },
+  {
+   "sample": "sample_4047_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 110,
+   "n_deck": 104,
+   "x_psd_resim_maxdiff": 4.609825854373639e-10,
+   "seconds": 3.7
+  },
+  {
+   "sample": "sample_4048_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 115,
+   "n_deck": 109,
+   "x_psd_resim_maxdiff": 6.141981367946414e-10,
+   "seconds": 4.7
+  },
+  {
+   "sample": "sample_4049_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 108,
+   "n_deck": 102,
+   "x_psd_resim_maxdiff": 2.8251107564436495e-08,
+   "seconds": 4.5
+  },
+  {
+   "sample": "sample_4050_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 103,
+   "n_deck": 97,
+   "x_psd_resim_maxdiff": 7.268582402630841e-10,
+   "seconds": 4.1
+  },
+  {
+   "sample": "sample_4051_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 102,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 6.861002099789459e-09,
+   "seconds": 4.7
+  },
+  {
+   "sample": "sample_4052_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 86,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 2.4878793469795824e-09,
+   "seconds": 4.3
+  },
+  {
+   "sample": "sample_4053_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 86,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 1.633325696914767e-10,
+   "seconds": 4.3
+  },
+  {
+   "sample": "sample_4054_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 80,
+   "n_deck": 74,
+   "x_psd_resim_maxdiff": 8.953503216613257e-11,
+   "seconds": 3.9
+  },
+  {
+   "sample": "sample_4055_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 96,
+   "n_deck": 90,
+   "x_psd_resim_maxdiff": 1.440951580278238e-09,
+   "seconds": 4.4
+  },
+  {
+   "sample": "sample_4056_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 78,
+   "n_deck": 72,
+   "x_psd_resim_maxdiff": 2.440943003279017e-10,
+   "seconds": 4.0
+  },
+  {
+   "sample": "sample_4057_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 86,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 8.304297249850379e-10,
+   "seconds": 3.9
+  },
+  {
+   "sample": "sample_4058_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 78,
+   "n_deck": 72,
+   "x_psd_resim_maxdiff": 4.891732574563434e-10,
+   "seconds": 3.4
+  },
+  {
+   "sample": "sample_4059_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 108,
+   "n_deck": 102,
+   "x_psd_resim_maxdiff": 3.325919539776123e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_4060_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 90,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 1.9071921819602267e-10,
+   "seconds": 2.7
+  },
+  {
+   "sample": "sample_4061_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 90,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 5.6109894508438174e-11,
+   "seconds": 2.9
+  },
+  {
+   "sample": "sample_4062_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 94,
+   "n_deck": 88,
+   "x_psd_resim_maxdiff": 2.9848068461291177e-10,
+   "seconds": 3.4
+  },
+  {
+   "sample": "sample_4063_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 106,
+   "n_deck": 100,
+   "x_psd_resim_maxdiff": 7.184359773759752e-10,
+   "seconds": 4.5
+  },
+  {
+   "sample": "sample_4064_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 83,
+   "n_deck": 77,
+   "x_psd_resim_maxdiff": 1.330448640146642e-09,
+   "seconds": 3.6
+  },
+  {
+   "sample": "sample_4065_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 80,
+   "n_deck": 74,
+   "x_psd_resim_maxdiff": 8.244549487557151e-11,
+   "seconds": 3.7
+  },
+  {
+   "sample": "sample_4066_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 83,
+   "n_deck": 77,
+   "x_psd_resim_maxdiff": 1.542984962021876e-09,
+   "seconds": 3.8
+  },
+  {
+   "sample": "sample_4067_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 78,
+   "n_deck": 72,
+   "x_psd_resim_maxdiff": 2.0062917993612928e-10,
+   "seconds": 3.9
+  },
+  {
+   "sample": "sample_4068_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 84,
+   "n_deck": 78,
+   "x_psd_resim_maxdiff": 3.6179226281518595e-10,
+   "seconds": 4.0
+  },
+  {
+   "sample": "sample_4069_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 92,
+   "n_deck": 86,
+   "x_psd_resim_maxdiff": 2.2905380370197292e-09,
+   "seconds": 4.3
+  },
+  {
+   "sample": "sample_4070_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 102,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 5.758340471118117e-10,
+   "seconds": 4.7
+  },
+  {
+   "sample": "sample_4071_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 114,
+   "n_deck": 108,
+   "x_psd_resim_maxdiff": 1.4098695544362272e-09,
+   "seconds": 4.7
+  },
+  {
+   "sample": "sample_4072_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 82,
+   "n_deck": 76,
+   "x_psd_resim_maxdiff": 1.6385198753354757e-10,
+   "seconds": 3.6
+  },
+  {
+   "sample": "sample_4073_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 84,
+   "n_deck": 78,
+   "x_psd_resim_maxdiff": 1.6697554450217922e-10,
+   "seconds": 3.3
+  },
+  {
+   "sample": "sample_4074_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 90,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 9.656182187178786e-09,
+   "seconds": 3.2
+  },
+  {
+   "sample": "sample_4075_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 106,
+   "n_deck": 100,
+   "x_psd_resim_maxdiff": 1.265424653951186e-09,
+   "seconds": 3.8
+  },
+  {
+   "sample": "sample_4076_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 93,
+   "n_deck": 87,
+   "x_psd_resim_maxdiff": 1.3469016457712257e-09,
+   "seconds": 3.6
+  },
+  {
+   "sample": "sample_4077_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 86,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 2.586472147569907e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_4078_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 92,
+   "n_deck": 86,
+   "x_psd_resim_maxdiff": 1.8669224499667791e-10,
+   "seconds": 3.9
+  },
+  {
+   "sample": "sample_4079_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 106,
+   "n_deck": 100,
+   "x_psd_resim_maxdiff": 2.9118525368687642e-09,
+   "seconds": 4.5
+  },
+  {
+   "sample": "sample_4080_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 106,
+   "n_deck": 100,
+   "x_psd_resim_maxdiff": 1.4287518945721445e-09,
+   "seconds": 4.9
+  },
+  {
+   "sample": "sample_4081_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 132,
+   "n_deck": 126,
+   "x_psd_resim_maxdiff": 1.5412857656826873e-09,
+   "seconds": 5.9
+  },
+  {
+   "sample": "sample_4082_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 98,
+   "n_deck": 92,
+   "x_psd_resim_maxdiff": 5.99545613155783e-09,
+   "seconds": 4.6
+  },
+  {
+   "sample": "sample_4083_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 86,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 1.8486927544358878e-09,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_4084_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 128,
+   "n_deck": 122,
+   "x_psd_resim_maxdiff": 9.827499924952576e-10,
+   "seconds": 5.7
+  },
+  {
+   "sample": "sample_4085_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 95,
+   "n_deck": 89,
+   "x_psd_resim_maxdiff": 3.4833191886463055e-10,
+   "seconds": 4.6
+  },
+  {
+   "sample": "sample_4086_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 106,
+   "n_deck": 100,
+   "x_psd_resim_maxdiff": 8.127254425005503e-11,
+   "seconds": 4.9
+  },
+  {
+   "sample": "sample_4087_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 90,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 1.0155924989874165e-09,
+   "seconds": 4.0
+  },
+  {
+   "sample": "sample_4088_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 83,
+   "n_deck": 77,
+   "x_psd_resim_maxdiff": 8.277777352461158e-10,
+   "seconds": 4.0
+  },
+  {
+   "sample": "sample_4089_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 82,
+   "n_deck": 76,
+   "x_psd_resim_maxdiff": 9.8434971285144e-10,
+   "seconds": 3.9
+  },
+  {
+   "sample": "sample_4090_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 118,
+   "n_deck": 112,
+   "x_psd_resim_maxdiff": 4.7993791163492006e-09,
+   "seconds": 4.6
+  },
+  {
+   "sample": "sample_4091_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 82,
+   "n_deck": 76,
+   "x_psd_resim_maxdiff": 1.238887492593932e-09,
+   "seconds": 3.2
+  },
+  {
+   "sample": "sample_4092_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 86,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 6.126296414610266e-10,
+   "seconds": 3.5
+  },
+  {
+   "sample": "sample_4093_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 108,
+   "n_deck": 102,
+   "x_psd_resim_maxdiff": 1.4372210088708925e-09,
+   "seconds": 4.3
+  },
+  {
+   "sample": "sample_4094_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 98,
+   "n_deck": 92,
+   "x_psd_resim_maxdiff": 3.993804176261051e-10,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_4095_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 90,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 4.784110885225346e-10,
+   "seconds": 4.5
+  },
+  {
+   "sample": "sample_4096_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 74,
+   "n_deck": 68,
+   "x_psd_resim_maxdiff": 2.195199577670337e-10,
+   "seconds": 3.9
+  },
+  {
+   "sample": "sample_4097_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 102,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 3.562973249771062e-10,
+   "seconds": 5.0
+  },
+  {
+   "sample": "sample_4098_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 90,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 1.8046542038518965e-10,
+   "seconds": 4.8
+  },
+  {
+   "sample": "sample_4099_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 124,
+   "n_deck": 118,
+   "x_psd_resim_maxdiff": 1.557514561767448e-09,
+   "seconds": 6.1
+  },
+  {
+   "sample": "sample_4100_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 110,
+   "n_deck": 104,
+   "x_psd_resim_maxdiff": 2.363225726220719e-09,
+   "seconds": 5.8
+  },
+  {
+   "sample": "sample_4101_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 86,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 6.34641061925123e-09,
+   "seconds": 4.9
+  },
+  {
+   "sample": "sample_4102_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 84,
+   "n_deck": 78,
+   "x_psd_resim_maxdiff": 2.477514859933194e-10,
+   "seconds": 4.7
+  },
+  {
+   "sample": "sample_4103_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 118,
+   "n_deck": 112,
+   "x_psd_resim_maxdiff": 1.715732445006779e-09,
+   "seconds": 5.8
+  },
+  {
+   "sample": "sample_4104_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 102,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 1.0293315089171529e-09,
+   "seconds": 5.1
+  },
+  {
+   "sample": "sample_4105_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 116,
+   "n_deck": 110,
+   "x_psd_resim_maxdiff": 5.045487361243772e-10,
+   "seconds": 5.0
+  },
+  {
+   "sample": "sample_4106_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 70,
+   "n_deck": 64,
+   "x_psd_resim_maxdiff": 3.2892299994813357e-10,
+   "seconds": 3.7
+  },
+  {
+   "sample": "sample_4107_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 136,
+   "n_deck": 130,
+   "x_psd_resim_maxdiff": 2.165761014971679e-09,
+   "seconds": 5.2
+  },
+  {
+   "sample": "sample_4108_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 102,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 1.3877909932347166e-10,
+   "seconds": 4.3
+  },
+  {
+   "sample": "sample_4109_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 102,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 1.6385814927133424e-10,
+   "seconds": 4.8
+  },
+  {
+   "sample": "sample_4110_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 110,
+   "n_deck": 104,
+   "x_psd_resim_maxdiff": 2.1992885290700315e-10,
+   "seconds": 5.4
+  },
+  {
+   "sample": "sample_4111_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 90,
+   "n_deck": 84,
+   "x_psd_resim_maxdiff": 1.2836689489148512e-09,
+   "seconds": 4.5
+  },
+  {
+   "sample": "sample_4112_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 98,
+   "n_deck": 92,
+   "x_psd_resim_maxdiff": 9.857357707865333e-10,
+   "seconds": 5.1
+  },
+  {
+   "sample": "sample_4113_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 78,
+   "n_deck": 72,
+   "x_psd_resim_maxdiff": 9.818997837029997e-10,
+   "seconds": 4.4
+  },
+  {
+   "sample": "sample_4114_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 78,
+   "n_deck": 72,
+   "x_psd_resim_maxdiff": 1.9584356358848254e-10,
+   "seconds": 4.3
+  },
+  {
+   "sample": "sample_4115_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 86,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 1.5888217408388527e-09,
+   "seconds": 4.6
+  },
+  {
+   "sample": "sample_4116_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 78,
+   "n_deck": 72,
+   "x_psd_resim_maxdiff": 7.274676416813008e-10,
+   "seconds": 4.3
+  },
+  {
+   "sample": "sample_4117_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 102,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 2.1633725921788027e-09,
+   "seconds": 4.7
+  },
+  {
+   "sample": "sample_4118_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 110,
+   "n_deck": 104,
+   "x_psd_resim_maxdiff": 1.1341516614749025e-10,
+   "seconds": 4.8
+  },
+  {
+   "sample": "sample_4119_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 98,
+   "n_deck": 92,
+   "x_psd_resim_maxdiff": 1.1965428647897625e-10,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_4120_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 88,
+   "n_deck": 82,
+   "x_psd_resim_maxdiff": 6.647721817465424e-10,
+   "seconds": 3.6
+  },
+  {
+   "sample": "sample_4121_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 100,
+   "n_deck": 94,
+   "x_psd_resim_maxdiff": 1.1912463793173345e-09,
+   "seconds": 4.1
+  },
+  {
+   "sample": "sample_4122_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 70,
+   "n_deck": 64,
+   "x_psd_resim_maxdiff": 2.247461106108517e-10,
+   "seconds": 3.1
+  },
+  {
+   "sample": "sample_4123_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 91,
+   "n_deck": 85,
+   "x_psd_resim_maxdiff": 4.64410032652296e-09,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_4124_Ng4_phase1_gnn",
+   "Ng": 4,
+   "n_nodes": 79,
+   "n_deck": 73,
+   "x_psd_resim_maxdiff": 1.1856697845757935e-09,
+   "seconds": 4.0
+  },
+  {
+   "sample": "sample_5375_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 109,
+   "n_deck": 102,
+   "x_psd_resim_maxdiff": 4.831135491656369e-10,
+   "seconds": 5.3
+  },
+  {
+   "sample": "sample_5376_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 87,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 1.5813234610639881e-09,
+   "seconds": 4.6
+  },
+  {
+   "sample": "sample_5377_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 125,
+   "n_deck": 118,
+   "x_psd_resim_maxdiff": 2.1462206456490662e-09,
+   "seconds": 5.7
+  },
+  {
+   "sample": "sample_5378_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 129,
+   "n_deck": 122,
+   "x_psd_resim_maxdiff": 8.704581500040831e-10,
+   "seconds": 5.7
+  },
+  {
+   "sample": "sample_5379_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 131,
+   "n_deck": 124,
+   "x_psd_resim_maxdiff": 1.2414003158767173e-10,
+   "seconds": 5.7
+  },
+  {
+   "sample": "sample_5380_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 119,
+   "n_deck": 112,
+   "x_psd_resim_maxdiff": 1.817283323823915e-09,
+   "seconds": 5.9
+  },
+  {
+   "sample": "sample_5381_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 143,
+   "n_deck": 136,
+   "x_psd_resim_maxdiff": 2.910934826516609e-10,
+   "seconds": 6.6
+  },
+  {
+   "sample": "sample_5382_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 92,
+   "n_deck": 85,
+   "x_psd_resim_maxdiff": 1.781529090916223e-10,
+   "seconds": 5.0
+  },
+  {
+   "sample": "sample_5383_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 122,
+   "n_deck": 115,
+   "x_psd_resim_maxdiff": 8.771456894152152e-10,
+   "seconds": 5.8
+  },
+  {
+   "sample": "sample_5384_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 128,
+   "n_deck": 121,
+   "x_psd_resim_maxdiff": 3.5047399427057258e-09,
+   "seconds": 5.7
+  },
+  {
+   "sample": "sample_5385_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 113,
+   "n_deck": 106,
+   "x_psd_resim_maxdiff": 2.1434867492065024e-09,
+   "seconds": 6.8
+  },
+  {
+   "sample": "sample_5386_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 134,
+   "n_deck": 127,
+   "x_psd_resim_maxdiff": 4.888500715338751e-10,
+   "seconds": 7.2
+  },
+  {
+   "sample": "sample_5387_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 139,
+   "n_deck": 132,
+   "x_psd_resim_maxdiff": 1.0905453207143978e-09,
+   "seconds": 8.0
+  },
+  {
+   "sample": "sample_5388_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 113,
+   "n_deck": 106,
+   "x_psd_resim_maxdiff": 4.5338099941005794e-10,
+   "seconds": 5.1
+  },
+  {
+   "sample": "sample_5389_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 122,
+   "n_deck": 115,
+   "x_psd_resim_maxdiff": 1.190161746933427e-09,
+   "seconds": 6.6
+  },
+  {
+   "sample": "sample_5390_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 97,
+   "n_deck": 90,
+   "x_psd_resim_maxdiff": 4.6045178780929064e-10,
+   "seconds": 5.0
+  },
+  {
+   "sample": "sample_5391_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 121,
+   "n_deck": 114,
+   "x_psd_resim_maxdiff": 6.877434177710029e-10,
+   "seconds": 6.4
+  },
+  {
+   "sample": "sample_5392_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 103,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 2.93156166009112e-10,
+   "seconds": 5.7
+  },
+  {
+   "sample": "sample_5393_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 143,
+   "n_deck": 136,
+   "x_psd_resim_maxdiff": 2.101742113680416e-10,
+   "seconds": 8.1
+  },
+  {
+   "sample": "sample_5394_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 116,
+   "n_deck": 109,
+   "x_psd_resim_maxdiff": 9.985055005046206e-09,
+   "seconds": 6.7
+  },
+  {
+   "sample": "sample_5395_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 125,
+   "n_deck": 118,
+   "x_psd_resim_maxdiff": 5.014175741280269e-10,
+   "seconds": 7.0
+  },
+  {
+   "sample": "sample_5396_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 103,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 1.5028489563917447e-10,
+   "seconds": 6.5
+  },
+  {
+   "sample": "sample_5397_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 103,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 1.1901402086067492e-09,
+   "seconds": 5.0
+  },
+  {
+   "sample": "sample_5398_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 138,
+   "n_deck": 131,
+   "x_psd_resim_maxdiff": 2.1707395880810054e-09,
+   "seconds": 6.3
+  },
+  {
+   "sample": "sample_5399_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 118,
+   "n_deck": 111,
+   "x_psd_resim_maxdiff": 9.386382338050225e-09,
+   "seconds": 5.7
+  },
+  {
+   "sample": "sample_5400_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 132,
+   "n_deck": 125,
+   "x_psd_resim_maxdiff": 3.538461079699573e-09,
+   "seconds": 6.0
+  },
+  {
+   "sample": "sample_5401_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 109,
+   "n_deck": 102,
+   "x_psd_resim_maxdiff": 5.62990765118343e-11,
+   "seconds": 4.9
+  },
+  {
+   "sample": "sample_5402_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 109,
+   "n_deck": 102,
+   "x_psd_resim_maxdiff": 1.3995332670546645e-09,
+   "seconds": 5.0
+  },
+  {
+   "sample": "sample_5403_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 99,
+   "n_deck": 92,
+   "x_psd_resim_maxdiff": 9.508071552311037e-10,
+   "seconds": 4.5
+  },
+  {
+   "sample": "sample_5404_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 120,
+   "n_deck": 113,
+   "x_psd_resim_maxdiff": 2.754505512569949e-10,
+   "seconds": 5.0
+  },
+  {
+   "sample": "sample_5405_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 129,
+   "n_deck": 122,
+   "x_psd_resim_maxdiff": 1.1096067398241871e-09,
+   "seconds": 4.9
+  },
+  {
+   "sample": "sample_5406_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 122,
+   "n_deck": 115,
+   "x_psd_resim_maxdiff": 3.7362091198644976e-10,
+   "seconds": 5.1
+  },
+  {
+   "sample": "sample_5407_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 143,
+   "n_deck": 136,
+   "x_psd_resim_maxdiff": 5.613549625138603e-10,
+   "seconds": 6.1
+  },
+  {
+   "sample": "sample_5408_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 128,
+   "n_deck": 121,
+   "x_psd_resim_maxdiff": 1.517562298047892e-09,
+   "seconds": 5.5
+  },
+  {
+   "sample": "sample_5409_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 103,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 5.339140241034102e-10,
+   "seconds": 4.5
+  },
+  {
+   "sample": "sample_5410_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 109,
+   "n_deck": 102,
+   "x_psd_resim_maxdiff": 1.0966494379260894e-10,
+   "seconds": 5.1
+  },
+  {
+   "sample": "sample_5411_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 98,
+   "n_deck": 91,
+   "x_psd_resim_maxdiff": 1.4922645341641783e-09,
+   "seconds": 4.9
+  },
+  {
+   "sample": "sample_5412_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 103,
+   "n_deck": 96,
+   "x_psd_resim_maxdiff": 1.3159284772967794e-10,
+   "seconds": 5.0
+  },
+  {
+   "sample": "sample_5413_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 139,
+   "n_deck": 132,
+   "x_psd_resim_maxdiff": 4.870950309765476e-10,
+   "seconds": 6.0
+  },
+  {
+   "sample": "sample_5414_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 102,
+   "n_deck": 95,
+   "x_psd_resim_maxdiff": 5.325470620043404e-10,
+   "seconds": 4.9
+  },
+  {
+   "sample": "sample_5415_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 131,
+   "n_deck": 124,
+   "x_psd_resim_maxdiff": 1.2803242910308654e-09,
+   "seconds": 5.5
+  },
+  {
+   "sample": "sample_5416_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 149,
+   "n_deck": 142,
+   "x_psd_resim_maxdiff": 4.090953020785548e-09,
+   "seconds": 5.8
+  },
+  {
+   "sample": "sample_5417_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 122,
+   "n_deck": 115,
+   "x_psd_resim_maxdiff": 3.76401354529321e-10,
+   "seconds": 4.7
+  },
+  {
+   "sample": "sample_5418_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 139,
+   "n_deck": 132,
+   "x_psd_resim_maxdiff": 3.1600833061418143e-10,
+   "seconds": 5.1
+  },
+  {
+   "sample": "sample_5419_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 118,
+   "n_deck": 111,
+   "x_psd_resim_maxdiff": 9.461610384065011e-10,
+   "seconds": 4.6
+  },
+  {
+   "sample": "sample_5420_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 119,
+   "n_deck": 112,
+   "x_psd_resim_maxdiff": 1.3086721706301319e-09,
+   "seconds": 4.8
+  },
+  {
+   "sample": "sample_5421_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 115,
+   "n_deck": 108,
+   "x_psd_resim_maxdiff": 7.815953440015733e-10,
+   "seconds": 4.7
+  },
+  {
+   "sample": "sample_5422_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 92,
+   "n_deck": 85,
+   "x_psd_resim_maxdiff": 3.695020955873929e-10,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_5423_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 102,
+   "n_deck": 95,
+   "x_psd_resim_maxdiff": 1.0960238272517131e-10,
+   "seconds": 4.5
+  },
+  {
+   "sample": "sample_5424_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 116,
+   "n_deck": 109,
+   "x_psd_resim_maxdiff": 1.8778661958762655e-10,
+   "seconds": 4.7
+  },
+  {
+   "sample": "sample_5425_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 122,
+   "n_deck": 115,
+   "x_psd_resim_maxdiff": 1.5287486831994102e-09,
+   "seconds": 4.9
+  },
+  {
+   "sample": "sample_5426_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 122,
+   "n_deck": 115,
+   "x_psd_resim_maxdiff": 9.16375730852792e-09,
+   "seconds": 4.9
+  },
+  {
+   "sample": "sample_5427_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 119,
+   "n_deck": 112,
+   "x_psd_resim_maxdiff": 1.5258005969798205e-10,
+   "seconds": 4.6
+  },
+  {
+   "sample": "sample_5428_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 143,
+   "n_deck": 136,
+   "x_psd_resim_maxdiff": 3.0765373582042344e-09,
+   "seconds": 5.3
+  },
+  {
+   "sample": "sample_5429_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 97,
+   "n_deck": 90,
+   "x_psd_resim_maxdiff": 5.3348396811259136e-09,
+   "seconds": 3.8
+  },
+  {
+   "sample": "sample_5430_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 92,
+   "n_deck": 85,
+   "x_psd_resim_maxdiff": 1.1317354831064108e-09,
+   "seconds": 3.8
+  },
+  {
+   "sample": "sample_5431_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 142,
+   "n_deck": 135,
+   "x_psd_resim_maxdiff": 1.7015280295851198e-09,
+   "seconds": 6.0
+  },
+  {
+   "sample": "sample_5432_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 118,
+   "n_deck": 111,
+   "x_psd_resim_maxdiff": 2.807025500928262e-09,
+   "seconds": 4.6
+  },
+  {
+   "sample": "sample_5433_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 122,
+   "n_deck": 115,
+   "x_psd_resim_maxdiff": 2.2454234582802712e-09,
+   "seconds": 5.0
+  },
+  {
+   "sample": "sample_5434_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 135,
+   "n_deck": 128,
+   "x_psd_resim_maxdiff": 3.0898406055968053e-10,
+   "seconds": 5.7
+  },
+  {
+   "sample": "sample_5435_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 118,
+   "n_deck": 111,
+   "x_psd_resim_maxdiff": 1.683999606427733e-10,
+   "seconds": 5.1
+  },
+  {
+   "sample": "sample_5436_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 106,
+   "n_deck": 99,
+   "x_psd_resim_maxdiff": 5.362873478631514e-10,
+   "seconds": 4.9
+  },
+  {
+   "sample": "sample_5437_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 132,
+   "n_deck": 125,
+   "x_psd_resim_maxdiff": 4.067269854246547e-10,
+   "seconds": 5.8
+  },
+  {
+   "sample": "sample_5438_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 134,
+   "n_deck": 127,
+   "x_psd_resim_maxdiff": 2.6210977832619164e-10,
+   "seconds": 5.6
+  },
+  {
+   "sample": "sample_5439_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 126,
+   "n_deck": 119,
+   "x_psd_resim_maxdiff": 4.378377660430033e-10,
+   "seconds": 5.4
+  },
+  {
+   "sample": "sample_5440_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 135,
+   "n_deck": 128,
+   "x_psd_resim_maxdiff": 6.111033901134988e-11,
+   "seconds": 5.4
+  },
+  {
+   "sample": "sample_5441_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 161,
+   "n_deck": 154,
+   "x_psd_resim_maxdiff": 2.603045001769999e-09,
+   "seconds": 6.0
+  },
+  {
+   "sample": "sample_5442_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 162,
+   "n_deck": 155,
+   "x_psd_resim_maxdiff": 6.663345430979462e-10,
+   "seconds": 5.9
+  },
+  {
+   "sample": "sample_5443_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 128,
+   "n_deck": 121,
+   "x_psd_resim_maxdiff": 1.8207402252556903e-10,
+   "seconds": 4.8
+  },
+  {
+   "sample": "sample_5444_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 156,
+   "n_deck": 149,
+   "x_psd_resim_maxdiff": 5.295439642338806e-10,
+   "seconds": 6.4
+  },
+  {
+   "sample": "sample_5445_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 135,
+   "n_deck": 128,
+   "x_psd_resim_maxdiff": 1.548690953256937e-09,
+   "seconds": 5.5
+  },
+  {
+   "sample": "sample_5446_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 107,
+   "n_deck": 100,
+   "x_psd_resim_maxdiff": 1.9859858202408986e-10,
+   "seconds": 4.8
+  },
+  {
+   "sample": "sample_5447_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 135,
+   "n_deck": 128,
+   "x_psd_resim_maxdiff": 9.83388370734417e-10,
+   "seconds": 6.1
+  },
+  {
+   "sample": "sample_5448_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 137,
+   "n_deck": 130,
+   "x_psd_resim_maxdiff": 9.039270887356565e-09,
+   "seconds": 6.4
+  },
+  {
+   "sample": "sample_5449_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 97,
+   "n_deck": 90,
+   "x_psd_resim_maxdiff": 6.146304576404304e-10,
+   "seconds": 4.5
+  },
+  {
+   "sample": "sample_5450_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 136,
+   "n_deck": 129,
+   "x_psd_resim_maxdiff": 2.131065213184513e-09,
+   "seconds": 5.9
+  },
+  {
+   "sample": "sample_5451_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 148,
+   "n_deck": 141,
+   "x_psd_resim_maxdiff": 1.7402872476424136e-09,
+   "seconds": 6.7
+  },
+  {
+   "sample": "sample_5452_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 102,
+   "n_deck": 95,
+   "x_psd_resim_maxdiff": 2.832691858856151e-10,
+   "seconds": 4.8
+  },
+  {
+   "sample": "sample_5453_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 119,
+   "n_deck": 112,
+   "x_psd_resim_maxdiff": 3.3558189560523033e-10,
+   "seconds": 5.3
+  },
+  {
+   "sample": "sample_5454_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 122,
+   "n_deck": 115,
+   "x_psd_resim_maxdiff": 5.35901989451304e-10,
+   "seconds": 5.4
+  },
+  {
+   "sample": "sample_5455_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 116,
+   "n_deck": 109,
+   "x_psd_resim_maxdiff": 3.7682590381393766e-10,
+   "seconds": 5.3
+  },
+  {
+   "sample": "sample_5456_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 119,
+   "n_deck": 112,
+   "x_psd_resim_maxdiff": 2.019588829504926e-09,
+   "seconds": 5.4
+  },
+  {
+   "sample": "sample_5457_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 87,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 2.703607338006009e-10,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_5458_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 106,
+   "n_deck": 99,
+   "x_psd_resim_maxdiff": 1.1197981431010362e-10,
+   "seconds": 5.0
+  },
+  {
+   "sample": "sample_5459_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 131,
+   "n_deck": 124,
+   "x_psd_resim_maxdiff": 3.6533165381769095e-10,
+   "seconds": 5.6
+  },
+  {
+   "sample": "sample_5460_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 114,
+   "n_deck": 107,
+   "x_psd_resim_maxdiff": 1.8495469322754587e-09,
+   "seconds": 5.1
+  },
+  {
+   "sample": "sample_5461_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 87,
+   "n_deck": 80,
+   "x_psd_resim_maxdiff": 2.3420154704467677e-10,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_5462_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 138,
+   "n_deck": 131,
+   "x_psd_resim_maxdiff": 2.3087156630907657e-09,
+   "seconds": 5.9
+  },
+  {
+   "sample": "sample_5463_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 112,
+   "n_deck": 105,
+   "x_psd_resim_maxdiff": 1.0889811274950034e-09,
+   "seconds": 5.2
+  },
+  {
+   "sample": "sample_5464_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 141,
+   "n_deck": 134,
+   "x_psd_resim_maxdiff": 3.9538439189357177e-10,
+   "seconds": 6.2
+  },
+  {
+   "sample": "sample_5465_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 168,
+   "n_deck": 161,
+   "x_psd_resim_maxdiff": 1.911002411869589e-09,
+   "seconds": 7.8
+  },
+  {
+   "sample": "sample_5466_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 141,
+   "n_deck": 134,
+   "x_psd_resim_maxdiff": 9.632101782841573e-10,
+   "seconds": 6.8
+  },
+  {
+   "sample": "sample_5467_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 102,
+   "n_deck": 95,
+   "x_psd_resim_maxdiff": 3.957880689853255e-10,
+   "seconds": 5.4
+  },
+  {
+   "sample": "sample_5468_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 126,
+   "n_deck": 119,
+   "x_psd_resim_maxdiff": 2.5143315207643013e-10,
+   "seconds": 6.6
+  },
+  {
+   "sample": "sample_5469_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 137,
+   "n_deck": 130,
+   "x_psd_resim_maxdiff": 7.759604070400883e-11,
+   "seconds": 7.2
+  },
+  {
+   "sample": "sample_5470_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 139,
+   "n_deck": 132,
+   "x_psd_resim_maxdiff": 1.0414047402207416e-09,
+   "seconds": 7.5
+  },
+  {
+   "sample": "sample_5471_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 141,
+   "n_deck": 134,
+   "x_psd_resim_maxdiff": 1.6050498707897987e-09,
+   "seconds": 7.2
+  },
+  {
+   "sample": "sample_5472_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 134,
+   "n_deck": 127,
+   "x_psd_resim_maxdiff": 1.2846834707147536e-10,
+   "seconds": 7.0
+  },
+  {
+   "sample": "sample_5473_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 141,
+   "n_deck": 134,
+   "x_psd_resim_maxdiff": 5.460021879066801e-10,
+   "seconds": 7.0
+  },
+  {
+   "sample": "sample_5474_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 102,
+   "n_deck": 95,
+   "x_psd_resim_maxdiff": 2.2003938671133483e-09,
+   "seconds": 5.2
+  },
+  {
+   "sample": "sample_5475_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 122,
+   "n_deck": 115,
+   "x_psd_resim_maxdiff": 4.237239448201535e-10,
+   "seconds": 5.9
+  },
+  {
+   "sample": "sample_5476_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 128,
+   "n_deck": 121,
+   "x_psd_resim_maxdiff": 1.0083612833611255e-09,
+   "seconds": 5.3
+  },
+  {
+   "sample": "sample_5477_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 109,
+   "n_deck": 102,
+   "x_psd_resim_maxdiff": 2.865176984556683e-10,
+   "seconds": 4.8
+  },
+  {
+   "sample": "sample_5478_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 119,
+   "n_deck": 112,
+   "x_psd_resim_maxdiff": 9.574250281474406e-10,
+   "seconds": 5.0
+  },
+  {
+   "sample": "sample_5479_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 112,
+   "n_deck": 105,
+   "x_psd_resim_maxdiff": 6.87935708398868e-10,
+   "seconds": 4.6
+  },
+  {
+   "sample": "sample_5480_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 130,
+   "n_deck": 123,
+   "x_psd_resim_maxdiff": 3.3266478460802773e-10,
+   "seconds": 4.8
+  },
+  {
+   "sample": "sample_5481_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 133,
+   "n_deck": 126,
+   "x_psd_resim_maxdiff": 6.232385718618616e-09,
+   "seconds": 6.0
+  },
+  {
+   "sample": "sample_5482_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 97,
+   "n_deck": 90,
+   "x_psd_resim_maxdiff": 1.895036350063606e-09,
+   "seconds": 4.8
+  },
+  {
+   "sample": "sample_5483_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 119,
+   "n_deck": 112,
+   "x_psd_resim_maxdiff": 1.5516937734716407e-09,
+   "seconds": 6.0
+  },
+  {
+   "sample": "sample_5484_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 102,
+   "n_deck": 95,
+   "x_psd_resim_maxdiff": 1.829268292397046e-09,
+   "seconds": 5.3
+  },
+  {
+   "sample": "sample_5485_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 142,
+   "n_deck": 135,
+   "x_psd_resim_maxdiff": 2.3868832466078516e-09,
+   "seconds": 7.1
+  },
+  {
+   "sample": "sample_5486_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 116,
+   "n_deck": 109,
+   "x_psd_resim_maxdiff": 4.765624561642312e-10,
+   "seconds": 5.8
+  },
+  {
+   "sample": "sample_5487_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 117,
+   "n_deck": 110,
+   "x_psd_resim_maxdiff": 6.098865856785096e-10,
+   "seconds": 6.2
+  },
+  {
+   "sample": "sample_5488_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 121,
+   "n_deck": 114,
+   "x_psd_resim_maxdiff": 1.5350642978972928e-10,
+   "seconds": 6.2
+  },
+  {
+   "sample": "sample_5489_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 89,
+   "n_deck": 82,
+   "x_psd_resim_maxdiff": 7.732393614290345e-10,
+   "seconds": 5.2
+  },
+  {
+   "sample": "sample_5490_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 158,
+   "n_deck": 151,
+   "x_psd_resim_maxdiff": 8.591612976616148e-10,
+   "seconds": 6.5
+  },
+  {
+   "sample": "sample_5491_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 129,
+   "n_deck": 122,
+   "x_psd_resim_maxdiff": 7.405261959192444e-10,
+   "seconds": 5.6
+  },
+  {
+   "sample": "sample_5492_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 161,
+   "n_deck": 154,
+   "x_psd_resim_maxdiff": 5.53219736687538e-09,
+   "seconds": 6.2
+  },
+  {
+   "sample": "sample_5493_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 97,
+   "n_deck": 90,
+   "x_psd_resim_maxdiff": 1.0132106265103857e-10,
+   "seconds": 4.2
+  },
+  {
+   "sample": "sample_5494_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 122,
+   "n_deck": 115,
+   "x_psd_resim_maxdiff": 1.8703150139742775e-10,
+   "seconds": 4.8
+  },
+  {
+   "sample": "sample_5495_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 155,
+   "n_deck": 148,
+   "x_psd_resim_maxdiff": 1.954833517281429e-09,
+   "seconds": 5.5
+  },
+  {
+   "sample": "sample_5496_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 128,
+   "n_deck": 121,
+   "x_psd_resim_maxdiff": 1.6858314744183645e-10,
+   "seconds": 4.8
+  },
+  {
+   "sample": "sample_5497_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 137,
+   "n_deck": 130,
+   "x_psd_resim_maxdiff": 7.315712480249204e-10,
+   "seconds": 4.6
+  },
+  {
+   "sample": "sample_5498_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 97,
+   "n_deck": 90,
+   "x_psd_resim_maxdiff": 4.269004871826354e-10,
+   "seconds": 3.6
+  },
+  {
+   "sample": "sample_5499_Ng5_phase1_gnn",
+   "Ng": 5,
+   "n_nodes": 125,
+   "n_deck": 118,
+   "x_psd_resim_maxdiff": 1.6284379400488547e-09,
+   "seconds": 4.0
+  }
+ ]
+}

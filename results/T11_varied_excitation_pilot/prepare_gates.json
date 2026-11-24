@@ -1,0 +1,82 @@
+{
+  "a_reproduction_paper_seed": {
+    "n_structures": 40,
+    "tol": 1e-05,
+    "pass": true,
+    "worst": {
+      "freq_bins_maxdiff": 0.0,
+      "label_freq_maxdiff_hz": 2.439488611116758e-10,
+      "label_shape_abs_maxdiff": 1.4497525957501978e-09,
+      "x_psd_maxdiff": 2.92046176131322e-09,
+      "x_psd_row_scale_relmax": 2.6582517917492516e-09,
+      "edge_cpsd8_maxdiff": 5.960464477539063e-08,
+      "edge_cpsd_res_maxdiff": 5.960464477539063e-08,
+      "edge_full_maxdiff": 5.960464477539063e-08
+    },
+    "graph_identical_all": true,
+    "per_ng": {
+      "2": 10,
+      "3": 10,
+      "4": 10,
+      "5": 10
+    },
+    "per_split": {
+      "train": 16,
+      "val": 8,
+      "test": 16
+    },
+    "seconds_median": 3.55
+  },
+  "b_records": {
+    "structures": {
+      "A": "sample_0000_Ng2_phase1_gnn.npz",
+      "B": "sample_0002_Ng2_phase1_gnn.npz",
+      "C": "sample_2750_Ng4_phase1_gnn.npz"
+    },
+    "support_rows": {
+      "sample_0000_Ng2_phase1_gnn.npz": {
+        "n_degree1": 4,
+        "n_loud_degree1_rms_gt_10x_deck": 4,
+        "degree1_rms_over_max_deck_rms": [
+          38.955,
+          40.857,
+          40.635,
+          41.06
+        ]
+      },
+      "sample_2750_Ng4_phase1_gnn.npz": {
+        "n_degree1": 7,
+        "n_loud_degree1_rms_gt_10x_deck": 6,
+        "degree1_rms_over_max_deck_rms": [
+          19.898,
+          20.869,
+          20.764,
+          20.965,
+          20.053,
+          20.859,
+          0.431
+        ]
+      }
+    },
+    "paper_seed_A_vs_B_max_abs_corr": 1.0000000000000002,
+    "paper_seed_A_vs_C_max_abs_corr": 1.0000000000000002,
+    "varied_A_vs_B_max_abs_corr": 0.04926997023503597,
+    "varied_A_vs_C_max_abs_corr": 0.04006804427958621,
+    "varied_A_vs_paper_A_max_abs_corr": 0.03715994315703017,
+    "train_base_vs_test_base_A_max_abs_corr": 0.05379982311885597,
+    "rng_draw_reproducible_bit_identical": true,
+    "same_structure_same_seed_record_maxdiff_rel_rms": 4.1405446121213664e-12,
+    "same_structure_same_seed_feature_maxdiff": 5.960464477539063e-08,
+    "varied_vs_paper_A_x_psd_maxdiff": 0.8523619472422681,
+    "varied_vs_paper_A_edge_full_maxdiff": 1.0853091776371002,
+    "pass": true,
+    "thresholds": {
+      "shared_record_corr_gt": 0.999,
+      "independent_record_corr_lt": 0.2,
+      "feature_tol": 1e-05,
+      "changed_features_x_psd_gt": 0.01
+    }
+  },
+  "pass": true,
+  "wall_s": 19.4
+}

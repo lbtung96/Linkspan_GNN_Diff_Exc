@@ -1,0 +1,734 @@
+{
+  "gates": {
+    "real_full_reproduces_s5": {
+      "max_abs_diff": 1.9073486328125e-06,
+      "tol": 1e-05,
+      "pass": true
+    },
+    "twin_full_reproduces_s6_prop_hybrid": {
+      "max_abs_diff": 9.5367431640625e-07,
+      "tol": 1e-05,
+      "pass": true
+    },
+    "real_full_features_vs_stored": {
+      "max_abs_diff": 0.0,
+      "tol": 1e-06,
+      "pass": true
+    },
+    "csd_matrix_vs_scipy": {
+      "max_rel_diff": 9.513088908098466e-16,
+      "tol": 1e-09,
+      "pass": true
+    },
+    "fp_operator_linear": {
+      "max_rel_diff": 1.199159405215786e-07,
+      "tol": 1e-05,
+      "pass": true
+    },
+    "pass": true
+  },
+  "per_structure": {
+    "Hellesylt": {
+      "real": {
+        "nseg": 12,
+        "n_samples": 13542,
+        "fs": 128.0,
+        "csd_vs_scipy": 6.485987635288501e-16
+      },
+      "twin_matched": {
+        "nseg": 12,
+        "n_samples": 13312,
+        "fs": 200.0,
+        "csd_vs_scipy": 7.086802710498825e-16
+      },
+      "twin_full": {
+        "nseg": 10,
+        "n_samples": 12000,
+        "fs": 200.0,
+        "csd_vs_scipy": 6.37286876714491e-16
+      },
+      "fp_operator_vs_direct_rel": 1.199159405215786e-07,
+      "real_full_vs_stored_node_maxdiff": 0.0,
+      "real_full_vs_stored_edge_maxdiff": 0.0,
+      "lines_y_mm": [
+        0,
+        4000
+      ],
+      "layouts": {
+        "full": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "single": [
+          12
+        ],
+        "front_pair": [
+          12,
+          13
+        ],
+        "front_mid": [
+          2,
+          3,
+          12,
+          13
+        ],
+        "alternate": [
+          0,
+          1,
+          4,
+          5,
+          8,
+          9,
+          12,
+          13
+        ],
+        "one_line": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12
+        ]
+      },
+      "seconds": 7.0
+    },
+    "Hundeidvik": {
+      "real": {
+        "nseg": 17,
+        "n_samples": 18960,
+        "fs": 128.0,
+        "csd_vs_scipy": 4.409298042636897e-16
+      },
+      "twin_matched": {
+        "nseg": 17,
+        "n_samples": 18432,
+        "fs": 200.0,
+        "csd_vs_scipy": 7.517131363911983e-16
+      },
+      "twin_full": {
+        "nseg": 10,
+        "n_samples": 12000,
+        "fs": 200.0,
+        "csd_vs_scipy": 7.818327152772854e-16
+      },
+      "fp_operator_vs_direct_rel": 1.0926942417165226e-07,
+      "real_full_vs_stored_node_maxdiff": 0.0,
+      "real_full_vs_stored_edge_maxdiff": 0.0,
+      "lines_y_mm": [
+        0,
+        6999
+      ],
+      "layouts": {
+        "full": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "single": [
+          12
+        ],
+        "front_pair": [
+          12,
+          13
+        ],
+        "front_mid": [
+          4,
+          5,
+          12,
+          13
+        ],
+        "alternate": [
+          1,
+          2,
+          5,
+          6,
+          9,
+          12,
+          13
+        ],
+        "one_line": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          12
+        ]
+      },
+      "seconds": 14.1
+    },
+    "Leknes": {
+      "real": {
+        "nseg": 6,
+        "n_samples": 7581,
+        "fs": 128.0,
+        "csd_vs_scipy": 2.678309783424742e-16
+      },
+      "twin_matched": {
+        "nseg": 6,
+        "n_samples": 7168,
+        "fs": 200.0,
+        "csd_vs_scipy": 7.422473355962846e-16
+      },
+      "twin_full": {
+        "nseg": 10,
+        "n_samples": 12000,
+        "fs": 200.0,
+        "csd_vs_scipy": 4.634565221769975e-16
+      },
+      "fp_operator_vs_direct_rel": 1.0365843090547021e-07,
+      "real_full_vs_stored_node_maxdiff": 0.0,
+      "real_full_vs_stored_edge_maxdiff": 0.0,
+      "lines_y_mm": [
+        0,
+        4500
+      ],
+      "layouts": {
+        "full": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "single": [
+          12
+        ],
+        "front_pair": [
+          12,
+          13
+        ],
+        "front_mid": [
+          4,
+          5,
+          12,
+          13
+        ],
+        "alternate": [
+          0,
+          1,
+          4,
+          5,
+          8,
+          9,
+          12,
+          13
+        ],
+        "one_line": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12
+        ]
+      },
+      "seconds": 7.4
+    },
+    "Linge": {
+      "real": {
+        "nseg": 7,
+        "n_samples": 8956,
+        "fs": 128.0,
+        "csd_vs_scipy": 4.14912157278802e-16
+      },
+      "twin_matched": {
+        "nseg": 7,
+        "n_samples": 8192,
+        "fs": 200.0,
+        "csd_vs_scipy": 7.188562185492377e-16
+      },
+      "twin_full": {
+        "nseg": 10,
+        "n_samples": 12000,
+        "fs": 200.0,
+        "csd_vs_scipy": 5.840094308501522e-16
+      },
+      "fp_operator_vs_direct_rel": 1.1562351667239775e-07,
+      "real_full_vs_stored_node_maxdiff": 0.0,
+      "real_full_vs_stored_edge_maxdiff": 0.0,
+      "lines_y_mm": [
+        0,
+        12000
+      ],
+      "layouts": {
+        "full": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "single": [
+          12
+        ],
+        "front_pair": [
+          12,
+          13
+        ],
+        "front_mid": [
+          4,
+          5,
+          12,
+          13
+        ],
+        "alternate": [
+          0,
+          1,
+          4,
+          5,
+          8,
+          9,
+          12,
+          13
+        ],
+        "one_line": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          12,
+          14
+        ]
+      },
+      "seconds": 17.4
+    },
+    "Saebo": {
+      "real": {
+        "nseg": 16,
+        "n_samples": 17865,
+        "fs": 128.0,
+        "csd_vs_scipy": 3.8507119748933154e-16
+      },
+      "twin_matched": {
+        "nseg": 16,
+        "n_samples": 17408,
+        "fs": 200.0,
+        "csd_vs_scipy": 4.4077880966707644e-16
+      },
+      "twin_full": {
+        "nseg": 10,
+        "n_samples": 12000,
+        "fs": 200.0,
+        "csd_vs_scipy": 6.505620294340372e-16
+      },
+      "fp_operator_vs_direct_rel": 9.316453176513084e-08,
+      "real_full_vs_stored_node_maxdiff": 0.0,
+      "real_full_vs_stored_edge_maxdiff": 0.0,
+      "lines_y_mm": [
+        0,
+        6999
+      ],
+      "layouts": {
+        "full": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "single": [
+          12
+        ],
+        "front_pair": [
+          12,
+          13
+        ],
+        "front_mid": [
+          4,
+          5,
+          12,
+          13
+        ],
+        "alternate": [
+          0,
+          1,
+          4,
+          5,
+          8,
+          9,
+          12,
+          13
+        ],
+        "one_line": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          12,
+          14
+        ]
+      },
+      "seconds": 13.4
+    },
+    "Eidsdal": {
+      "real": {
+        "nseg": 13,
+        "n_samples": 14795,
+        "fs": 128.0,
+        "csd_vs_scipy": 4.3972671238615307e-16
+      },
+      "twin_matched": {
+        "nseg": 13,
+        "n_samples": 14336,
+        "fs": 200.0,
+        "csd_vs_scipy": 4.795837671371105e-16
+      },
+      "twin_full": {
+        "nseg": 10,
+        "n_samples": 12000,
+        "fs": 200.0,
+        "csd_vs_scipy": 6.399084001724014e-16
+      },
+      "fp_operator_vs_direct_rel": 9.806281636913798e-08,
+      "real_full_vs_stored_node_maxdiff": 0.0,
+      "real_full_vs_stored_edge_maxdiff": 0.0,
+      "lines_y_mm": [
+        0,
+        9000
+      ],
+      "layouts": {
+        "full": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "single": [
+          12
+        ],
+        "front_pair": [
+          12,
+          13
+        ],
+        "front_mid": [
+          4,
+          5,
+          12,
+          13
+        ],
+        "alternate": [
+          2,
+          3,
+          6,
+          7,
+          12,
+          13
+        ],
+        "one_line": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          12
+        ]
+      },
+      "seconds": 20.3
+    },
+    "Liabygda": {
+      "real": {
+        "nseg": 12,
+        "n_samples": 14156,
+        "fs": 128.0,
+        "csd_vs_scipy": 8.539054912528243e-16
+      },
+      "twin_matched": {
+        "nseg": 12,
+        "n_samples": 13312,
+        "fs": 200.0,
+        "csd_vs_scipy": 4.652491884327812e-16
+      },
+      "twin_full": {
+        "nseg": 10,
+        "n_samples": 12000,
+        "fs": 200.0,
+        "csd_vs_scipy": 9.513088908098466e-16
+      },
+      "fp_operator_vs_direct_rel": 1.0355081937729831e-07,
+      "real_full_vs_stored_node_maxdiff": 0.0,
+      "real_full_vs_stored_edge_maxdiff": 0.0,
+      "lines_y_mm": [
+        0,
+        9000
+      ],
+      "layouts": {
+        "full": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "single": [
+          12
+        ],
+        "front_pair": [
+          12,
+          13
+        ],
+        "front_mid": [
+          4,
+          5,
+          12,
+          13
+        ],
+        "alternate": [
+          2,
+          3,
+          6,
+          7,
+          12,
+          13
+        ],
+        "one_line": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          12
+        ]
+      },
+      "seconds": 18.1
+    },
+    "Stranda": {
+      "real": {
+        "nseg": 16,
+        "n_samples": 17640,
+        "fs": 128.0,
+        "csd_vs_scipy": 6.977350187627295e-16
+      },
+      "twin_matched": {
+        "nseg": 16,
+        "n_samples": 17408,
+        "fs": 200.0,
+        "csd_vs_scipy": 7.935721177567271e-16
+      },
+      "twin_full": {
+        "nseg": 10,
+        "n_samples": 12000,
+        "fs": 200.0,
+        "csd_vs_scipy": 6.875206609404705e-16
+      },
+      "fp_operator_vs_direct_rel": 9.939164215458165e-08,
+      "real_full_vs_stored_node_maxdiff": 0.0,
+      "real_full_vs_stored_edge_maxdiff": 0.0,
+      "lines_y_mm": [
+        0,
+        9000
+      ],
+      "layouts": {
+        "full": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "single": [
+          12
+        ],
+        "front_pair": [
+          12,
+          13
+        ],
+        "front_mid": [
+          4,
+          5,
+          12,
+          13
+        ],
+        "alternate": [
+          2,
+          3,
+          6,
+          7,
+          12,
+          13
+        ],
+        "one_line": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          12
+        ]
+      },
+      "seconds": 19.1
+    },
+    "Festoya": {
+      "real": {
+        "nseg": 14,
+        "n_samples": 15697,
+        "fs": 128.0,
+        "csd_vs_scipy": 6.18009825829464e-16
+      },
+      "twin_matched": {
+        "nseg": 14,
+        "n_samples": 15360,
+        "fs": 200.0,
+        "csd_vs_scipy": 4.936771526203693e-16
+      },
+      "twin_full": {
+        "nseg": 10,
+        "n_samples": 12000,
+        "fs": 200.0,
+        "csd_vs_scipy": 4.2539742023691356e-16
+      },
+      "fp_operator_vs_direct_rel": 1.1865626848492332e-07,
+      "real_full_vs_stored_node_maxdiff": 0.0,
+      "real_full_vs_stored_edge_maxdiff": 0.0,
+      "lines_y_mm": [
+        0,
+        12000
+      ],
+      "layouts": {
+        "full": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "single": [
+          12
+        ],
+        "front_pair": [
+          12,
+          13
+        ],
+        "front_mid": [
+          4,
+          5,
+          12,
+          13
+        ],
+        "alternate": [
+          2,
+          3,
+          6,
+          7,
+          12,
+          13
+        ],
+        "one_line": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          12
+        ]
+      },
+      "seconds": 13.9
+    }
+  }
+}

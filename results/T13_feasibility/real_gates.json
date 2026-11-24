@@ -1,0 +1,178 @@
+{
+  "zeroshot": {
+    "torch_threads": 14,
+    "inputs": "Final_results_for_paper/data/field_inputs_v2/phase3_corrected",
+    "s5_main_edgegat_N2000": {
+      "pass": true,
+      "rows": 36,
+      "columns": 9,
+      "max_abs_diff": 0.0
+    },
+    "s5_transfer_edgegat_N600": {
+      "pass": true,
+      "rows": 36,
+      "columns": 9,
+      "max_abs_diff": 0.0
+    },
+    "feature_convention": {
+      "pass": true,
+      "per_structure": {
+        "Hellesylt": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Hundeidvik": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Leknes": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Linge": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Saebo": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Eidsdal": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Liabygda": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Stranda": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Festoya": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        }
+      }
+    },
+    "orientation_inputs": {
+      "pass": true,
+      "rule": "cos/sin of graph_package edge_attr_geom theta == unit vector dst - src (1e-6)",
+      "per_structure": {
+        "Hellesylt": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 128
+        },
+        "Hundeidvik": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 320
+        },
+        "Leknes": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 1.0403823341720297e-07,
+          "n_edges": 168
+        },
+        "Linge": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 576
+        },
+        "Saebo": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 304
+        },
+        "Eidsdal": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 596
+        },
+        "Liabygda": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 512
+        },
+        "Stranda": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 512
+        },
+        "Festoya": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 374
+        }
+      }
+    },
+    "input_dependence[ec_t13_coh_K1_N600]": {
+      "pass": true,
+      "gate": "structure mean < 0.9",
+      "overall_mean": 0.4572532806189581,
+      "worst_structure": 0.6403793840097789
+    },
+    "input_dependence[ec_t13_coh_K4_N600]": {
+      "pass": true,
+      "gate": "structure mean < 0.9",
+      "overall_mean": 0.40399947860799384,
+      "worst_structure": 0.5331295729638773
+    },
+    "input_dependence[ec_t13_coh_K1_N600_T120]": {
+      "pass": true,
+      "gate": "structure mean < 0.9",
+      "overall_mean": 0.38939406975565105,
+      "worst_structure": 0.6942614619830177
+    },
+    "input_dependence[ec_t13_coh_K1_N2000]": {
+      "pass": true,
+      "gate": "structure mean < 0.9",
+      "overall_mean": 0.3368165309408259,
+      "worst_structure": 0.7110033401143545
+    },
+    "input_dependence[ec_t13_orient_K4_N600]": {
+      "pass": true,
+      "gate": "structure mean < 0.9",
+      "overall_mean": 0.16252086344239688,
+      "worst_structure": 0.2703307212467328
+    },
+    "input_dependence[ec_varexc_edgegat_N600]": {
+      "pass": true,
+      "gate": "structure mean < 0.9",
+      "overall_mean": 0.4572532806189581,
+      "worst_structure": 0.6403793840097789
+    },
+    "input_dependence[ec_varexc_edgegat_geomorient_N600]": {
+      "pass": true,
+      "gate": "structure mean < 0.9",
+      "overall_mean": 0.19110887853404807,
+      "worst_structure": 0.28290017980622223
+    },
+    "pass": true,
+    "wall_s": 2.2,
+    "t11_arms_reproduce_t11": {
+      "pass": true,
+      "per_net": {
+        "ec_varexc_edgegat_N600": {
+          "rows": 36,
+          "max_abs_diff": 0.0,
+          "pass": true
+        },
+        "ec_varexc_edgegat_geomorient_N600": {
+          "rows": 36,
+          "max_abs_diff": 0.0,
+          "pass": true
+        }
+      }
+    }
+  }
+}

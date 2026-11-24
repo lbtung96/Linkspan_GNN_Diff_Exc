@@ -1,0 +1,16 @@
+{
+  "all_node_mac_equals_q_eval": {
+    "max_abs_diff": 1.1102230246251565e-16,
+    "pass": true
+  },
+  "support_masks": {
+    "n_support_eq_ng_plus_2": true,
+    "mask_matches_graph": true,
+    "pass": true
+  },
+  "t5_means_reproduce": {
+    "max_abs_diff": 1.1102230246251565e-16,
+    "pass": true
+  },
+  "pass": true
+}

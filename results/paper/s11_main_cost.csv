@@ -1,0 +1,2 @@
+run,N,n_train,n_val,params_total,params_edge_path,epochs,best_epoch,s_per_epoch_alone,est_5000_epochs_h_alone,est_to_best_epoch_h_alone,recorded_train_time_h,timing_epochs,threads,machine
+edgegat_N2000,2000,1700,300,55912,29856,5000,591,3.302010917663574,4.586126274532742,0.5429973509046766,9.46762109524674,40,2,"Intel64 Family 6 Model 186 Stepping 2, GenuineIntel / 20 logical CPUs"

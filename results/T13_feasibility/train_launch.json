@@ -1,0 +1,27 @@
+{
+  "ec_t13_coh_K1_N600": {
+    "rc": 0,
+    "wall_s": 913.5,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_ec_t13_coh_K1_N600.log"
+  },
+  "ec_t13_coh_K4_N600": {
+    "rc": 0,
+    "wall_s": 933.0,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_ec_t13_coh_K4_N600.log"
+  },
+  "ec_t13_coh_K1_N600_T120": {
+    "rc": 0,
+    "wall_s": 933.0,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_ec_t13_coh_K1_N600_T120.log"
+  },
+  "ec_t13_coh_K1_N2000": {
+    "rc": 0,
+    "wall_s": 1819.0,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_ec_t13_coh_K1_N2000.log"
+  },
+  "ec_t13_orient_K4_N600": {
+    "rc": 0,
+    "wall_s": 1819.0,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_ec_t13_orient_K4_N600.log"
+  }
+}

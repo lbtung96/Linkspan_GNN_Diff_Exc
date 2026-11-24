@@ -1,0 +1,737 @@
+{
+ "batches": [
+  {
+   "archive": "Linkspan_GNN_OMA",
+   "archive_commit": "f4e1ad5",
+   "only": null,
+   "late": false,
+   "tally": {
+    "copy grid_modal_Kinematic_MPC.py": {
+     "files": 1,
+     "MB": 0.069294
+    },
+    "copy standalone_mode_matching_mmi.py": {
+     "files": 1,
+     "MB": 0.054926
+    },
+    "copy export_projected_graph.py": {
+     "files": 1,
+     "MB": 0.019906
+    },
+    "copy simulate_uniform_inertial_u3_white_noise.py": {
+     "files": 1,
+     "MB": 0.032651
+    },
+    "copy generate_population_dataset_modes4.py": {
+     "files": 1,
+     "MB": 0.105371
+    },
+    "copy GraphSAGE_Modal_GNN.py": {
+     "files": 1,
+     "MB": 0.06258
+    },
+    "copy EdgeGATConv_Modal_GNN.py": {
+     "files": 1,
+     "MB": 0.035599
+    },
+    "copy phase3_utils.py": {
+     "files": 1,
+     "MB": 0.003767
+    },
+    "copy infer_phase1_unseen_structure.py": {
+     "files": 1,
+     "MB": 0.013309
+    },
+    "copy infer_phase2a_unseen_structure.py": {
+     "files": 1,
+     "MB": 0.023902
+    },
+    "copy infer_phase2a_unseen_structure_edgegat.py": {
+     "files": 1,
+     "MB": 0.007268
+    },
+    "copy infer_phase2a_deterministic_edgegat.py": {
+     "files": 1,
+     "MB": 0.050322
+    },
+    "copy build_phase3_graphs.py": {
+     "files": 1,
+     "MB": 0.019974
+    },
+    "copy analyze_phase1_run.py": {
+     "files": 1,
+     "MB": 0.017944
+    },
+    "copy structures.py": {
+     "files": 1,
+     "MB": 0.002795
+    },
+    "copy process_field_modal_filtering.py": {
+     "files": 1,
+     "MB": 0.063841
+    },
+    "copy ref_modes_Ng2_Balcony.npz": {
+     "files": 1,
+     "MB": 0.02121
+    },
+    "copy ref_modes_Ng2_No_bal.npz": {
+     "files": 1,
+     "MB": 0.02121
+    },
+    "copy ref_modes_Ng3.npz": {
+     "files": 1,
+     "MB": 0.02937
+    },
+    "copy ref_modes_Ng4.npz": {
+     "files": 1,
+     "MB": 0.03753
+    },
+    "copy ref_modes_Ng5.npz": {
+     "files": 1,
+     "MB": 0.04569
+    },
+    "copy ref_modes_Ng6.npz": {
+     "files": 1,
+     "MB": 0.055106
+    },
+    "copy pipeline/fr_common.py": {
+     "files": 1,
+     "MB": 0.00815
+    },
+    "copy pipeline/fr_train.py": {
+     "files": 1,
+     "MB": 0.021757
+    },
+    "copy pipeline/fr_edge_modes.py": {
+     "files": 1,
+     "MB": 0.00402
+    },
+    "copy pipeline/s0_generate_population.py": {
+     "files": 1,
+     "MB": 0.009528
+    },
+    "copy pipeline/s4_indomain.py": {
+     "files": 1,
+     "MB": 0.008642
+    },
+    "copy pipeline/s5_zeroshot.py": {
+     "files": 1,
+     "MB": 0.011937
+    },
+    "copy pipeline/s5a_field_inputs.py": {
+     "files": 1,
+     "MB": 0.012544
+    },
+    "copy pipeline/s6_decomposition.py": {
+     "files": 1,
+     "MB": 0.016001
+    },
+    "copy pipeline/c_ec23_metrics.py": {
+     "files": 1,
+     "MB": 0.006354
+    },
+    "copy pipeline/c_excitation_diag.py": {
+     "files": 1,
+     "MB": 0.005966
+    },
+    "copy pipeline/c_fdd.py": {
+     "files": 1,
+     "MB": 0.016697
+    },
+    "copy pipeline/c_freq_baselines.py": {
+     "files": 1,
+     "MB": 0.006937
+    },
+    "copy pipeline/c_fresh_checks.py": {
+     "files": 1,
+     "MB": 0.010955
+    },
+    "copy pipeline/c_gen_fresh_test.py": {
+     "files": 1,
+     "MB": 0.006396
+    },
+    "copy pipeline/c_report.py": {
+     "files": 1,
+     "MB": 0.041887
+    },
+    "copy pipeline/c_rescore.py": {
+     "files": 1,
+     "MB": 0.013808
+    },
+    "copy pipeline/ec_common.py": {
+     "files": 1,
+     "MB": 0.002231
+    },
+    "copy pipeline/g_t10_channel_order.py": {
+     "files": 1,
+     "MB": 0.011506
+    },
+    "copy pipeline/g_t10_swapped_inputs.py": {
+     "files": 1,
+     "MB": 0.006039
+    },
+    "copy pipeline/h_common.py": {
+     "files": 1,
+     "MB": 0.010118
+    },
+    "copy pipeline/h_eval.py": {
+     "files": 1,
+     "MB": 0.010266
+    },
+    "copy pipeline/h_prepare.py": {
+     "files": 1,
+     "MB": 0.016573
+    },
+    "copy pipeline/h_real.py": {
+     "files": 1,
+     "MB": 0.015981
+    },
+    "copy pipeline/h_report.py": {
+     "files": 1,
+     "MB": 0.030759
+    },
+    "copy pipeline/h_train.py": {
+     "files": 1,
+     "MB": 0.007123
+    },
+    "copy pipeline/k_common.py": {
+     "files": 1,
+     "MB": 0.00819
+    },
+    "copy pipeline/k_diag.py": {
+     "files": 1,
+     "MB": 0.002357
+    },
+    "copy pipeline/k_eval.py": {
+     "files": 1,
+     "MB": 0.009205
+    },
+    "copy pipeline/k_prepare.py": {
+     "files": 1,
+     "MB": 0.019702
+    },
+    "copy pipeline/k_real.py": {
+     "files": 1,
+     "MB": 0.0024
+    },
+    "copy pipeline/k_report.py": {
+     "files": 1,
+     "MB": 0.030325
+    },
+    "copy pipeline/k_train.py": {
+     "files": 1,
+     "MB": 0.014489
+    },
+    "copy pipeline/m_input_anatomy.py": {
+     "files": 1,
+     "MB": 0.022054
+    },
+    "copy pipeline/m_occlusion.py": {
+     "files": 1,
+     "MB": 0.007655
+    },
+    "copy pipeline/n_mirror_test.py": {
+     "files": 1,
+     "MB": 0.019519
+    },
+    "copy pipeline/p_common.py": {
+     "files": 1,
+     "MB": 0.008325
+    },
+    "copy pipeline/p_eval.py": {
+     "files": 1,
+     "MB": 0.011093
+    },
+    "copy pipeline/p_train.py": {
+     "files": 1,
+     "MB": 0.008237
+    },
+    "copy pipeline/q_common.py": {
+     "files": 1,
+     "MB": 0.002376
+    },
+    "copy pipeline/q_eval.py": {
+     "files": 1,
+     "MB": 0.005348
+    },
+    "copy pipeline/q_prepare.py": {
+     "files": 1,
+     "MB": 0.002824
+    },
+    "copy pipeline/q_template_compare.py": {
+     "files": 1,
+     "MB": 0.008667
+    },
+    "copy pipeline/q_train.py": {
+     "files": 1,
+     "MB": 0.005608
+    },
+    "copy pipeline/r_excitation_realism.py": {
+     "files": 1,
+     "MB": 0.020882
+    },
+    "copy pipeline/t_gates.py": {
+     "files": 1,
+     "MB": 0.015866
+    },
+    "copy pipeline/u_decomposition.py": {
+     "files": 1,
+     "MB": 0.019126
+    },
+    "copy pipeline/v_common.py": {
+     "files": 1,
+     "MB": 0.010016
+    },
+    "copy pipeline/v_eval.py": {
+     "files": 1,
+     "MB": 0.007251
+    },
+    "copy pipeline/v_fit_noise.py": {
+     "files": 1,
+     "MB": 0.009687
+    },
+    "copy pipeline/v_prepare.py": {
+     "files": 1,
+     "MB": 0.011866
+    },
+    "copy pipeline/v_train.py": {
+     "files": 1,
+     "MB": 0.003359
+    },
+    "copy pipeline/x_plot_excitation.py": {
+     "files": 1,
+     "MB": 0.010151
+    },
+    "copy experiments/E5_real_transfer": {
+     "files": 21,
+     "MB": 0.9248939999999999
+    },
+    "copy experiments/E14_corner_sensors": {
+     "files": 17,
+     "MB": 22.614601
+    },
+    "copy experiments/E16_fp_imputers": {
+     "files": 7,
+     "MB": 37.128465
+    },
+    "copy experiments/E17_real_holdout": {
+     "files": 7,
+     "MB": 9.667903000000003
+    },
+    "copy experiments/E18_population_basis": {
+     "files": 14,
+     "MB": 19.324415
+    },
+    "copy experiments/E19_mode_identification": {
+     "files": 9,
+     "MB": 2.915663
+    },
+    "copy tools/run_stage.py": {
+     "files": 1,
+     "MB": 0.006595
+    },
+    "copy tools/INTERPRETER": {
+     "files": 1,
+     "MB": 0.000113
+    },
+    "copy results/T5_fresh_test_baselines": {
+     "files": 25,
+     "MB": 25.326718999999997
+    },
+    "copy results/T10_channel_order": {
+     "files": 8,
+     "MB": 0.064467
+    },
+    "copy results/T11_varied_excitation_pilot": {
+     "files": 22,
+     "MB": 5.099446
+    },
+    "copy results/T12_excitation_plots": {
+     "files": 4,
+     "MB": 2.793402
+    },
+    "copy results/T13_feasibility": {
+     "files": 17,
+     "MB": 6.133427999999999
+    },
+    "copy results/T14_input_anatomy": {
+     "files": 14,
+     "MB": 0.5617109999999998
+    },
+    "copy results/T15_mirror_test": {
+     "files": 7,
+     "MB": 0.8758350000000001
+    },
+    "copy results/T16_sign_test": {
+     "files": 9,
+     "MB": 5.064366000000001
+    },
+    "copy results/T17_scale_up": {
+     "files": 14,
+     "MB": 7.220954999999999
+    },
+    "copy results/T18_excitation_realism": {
+     "files": 8,
+     "MB": 1.1303599999999998
+    },
+    "copy results/T19_decomposition": {
+     "files": 6,
+     "MB": 0.516642
+    },
+    "copy results/T20_deck_forcing": {
+     "files": 6,
+     "MB": 0.02561
+    },
+    "copy results/RUN_LEDGER.jsonl": {
+     "files": 1,
+     "MB": 2.37401
+    },
+    "copy docs/history": {
+     "files": 2,
+     "MB": 0.032186
+    },
+    "copy data/splits": {
+     "files": 18,
+     "MB": 0.4992
+    },
+    "copy phase3_real_graphs/Eidsdal": {
+     "files": 5,
+     "MB": 4.464497
+    },
+    "copy phase3_real_graphs/Festoya": {
+     "files": 5,
+     "MB": 2.799049
+    },
+    "copy phase3_real_graphs/Hellesylt": {
+     "files": 5,
+     "MB": 0.9980910000000002
+    },
+    "copy phase3_real_graphs/Hundeidvik": {
+     "files": 5,
+     "MB": 2.408604
+    },
+    "copy phase3_real_graphs/Leknes": {
+     "files": 5,
+     "MB": 1.2951039999999998
+    },
+    "copy phase3_real_graphs/Liabygda": {
+     "files": 5,
+     "MB": 3.8448179999999996
+    },
+    "copy phase3_real_graphs/Linge": {
+     "files": 5,
+     "MB": 4.287015
+    },
+    "copy phase3_real_graphs/Saebo": {
+     "files": 5,
+     "MB": 2.2891829999999995
+    },
+    "copy phase3_real_graphs/Stranda": {
+     "files": 5,
+     "MB": 3.844817
+    },
+    "copy phase3_real_graphs/Sykkylven": {
+     "files": 5,
+     "MB": 2.6829310000000004
+    },
+    "copy SSI_modal_infor/build_ssi_modal_infor.py": {
+     "files": 1,
+     "MB": 0.010081
+    },
+    "copy SSI_modal_infor/compare_ssi_relabel_impact.py": {
+     "files": 1,
+     "MB": 0.011551
+    },
+    "copy SSI_modal_infor/Eidsdal_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.00208
+    },
+    "copy SSI_modal_infor/Festoya_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.001888
+    },
+    "copy SSI_modal_infor/grid_Eidsdal.txt": {
+     "files": 1,
+     "MB": 0.000269
+    },
+    "copy SSI_modal_infor/grid_Festoya.txt": {
+     "files": 1,
+     "MB": 0.000211
+    },
+    "copy SSI_modal_infor/grid_Hellesylt.txt": {
+     "files": 1,
+     "MB": 0.000223
+    },
+    "copy SSI_modal_infor/grid_Hundeidvik.txt": {
+     "files": 1,
+     "MB": 0.000253
+    },
+    "copy SSI_modal_infor/grid_Leknes.txt": {
+     "files": 1,
+     "MB": 0.000284
+    },
+    "copy SSI_modal_infor/grid_Liabygda.txt": {
+     "files": 1,
+     "MB": 0.000301
+    },
+    "copy SSI_modal_infor/grid_Linge.txt": {
+     "files": 1,
+     "MB": 0.000267
+    },
+    "copy SSI_modal_infor/grid_Saebo.txt": {
+     "files": 1,
+     "MB": 0.000235
+    },
+    "copy SSI_modal_infor/grid_Stranda.txt": {
+     "files": 1,
+     "MB": 0.000294
+    },
+    "copy SSI_modal_infor/grid_Sykkylven.txt": {
+     "files": 1,
+     "MB": 0.000288
+    },
+    "copy SSI_modal_infor/Hellesylt_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.001888
+    },
+    "copy SSI_modal_infor/Hundeidvik_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.00208
+    },
+    "copy SSI_modal_infor/legacy_labels_backup.npz": {
+     "files": 1,
+     "MB": 0.019892
+    },
+    "copy SSI_modal_infor/Leknes_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.00208
+    },
+    "copy SSI_modal_infor/Liabygda_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.00208
+    },
+    "copy SSI_modal_infor/Linge_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.00208
+    },
+    "copy SSI_modal_infor/mode_selection.json": {
+     "files": 1,
+     "MB": 0.003647
+    },
+    "copy SSI_modal_infor/README.md": {
+     "files": 1,
+     "MB": 0.00645
+    },
+    "copy SSI_modal_infor/relabel_impact.csv": {
+     "files": 1,
+     "MB": 0.000723
+    },
+    "copy SSI_modal_infor/RELABEL_IMPACT.md": {
+     "files": 1,
+     "MB": 0.003756
+    },
+    "copy SSI_modal_infor/relabel_phase3_datasets.py": {
+     "files": 1,
+     "MB": 0.008656
+    },
+    "copy SSI_modal_infor/Saebo_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.00208
+    },
+    "copy SSI_modal_infor/Stranda_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.00208
+    },
+    "copy SSI_modal_infor/Sykkylven_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.00208
+    },
+    "copy field_measurements_raw/build_real_linkspan_graphs.py": {
+     "files": 1,
+     "MB": 0.065111
+    },
+    "copy field_measurements_raw/Eidsdal.mat": {
+     "files": 1,
+     "MB": 2.529674
+    },
+    "copy field_measurements_raw/Eisdal_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.004047
+    },
+    "copy field_measurements_raw/Festoya.mat": {
+     "files": 1,
+     "MB": 3.104911
+    },
+    "copy field_measurements_raw/Festoya_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.006204
+    },
+    "copy field_measurements_raw/grid_Eidsdal.txt": {
+     "files": 1,
+     "MB": 0.000269
+    },
+    "copy field_measurements_raw/grid_Festoya.txt": {
+     "files": 1,
+     "MB": 0.000211
+    },
+    "copy field_measurements_raw/grid_Hellesylt.txt": {
+     "files": 1,
+     "MB": 0.000223
+    },
+    "copy field_measurements_raw/grid_Hundeidvik.txt": {
+     "files": 1,
+     "MB": 0.000253
+    },
+    "copy field_measurements_raw/grid_Leknes.txt": {
+     "files": 1,
+     "MB": 0.000284
+    },
+    "copy field_measurements_raw/grid_Liabygda.txt": {
+     "files": 1,
+     "MB": 0.000301
+    },
+    "copy field_measurements_raw/grid_Linge.txt": {
+     "files": 1,
+     "MB": 0.000267
+    },
+    "copy field_measurements_raw/grid_Saebo.txt": {
+     "files": 1,
+     "MB": 0.000235
+    },
+    "copy field_measurements_raw/grid_Stranda.txt": {
+     "files": 1,
+     "MB": 0.000294
+    },
+    "copy field_measurements_raw/grid_Sykkylven.txt": {
+     "files": 1,
+     "MB": 0.000288
+    },
+    "copy field_measurements_raw/Hellesylt.mat": {
+     "files": 1,
+     "MB": 2.681118
+    },
+    "copy field_measurements_raw/Hellesylt_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.005549
+    },
+    "copy field_measurements_raw/Hundeidvik.mat": {
+     "files": 1,
+     "MB": 3.531295
+    },
+    "copy field_measurements_raw/Hundeidvik_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.004044
+    },
+    "copy field_measurements_raw/Leknes.mat": {
+     "files": 1,
+     "MB": 3.544132
+    },
+    "copy field_measurements_raw/Leknes_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.006278
+    },
+    "copy field_measurements_raw/Liabygda.mat": {
+     "files": 1,
+     "MB": 3.64592
+    },
+    "copy field_measurements_raw/Liabygda_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.00479
+    },
+    "copy field_measurements_raw/Linge.mat": {
+     "files": 1,
+     "MB": 2.068823
+    },
+    "copy field_measurements_raw/Linge_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.004417
+    },
+    "copy field_measurements_raw/phase3_graph_io.py": {
+     "files": 1,
+     "MB": 0.003024
+    },
+    "copy field_measurements_raw/Saebo.mat": {
+     "files": 1,
+     "MB": 3.314251
+    },
+    "copy field_measurements_raw/Saebo_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.006286
+    },
+    "copy field_measurements_raw/Stranda_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.004789
+    },
+    "copy field_measurements_raw/Stranda_Walk.mat": {
+     "files": 1,
+     "MB": 3.340976
+    },
+    "copy field_measurements_raw/Sykkylven.mat": {
+     "files": 1,
+     "MB": 3.87923
+    },
+    "copy field_measurements_raw/Sykkylven_Data_picked.mat": {
+     "files": 1,
+     "MB": 0.006282
+    },
+    "copy experiments/E6_controls": {
+     "files": 9,
+     "MB": 0.155974
+    },
+    "copy results/paper": {
+     "files": 92,
+     "MB": 31.86521
+    },
+    "copy data/population": {
+     "files": 5,
+     "MB": 5.794058
+    },
+    "copy runs/paper": {
+     "files": 2280,
+     "MB": 109.86521199999997
+    },
+    "copy runs/ec": {
+     "files": 223,
+     "MB": 29.83383299999999
+    },
+    "link data/population": {
+     "files": 5500,
+     "MB": 7897.945684000002
+    },
+    "link data/field_inputs_v2": {
+     "files": 182,
+     "MB": 195.8982150000001
+    },
+    "link data/legacy_preP": {
+     "files": 203,
+     "MB": 218.82141400000006
+    },
+    "link experiments/E19_mode_identification": {
+     "files": 800,
+     "MB": 61.02417799999989
+    },
+    "link data/T5": {
+     "files": 2010,
+     "MB": 1559.3167959999987
+    },
+    "link data/T11": {
+     "files": 2200,
+     "MB": 1572.232771000004
+    },
+    "link data/T13": {
+     "files": 9248,
+     "MB": 6610.538260999979
+    },
+    "link data/T17": {
+     "files": 10200,
+     "MB": 7312.400643999966
+    },
+    "link data/T20": {
+     "files": 17700,
+     "MB": 21775.77118099963
+    }
+   },
+   "n_ops": 51074
+  }
+ ]
+}

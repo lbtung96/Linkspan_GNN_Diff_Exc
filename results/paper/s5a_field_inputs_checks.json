@@ -1,0 +1,2036 @@
+{
+  "field_sensor_swap": [
+    6,
+    8
+  ],
+  "serials": [
+    "x40131",
+    "x40133"
+  ],
+  "field_raw_mat_dir": "C:\\MyFolder\\Individual_Study_Syllabus\\System identification code\\Field measurements 26_270625\\For GNN",
+  "per_structure": {
+    "Hellesylt": {
+      "serials": {
+        "pass": true,
+        "n_channels": 42,
+        "names": {
+          "6": [
+            "x40131_ch1",
+            "x40131_ch2",
+            "x40131_ch3"
+          ],
+          "8": [
+            "x40133_ch1",
+            "x40133_ch2",
+            "x40133_ch3"
+          ]
+        }
+      },
+      "channel_reorder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        26,
+        21,
+        22,
+        23,
+        18,
+        19,
+        20,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "identity": {
+        "pass": true,
+        "settings_diff_vs_legacy": [],
+        "field_arrays": 27,
+        "field_arrays_differing": [],
+        "feature_arrays": 17,
+        "feature_arrays_differing": []
+      },
+      "swap": {
+        "pass": true,
+        "raw_u3_equals_legacy_rows_exchanged": true,
+        "ssi_file_arrays_unchanged": true,
+        "non_feature_arrays_changed": [],
+        "feature_rel_change": {
+          "x_psd": 0.02531577169298202,
+          "x_psd_order_B": 0.009023647161523641,
+          "x_psd_norm_full": 0.021508454054844545,
+          "edge_attr_cpsd_full": 0.1249246524814765
+        },
+        "field_arrays": {
+          "freq_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_full": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_clean": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.6263528888077265e-19
+          },
+          "raw_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 1.6263032587282567e-19
+          },
+          "singular_values": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 1.4210854715202004e-14
+          },
+          "first_singular_vectors": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 1.072098405376252e-15
+          },
+          "ssi_picked_frequencies_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "ssi_selected_indices": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "u3_channel_indices_zero_based": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_sdm_B1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.6263528888077265e-19
+          },
+          "filtered_sdm_T1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 5.421010862427522e-20
+          },
+          "filtered_sdm_B2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 3.705769144237564e-22
+          },
+          "filtered_sdm_T2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 2.117582368135751e-22
+          },
+          "mask_B1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_B2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 5.837786722267917e-21
+          },
+          "filtered_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 6.692130385407648e-20
+          },
+          "filtered_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 1.0169357239627856e-20
+          },
+          "filtered_u3_timeseries_visualization_only": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          }
+        }
+      },
+      "pass": true
+    },
+    "Hundeidvik": {
+      "serials": {
+        "pass": true,
+        "n_channels": 48,
+        "names": {
+          "6": [
+            "x40131_ch1",
+            "x40131_ch2",
+            "x40131_ch3"
+          ],
+          "8": [
+            "x40133_ch1",
+            "x40133_ch2",
+            "x40133_ch3"
+          ]
+        }
+      },
+      "channel_reorder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        26,
+        21,
+        22,
+        23,
+        18,
+        19,
+        20,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "identity": {
+        "pass": true,
+        "settings_diff_vs_legacy": [],
+        "field_arrays": 27,
+        "field_arrays_differing": [],
+        "feature_arrays": 17,
+        "feature_arrays_differing": []
+      },
+      "swap": {
+        "pass": true,
+        "raw_u3_equals_legacy_rows_exchanged": true,
+        "ssi_file_arrays_unchanged": true,
+        "non_feature_arrays_changed": [],
+        "feature_rel_change": {
+          "x_psd": 0.14326617574911762,
+          "x_psd_order_B": 0.16975582542419124,
+          "x_psd_norm_full": 0.13903047887258152,
+          "edge_attr_cpsd_full": 0.05647275664401846
+        },
+        "field_arrays": {
+          "freq_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_full": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_clean": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 2.710505431213761e-20
+          },
+          "raw_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 2.710505431213761e-20
+          },
+          "singular_values": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 1.0102419190528313e-16
+          },
+          "first_singular_vectors": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 3.0022245318650408e-15
+          },
+          "ssi_picked_frequencies_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "ssi_selected_indices": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "u3_channel_indices_zero_based": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_sdm_B1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 2.546750477660859e-21
+          },
+          "filtered_sdm_T1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 2.710505431213761e-20
+          },
+          "filtered_sdm_B2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.3552527156068805e-20
+          },
+          "filtered_sdm_T2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 2.5433037001749034e-21
+          },
+          "mask_B1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_B2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 4.235164736271502e-22
+          },
+          "filtered_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 4.2372321831782735e-22
+          },
+          "filtered_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 1.6948928732713094e-21
+          },
+          "filtered_u3_timeseries_visualization_only": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          }
+        }
+      },
+      "pass": true
+    },
+    "Leknes": {
+      "serials": {
+        "pass": true,
+        "n_channels": 48,
+        "names": {
+          "6": [
+            "x40131_ch1",
+            "x40131_ch2",
+            "x40131_ch3"
+          ],
+          "8": [
+            "x40133_ch1",
+            "x40133_ch2",
+            "x40133_ch3"
+          ]
+        }
+      },
+      "channel_reorder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        26,
+        21,
+        22,
+        23,
+        18,
+        19,
+        20,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "identity": {
+        "pass": true,
+        "settings_diff_vs_legacy": [],
+        "field_arrays": 27,
+        "field_arrays_differing": [],
+        "feature_arrays": 17,
+        "feature_arrays_differing": []
+      },
+      "swap": {
+        "pass": true,
+        "raw_u3_equals_legacy_rows_exchanged": true,
+        "ssi_file_arrays_unchanged": true,
+        "non_feature_arrays_changed": [],
+        "feature_rel_change": {
+          "x_psd": 0.21649984684797696,
+          "x_psd_order_B": 0.22867402629906916,
+          "x_psd_norm_full": 0.20483760416264443,
+          "edge_attr_cpsd_full": 0.07185202100703808
+        },
+        "field_arrays": {
+          "freq_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_full": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_clean": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.0842021724855044e-19
+          },
+          "raw_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 1.0842021724855044e-19
+          },
+          "singular_values": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 5.53843080474065e-16
+          },
+          "first_singular_vectors": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 6.670499109600517e-16
+          },
+          "ssi_picked_frequencies_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "ssi_selected_indices": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "u3_channel_indices_zero_based": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_sdm_B1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.0842021724855044e-19
+          },
+          "filtered_sdm_T1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.1858461261560205e-20
+          },
+          "filtered_sdm_B2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 6.166492935852456e-21
+          },
+          "filtered_sdm_T2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 4.924108293947276e-22
+          },
+          "mask_B1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_B2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 4.235495595592836e-21
+          },
+          "filtered_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 1.6102114604895997e-20
+          },
+          "filtered_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 3.4292414194124425e-21
+          },
+          "filtered_u3_timeseries_visualization_only": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          }
+        }
+      },
+      "pass": true
+    },
+    "Linge": {
+      "serials": {
+        "pass": true,
+        "n_channels": 48,
+        "names": {
+          "6": [
+            "x40131_ch1",
+            "x40131_ch2",
+            "x40131_ch3"
+          ],
+          "8": [
+            "x40133_ch1",
+            "x40133_ch2",
+            "x40133_ch3"
+          ]
+        }
+      },
+      "channel_reorder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        26,
+        21,
+        22,
+        23,
+        18,
+        19,
+        20,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "identity": {
+        "pass": true,
+        "settings_diff_vs_legacy": [],
+        "field_arrays": 27,
+        "field_arrays_differing": [],
+        "feature_arrays": 17,
+        "feature_arrays_differing": []
+      },
+      "swap": {
+        "pass": true,
+        "raw_u3_equals_legacy_rows_exchanged": true,
+        "ssi_file_arrays_unchanged": true,
+        "non_feature_arrays_changed": [],
+        "feature_rel_change": {
+          "x_psd": 0.1325748233676226,
+          "x_psd_order_B": 0.13184188397441632,
+          "x_psd_norm_full": 0.11596286274977705,
+          "edge_attr_cpsd_full": 0.04277394825623579
+        },
+        "field_arrays": {
+          "freq_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_full": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_clean": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 9.093631047385211e-22
+          },
+          "raw_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 5.293955920339377e-22
+          },
+          "singular_values": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 3.3881317890172014e-21
+          },
+          "first_singular_vectors": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 8.8843176636044e-16
+          },
+          "ssi_picked_frequencies_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "ssi_selected_indices": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "u3_channel_indices_zero_based": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_sdm_B1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 9.093631047385211e-22
+          },
+          "filtered_sdm_T1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 2.134061856895356e-22
+          },
+          "filtered_sdm_B2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 5.33515464223839e-23
+          },
+          "filtered_sdm_T2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 3.7081317642698815e-22
+          },
+          "mask_B1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_B2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 6.617444900424221e-23
+          },
+          "filtered_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 1.2406127966265958e-22
+          },
+          "filtered_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 2.9594113269415773e-23
+          },
+          "filtered_u3_timeseries_visualization_only": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          }
+        }
+      },
+      "pass": true
+    },
+    "Saebo": {
+      "serials": {
+        "pass": true,
+        "n_channels": 48,
+        "names": {
+          "6": [
+            "x40131_ch1",
+            "x40131_ch2",
+            "x40131_ch3"
+          ],
+          "8": [
+            "x40133_ch1",
+            "x40133_ch2",
+            "x40133_ch3"
+          ]
+        }
+      },
+      "channel_reorder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        26,
+        21,
+        22,
+        23,
+        18,
+        19,
+        20,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "identity": {
+        "pass": true,
+        "settings_diff_vs_legacy": [],
+        "field_arrays": 27,
+        "field_arrays_differing": [],
+        "feature_arrays": 17,
+        "feature_arrays_differing": []
+      },
+      "swap": {
+        "pass": true,
+        "raw_u3_equals_legacy_rows_exchanged": true,
+        "ssi_file_arrays_unchanged": true,
+        "non_feature_arrays_changed": [],
+        "feature_rel_change": {
+          "x_psd": 0.11807903858232792,
+          "x_psd_order_B": 0.11403966831773955,
+          "x_psd_norm_full": 0.12102413320216852,
+          "edge_attr_cpsd_full": 0.042623176155102645
+        },
+        "field_arrays": {
+          "freq_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_full": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_clean": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 6.776263578034403e-21
+          },
+          "raw_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 6.776263578034403e-21
+          },
+          "singular_values": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 2.541098841762901e-21
+          },
+          "first_singular_vectors": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 1.6136471996107273e-15
+          },
+          "ssi_picked_frequencies_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "ssi_selected_indices": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "u3_channel_indices_zero_based": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_sdm_B1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 4.382027843242328e-22
+          },
+          "filtered_sdm_T1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 6.776263578034403e-21
+          },
+          "filtered_sdm_B2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 8.472026678740318e-22
+          },
+          "filtered_sdm_T2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 8.470329472543003e-22
+          },
+          "mask_B1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_B2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 6.88214766747673e-22
+          },
+          "filtered_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 3.9262422075055737e-22
+          },
+          "filtered_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 9.779290098139746e-23
+          },
+          "filtered_u3_timeseries_visualization_only": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          }
+        }
+      },
+      "pass": true
+    },
+    "Eidsdal": {
+      "serials": {
+        "pass": true,
+        "n_channels": 48,
+        "names": {
+          "6": [
+            "x40131_ch1",
+            "x40131_ch2",
+            "x40131_ch3"
+          ],
+          "8": [
+            "x40133_ch1",
+            "x40133_ch2",
+            "x40133_ch3"
+          ]
+        }
+      },
+      "channel_reorder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        26,
+        21,
+        22,
+        23,
+        18,
+        19,
+        20,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "identity": {
+        "pass": true,
+        "settings_diff_vs_legacy": [],
+        "field_arrays": 27,
+        "field_arrays_differing": [],
+        "feature_arrays": 17,
+        "feature_arrays_differing": []
+      },
+      "swap": {
+        "pass": true,
+        "raw_u3_equals_legacy_rows_exchanged": true,
+        "ssi_file_arrays_unchanged": true,
+        "non_feature_arrays_changed": [],
+        "feature_rel_change": {
+          "x_psd": 0.1253469241816378,
+          "x_psd_order_B": 0.034617705009756375,
+          "x_psd_norm_full": 0.12344842847102099,
+          "edge_attr_cpsd_full": 0.05184598004386563
+        },
+        "field_arrays": {
+          "freq_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_full": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_clean": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 5.42365719446819e-20
+          },
+          "raw_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 5.421010862427522e-20
+          },
+          "singular_values": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 4.4133375625154334e-16
+          },
+          "first_singular_vectors": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 1.2806724564228628e-15
+          },
+          "ssi_picked_frequencies_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "ssi_selected_indices": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "u3_channel_indices_zero_based": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_sdm_B1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.412216697393274e-20
+          },
+          "filtered_sdm_T1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 5.42365719446819e-20
+          },
+          "filtered_sdm_B2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.6940658945086007e-21
+          },
+          "filtered_sdm_T2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 8.470329472543003e-22
+          },
+          "mask_B1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_B2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 1.1382209805308468e-21
+          },
+          "filtered_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 2.8086123212144258e-21
+          },
+          "filtered_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 8.474464366356547e-22
+          },
+          "filtered_u3_timeseries_visualization_only": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          }
+        }
+      },
+      "pass": true
+    },
+    "Liabygda": {
+      "serials": {
+        "pass": true,
+        "n_channels": 48,
+        "names": {
+          "6": [
+            "x40131_ch1",
+            "x40131_ch2",
+            "x40131_ch3"
+          ],
+          "8": [
+            "x40133_ch1",
+            "x40133_ch2",
+            "x40133_ch3"
+          ]
+        }
+      },
+      "channel_reorder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        26,
+        21,
+        22,
+        23,
+        18,
+        19,
+        20,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "identity": {
+        "pass": true,
+        "settings_diff_vs_legacy": [],
+        "field_arrays": 27,
+        "field_arrays_differing": [],
+        "feature_arrays": 17,
+        "feature_arrays_differing": []
+      },
+      "swap": {
+        "pass": true,
+        "raw_u3_equals_legacy_rows_exchanged": true,
+        "ssi_file_arrays_unchanged": true,
+        "non_feature_arrays_changed": [],
+        "feature_rel_change": {
+          "x_psd": 0.13001473103373085,
+          "x_psd_order_B": 0.17471070868647717,
+          "x_psd_norm_full": 0.12643362767276825,
+          "edge_attr_cpsd_full": 0.04215420610185963
+        },
+        "field_arrays": {
+          "freq_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_full": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_clean": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.6992279087106844e-21
+          },
+          "raw_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 1.6940658945086007e-21
+          },
+          "singular_values": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 1.038790928793563e-16
+          },
+          "first_singular_vectors": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 8.899114524108741e-16
+          },
+          "ssi_picked_frequencies_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "ssi_selected_indices": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "u3_channel_indices_zero_based": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_sdm_B1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 6.365142720300251e-22
+          },
+          "filtered_sdm_T1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 4.27683574820683e-22
+          },
+          "filtered_sdm_B2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.6992279087106844e-21
+          },
+          "filtered_sdm_T2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 3.1763735522036263e-22
+          },
+          "mask_B1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_B2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 4.235164736271502e-22
+          },
+          "filtered_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 4.2372321831782735e-22
+          },
+          "filtered_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 4.243428480200167e-22
+          },
+          "filtered_u3_timeseries_visualization_only": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          }
+        }
+      },
+      "pass": true
+    },
+    "Stranda": {
+      "serials": {
+        "pass": true,
+        "n_channels": 48,
+        "names": {
+          "6": [
+            "x40131_ch1",
+            "x40131_ch2",
+            "x40131_ch3"
+          ],
+          "8": [
+            "x40133_ch1",
+            "x40133_ch2",
+            "x40133_ch3"
+          ]
+        }
+      },
+      "channel_reorder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        26,
+        21,
+        22,
+        23,
+        18,
+        19,
+        20,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "identity": {
+        "pass": true,
+        "settings_diff_vs_legacy": [],
+        "field_arrays": 27,
+        "field_arrays_differing": [],
+        "feature_arrays": 17,
+        "feature_arrays_differing": []
+      },
+      "swap": {
+        "pass": true,
+        "raw_u3_equals_legacy_rows_exchanged": true,
+        "ssi_file_arrays_unchanged": true,
+        "non_feature_arrays_changed": [],
+        "feature_rel_change": {
+          "x_psd": 0.06275279462708007,
+          "x_psd_order_B": 0.0972107293281262,
+          "x_psd_norm_full": 0.06516999396123797,
+          "edge_attr_cpsd_full": 0.0422444573007165
+        },
+        "field_arrays": {
+          "freq_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_full": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_clean": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.7462031549538564e-21
+          },
+          "raw_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 1.6940658945086007e-21
+          },
+          "singular_values": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 1.2857440835331718e-16
+          },
+          "first_singular_vectors": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 3.891451472101688e-15
+          },
+          "ssi_picked_frequencies_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "ssi_selected_indices": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "u3_channel_indices_zero_based": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_sdm_B1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.2709801710992359e-21
+          },
+          "filtered_sdm_T1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 4.437143610901464e-22
+          },
+          "filtered_sdm_B2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.0634338960589593e-22
+          },
+          "filtered_sdm_T2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.7462031549538564e-21
+          },
+          "mask_B1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_B2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 6.374767091072401e-22
+          },
+          "filtered_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 8.496139543553422e-22
+          },
+          "filtered_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 8.370479270402673e-23
+          },
+          "filtered_u3_timeseries_visualization_only": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          }
+        }
+      },
+      "pass": true
+    },
+    "Festoya": {
+      "serials": {
+        "pass": true,
+        "n_channels": 42,
+        "names": {
+          "6": [
+            "x40131_ch1",
+            "x40131_ch2",
+            "x40131_ch3"
+          ],
+          "8": [
+            "x40133_ch1",
+            "x40133_ch2",
+            "x40133_ch3"
+          ]
+        }
+      },
+      "channel_reorder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        26,
+        21,
+        22,
+        23,
+        18,
+        19,
+        20,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "identity": {
+        "pass": true,
+        "settings_diff_vs_legacy": [],
+        "field_arrays": 27,
+        "field_arrays_differing": [],
+        "feature_arrays": 17,
+        "feature_arrays_differing": []
+      },
+      "swap": {
+        "pass": true,
+        "raw_u3_equals_legacy_rows_exchanged": true,
+        "ssi_file_arrays_unchanged": true,
+        "non_feature_arrays_changed": [],
+        "feature_rel_change": {
+          "x_psd": 0.0883875885081934,
+          "x_psd_order_B": 0.08399126345601461,
+          "x_psd_norm_full": 0.09078906922847027,
+          "edge_attr_cpsd_full": 0.062028291298456543
+        },
+        "field_arrays": {
+          "freq_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_full": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_u3_timeseries_clean": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_spectral_density_matrix": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.1988803723171533e-06
+          },
+          "raw_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_psd": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 1.1988803723171533e-06
+          },
+          "singular_values": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 2.6599728352439986e-16
+          },
+          "first_singular_vectors": {
+            "compared_to_legacy": "sensor rows permuted",
+            "equal": false,
+            "max_abs_diff": 3.091259711681655e-15
+          },
+          "ssi_picked_frequencies_hz": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "ssi_selected_indices": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "u3_channel_indices_zero_based": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_sdm_B1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.361195386955468e-20
+          },
+          "filtered_sdm_T1": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.3234889800848443e-22
+          },
+          "filtered_sdm_B2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 1.1988803723171533e-06
+          },
+          "filtered_sdm_T2": {
+            "compared_to_legacy": "sensor rows and columns permuted",
+            "equal": false,
+            "max_abs_diff": 8.470329472543003e-22
+          },
+          "mask_B1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_T1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "mask_B2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 0.3324902841801805
+          },
+          "mask_T2": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "raw_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": true,
+            "max_abs_diff": 0.0
+          },
+          "filtered_cpsd_0-1": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 3.0950745686012184e-07
+          },
+          "filtered_cpsd_0-7": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 2.835384470212802e-07
+          },
+          "filtered_cpsd_3-10": {
+            "compared_to_legacy": "unpermuted",
+            "equal": false,
+            "max_abs_diff": 2.7057750199101856e-07
+          },
+          "filtered_u3_timeseries_visualization_only": {
+            "compared_to_legacy": "sensor columns permuted",
+            "equal": false,
+            "max_abs_diff": 0.0010079465706760808
+          }
+        }
+      },
+      "pass": true
+    }
+  },
+  "pass": true
+}

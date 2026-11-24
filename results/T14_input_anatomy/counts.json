@@ -1,0 +1,9 @@
+{
+  "train_structures": 508,
+  "test_structures": 500,
+  "train_mirror_symmetric": 435,
+  "test_mirror_symmetric": 427,
+  "res_w_bins": 3,
+  "off_w_bins": 6,
+  "phi_min": 0.3
+}

@@ -1,0 +1,35 @@
+arm,Ng,reason,count
+broadband,2,No feasible candidate survives MMI scoring for target B1,198
+broadband,2,No feasible candidate survives MMI scoring for target B2,79
+broadband,2,No feasible candidate survives MMI scoring for target T1,25
+broadband,2,No feasible candidate survives MMI scoring for target T2,296
+broadband,2,selected-mode MAC below gate,70
+broadband,3,No feasible candidate survives MMI scoring for target B1,102
+broadband,3,No feasible candidate survives MMI scoring for target B2,41
+broadband,3,No feasible candidate survives MMI scoring for target T1,64
+broadband,3,No feasible candidate survives MMI scoring for target T2,12
+broadband,4,No feasible candidate survives MMI scoring for target B1,63
+broadband,4,No feasible candidate survives MMI scoring for target B2,39
+broadband,4,No feasible candidate survives MMI scoring for target T1,108
+broadband,4,No feasible candidate survives MMI scoring for target T2,29
+broadband,5,No feasible candidate survives MMI scoring for target B1,1
+broadband,5,No feasible candidate survives MMI scoring for target B2,5
+broadband,5,No feasible candidate survives MMI scoring for target T1,77
+broadband,5,No feasible candidate survives MMI scoring for target T2,15
+narrowband,2,No feasible candidate survives MMI scoring for target B1,198
+narrowband,2,No feasible candidate survives MMI scoring for target B2,79
+narrowband,2,No feasible candidate survives MMI scoring for target T1,25
+narrowband,2,No feasible candidate survives MMI scoring for target T2,296
+narrowband,2,selected-mode MAC below gate,70
+narrowband,3,No feasible candidate survives MMI scoring for target B1,102
+narrowband,3,No feasible candidate survives MMI scoring for target B2,41
+narrowband,3,No feasible candidate survives MMI scoring for target T1,64
+narrowband,3,No feasible candidate survives MMI scoring for target T2,12
+narrowband,4,No feasible candidate survives MMI scoring for target B1,63
+narrowband,4,No feasible candidate survives MMI scoring for target B2,39
+narrowband,4,No feasible candidate survives MMI scoring for target T1,108
+narrowband,4,No feasible candidate survives MMI scoring for target T2,29
+narrowband,5,No feasible candidate survives MMI scoring for target B1,1
+narrowband,5,No feasible candidate survives MMI scoring for target B2,5
+narrowband,5,No feasible candidate survives MMI scoring for target T1,77
+narrowband,5,No feasible candidate survives MMI scoring for target T2,15

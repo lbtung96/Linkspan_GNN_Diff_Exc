@@ -1,0 +1,33 @@
+input,template_from,scored_on,Ng,n_train,n_test,frac_same_side,median_corr_with_template
+node log PSD,paper-record training structures,"test, paper record",2,114,110,1.0,0.6154286489417834
+node log PSD,paper-record training structures,"test, own records (paper_varexc)",2,114,110,0.5454545454545454,0.00760753836076807
+node log PSD,paper-record training structures,"test, paper record",3,111,106,1.0,0.5605618330123465
+node log PSD,paper-record training structures,"test, own records (paper_varexc)",3,111,106,0.6037735849056604,0.022858625793516323
+node log PSD,paper-record training structures,"test, paper record",4,105,108,1.0,0.5662316995053751
+node log PSD,paper-record training structures,"test, own records (paper_varexc)",4,105,108,0.5277777777777778,0.00809007239076349
+node log PSD,paper-record training structures,"test, paper record",5,105,103,1.0,0.4873623716945478
+node log PSD,paper-record training structures,"test, own records (paper_varexc)",5,105,103,0.49514563106796117,-0.0010701884974112113
+node log PSD,own-record training structures (r0),"test, own records (paper_varexc)",2,114,110,0.5636363636363636,0.017800330322914837
+node log PSD,own-record training structures (r0),"test, paper record",2,114,110,0.5,0.0019145491220990004
+node log PSD,own-record training structures (r0),"test, own records (paper_varexc)",3,111,106,0.4528301886792453,-0.009944597618036528
+node log PSD,own-record training structures (r0),"test, paper record",3,111,106,0.7358490566037735,0.05076069529561805
+node log PSD,own-record training structures (r0),"test, own records (paper_varexc)",4,105,108,0.5092592592592593,0.005652590250882003
+node log PSD,own-record training structures (r0),"test, paper record",4,105,108,0.7870370370370371,0.049487857922254935
+node log PSD,own-record training structures (r0),"test, own records (paper_varexc)",5,105,103,0.5436893203883495,0.004818139505717611
+node log PSD,own-record training structures (r0),"test, paper record",5,105,103,0.8932038834951457,0.10050015136695466
+edge Re coherency,paper-record training structures,"test, paper record",2,114,110,1.0,0.4681279392742398
+edge Re coherency,paper-record training structures,"test, own records (paper_varexc)",2,114,110,0.43636363636363634,-0.011023449136174666
+edge Re coherency,paper-record training structures,"test, paper record",3,111,106,0.9528301886792453,0.5133856176556053
+edge Re coherency,paper-record training structures,"test, own records (paper_varexc)",3,111,106,0.5471698113207547,0.020520109466861114
+edge Re coherency,paper-record training structures,"test, paper record",4,105,108,0.9629629629629629,0.491089662434409
+edge Re coherency,paper-record training structures,"test, own records (paper_varexc)",4,105,108,0.5462962962962963,0.009007574865584995
+edge Re coherency,paper-record training structures,"test, paper record",5,105,103,0.9902912621359223,0.46387886751276963
+edge Re coherency,paper-record training structures,"test, own records (paper_varexc)",5,105,103,0.4563106796116505,-0.008210870775636196
+edge Re coherency,own-record training structures (r0),"test, own records (paper_varexc)",2,114,110,0.5363636363636364,0.008217618240171174
+edge Re coherency,own-record training structures (r0),"test, paper record",2,114,110,0.5818181818181818,0.010115127948299702
+edge Re coherency,own-record training structures (r0),"test, own records (paper_varexc)",3,111,106,0.49056603773584906,-0.010946371822437247
+edge Re coherency,own-record training structures (r0),"test, paper record",3,111,106,0.42452830188679247,-0.026982151947513952
+edge Re coherency,own-record training structures (r0),"test, own records (paper_varexc)",4,105,108,0.5833333333333334,0.02614899610956864
+edge Re coherency,own-record training structures (r0),"test, paper record",4,105,108,0.6759259259259259,0.03117492652181665
+edge Re coherency,own-record training structures (r0),"test, own records (paper_varexc)",5,105,103,0.5242718446601942,0.010193563735969037
+edge Re coherency,own-record training structures (r0),"test, paper record",5,105,103,0.34951456310679613,-0.03637378776753879

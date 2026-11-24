@@ -1,0 +1,78 @@
+{
+ "reference": "Final_results_for_paper/pipeline/results/s4_indomain_summary.csv (best_model rows)",
+ "rule": "every shared numeric column equal (==)",
+ "runs": {
+  "edgegat_N100": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  },
+  "edgegat_N1000": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  },
+  "edgegat_N200": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  },
+  "edgegat_N2000": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  },
+  "edgegat_N400": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  },
+  "edgegat_N5000": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  },
+  "edgegat_N600": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  },
+  "edgegat_N800": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  },
+  "edgegat_geomorient_N600": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  },
+  "edgegat_noedge_N600": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  },
+  "graphsage_cpsd8_signed_N600": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  },
+  "graphsage_cpsdfull_signed_N600": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  },
+  "graphsage_geomorient_signed_N600": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  },
+  "graphsage_noedge_signed_N600": {
+   "columns_compared": 22,
+   "mismatches": {},
+   "pass": true
+  }
+ },
+ "n_runs": 14,
+ "pass": true
+}

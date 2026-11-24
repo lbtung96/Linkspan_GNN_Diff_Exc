@@ -1,0 +1,121 @@
+{
+  "torch_threads": 14,
+  "copy_reproduces_E2": {
+    "pass": true,
+    "rows": 36,
+    "max_abs_diff": 0.0,
+    "inputs": "legacy raw sensor order (E2's)"
+  },
+  "inputs": {
+    "features": "Final_results_for_paper/data/field_inputs_v2/phase3_corrected",
+    "field_sensor_swap": [
+      6,
+      8
+    ]
+  },
+  "feature_convention": {
+    "pass": true,
+    "per_structure": {
+      "Hellesylt": {
+        "node_rowmax_min": 1.0,
+        "node_rowmax_max": 1.0,
+        "edge_absmax": 1.0
+      },
+      "Hundeidvik": {
+        "node_rowmax_min": 1.0,
+        "node_rowmax_max": 1.0,
+        "edge_absmax": 1.0
+      },
+      "Leknes": {
+        "node_rowmax_min": 1.0,
+        "node_rowmax_max": 1.0,
+        "edge_absmax": 1.0
+      },
+      "Linge": {
+        "node_rowmax_min": 1.0,
+        "node_rowmax_max": 1.0,
+        "edge_absmax": 1.0
+      },
+      "Saebo": {
+        "node_rowmax_min": 1.0,
+        "node_rowmax_max": 1.0,
+        "edge_absmax": 1.0
+      },
+      "Eidsdal": {
+        "node_rowmax_min": 1.0,
+        "node_rowmax_max": 1.0,
+        "edge_absmax": 1.0
+      },
+      "Liabygda": {
+        "node_rowmax_min": 1.0,
+        "node_rowmax_max": 1.0,
+        "edge_absmax": 1.0
+      },
+      "Stranda": {
+        "node_rowmax_min": 1.0,
+        "node_rowmax_max": 1.0,
+        "edge_absmax": 1.0
+      },
+      "Festoya": {
+        "node_rowmax_min": 1.0,
+        "node_rowmax_max": 1.0,
+        "edge_absmax": 1.0
+      }
+    },
+    "synthetic_training_reference": {
+      "node_rowmax_max": 1.0,
+      "edge_absmax_max": 1.0,
+      "n": 40
+    }
+  },
+  "input_dependence": {
+    "pass": true,
+    "gate": "structure mean < 0.9",
+    "per_structure_mean": {
+      "Hellesylt": 0.3932277491782565,
+      "Hundeidvik": 0.23103834509867535,
+      "Leknes": 0.309498065097996,
+      "Linge": 0.5069929684597861,
+      "Saebo": 0.5124784069309309,
+      "Eidsdal": 0.5412849513189055,
+      "Liabygda": 0.2663881856500311,
+      "Stranda": 0.31305116060636995,
+      "Festoya": 0.42175303062323966
+    },
+    "overall_mean": 0.38841254032935457,
+    "worst_slot": 0.9150119232642998
+  },
+  "input_dependence_N100": {
+    "pass": true,
+    "overall_mean": 0.3986785465939009
+  },
+  "input_dependence_N200": {
+    "pass": true,
+    "overall_mean": 0.39218796108360315
+  },
+  "input_dependence_N400": {
+    "pass": true,
+    "overall_mean": 0.30919415575278725
+  },
+  "input_dependence_N600": {
+    "pass": true,
+    "overall_mean": 0.4307274325307241
+  },
+  "input_dependence_N800": {
+    "pass": true,
+    "overall_mean": 0.3274696510956387
+  },
+  "input_dependence_N1000": {
+    "pass": true,
+    "overall_mean": 0.32847816130418367
+  },
+  "input_dependence_N2000": {
+    "pass": true,
+    "overall_mean": 0.38841254032935457
+  },
+  "input_dependence_N5000": {
+    "pass": true,
+    "overall_mean": 0.4132097194973617
+  },
+  "pass": true
+}

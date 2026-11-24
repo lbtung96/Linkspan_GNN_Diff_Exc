@@ -1,0 +1,17 @@
+{
+  "linked_from_t13": {
+    "rec1_N2000": 426,
+    "rec2_N2000": 426,
+    "rec3_N2000": 426
+  },
+  "simulated": 3822,
+  "failed": [],
+  "n_failed": 0,
+  "complete": {
+    "rec1_N2000": 1700,
+    "rec2_N2000": 1700,
+    "rec3_N2000": 1700
+  },
+  "pass": true,
+  "wall_s": 1297.1
+}

@@ -1,0 +1,21 @@
+[run] Final_results_for_paper\EC_comments\pipeline\h_real.py --part zeroshot
+DEVICE: cpu
+[zeroshot] ec_varexc_edgegat_N600               MAC vs SSI 0.231  vs FE 0.260
+[zeroshot] edgegat_N600                         MAC vs SSI 0.221  vs FE 0.237
+[zeroshot] ec_varexc_edgegat_geomorient_N600    MAC vs SSI 0.506  vs FE 0.470
+[zeroshot] edgegat_geomorient_N600              MAC vs SSI 0.492  vs FE 0.426
+{
+ "torch_threads": 14,
+ "inputs": "Final_results_for_paper/data/field_inputs_v2/phase3_corrected",
+ "s5_main_edgegat_N2000": true,
+ "s5_transfer_edgegat_N600": true,
+ "feature_convention": true,
+ "orientation_inputs": true,
+ "input_dependence[ec_varexc_edgegat_N600]": true,
+ "input_dependence[edgegat_N600]": true,
+ "input_dependence[ec_varexc_edgegat_geomorient_N600]": true,
+ "input_dependence[edgegat_geomorient_N600]": true,
+ "pass": true,
+ "wall_s": 1.5
+}
+[ok] Final_results_for_paper\EC_comments\pipeline\h_real.py exit=0 in 6.2s (2 file(s) changed) -> logs\Final_results_for_paper__EC_comments__pipeline__h_real__part_zeroshot.log

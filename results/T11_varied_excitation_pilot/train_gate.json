@@ -1,0 +1,25 @@
+{
+  "rule": "first 3 epochs of training_history.csv equal number for number (t_gates.HIST_KEYS)",
+  "threads": 2,
+  "runs": {
+    "edgegat_N600": {
+      "rc": 0,
+      "wall_s": 29.8,
+      "log": "Final_results_for_paper\\EC_comments\\logs\\T11_train_gate_edgegat_N600.log",
+      "pass": true,
+      "epochs_compared": 3,
+      "n_diffs": 0,
+      "first_diffs": []
+    },
+    "edgegat_geomorient_N600": {
+      "rc": 0,
+      "wall_s": 29.8,
+      "log": "Final_results_for_paper\\EC_comments\\logs\\T11_train_gate_edgegat_geomorient_N600.log",
+      "pass": true,
+      "epochs_compared": 3,
+      "n_diffs": 0,
+      "first_diffs": []
+    }
+  },
+  "pass": true
+}

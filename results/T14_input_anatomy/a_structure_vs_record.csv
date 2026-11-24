@@ -1,0 +1,5 @@
+comparison,bins,node log PSD,edge Re coherency,edge Im coherency
+two varied records,resonance (+-3 bins of a target mode),0.9663624133430596,0.9477332785598493,0.15542624053469833
+two varied records,off resonance (> 6 bins from every target mode),0.8576033416869895,0.931892448492488,0.0631276893121659
+paper record vs a varied record,resonance (+-3 bins of a target mode),0.9676218763772787,0.9470565081313551,0.15335687585083013
+paper record vs a varied record,off resonance (> 6 bins from every target mode),0.8597695201496357,0.9309844993251042,0.06376691787905929

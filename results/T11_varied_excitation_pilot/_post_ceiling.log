@@ -1,0 +1,289 @@
+[run] Final_results_for_paper\EC_comments\pipeline\h_real.py --part ceiling --workers 9
+C:\MyFolder\Individual_Study_Syllabus\GNN_PBSHM\Linkspan_GNN\Linkspan_GNN_OMA\simulate_uniform_inertial_u3_white_noise.py:209: RuntimeWarning: TORSION_NODE_PAIR=[117, 22] out of valid range [1,68]. Skipping torsion proxy.
+  warnings.warn(f"TORSION_NODE_PAIR={TORSION_NODE_PAIR} out of valid range [1,{nn}]. Skipping torsion proxy.", RuntimeWarning)
+C:\MyFolder\Individual_Study_Syllabus\GNN_PBSHM\Linkspan_GNN\Linkspan_GNN_OMA\simulate_uniform_inertial_u3_white_noise.py:209: RuntimeWarning: TORSION_NODE_PAIR=[117, 22] out of valid range [1,90]. Skipping torsion proxy.
+  warnings.warn(f"TORSION_NODE_PAIR={TORSION_NODE_PAIR} out of valid range [1,{nn}]. Skipping torsion proxy.", RuntimeWarning)
+DEVICE: cpu
+Model check: Nn=68, rigid_mpc_slaves=32, full_ndof=408, ndof_red=216, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=68, rigid_mpc_slaves=32, full_ndof=408, ndof_red=216, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=68, rigid_mpc_slaves=32, full_ndof=408, ndof_red=216, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=68, rigid_mpc_slaves=32, full_ndof=408, ndof_red=216, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=68, rigid_mpc_slaves=32, full_ndof=408, ndof_red=216, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+DEVICE: cpu
+Model check: Nn=90, rigid_mpc_slaves=44, full_ndof=540, ndof_red=276, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = staggered_x
+diagonal braces = 4
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=6
+Model check: Nn=90, rigid_mpc_slaves=44, full_ndof=540, ndof_red=276, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = staggered_x
+diagonal braces = 4
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=6
+Model check: Nn=90, rigid_mpc_slaves=44, full_ndof=540, ndof_red=276, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = staggered_x
+diagonal braces = 4
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=6
+Model check: Nn=90, rigid_mpc_slaves=44, full_ndof=540, ndof_red=276, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = staggered_x
+diagonal braces = 4
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=6
+Model check: Nn=90, rigid_mpc_slaves=44, full_ndof=540, ndof_red=276, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = staggered_x
+diagonal braces = 4
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=6
+DEVICE: cpu
+Model check: Nn=160, rigid_mpc_slaves=78, full_ndof=960, ndof_red=492, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = single_partial_x
+diagonal braces = 1
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=160, rigid_mpc_slaves=78, full_ndof=960, ndof_red=492, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = single_partial_x
+diagonal braces = 1
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=160, rigid_mpc_slaves=78, full_ndof=960, ndof_red=492, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = single_partial_x
+diagonal braces = 1
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=160, rigid_mpc_slaves=78, full_ndof=960, ndof_red=492, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = single_partial_x
+diagonal braces = 1
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=160, rigid_mpc_slaves=78, full_ndof=960, ndof_red=492, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = single_partial_x
+diagonal braces = 1
+[vref-check] balcony_edge_overrides=0
+DEVICE: cpu
+Model check: Nn=197, rigid_mpc_slaves=95, full_ndof=1182, ndof_red=612, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=197, rigid_mpc_slaves=95, full_ndof=1182, ndof_red=612, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=197, rigid_mpc_slaves=95, full_ndof=1182, ndof_red=612, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=197, rigid_mpc_slaves=95, full_ndof=1182, ndof_red=612, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=197, rigid_mpc_slaves=95, full_ndof=1182, ndof_red=612, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+DEVICE: cpu
+Model check: Nn=276, rigid_mpc_slaves=128, full_ndof=1656, ndof_red=888, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+Model check: Nn=276, rigid_mpc_slaves=128, full_ndof=1656, ndof_red=888, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+Model check: Nn=276, rigid_mpc_slaves=128, full_ndof=1656, ndof_red=888, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+Model check: Nn=276, rigid_mpc_slaves=128, full_ndof=1656, ndof_red=888, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+Model check: Nn=276, rigid_mpc_slaves=128, full_ndof=1656, ndof_red=888, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+DEVICE: cpu
+Model check: Nn=167, rigid_mpc_slaves=80, full_ndof=1002, ndof_red=522, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = staggered_x
+diagonal braces = 12
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=1
+Model check: Nn=167, rigid_mpc_slaves=80, full_ndof=1002, ndof_red=522, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = staggered_x
+diagonal braces = 12
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=1
+Model check: Nn=167, rigid_mpc_slaves=80, full_ndof=1002, ndof_red=522, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = staggered_x
+diagonal braces = 12
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=1
+Model check: Nn=167, rigid_mpc_slaves=80, full_ndof=1002, ndof_red=522, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = staggered_x
+diagonal braces = 12
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=1
+Model check: Nn=167, rigid_mpc_slaves=80, full_ndof=1002, ndof_red=522, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = staggered_x
+diagonal braces = 12
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=1
+DEVICE: cpu
+Model check: Nn=276, rigid_mpc_slaves=128, full_ndof=1656, ndof_red=888, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+Model check: Nn=276, rigid_mpc_slaves=128, full_ndof=1656, ndof_red=888, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+Model check: Nn=276, rigid_mpc_slaves=128, full_ndof=1656, ndof_red=888, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+Model check: Nn=276, rigid_mpc_slaves=128, full_ndof=1656, ndof_red=888, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+Model check: Nn=276, rigid_mpc_slaves=128, full_ndof=1656, ndof_red=888, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+DEVICE: cpu
+Model check: Nn=324, rigid_mpc_slaves=152, full_ndof=1944, ndof_red=1032, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+Model check: Nn=324, rigid_mpc_slaves=152, full_ndof=1944, ndof_red=1032, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+Model check: Nn=324, rigid_mpc_slaves=152, full_ndof=1944, ndof_red=1032, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+Model check: Nn=324, rigid_mpc_slaves=152, full_ndof=1944, ndof_red=1032, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+Model check: Nn=324, rigid_mpc_slaves=152, full_ndof=1944, ndof_red=1032, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check balcony] xhat=[ 0. -1.  0.], vref=[1. 0. 0.]
+[vref-check] balcony_edge_overrides=10
+DEVICE: cpu
+Model check: Nn=307, rigid_mpc_slaves=150, full_ndof=1842, ndof_red=942, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=307, rigid_mpc_slaves=150, full_ndof=1842, ndof_red=942, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=307, rigid_mpc_slaves=150, full_ndof=1842, ndof_red=942, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=307, rigid_mpc_slaves=150, full_ndof=1842, ndof_red=942, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+Model check: Nn=307, rigid_mpc_slaves=150, full_ndof=1842, ndof_red=942, ndof_reduced_ok=True
+no_rigid_group4=True, no_rigid_sec4=True
+diag_pattern = None
+diagonal braces = 0
+[vref-check] balcony_edge_overrides=0
+{
+ "s6_ceiling_edgegat_N2000_paper_record": true,
+ "orientation_fe_edges": true,
+ "records": null,
+ "wall_s": 33.6,
+ "pass": true
+}
+{
+ "mac_vs_fe_all_fe_nodes": 6.43122521903905e-08,
+ "mac_vs_ssi_sensor_nodes": 4.980852263969382e-08,
+ "pred_freq_hz": 9.5367431640625e-07,
+ "fe_target_freq_hz": 0.0,
+ "ssi_freq_hz": 0.0
+}
+[ceiling] ec_varexc_edgegat_N600               paper  MAC vs FE 0.361  vs SSI 0.306
+[ceiling] ec_varexc_edgegat_N600               new    MAC vs FE 0.383  vs SSI 0.349
+[ceiling] edgegat_N600                         paper  MAC vs FE 0.694  vs SSI 0.610
+[ceiling] edgegat_N600                         new    MAC vs FE 0.296  vs SSI 0.311
+[ceiling] ec_varexc_edgegat_geomorient_N600    paper  MAC vs FE 0.574  vs SSI 0.541
+[ceiling] ec_varexc_edgegat_geomorient_N600    new    MAC vs FE 0.569  vs SSI 0.529
+[ceiling] edgegat_geomorient_N600              paper  MAC vs FE 0.647  vs SSI 0.627
+[ceiling] edgegat_geomorient_N600              new    MAC vs FE 0.496  vs SSI 0.505
+[ceiling] edgegat_N2000                        paper  MAC vs FE 0.772  vs SSI 0.715
+[ceiling] edgegat_N2000                        new    MAC vs FE 0.321  vs SSI 0.340
+[ok] Final_results_for_paper\EC_comments\pipeline\h_real.py exit=0 in 33.8s (2 file(s) changed) -> logs\Final_results_for_paper__EC_comments__pipeline__h_real__part_ceiling___workers_9.log

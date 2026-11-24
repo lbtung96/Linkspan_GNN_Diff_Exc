@@ -1,0 +1,14 @@
+{
+  "synthetic_t16_refs": {
+    "max_abs_diff": 0.0,
+    "pass": true
+  },
+  "real_t16_refs": {
+    "max_abs_diff": {
+      "ec_t16_cohorient_signinv": 0.0,
+      "ec_t16_orient_signinv": 0.0
+    },
+    "pass": true
+  },
+  "pass": true
+}

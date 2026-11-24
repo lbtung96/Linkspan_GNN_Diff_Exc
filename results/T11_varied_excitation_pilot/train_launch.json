@@ -1,0 +1,12 @@
+{
+  "ec_varexc_edgegat_N600": {
+    "rc": 0,
+    "wall_s": 8723.7,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T11_train_ec_varexc_edgegat_N600.log"
+  },
+  "ec_varexc_edgegat_geomorient_N600": {
+    "rc": 0,
+    "wall_s": 10113.2,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T11_train_ec_varexc_edgegat_geomorient_N600.log"
+  }
+}

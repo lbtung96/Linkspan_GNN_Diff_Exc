@@ -1,0 +1,25 @@
+[run] Final_results_for_paper\EC_comments\pipeline\h_eval.py --runs ec_varexc_edgegat_N600 ec_varexc_edgegat_geomorient_N600 --workers 4
+[eval] paper                ec_varexc_edgegat_N600               MAC 0.4123 (0.2 min)
+[eval] paper                ec_varexc_edgegat_geomorient_N600    MAC 0.7248 (0.2 min)
+[eval] paper_varexc         ec_varexc_edgegat_N600               MAC 0.4122 (0.2 min)
+[eval] paper_varexc         ec_varexc_edgegat_geomorient_N600    MAC 0.7069 (0.2 min)
+[eval] fresh_test           ec_varexc_edgegat_N600               MAC 0.4073 (0.4 min)
+[eval] fresh_test           ec_varexc_edgegat_geomorient_N600    MAC 0.7225 (0.4 min)
+[eval] fresh_test_paperexc  ec_varexc_edgegat_N600               MAC 0.4102 (0.4 min)
+[eval] fresh_test_paperexc  ec_varexc_edgegat_geomorient_N600    MAC 0.7278 (0.4 min)
+DEVICE: cpu
+DEVICE: cpu
+DEVICE: cpu
+DEVICE: cpu
+[gate] paper_vs_s4_indomain: PASS
+[gate] fresh_vs_T5_rescore: PASS
+paper                ec_varexc_edgegat_N600               MAC 0.4123 [0.405, 0.419]  B1 0.766 T1 0.010 B2 0.755 T2 0.118  f MAE 0.363 Hz
+paper                ec_varexc_edgegat_geomorient_N600    MAC 0.7248 [0.708, 0.742]  B1 0.743 T1 0.677 B2 0.695 T2 0.784  f MAE 0.478 Hz
+paper_varexc         ec_varexc_edgegat_N600               MAC 0.4122 [0.404, 0.420]  B1 0.760 T1 0.010 B2 0.755 T2 0.124  f MAE 0.372 Hz
+paper_varexc         ec_varexc_edgegat_geomorient_N600    MAC 0.7069 [0.688, 0.725]  B1 0.741 T1 0.652 B2 0.673 T2 0.762  f MAE 0.481 Hz
+fresh_test           ec_varexc_edgegat_N600               MAC 0.4073 [0.399, 0.415]  B1 0.751 T1 0.010 B2 0.752 T2 0.115  f MAE 0.361 Hz
+fresh_test           ec_varexc_edgegat_geomorient_N600    MAC 0.7225 [0.705, 0.739]  B1 0.745 T1 0.681 B2 0.678 T2 0.786  f MAE 0.467 Hz
+fresh_test_paperexc  ec_varexc_edgegat_N600               MAC 0.4102 [0.402, 0.417]  B1 0.759 T1 0.009 B2 0.762 T2 0.111  f MAE 0.355 Hz
+fresh_test_paperexc  ec_varexc_edgegat_geomorient_N600    MAC 0.7278 [0.712, 0.744]  B1 0.743 T1 0.671 B2 0.701 T2 0.796  f MAE 0.460 Hz
+done in 0.4 min
+[ok] Final_results_for_paper\EC_comments\pipeline\h_eval.py exit=0 in 26.7s (5 file(s) changed) -> logs\Final_results_for_paper__EC_comments__pipeline__h_eval__runs_ec_varexc_edgegat_N600_ec_varexc.log

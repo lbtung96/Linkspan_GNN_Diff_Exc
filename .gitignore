@@ -1,0 +1,19 @@
+# Large or private inputs: listed with hashes in DATA.md, never pushed (public repository)
+data/
+runs/
+logs/
+field_measurements_raw/
+SSI_modal_infor/
+phase3_real_graphs/
+experiments/E6_controls/task2_raw/
+experiments/E19_mode_identification/cache/
+experiments/E18_population_basis/prior.npz
+
+# Python
+__pycache__/
+*.pyc
+.venv*/
+
+# Scratch
+*.tmp
+_scratch/

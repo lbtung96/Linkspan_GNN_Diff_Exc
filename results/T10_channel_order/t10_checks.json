@@ -1,0 +1,465 @@
+{
+  "torch_threads": 14,
+  "Hellesylt": {
+    "raw_file": "C:\\MyFolder\\Individual_Study_Syllabus\\System identification code\\Field measurements 26_270625\\For GNN\\Hellesylt.mat",
+    "raw_u3_full_equals_raw_mat_Data_ch3_in_column_order": true,
+    "u3_channel_indices_zero_based": [
+      2,
+      5,
+      8,
+      11,
+      14,
+      17,
+      20,
+      23,
+      26,
+      29,
+      32,
+      35,
+      38,
+      41
+    ],
+    "raw_names_rows_6_8": [
+      "x40131_ch3",
+      "x40133_ch3"
+    ],
+    "sensor_physical_ids": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138
+    ],
+    "y_ssi_equals_phi_sorted_uz_up_to_sign": true,
+    "ssi_mac_vs_fe_reproduced_maxabs": 2.171257051930553e-08
+  },
+  "Hundeidvik": {
+    "raw_file": "C:\\MyFolder\\Individual_Study_Syllabus\\System identification code\\Field measurements 26_270625\\For GNN\\Hundeidvik.mat",
+    "raw_u3_full_equals_raw_mat_Data_ch3_in_column_order": true,
+    "u3_channel_indices_zero_based": [
+      2,
+      5,
+      8,
+      11,
+      14,
+      17,
+      20,
+      23,
+      26,
+      29,
+      32,
+      35,
+      38,
+      41,
+      44,
+      47
+    ],
+    "raw_names_rows_6_8": [
+      "x40131_ch3",
+      "x40133_ch3"
+    ],
+    "sensor_physical_ids": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140
+    ],
+    "y_ssi_equals_phi_sorted_uz_up_to_sign": true,
+    "ssi_mac_vs_fe_reproduced_maxabs": 3.3752955985733024e-08
+  },
+  "Leknes": {
+    "raw_file": "C:\\MyFolder\\Individual_Study_Syllabus\\System identification code\\Field measurements 26_270625\\For GNN\\Leknes.mat",
+    "raw_u3_full_equals_raw_mat_Data_ch3_in_column_order": true,
+    "u3_channel_indices_zero_based": [
+      2,
+      5,
+      8,
+      11,
+      14,
+      17,
+      20,
+      23,
+      26,
+      29,
+      32,
+      35,
+      38,
+      41,
+      44,
+      47
+    ],
+    "raw_names_rows_6_8": [
+      "x40131_ch3",
+      "x40133_ch3"
+    ],
+    "sensor_physical_ids": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140
+    ],
+    "y_ssi_equals_phi_sorted_uz_up_to_sign": true,
+    "ssi_mac_vs_fe_reproduced_maxabs": 3.051921060315266e-08
+  },
+  "Linge": {
+    "raw_file": "C:\\MyFolder\\Individual_Study_Syllabus\\System identification code\\Field measurements 26_270625\\For GNN\\Linge.mat",
+    "raw_u3_full_equals_raw_mat_Data_ch3_in_column_order": true,
+    "u3_channel_indices_zero_based": [
+      2,
+      5,
+      8,
+      11,
+      14,
+      17,
+      20,
+      23,
+      26,
+      29,
+      32,
+      35,
+      38,
+      41,
+      44,
+      47
+    ],
+    "raw_names_rows_6_8": [
+      "x40131_ch3",
+      "x40133_ch3"
+    ],
+    "sensor_physical_ids": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140
+    ],
+    "y_ssi_equals_phi_sorted_uz_up_to_sign": true,
+    "ssi_mac_vs_fe_reproduced_maxabs": 2.1654742221599577e-08
+  },
+  "Saebo": {
+    "raw_file": "C:\\MyFolder\\Individual_Study_Syllabus\\System identification code\\Field measurements 26_270625\\For GNN\\Saebo.mat",
+    "raw_u3_full_equals_raw_mat_Data_ch3_in_column_order": true,
+    "u3_channel_indices_zero_based": [
+      2,
+      5,
+      8,
+      11,
+      14,
+      17,
+      20,
+      23,
+      26,
+      29,
+      32,
+      35,
+      38,
+      41,
+      44,
+      47
+    ],
+    "raw_names_rows_6_8": [
+      "x40131_ch3",
+      "x40133_ch3"
+    ],
+    "sensor_physical_ids": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140
+    ],
+    "y_ssi_equals_phi_sorted_uz_up_to_sign": true,
+    "ssi_mac_vs_fe_reproduced_maxabs": 2.8446372035695333e-08
+  },
+  "Eidsdal": {
+    "raw_file": "C:\\MyFolder\\Individual_Study_Syllabus\\System identification code\\Field measurements 26_270625\\For GNN\\Eidsdal.mat",
+    "raw_u3_full_equals_raw_mat_Data_ch3_in_column_order": true,
+    "u3_channel_indices_zero_based": [
+      2,
+      5,
+      8,
+      11,
+      14,
+      17,
+      20,
+      23,
+      26,
+      29,
+      32,
+      35,
+      38,
+      41,
+      44,
+      47
+    ],
+    "raw_names_rows_6_8": [
+      "x40131_ch3",
+      "x40133_ch3"
+    ],
+    "sensor_physical_ids": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140
+    ],
+    "y_ssi_equals_phi_sorted_uz_up_to_sign": true,
+    "ssi_mac_vs_fe_reproduced_maxabs": 2.228953788208088e-08
+  },
+  "Liabygda": {
+    "raw_file": "C:\\MyFolder\\Individual_Study_Syllabus\\System identification code\\Field measurements 26_270625\\For GNN\\Liabygda.mat",
+    "raw_u3_full_equals_raw_mat_Data_ch3_in_column_order": true,
+    "u3_channel_indices_zero_based": [
+      2,
+      5,
+      8,
+      11,
+      14,
+      17,
+      20,
+      23,
+      26,
+      29,
+      32,
+      35,
+      38,
+      41,
+      44,
+      47
+    ],
+    "raw_names_rows_6_8": [
+      "x40131_ch3",
+      "x40133_ch3"
+    ],
+    "sensor_physical_ids": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140
+    ],
+    "y_ssi_equals_phi_sorted_uz_up_to_sign": true,
+    "ssi_mac_vs_fe_reproduced_maxabs": 3.2015510131877534e-08
+  },
+  "Stranda": {
+    "raw_file": "C:\\MyFolder\\Individual_Study_Syllabus\\System identification code\\Field measurements 26_270625\\For GNN\\Stranda_Walk.mat",
+    "raw_u3_full_equals_raw_mat_Data_ch3_in_column_order": true,
+    "u3_channel_indices_zero_based": [
+      2,
+      5,
+      8,
+      11,
+      14,
+      17,
+      20,
+      23,
+      26,
+      29,
+      32,
+      35,
+      38,
+      41,
+      44,
+      47
+    ],
+    "raw_names_rows_6_8": [
+      "x40131_ch3",
+      "x40133_ch3"
+    ],
+    "sensor_physical_ids": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140
+    ],
+    "y_ssi_equals_phi_sorted_uz_up_to_sign": true,
+    "ssi_mac_vs_fe_reproduced_maxabs": 2.41541966428116e-08
+  },
+  "Festoya": {
+    "raw_file": "C:\\MyFolder\\Individual_Study_Syllabus\\System identification code\\Field measurements 26_270625\\For GNN\\Festoya.mat",
+    "raw_u3_full_equals_raw_mat_Data_ch3_in_column_order": true,
+    "u3_channel_indices_zero_based": [
+      2,
+      5,
+      8,
+      11,
+      14,
+      17,
+      20,
+      23,
+      26,
+      29,
+      32,
+      35,
+      38,
+      41
+    ],
+    "raw_names_rows_6_8": [
+      "x40131_ch3",
+      "x40133_ch3"
+    ],
+    "sensor_physical_ids": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138
+    ],
+    "y_ssi_equals_phi_sorted_uz_up_to_sign": true,
+    "ssi_mac_vs_fe_reproduced_maxabs": 2.9176854043910794e-08
+  },
+  "gate_stored_reproduces_s5": {
+    "pass": true,
+    "max_abs_diff": 0.0
+  },
+  "gate_prediction_rescoring_matches_evaluate": "abs diff < 1e-12 (last-bit BLAS alignment)",
+  "summary": {
+    "geometry_mean": {
+      "ssi_freq_hz": 7.639729148811764,
+      "fdd_freq_hz": 7.652777777777778,
+      "rel_diff_ssi_rows_6_8": 0.2622948064365321,
+      "rel_diff_fe_rows_6_8": 0.28488963915289184,
+      "mac_fe_vs_ssi_stored": 0.8560727045913246,
+      "mac_fe_vs_ssi_swapped": 0.8250274116316226,
+      "mac_fe_vs_fdd_raw": 0.7998557664328807,
+      "mac_fe_vs_fdd_swapped": 0.8296030980735147,
+      "mac_ssi_stored_vs_fdd_raw": 0.929466055444418,
+      "mac_ssi_stored_vs_fdd_swapped": 0.9624635531229992,
+      "rough_fe": 0.005836336511673139,
+      "rough_ssi_stored": 0.08093706659890934,
+      "rough_ssi_swapped": 0.17289083338898145,
+      "rough_fdd_raw": 0.18097265523314623,
+      "rough_fdd_swapped": 0.08953502339988903,
+      "n_sensors_on_line": 6.444444444444445
+    },
+    "zeroshot_mean": {
+      "mac_ssi_stored": 0.23268087883038394,
+      "mac_ssi_swapped": 0.23511993648053972,
+      "delta": 0.0024390576501557484,
+      "mac_pred_swapped_vs_ssi_stored": 0.23511993648053967
+    },
+    "zeroshot_per_mode": {
+      "B1": {
+        "mac_ssi_stored": 0.5488606516461365,
+        "mac_ssi_swapped": 0.5581019047675253
+      },
+      "T1": {
+        "mac_ssi_stored": 0.11666543919334457,
+        "mac_ssi_swapped": 0.12374562872290396
+      },
+      "B2": {
+        "mac_ssi_stored": 0.21324679489469567,
+        "mac_ssi_swapped": 0.20863854308761062
+      },
+      "T2": {
+        "mac_ssi_stored": 0.05195062958735896,
+        "mac_ssi_swapped": 0.049993669344118814
+      }
+    },
+    "votes": {
+      "fe_vs_ssi_stored_better": 36,
+      "fe_vs_fdd_swapped_better": 36,
+      "rough_ssi_stored_smoother": 32,
+      "rough_fdd_swapped_smoother": 32,
+      "n_cells": 36
+    }
+  }
+}

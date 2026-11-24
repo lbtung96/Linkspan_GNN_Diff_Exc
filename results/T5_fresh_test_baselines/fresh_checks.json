@@ -1,0 +1,144 @@
+{
+ "counts": {
+  "fresh_test": {
+   "n": 500,
+   "per_Ng": {
+    "2": 125,
+    "3": 125,
+    "4": 125,
+    "5": 125
+   }
+  },
+  "fresh_test_paperexc": {
+   "n": 500,
+   "per_Ng": {
+    "2": 125,
+    "3": 125,
+    "4": 125,
+    "5": 125
+   }
+  }
+ },
+ "fresh_sets_paired": {
+  "same_params_json_all": true,
+  "max_abs_diff_targets": 5.8758698573413426e-08,
+  "max_abs_diff_freq_hz": 0.0,
+  "node_psd_max_abs_diff_min": 0.7717265088571184,
+  "node_psd_max_abs_diff_median": 0.7717265088571184
+ },
+ "novelty": {
+  "fresh_test": {
+   "identical_params_json_in_paper_population": 0,
+   "nn_dist_to_any_paper_structure_min": 0.9150411088110636,
+   "nn_dist_to_paper_pool_median": 1.8189799287529875,
+   "nn_dist_to_paper_pool_min": 0.9150411088110636
+  },
+  "fresh_test_paperexc": {
+   "identical_params_json_in_paper_population": 0,
+   "nn_dist_to_any_paper_structure_min": 0.9150411088110636,
+   "nn_dist_to_paper_pool_median": 1.8189799287529875,
+   "nn_dist_to_paper_pool_min": 0.9150411088110636
+  },
+  "paper_test_to_paper_pool": {
+   "nn_dist_median": 1.8260863422627096,
+   "nn_dist_min": 0.9616008119035789
+  },
+  "space": "standardised over the 5500 paper structures: ['L_mm', 'Nx', 'dy_mm', 'E', 'rho', 'bottom_beam.x_frac', 'bottom_beam.overhang_mm', 'spring.kx_kN_per_m', 'spring.kz_kN_per_m', 'nsm.total_mass_tonne', 'balcony.length_mm', 'balcony.dx_mm', 'balcony.nBeams', 'balcony.x_center_frac'] (balcony fields 0 when no balcony), same Ng"
+ },
+ "categorical_shares": {
+  "diag_pattern": {
+   "fresh": {
+    "None": 0.294,
+    "global_x": 0.326,
+    "single_partial_x": 0.08,
+    "staggered_x": 0.3
+   },
+   "paper_test": {
+    "None": 0.288,
+    "global_x": 0.33,
+    "single_partial_x": 0.086,
+    "staggered_x": 0.296
+   }
+  },
+  "balcony.enable": {
+   "fresh": {
+    "False": 0.512,
+    "True": 0.488
+   },
+   "paper_test": {
+    "False": 0.496,
+    "True": 0.504
+   }
+  },
+  "balcony.side": {
+   "fresh": {
+    "both": 0.326,
+    "left": 0.082,
+    "none": 0.512,
+    "right": 0.08
+   },
+   "paper_test": {
+    "both": 0.358,
+    "left": 0.082,
+    "none": 0.496,
+    "right": 0.064
+   }
+  }
+ },
+ "ks_summary": {
+  "n_tests": 95,
+  "n_p_below_0.05": 4,
+  "n_p_below_0.05_over_n_tests_expected_under_null": 0.05,
+  "min_p": 1.7304128632223687e-05,
+  "min_p_quantity": "balcony.length_mm (Ng 3)",
+  "bonferroni_0.05_pass": false
+ },
+ "logged_rejections_per_100_accepted": {
+  "fresh_test": {
+   "2": 50.400000000000006,
+   "3": 15.200000000000003,
+   "4": 21.6,
+   "5": 9.600000000000001
+  },
+  "fresh_test_paperexc": {
+   "2": 50.400000000000006,
+   "3": 15.200000000000003,
+   "4": 21.6,
+   "5": 9.600000000000001
+  },
+  "paper_population": {
+   "2": 48.58181818181818,
+   "3": 15.927272727272728,
+   "4": 17.381818181818183,
+   "5": 7.127272727272727
+  }
+ },
+ "generation": {
+  "fresh_test": {
+   "param_seed": 20261123,
+   "excitation_seed": 20261124,
+   "seconds": 3133.2,
+   "started_utc": "2026-11-23T08:37:26+00:00",
+   "finished_utc": "2026-11-23T09:29:39+00:00",
+   "threads": {
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2"
+   }
+  },
+  "fresh_test_paperexc": {
+   "param_seed": 20261123,
+   "excitation_seed": 12345,
+   "seconds": 3355.1,
+   "started_utc": "2026-11-23T08:38:32+00:00",
+   "finished_utc": "2026-11-23T09:34:27+00:00",
+   "threads": {
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2"
+   }
+  },
+  "paper_broadband_5500": {
+   "seconds": 11460.3,
+   "per_structure_s": 2.083690909090909
+  }
+ }
+}

@@ -1,0 +1,31 @@
+run,label,variant,target_class,n_mode_cells,frac_sign_flipped,mean_cos_relative_to_paper_sign
+edgegat_N2000,"paper main, coherency, N 2000",mirror,antisymmetric (torsion-like),153,1.0,-0.9487589203792667
+edgegat_N2000,"paper main, coherency, N 2000",mirror,symmetric (bending-like),153,0.0,0.9736776357896318
+edgegat_N2000,"paper main, coherency, N 2000",swap_hinge,antisymmetric (torsion-like),153,0.19607843137254902,0.550150858603892
+edgegat_N2000,"paper main, coherency, N 2000",swap_hinge,symmetric (bending-like),153,0.0392156862745098,0.8363557327996827
+edgegat_N2000,"paper main, coherency, N 2000",swap_ends,antisymmetric (torsion-like),153,0.803921568627451,-0.5501515712062175
+edgegat_N2000,"paper main, coherency, N 2000",swap_ends,symmetric (bending-like),153,0.0392156862745098,0.8363556183368456
+edgegat_N600,"paper, coherency, N 600",mirror,antisymmetric (torsion-like),149,1.0,-0.9105392227724391
+edgegat_N600,"paper, coherency, N 600",mirror,symmetric (bending-like),153,0.0,0.9498118261814651
+edgegat_N600,"paper, coherency, N 600",swap_hinge,antisymmetric (torsion-like),149,0.22818791946308725,0.48487668718025634
+edgegat_N600,"paper, coherency, N 600",swap_hinge,symmetric (bending-like),153,0.0392156862745098,0.7994890578275384
+edgegat_N600,"paper, coherency, N 600",swap_ends,antisymmetric (torsion-like),149,0.7718120805369127,-0.48487658088766034
+edgegat_N600,"paper, coherency, N 600",swap_ends,symmetric (bending-like),153,0.0392156862745098,0.799489059302563
+edgegat_geomorient_N600,"paper, orientation, N 600",mirror,antisymmetric (torsion-like),143,0.0,0.8687338729095341
+edgegat_geomorient_N600,"paper, orientation, N 600",mirror,symmetric (bending-like),146,0.0,0.8980279824898464
+edgegat_geomorient_N600,"paper, orientation, N 600",swap_hinge,antisymmetric (torsion-like),143,0.06993006993006994,0.7458680362756331
+edgegat_geomorient_N600,"paper, orientation, N 600",swap_hinge,symmetric (bending-like),146,0.0273972602739726,0.8279705382450384
+edgegat_geomorient_N600,"paper, orientation, N 600",swap_ends,antisymmetric (torsion-like),143,0.06993006993006994,0.7459179313111743
+edgegat_geomorient_N600,"paper, orientation, N 600",swap_ends,symmetric (bending-like),146,0.0273972602739726,0.8272033505430739
+ec_varexc_edgegat_N600,"T11 varied exc., coherency, N 600",mirror,antisymmetric (torsion-like),11,1.0,-0.39998286536284766
+ec_varexc_edgegat_N600,"T11 varied exc., coherency, N 600",mirror,symmetric (bending-like),150,0.0,0.9061755151776667
+ec_varexc_edgegat_N600,"T11 varied exc., coherency, N 600",swap_hinge,antisymmetric (torsion-like),11,0.6363636363636364,-0.06712720812720664
+ec_varexc_edgegat_N600,"T11 varied exc., coherency, N 600",swap_hinge,symmetric (bending-like),150,0.006666666666666667,0.894305011281999
+ec_varexc_edgegat_N600,"T11 varied exc., coherency, N 600",swap_ends,antisymmetric (torsion-like),11,0.36363636363636365,0.06712687017102799
+ec_varexc_edgegat_N600,"T11 varied exc., coherency, N 600",swap_ends,symmetric (bending-like),150,0.006666666666666667,0.8943050164571904
+ec_varexc_edgegat_geomorient_N600,"T11 varied exc., orientation, N 600",mirror,antisymmetric (torsion-like),139,0.0,0.8684492415343633
+ec_varexc_edgegat_geomorient_N600,"T11 varied exc., orientation, N 600",mirror,symmetric (bending-like),146,0.0,0.8851976428500631
+ec_varexc_edgegat_geomorient_N600,"T11 varied exc., orientation, N 600",swap_hinge,antisymmetric (torsion-like),139,0.014388489208633094,0.8370021138573697
+ec_varexc_edgegat_geomorient_N600,"T11 varied exc., orientation, N 600",swap_hinge,symmetric (bending-like),146,0.02054794520547945,0.845501013149284
+ec_varexc_edgegat_geomorient_N600,"T11 varied exc., orientation, N 600",swap_ends,antisymmetric (torsion-like),139,0.014388489208633094,0.836880031056474
+ec_varexc_edgegat_geomorient_N600,"T11 varied exc., orientation, N 600",swap_ends,symmetric (bending-like),146,0.02054794520547945,0.8440805542955062

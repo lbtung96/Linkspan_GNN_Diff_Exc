@@ -1,0 +1,113 @@
+{
+  "pass": true,
+  "per_structure": {
+    "Hellesylt": {
+      "refilter_maxdiff": 0.0,
+      "ceiling_vs_corrected_builder_node_maxdiff": 1.1920928955078125e-07,
+      "ceiling_vs_corrected_builder_edge_maxdiff": 0.0,
+      "fe_target_vs_E6_mac": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fe_coords_vs_graph_package_maxdiff_mm": 0.00038281250090221874
+    },
+    "Hundeidvik": {
+      "refilter_maxdiff": 0.0,
+      "ceiling_vs_corrected_builder_node_maxdiff": 1.1920928955078125e-07,
+      "ceiling_vs_corrected_builder_edge_maxdiff": 0.0,
+      "fe_target_vs_E6_mac": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fe_coords_vs_graph_package_maxdiff_mm": 0.0004340277773735579
+    },
+    "Leknes": {
+      "refilter_maxdiff": 0.0,
+      "ceiling_vs_corrected_builder_node_maxdiff": 5.960464477539063e-08,
+      "ceiling_vs_corrected_builder_edge_maxdiff": 0.0,
+      "fe_target_vs_E6_mac": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fe_coords_vs_graph_package_maxdiff_mm": 0.0003906249985448085
+    },
+    "Linge": {
+      "refilter_maxdiff": 0.0,
+      "ceiling_vs_corrected_builder_node_maxdiff": 1.1920928955078125e-07,
+      "ceiling_vs_corrected_builder_edge_maxdiff": 0.0,
+      "fe_target_vs_E6_mac": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fe_coords_vs_graph_package_maxdiff_mm": 0.00047144396557996515
+    },
+    "Saebo": {
+      "refilter_maxdiff": 0.0,
+      "ceiling_vs_corrected_builder_node_maxdiff": 5.960464477539063e-08,
+      "ceiling_vs_corrected_builder_edge_maxdiff": 0.0,
+      "fe_target_vs_E6_mac": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fe_coords_vs_graph_package_maxdiff_mm": 0.0
+    },
+    "Eidsdal": {
+      "refilter_maxdiff": 0.0,
+      "ceiling_vs_corrected_builder_node_maxdiff": 5.960464477539063e-08,
+      "ceiling_vs_corrected_builder_edge_maxdiff": 0.0,
+      "fe_target_vs_E6_mac": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fe_coords_vs_graph_package_maxdiff_mm": 0.0008370535724679939
+    },
+    "Liabygda": {
+      "refilter_maxdiff": 0.0,
+      "ceiling_vs_corrected_builder_node_maxdiff": 1.1920928955078125e-07,
+      "ceiling_vs_corrected_builder_edge_maxdiff": 0.0,
+      "fe_target_vs_E6_mac": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fe_coords_vs_graph_package_maxdiff_mm": 0.00047144396376097575
+    },
+    "Stranda": {
+      "refilter_maxdiff": 0.0,
+      "ceiling_vs_corrected_builder_node_maxdiff": 5.960464477539063e-08,
+      "ceiling_vs_corrected_builder_edge_maxdiff": 0.0,
+      "fe_target_vs_E6_mac": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fe_coords_vs_graph_package_maxdiff_mm": 0.00047144396376097575
+    },
+    "Festoya": {
+      "refilter_maxdiff": 0.0,
+      "ceiling_vs_corrected_builder_node_maxdiff": 5.960464477539063e-08,
+      "ceiling_vs_corrected_builder_edge_maxdiff": 0.0,
+      "fe_target_vs_E6_mac": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fe_coords_vs_graph_package_maxdiff_mm": 0.00032552083393966313
+    }
+  }
+}

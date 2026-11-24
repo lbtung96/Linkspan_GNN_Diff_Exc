@@ -1,0 +1,61 @@
+{
+  "s6_reproduced": {
+    "rows": 180,
+    "rows_s6": 180,
+    "max_abs_diff": 1.9073486328125e-06,
+    "zeroshot_rows_max_abs_diff": 0.0,
+    "pass": true
+  },
+  "real_equals_t17": {
+    "rows": 216,
+    "max_abs_diff": 0.0,
+    "pass": true
+  },
+  "orientation": {
+    "max_abs_diff": {
+      "Hellesylt": 8.742277657347586e-08,
+      "Hundeidvik": 8.742277657347586e-08,
+      "Leknes": 8.940696716308594e-08,
+      "Linge": 8.742277657347586e-08,
+      "Saebo": 8.742277657347586e-08,
+      "Eidsdal": 8.742277657347586e-08,
+      "Liabygda": 8.742277657347586e-08,
+      "Stranda": 8.742277657347586e-08,
+      "Festoya": 8.742277657347586e-08
+    },
+    "pass": true
+  },
+  "records_distinct": {
+    "min_rel_max_diff": {
+      "Hellesylt": 1.165695479432464,
+      "Hundeidvik": 1.1208187933923264,
+      "Leknes": 0.9444575092828112,
+      "Linge": 1.1128380612713165,
+      "Saebo": 1.2327675377988043,
+      "Eidsdal": 0.9996704823231957,
+      "Liabygda": 1.2288671595350151,
+      "Stranda": 1.0974642721897097,
+      "Festoya": 1.2314497173254144
+    },
+    "max_abs_corr_info": {
+      "Hellesylt": 0.22562842457232982,
+      "Hundeidvik": 0.15772395384161386,
+      "Leknes": 0.25583053100102815,
+      "Linge": 0.12712610498680532,
+      "Saebo": 0.16055885502041595,
+      "Eidsdal": 0.18444077953734359,
+      "Liabygda": 0.137229075141121,
+      "Stranda": 0.14554682212673942,
+      "Festoya": 0.09237535656820525
+    },
+    "pass": true
+  },
+  "sim_checks": {
+    "refilter_max": 0.0,
+    "builder_node_max": 1.1920928955078125e-07,
+    "builder_edge_max": 0.0,
+    "fe_coords_max_mm": 0.0008370535724679939,
+    "pass": true
+  },
+  "pass": true
+}

@@ -1,0 +1,43 @@
+{
+  "synthetic_refs_reproduce_t13": {
+    "pass": true,
+    "rows": {
+      "paper_varexc/ec_t13_coh_K4_N600": {
+        "mine": 0.42251239063257434,
+        "t13": 0.4225123869880075,
+        "pass": true
+      },
+      "paper_varexc/ec_t13_orient_K4_N600": {
+        "mine": 0.7579551247632464,
+        "t13": 0.7579551261124653,
+        "pass": true
+      },
+      "fresh_test/ec_t13_coh_K4_N600": {
+        "mine": 0.42225461685548193,
+        "t13": 0.42225460831493455,
+        "pass": true
+      },
+      "fresh_test/ec_t13_orient_K4_N600": {
+        "mine": 0.7543437810755199,
+        "t13": 0.7543437834984008,
+        "pass": true
+      }
+    }
+  },
+  "real_refs_reproduce_t13": {
+    "pass": true,
+    "rows": {
+      "ec_t13_coh_K4_N600": {
+        "rows": 36,
+        "max_abs_diff_mac_ssi": 0.0,
+        "pass": true
+      },
+      "ec_t13_orient_K4_N600": {
+        "rows": 36,
+        "max_abs_diff_mac_ssi": 0.0,
+        "pass": true
+      }
+    }
+  },
+  "pass": true
+}

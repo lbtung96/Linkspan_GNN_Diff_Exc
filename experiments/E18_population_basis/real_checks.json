@@ -1,0 +1,346 @@
+{
+ "gates": {
+  "e17_fill": {
+   "rows_matched": 1296,
+   "rows_expected": 1296,
+   "max_abs_diff": 3.414443394689215e-09,
+   "tol": 1e-05,
+   "pass": true
+  }
+ },
+ "per_structure": {
+  "Hellesylt": {
+   "L_mm": 14920.0,
+   "Ng": 2,
+   "dy_mm": 4000.0,
+   "lines_y_mm": [
+    0,
+    4000
+   ],
+   "real": {
+    "nseg": 12,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_matched": {
+    "nseg": 12,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_full": {
+    "nseg": 10,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "seconds": 4.8
+  },
+  "Hundeidvik": {
+   "L_mm": 14555.0,
+   "Ng": 4,
+   "dy_mm": 2333.0,
+   "lines_y_mm": [
+    0,
+    6999
+   ],
+   "real": {
+    "nseg": 17,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_matched": {
+    "nseg": 17,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_full": {
+    "nseg": 10,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "seconds": 7.0
+  },
+  "Leknes": {
+   "L_mm": 14900.0,
+   "Ng": 2,
+   "dy_mm": 4500.0,
+   "lines_y_mm": [
+    0,
+    4500
+   ],
+   "real": {
+    "nseg": 6,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_matched": {
+    "nseg": 6,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_full": {
+    "nseg": 10,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "seconds": 4.8
+  },
+  "Linge": {
+   "L_mm": 18000.0,
+   "Ng": 5,
+   "dy_mm": 3000.0,
+   "lines_y_mm": [
+    0,
+    12000
+   ],
+   "real": {
+    "nseg": 7,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_matched": {
+    "nseg": 7,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_full": {
+    "nseg": 10,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "seconds": 7.5
+  },
+  "Saebo": {
+   "L_mm": 18000.0,
+   "Ng": 4,
+   "dy_mm": 2333.0,
+   "lines_y_mm": [
+    0,
+    6999
+   ],
+   "real": {
+    "nseg": 16,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_matched": {
+    "nseg": 16,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_full": {
+    "nseg": 10,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "seconds": 6.8
+  },
+  "Eidsdal": {
+   "L_mm": 22000.0,
+   "Ng": 4,
+   "dy_mm": 3000.0,
+   "lines_y_mm": [
+    0,
+    9000
+   ],
+   "real": {
+    "nseg": 13,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_matched": {
+    "nseg": 13,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_full": {
+    "nseg": 10,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "seconds": 8.0
+  },
+  "Liabygda": {
+   "L_mm": 18090.0,
+   "Ng": 4,
+   "dy_mm": 3000.0,
+   "lines_y_mm": [
+    0,
+    9000
+   ],
+   "real": {
+    "nseg": 12,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_matched": {
+    "nseg": 12,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_full": {
+    "nseg": 10,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "seconds": 7.5
+  },
+  "Stranda": {
+   "L_mm": 18090.0,
+   "Ng": 4,
+   "dy_mm": 3000.0,
+   "lines_y_mm": [
+    0,
+    9000
+   ],
+   "real": {
+    "nseg": 16,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_matched": {
+    "nseg": 16,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_full": {
+    "nseg": 10,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "seconds": 7.8
+  },
+  "Festoya": {
+   "L_mm": 15000.0,
+   "Ng": 5,
+   "dy_mm": 3000.0,
+   "lines_y_mm": [
+    0,
+    12000
+   ],
+   "real": {
+    "nseg": 14,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_matched": {
+    "nseg": 14,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "twin_full": {
+    "nseg": 10,
+    "class_label": [
+     "bend1",
+     "tors1",
+     "bend2",
+     "tors2"
+    ]
+   },
+   "seconds": 5.2
+  }
+ }
+}

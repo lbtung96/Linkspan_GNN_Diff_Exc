@@ -1,0 +1,20 @@
+{
+  "outer": {
+    "rows_matched": 5500,
+    "rows_s8": 5500,
+    "max_abs_diff": 2.8908139331207394e-06,
+    "n_sensors_equal": true,
+    "pass": true
+  },
+  "all": {
+    "rows_matched": 5500,
+    "rows_s8": 5500,
+    "max_abs_diff": 2.3952930969239894e-06,
+    "n_sensors_equal": true,
+    "pass": true
+  },
+  "resim_x_psd_maxdiff": 7.166586790674502e-08,
+  "structures": 500,
+  "atol": 1e-05,
+  "pass": true
+}

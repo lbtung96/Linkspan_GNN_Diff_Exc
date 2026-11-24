@@ -1,0 +1,32 @@
+{
+  "ec_t16_coh_signinv": {
+    "rc": 0,
+    "wall_s": 981.7,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T16_train_ec_t16_coh_signinv.log"
+  },
+  "ec_t16_none_signinv": {
+    "rc": 0,
+    "wall_s": 1161.1,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T16_train_ec_t16_none_signinv.log"
+  },
+  "ec_t16_cohorient": {
+    "rc": 0,
+    "wall_s": 1161.1,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T16_train_ec_t16_cohorient.log"
+  },
+  "ec_t16_cohorient_signinv": {
+    "rc": 0,
+    "wall_s": 1161.1,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T16_train_ec_t16_cohorient_signinv.log"
+  },
+  "ec_t16_orient_signinv": {
+    "rc": 0,
+    "wall_s": 1161.1,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T16_train_ec_t16_orient_signinv.log"
+  },
+  "ec_t16_coh_signinv_amp": {
+    "rc": 0,
+    "wall_s": 1270.3,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T16_train_ec_t16_coh_signinv_amp.log"
+  }
+}

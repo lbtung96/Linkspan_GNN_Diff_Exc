@@ -1,0 +1,30 @@
+{
+  "t11_arms_vs_t11_eval_summary": {
+    "reference": "EC_comments/pipeline/results/T11_varied_excitation_pilot/eval_summary.csv",
+    "rule": "every shared numeric column equal (==)",
+    "rows": {
+      "paper_varexc/ec_varexc_edgegat_N600": {
+        "columns_compared": 34,
+        "mismatches": {},
+        "pass": true
+      },
+      "paper_varexc/ec_varexc_edgegat_geomorient_N600": {
+        "columns_compared": 34,
+        "mismatches": {},
+        "pass": true
+      },
+      "fresh_test/ec_varexc_edgegat_N600": {
+        "columns_compared": 34,
+        "mismatches": {},
+        "pass": true
+      },
+      "fresh_test/ec_varexc_edgegat_geomorient_N600": {
+        "columns_compared": 34,
+        "mismatches": {},
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "pass": true
+}

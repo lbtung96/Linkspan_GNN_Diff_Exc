@@ -1,0 +1,37 @@
+{
+  "alpha": {
+    "deck": 0.8399156537957424,
+    "walk": 1.597033418497631
+  },
+  "counts": {
+    "deck_p0": 2000,
+    "deck_p1": 1700,
+    "deck_p2": 1700,
+    "deck_p3": 1700,
+    "walk_p0": 2000,
+    "walk_p1": 1700,
+    "walk_p2": 1700,
+    "walk_p3": 1700,
+    "deck_test": 500,
+    "walk_test": 500
+  },
+  "expected": {
+    "deck_p0": 2000,
+    "deck_p1": 1700,
+    "deck_p2": 1700,
+    "deck_p3": 1700,
+    "walk_p0": 2000,
+    "walk_p1": 1700,
+    "walk_p2": 1700,
+    "walk_p3": 1700,
+    "deck_test": 500,
+    "walk_test": 500
+  },
+  "wall_s": 5145.4,
+  "graph_equal_all": true,
+  "finite_all": true,
+  "hinges_at_rest_max": 0.0,
+  "noise_rel_err_max": 0.003444808311497183,
+  "files_present": true,
+  "pass": true
+}

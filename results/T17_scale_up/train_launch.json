@@ -1,0 +1,32 @@
+{
+  "ec_t17_cohorient_signinv_N2000_s123": {
+    "rc": 0,
+    "wall_s": 9477.9,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T17_train_ec_t17_cohorient_signinv_N2000_s123.log"
+  },
+  "ec_t17_cohorient_signinv_N2000_s124": {
+    "rc": 0,
+    "wall_s": 9478.8,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T17_train_ec_t17_cohorient_signinv_N2000_s124.log"
+  },
+  "ec_t17_cohorient_signinv_N2000_s125": {
+    "rc": 0,
+    "wall_s": 10618.5,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T17_train_ec_t17_cohorient_signinv_N2000_s125.log"
+  },
+  "ec_t17_orient_signinv_N2000_s123": {
+    "rc": 0,
+    "wall_s": 10618.5,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T17_train_ec_t17_orient_signinv_N2000_s123.log"
+  },
+  "ec_t17_orient_signinv_N2000_s124": {
+    "rc": 0,
+    "wall_s": 10618.5,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T17_train_ec_t17_orient_signinv_N2000_s124.log"
+  },
+  "ec_t17_orient_signinv_N2000_s125": {
+    "rc": 0,
+    "wall_s": 10618.5,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T17_train_ec_t17_orient_signinv_N2000_s125.log"
+  }
+}

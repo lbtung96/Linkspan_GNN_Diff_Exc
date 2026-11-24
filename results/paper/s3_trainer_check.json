@@ -1,0 +1,40 @@
+{
+  "pool": "C:\\MyFolder\\Individual_Study_Syllabus\\GNN_PBSHM\\Linkspan_GNN\\Linkspan_GNN_OMA\\population_dataset_modes4\\samples_phase2_bandpass",
+  "n_train": 40,
+  "n_val": 10,
+  "epochs": 4,
+  "threads": 2,
+  "arms": {
+    "edgegat": {
+      "history_straight_eq_canonical": true,
+      "history_resumed_eq_straight": true,
+      "best_straight_eq_canonical": true,
+      "last_straight_eq_canonical": true,
+      "best_resumed_eq_straight": true,
+      "last_resumed_eq_straight": true,
+      "val_loss_by_epoch": [
+        0.5194863080978394,
+        0.4933170676231384,
+        0.5058382749557495,
+        0.5217207670211792
+      ],
+      "pass": true
+    },
+    "graphsage": {
+      "history_straight_eq_canonical": true,
+      "history_resumed_eq_straight": true,
+      "best_straight_eq_canonical": true,
+      "last_straight_eq_canonical": true,
+      "best_resumed_eq_straight": true,
+      "last_resumed_eq_straight": true,
+      "val_loss_by_epoch": [
+        0.45297783613204956,
+        0.47451698780059814,
+        0.5033037662506104,
+        0.5149312019348145
+      ],
+      "pass": true
+    }
+  },
+  "pass": true
+}

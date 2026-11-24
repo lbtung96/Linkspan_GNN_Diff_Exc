@@ -1,0 +1,97 @@
+{
+  "G1_broadband": {
+    "pass": true,
+    "counts": {
+      "2": 1375,
+      "3": 1375,
+      "4": 1375,
+      "5": 1375
+    },
+    "n": 5500
+  },
+  "G1_narrowband": {
+    "pass": true,
+    "counts": {
+      "2": 1375,
+      "3": 1375,
+      "4": 1375,
+      "5": 1375
+    },
+    "n": 5500
+  },
+  "G2_pairing": {
+    "pass": true,
+    "same_file_names": true,
+    "params_identical": 5500,
+    "graph_identical": 5500,
+    "max_abs_dfreq_hz": 9.5367431640625e-07,
+    "max_abs_dshape": 1.5992016377808227e-07,
+    "n": 5500
+  },
+  "response_content": {
+    "broadband_median_energy_within_0.3Hz_of_targets": 0.16528718795117298,
+    "narrowband_median_energy_within_0.3Hz_of_targets": 0.7814666022206183
+  },
+  "G3_labels": {
+    "pass": true,
+    "min_selected_mac": 0.8500275363463261,
+    "n_below_gate": 0,
+    "median_selected_mac_by_mode": {
+      "B1": 0.9855,
+      "T1": 0.9834,
+      "B2": 0.9762,
+      "T2": 0.9717
+    }
+  },
+  "G4_envelope": {
+    "pass": true,
+    "dy_by_ng": {
+      "2": {
+        "dy_min": 4000.7494119020653,
+        "dy_max": 4499.745523677865,
+        "inside": true,
+        "spans": true,
+        "share_dy_ge_2900": 1.0
+      },
+      "3": {
+        "dy_min": 2250.176399919912,
+        "dy_max": 2999.4073675250715,
+        "inside": true,
+        "spans": true,
+        "share_dy_ge_2900": 0.13527272727272727
+      },
+      "4": {
+        "dy_min": 2002.8108293698153,
+        "dy_max": 2999.9477304604125,
+        "inside": true,
+        "spans": true,
+        "share_dy_ge_2900": 0.1149090909090909
+      },
+      "5": {
+        "dy_min": 2000.8827840741928,
+        "dy_max": 2998.4446991390196,
+        "inside": true,
+        "spans": true,
+        "share_dy_ge_2900": 0.10545454545454545
+      }
+    },
+    "E_range": [
+      160001.40416962781,
+      229985.97904657215
+    ],
+    "rho_range": [
+      7.000293276374393e-09,
+      7.999839178167536e-09
+    ]
+  },
+  "G5_fidelity_ng2": {
+    "pass": true,
+    "old_ng2": 2500,
+    "old_ng2_passing_gate": 2381,
+    "new_ng2": 1375,
+    "compared": 1375,
+    "first_mismatch": null
+  },
+  "real_bridges_dy_inside": 9,
+  "pass": true
+}

@@ -1,0 +1,48 @@
+set,Ng,reason,count,accepted,per_100_accepted
+fresh_test,2,No feasible candidate survives MMI scoring for target B1,15,125,12.0
+fresh_test,2,No feasible candidate survives MMI scoring for target B2,11,125,8.8
+fresh_test,2,No feasible candidate survives MMI scoring for target T1,5,125,4.0
+fresh_test,2,No feasible candidate survives MMI scoring for target T2,23,125,18.4
+fresh_test,2,selected-mode MAC below gate,9,125,7.2
+fresh_test,3,No feasible candidate survives MMI scoring for target B1,8,125,6.4
+fresh_test,3,No feasible candidate survives MMI scoring for target B2,4,125,3.2
+fresh_test,3,No feasible candidate survives MMI scoring for target T1,6,125,4.8
+fresh_test,3,No feasible candidate survives MMI scoring for target T2,1,125,0.8
+fresh_test,4,No feasible candidate survives MMI scoring for target B1,6,125,4.8
+fresh_test,4,No feasible candidate survives MMI scoring for target B2,2,125,1.6
+fresh_test,4,No feasible candidate survives MMI scoring for target T1,12,125,9.6
+fresh_test,4,No feasible candidate survives MMI scoring for target T2,7,125,5.6
+fresh_test,5,No feasible candidate survives MMI scoring for target T1,11,125,8.8
+fresh_test,5,No feasible candidate survives MMI scoring for target T2,1,125,0.8
+fresh_test_paperexc,2,No feasible candidate survives MMI scoring for target B1,15,125,12.0
+fresh_test_paperexc,2,No feasible candidate survives MMI scoring for target B2,11,125,8.8
+fresh_test_paperexc,2,No feasible candidate survives MMI scoring for target T1,5,125,4.0
+fresh_test_paperexc,2,No feasible candidate survives MMI scoring for target T2,23,125,18.4
+fresh_test_paperexc,2,selected-mode MAC below gate,9,125,7.2
+fresh_test_paperexc,3,No feasible candidate survives MMI scoring for target B1,8,125,6.4
+fresh_test_paperexc,3,No feasible candidate survives MMI scoring for target B2,4,125,3.2
+fresh_test_paperexc,3,No feasible candidate survives MMI scoring for target T1,6,125,4.8
+fresh_test_paperexc,3,No feasible candidate survives MMI scoring for target T2,1,125,0.8
+fresh_test_paperexc,4,No feasible candidate survives MMI scoring for target B1,6,125,4.8
+fresh_test_paperexc,4,No feasible candidate survives MMI scoring for target B2,2,125,1.6
+fresh_test_paperexc,4,No feasible candidate survives MMI scoring for target T1,12,125,9.6
+fresh_test_paperexc,4,No feasible candidate survives MMI scoring for target T2,7,125,5.6
+fresh_test_paperexc,5,No feasible candidate survives MMI scoring for target T1,11,125,8.8
+fresh_test_paperexc,5,No feasible candidate survives MMI scoring for target T2,1,125,0.8
+paper_population,2,No feasible candidate survives MMI scoring for target B1,198,1375,14.4
+paper_population,2,No feasible candidate survives MMI scoring for target B2,79,1375,5.745454545454545
+paper_population,2,No feasible candidate survives MMI scoring for target T1,25,1375,1.8181818181818181
+paper_population,2,No feasible candidate survives MMI scoring for target T2,296,1375,21.527272727272727
+paper_population,2,selected-mode MAC below gate,70,1375,5.090909090909091
+paper_population,3,No feasible candidate survives MMI scoring for target B1,102,1375,7.418181818181818
+paper_population,3,No feasible candidate survives MMI scoring for target B2,41,1375,2.981818181818182
+paper_population,3,No feasible candidate survives MMI scoring for target T1,64,1375,4.654545454545454
+paper_population,3,No feasible candidate survives MMI scoring for target T2,12,1375,0.8727272727272727
+paper_population,4,No feasible candidate survives MMI scoring for target B1,63,1375,4.581818181818182
+paper_population,4,No feasible candidate survives MMI scoring for target B2,39,1375,2.8363636363636364
+paper_population,4,No feasible candidate survives MMI scoring for target T1,108,1375,7.8545454545454545
+paper_population,4,No feasible candidate survives MMI scoring for target T2,29,1375,2.109090909090909
+paper_population,5,No feasible candidate survives MMI scoring for target B1,1,1375,0.07272727272727272
+paper_population,5,No feasible candidate survives MMI scoring for target B2,5,1375,0.36363636363636365
+paper_population,5,No feasible candidate survives MMI scoring for target T1,77,1375,5.6
+paper_population,5,No feasible candidate survives MMI scoring for target T2,15,1375,1.0909090909090908

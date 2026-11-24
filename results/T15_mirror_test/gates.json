@@ -1,0 +1,23 @@
+{
+  "n_structures": 100,
+  "paper_reproduces_stored_x_max": 1.811835892429059e-08,
+  "paper_reproduces_stored_e_max": 8.940696716308594e-08,
+  "n_symmetric_decks": 77,
+  "n_asymmetric_supports": {
+    "paper": 0,
+    "mirror": 12,
+    "swap_hinge": 12,
+    "swap_ends": 12
+  },
+  "mirror_equals_permuted_stored_x_max": 1.4207733893933927e-05,
+  "mirror_equals_permuted_stored_e_max": 0.0005508139729499817,
+  "target_parity_by_mode_median": {
+    "B1": 1.0,
+    "T1": -1.0,
+    "B2": 1.0,
+    "T2": -0.9999999999999998
+  },
+  "gate_paper_reproduces": true,
+  "gate_mirror_is_permutation": true,
+  "stored_vs_resimulated_paper_mac_maxdiff": 4.772468096270188e-07
+}

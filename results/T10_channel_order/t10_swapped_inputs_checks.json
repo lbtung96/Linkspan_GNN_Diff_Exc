@@ -1,0 +1,88 @@
+{
+  "torch_threads": 14,
+  "Hellesylt": {
+    "unswapped_node_equal": true,
+    "unswapped_edge_equal": true,
+    "swapped_node_rel_change": 0.025315774604678154,
+    "swapped_edge_rel_change": 0.12492460757493973
+  },
+  "Hundeidvik": {
+    "unswapped_node_equal": true,
+    "unswapped_edge_equal": true,
+    "swapped_node_rel_change": 0.1432662308216095,
+    "swapped_edge_rel_change": 0.056472357362508774
+  },
+  "Leknes": {
+    "unswapped_node_equal": true,
+    "unswapped_edge_equal": true,
+    "swapped_node_rel_change": 0.216499924659729,
+    "swapped_edge_rel_change": 0.07185186445713043
+  },
+  "Linge": {
+    "unswapped_node_equal": true,
+    "unswapped_edge_equal": true,
+    "swapped_node_rel_change": 0.13257481157779694,
+    "swapped_edge_rel_change": 0.042773306369781494
+  },
+  "Saebo": {
+    "unswapped_node_equal": true,
+    "unswapped_edge_equal": true,
+    "swapped_node_rel_change": 0.1180790513753891,
+    "swapped_edge_rel_change": 0.042622968554496765
+  },
+  "Eidsdal": {
+    "unswapped_node_equal": true,
+    "unswapped_edge_equal": true,
+    "swapped_node_rel_change": 0.12534695863723755,
+    "swapped_edge_rel_change": 0.051845259964466095
+  },
+  "Liabygda": {
+    "unswapped_node_equal": true,
+    "unswapped_edge_equal": true,
+    "swapped_node_rel_change": 0.13001471757888794,
+    "swapped_edge_rel_change": 0.04215364158153534
+  },
+  "Stranda": {
+    "unswapped_node_equal": true,
+    "unswapped_edge_equal": true,
+    "swapped_node_rel_change": 0.06275277584791183,
+    "swapped_edge_rel_change": 0.04224379360675812
+  },
+  "Festoya": {
+    "unswapped_node_equal": true,
+    "unswapped_edge_equal": true,
+    "swapped_node_rel_change": 0.08838758617639542,
+    "swapped_edge_rel_change": 0.06202779337763786
+  },
+  "gate_unswapped_reproduces_s5": {
+    "pass": true,
+    "max_abs_diff": 0.0
+  },
+  "gate_unswapped_features_equal_stored": true,
+  "summary": {
+    "unswapped_rebuild": {
+      "mac_ssi_per_mode": {
+        "B1": 0.5488606516461365,
+        "T1": 0.11666543919334457,
+        "B2": 0.21324679489469567,
+        "T2": 0.05195062958735896
+      },
+      "mac_ssi_mean": 0.23268087883038394,
+      "mac_fe_det_mean": 0.2568691387955797,
+      "abs_freq_err_vs_ssi_mean": 2.243125240008036,
+      "input_dependence_mean": 0.3796846050212726
+    },
+    "inputs_swapped": {
+      "mac_ssi_per_mode": {
+        "B1": 0.5786807885742177,
+        "T1": 0.1470052383741496,
+        "B2": 0.21767645164587943,
+        "T2": 0.07382277726995796
+      },
+      "mac_ssi_mean": 0.2542963139660512,
+      "mac_fe_det_mean": 0.2669409358335575,
+      "abs_freq_err_vs_ssi_mean": 2.235154469807943,
+      "input_dependence_mean": 0.38841254032935457
+    }
+  }
+}

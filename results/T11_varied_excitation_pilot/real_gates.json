@@ -1,0 +1,492 @@
+{
+  "zeroshot_pretrain_gate": {
+    "torch_threads": 14,
+    "inputs": "Final_results_for_paper/data/field_inputs_v2/phase3_corrected",
+    "s5_main_edgegat_N2000": {
+      "pass": true,
+      "rows": 36,
+      "columns": 9,
+      "max_abs_diff": 0.0
+    },
+    "s5_transfer_edgegat_N600": {
+      "pass": true,
+      "rows": 36,
+      "columns": 9,
+      "max_abs_diff": 0.0
+    },
+    "feature_convention": {
+      "pass": true,
+      "per_structure": {
+        "Hellesylt": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Hundeidvik": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Leknes": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Linge": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Saebo": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Eidsdal": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Liabygda": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Stranda": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Festoya": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        }
+      }
+    },
+    "orientation_inputs": {
+      "pass": true,
+      "rule": "cos/sin of graph_package edge_attr_geom theta == unit vector dst - src (1e-6)",
+      "per_structure": {
+        "Hellesylt": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 128
+        },
+        "Hundeidvik": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 320
+        },
+        "Leknes": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 1.0403823341720297e-07,
+          "n_edges": 168
+        },
+        "Linge": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 576
+        },
+        "Saebo": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 304
+        },
+        "Eidsdal": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 596
+        },
+        "Liabygda": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 512
+        },
+        "Stranda": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 512
+        },
+        "Festoya": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 374
+        }
+      }
+    },
+    "input_dependence[edgegat_N600]": {
+      "pass": true,
+      "gate": "structure mean < 0.9",
+      "overall_mean": 0.4307274325307241,
+      "worst_structure": 0.6246308123015679
+    },
+    "input_dependence[edgegat_geomorient_N600]": {
+      "pass": true,
+      "gate": "structure mean < 0.9",
+      "overall_mean": 0.21853789026116063,
+      "worst_structure": 0.3033795070290293
+    },
+    "pass": true,
+    "wall_s": 1.9
+  },
+  "ceiling_pretrain_gate": {
+    "s6_ceiling_edgegat_N2000_paper_record": {
+      "rows": 36,
+      "matched": 36,
+      "max_abs_diff": {
+        "mac_vs_fe_all_fe_nodes": 4.760846006313102e-08,
+        "mac_vs_ssi_sensor_nodes": 4.6595430291951345e-08,
+        "pred_freq_hz": 9.5367431640625e-07,
+        "fe_target_freq_hz": 0.0,
+        "ssi_freq_hz": 0.0
+      },
+      "tol": 1e-05,
+      "pass": true
+    },
+    "orientation_fe_edges": {
+      "rule": "every FE edge of the generator's graph is in the hybrid graph with the same cos/sin (1e-6), or is split by an inserted sensor node (a-c-b)",
+      "pass": true,
+      "per_structure": {
+        "Hellesylt": {
+          "fe_edges_found_in_hybrid": 76,
+          "fe_edges": 100,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.00038281250090221874,
+          "fe_edges_missing": 24,
+          "fe_edges_missing_split_by_sensor_node": 24,
+          "seconds": 8.7
+        },
+        "Hundeidvik": {
+          "fe_edges_found_in_hybrid": 258,
+          "fe_edges": 288,
+          "hybrid_vs_generator_orientation_maxdiff": 1.1920928955078125e-07,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.0004340277773735579,
+          "fe_edges_missing": 30,
+          "fe_edges_missing_split_by_sensor_node": 30,
+          "seconds": 14.3
+        },
+        "Leknes": {
+          "fe_edges_found_in_hybrid": 108,
+          "fe_edges": 136,
+          "hybrid_vs_generator_orientation_maxdiff": 8.940696716308594e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.0003906249985448085,
+          "fe_edges_missing": 28,
+          "fe_edges_missing_split_by_sensor_node": 28,
+          "seconds": 10.2
+        },
+        "Linge": {
+          "fe_edges_found_in_hybrid": 512,
+          "fe_edges": 544,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.00047144396557996515,
+          "fe_edges_missing": 32,
+          "fe_edges_missing_split_by_sensor_node": 32,
+          "seconds": 19.2
+        },
+        "Saebo": {
+          "fe_edges_found_in_hybrid": 240,
+          "fe_edges": 272,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.0,
+          "fe_edges_missing": 32,
+          "fe_edges_missing_split_by_sensor_node": 32,
+          "seconds": 14.2
+        },
+        "Eidsdal": {
+          "fe_edges_found_in_hybrid": 532,
+          "fe_edges": 564,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.0008370535724679939,
+          "fe_edges_missing": 32,
+          "fe_edges_missing_split_by_sensor_node": 32,
+          "seconds": 20.2
+        },
+        "Liabygda": {
+          "fe_edges_found_in_hybrid": 452,
+          "fe_edges": 480,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.00047144396376097575,
+          "fe_edges_missing": 28,
+          "fe_edges_missing_split_by_sensor_node": 28,
+          "seconds": 18.4
+        },
+        "Stranda": {
+          "fe_edges_found_in_hybrid": 452,
+          "fe_edges": 480,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.00047144396376097575,
+          "fe_edges_missing": 28,
+          "fe_edges_missing_split_by_sensor_node": 28,
+          "seconds": 18.6
+        },
+        "Festoya": {
+          "fe_edges_found_in_hybrid": 318,
+          "fe_edges": 346,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.00032552083393966313,
+          "fe_edges_missing": 28,
+          "fe_edges_missing_split_by_sensor_node": 28,
+          "seconds": 15.7
+        }
+      }
+    },
+    "records": {
+      "paper": 12345,
+      "new": "SeedSequence([20261127, LOOCV position, k]), k = 0..2"
+    },
+    "wall_s": 26.8,
+    "pass": true
+  },
+  "zeroshot": {
+    "torch_threads": 14,
+    "inputs": "Final_results_for_paper/data/field_inputs_v2/phase3_corrected",
+    "s5_main_edgegat_N2000": {
+      "pass": true,
+      "rows": 36,
+      "columns": 9,
+      "max_abs_diff": 0.0
+    },
+    "s5_transfer_edgegat_N600": {
+      "pass": true,
+      "rows": 36,
+      "columns": 9,
+      "max_abs_diff": 0.0
+    },
+    "feature_convention": {
+      "pass": true,
+      "per_structure": {
+        "Hellesylt": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Hundeidvik": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Leknes": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Linge": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Saebo": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Eidsdal": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Liabygda": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Stranda": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        },
+        "Festoya": {
+          "node_rowmax_min": 1.0,
+          "node_rowmax_max": 1.0,
+          "edge_absmax": 1.0
+        }
+      }
+    },
+    "orientation_inputs": {
+      "pass": true,
+      "rule": "cos/sin of graph_package edge_attr_geom theta == unit vector dst - src (1e-6)",
+      "per_structure": {
+        "Hellesylt": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 128
+        },
+        "Hundeidvik": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 320
+        },
+        "Leknes": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 1.0403823341720297e-07,
+          "n_edges": 168
+        },
+        "Linge": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 576
+        },
+        "Saebo": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 304
+        },
+        "Eidsdal": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 596
+        },
+        "Liabygda": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 512
+        },
+        "Stranda": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 512
+        },
+        "Festoya": {
+          "edge_index_equal": true,
+          "orientation_vs_coords_maxdiff": 8.742277657347586e-08,
+          "n_edges": 374
+        }
+      }
+    },
+    "input_dependence[ec_varexc_edgegat_N600]": {
+      "pass": true,
+      "gate": "structure mean < 0.9",
+      "overall_mean": 0.4572532806189581,
+      "worst_structure": 0.6403793840097789
+    },
+    "input_dependence[edgegat_N600]": {
+      "pass": true,
+      "gate": "structure mean < 0.9",
+      "overall_mean": 0.4307274325307241,
+      "worst_structure": 0.6246308123015679
+    },
+    "input_dependence[ec_varexc_edgegat_geomorient_N600]": {
+      "pass": true,
+      "gate": "structure mean < 0.9",
+      "overall_mean": 0.19110887853404807,
+      "worst_structure": 0.28290017980622223
+    },
+    "input_dependence[edgegat_geomorient_N600]": {
+      "pass": true,
+      "gate": "structure mean < 0.9",
+      "overall_mean": 0.21853789026116063,
+      "worst_structure": 0.3033795070290293
+    },
+    "pass": true,
+    "wall_s": 1.5
+  },
+  "ceiling": {
+    "s6_ceiling_edgegat_N2000_paper_record": {
+      "rows": 36,
+      "matched": 36,
+      "max_abs_diff": {
+        "mac_vs_fe_all_fe_nodes": 6.43122521903905e-08,
+        "mac_vs_ssi_sensor_nodes": 4.980852263969382e-08,
+        "pred_freq_hz": 9.5367431640625e-07,
+        "fe_target_freq_hz": 0.0,
+        "ssi_freq_hz": 0.0
+      },
+      "tol": 1e-05,
+      "pass": true
+    },
+    "orientation_fe_edges": {
+      "rule": "every FE edge of the generator's graph is in the hybrid graph with the same cos/sin (1e-6), or is split by an inserted sensor node (a-c-b)",
+      "pass": true,
+      "per_structure": {
+        "Hellesylt": {
+          "fe_edges_found_in_hybrid": 76,
+          "fe_edges": 100,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.00038281250090221874,
+          "fe_edges_missing": 24,
+          "fe_edges_missing_split_by_sensor_node": 24,
+          "seconds": 13.3
+        },
+        "Hundeidvik": {
+          "fe_edges_found_in_hybrid": 258,
+          "fe_edges": 288,
+          "hybrid_vs_generator_orientation_maxdiff": 1.1920928955078125e-07,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.0004340277773735579,
+          "fe_edges_missing": 30,
+          "fe_edges_missing_split_by_sensor_node": 30,
+          "seconds": 18.4
+        },
+        "Leknes": {
+          "fe_edges_found_in_hybrid": 108,
+          "fe_edges": 136,
+          "hybrid_vs_generator_orientation_maxdiff": 8.940696716308594e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.0003906249985448085,
+          "fe_edges_missing": 28,
+          "fe_edges_missing_split_by_sensor_node": 28,
+          "seconds": 14.7
+        },
+        "Linge": {
+          "fe_edges_found_in_hybrid": 512,
+          "fe_edges": 544,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.00047144396557996515,
+          "fe_edges_missing": 32,
+          "fe_edges_missing_split_by_sensor_node": 32,
+          "seconds": 26.0
+        },
+        "Saebo": {
+          "fe_edges_found_in_hybrid": 240,
+          "fe_edges": 272,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.0,
+          "fe_edges_missing": 32,
+          "fe_edges_missing_split_by_sensor_node": 32,
+          "seconds": 19.0
+        },
+        "Eidsdal": {
+          "fe_edges_found_in_hybrid": 532,
+          "fe_edges": 564,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.0008370535724679939,
+          "fe_edges_missing": 32,
+          "fe_edges_missing_split_by_sensor_node": 32,
+          "seconds": 26.6
+        },
+        "Liabygda": {
+          "fe_edges_found_in_hybrid": 452,
+          "fe_edges": 480,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.00047144396376097575,
+          "fe_edges_missing": 28,
+          "fe_edges_missing_split_by_sensor_node": 28,
+          "seconds": 24.8
+        },
+        "Stranda": {
+          "fe_edges_found_in_hybrid": 452,
+          "fe_edges": 480,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.00047144396376097575,
+          "fe_edges_missing": 28,
+          "fe_edges_missing_split_by_sensor_node": 28,
+          "seconds": 23.2
+        },
+        "Festoya": {
+          "fe_edges_found_in_hybrid": 318,
+          "fe_edges": 346,
+          "hybrid_vs_generator_orientation_maxdiff": 8.742277657347586e-08,
+          "fe_coords_vs_graph_package_maxdiff_mm": 0.00032552083393966313,
+          "fe_edges_missing": 28,
+          "fe_edges_missing_split_by_sensor_node": 28,
+          "seconds": 20.9
+        }
+      }
+    },
+    "records": {
+      "paper": 12345,
+      "new": "SeedSequence([20261127, LOOCV position, k]), k = 0..2"
+    },
+    "wall_s": 33.6,
+    "pass": true
+  }
+}

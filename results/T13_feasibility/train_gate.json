@@ -1,0 +1,142 @@
+{
+  "threads": 2,
+  "d_paper_history": {
+    "d_edgegat_N600": {
+      "rc": 0,
+      "wall_s": 28.1,
+      "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_d_edgegat_N600.log",
+      "reference": "Final_results_for_paper/runs/edgegat_N600",
+      "pass": true,
+      "epochs_compared": 3,
+      "n_diffs": 0,
+      "first_diffs": []
+    },
+    "d_edgegat_N2000": {
+      "rc": 0,
+      "wall_s": 44.4,
+      "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_d_edgegat_N2000.log",
+      "reference": "Final_results_for_paper/runs/edgegat_N2000",
+      "pass": true,
+      "epochs_compared": 3,
+      "n_diffs": 0,
+      "first_diffs": []
+    },
+    "d_aug_K1_edgegat_N600": {
+      "rc": 0,
+      "wall_s": 44.4,
+      "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_d_aug_K1_edgegat_N600.log",
+      "reference": "Final_results_for_paper/runs/edgegat_N600",
+      "pass": true,
+      "epochs_compared": 3,
+      "n_diffs": 0,
+      "first_diffs": []
+    }
+  },
+  "e_augmentation_vs_plain": {
+    "e_aug_K1": {
+      "rc": 0,
+      "wall_s": 44.4,
+      "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_e_aug_K1.log",
+      "history": {
+        "pass": true,
+        "epochs_compared": 2,
+        "n_diffs": 0,
+        "first_diffs": []
+      },
+      "best_model": {
+        "tensors": 49,
+        "differing": [],
+        "n_differing": 0,
+        "epoch": [
+          1,
+          1
+        ],
+        "pass": true
+      },
+      "last_model": {
+        "tensors": 49,
+        "differing": [],
+        "n_differing": 0,
+        "epoch": [
+          1,
+          1
+        ],
+        "pass": true
+      },
+      "draws_logged": [
+        {
+          "epoch": "0",
+          "n_k0": "508",
+          "slots_head": "000000000000000000000000"
+        },
+        {
+          "epoch": "1",
+          "n_k0": "508",
+          "slots_head": "000000000000000000000000"
+        }
+      ],
+      "pass": true
+    },
+    "e_aug_K4_same": {
+      "rc": 0,
+      "wall_s": 44.4,
+      "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_e_aug_K4_same.log",
+      "history": {
+        "pass": true,
+        "epochs_compared": 2,
+        "n_diffs": 0,
+        "first_diffs": []
+      },
+      "best_model": {
+        "tensors": 49,
+        "differing": [],
+        "n_differing": 0,
+        "epoch": [
+          1,
+          1
+        ],
+        "pass": true
+      },
+      "last_model": {
+        "tensors": 49,
+        "differing": [],
+        "n_differing": 0,
+        "epoch": [
+          1,
+          1
+        ],
+        "pass": true
+      },
+      "draws_logged": [
+        {
+          "epoch": "0",
+          "n_k0": "117",
+          "n_k1": "129",
+          "n_k2": "141",
+          "n_k3": "121",
+          "slots_head": "321131302121123213231332"
+        },
+        {
+          "epoch": "1",
+          "n_k0": "111",
+          "n_k1": "124",
+          "n_k2": "119",
+          "n_k3": "154",
+          "slots_head": "203312211213122111203112"
+        }
+      ],
+      "pass": true
+    }
+  },
+  "d_t11_gate_reused": {
+    "pass": true,
+    "runs": {
+      "edgegat_N600": true,
+      "edgegat_geomorient_N600": true
+    },
+    "source": "results/T11_varied_excitation_pilot/train_gate.json"
+  },
+  "d_pass": true,
+  "e_pass": true,
+  "pass": true
+}

@@ -1,0 +1,72 @@
+{
+  "edgegat_N600": {
+    "run": "edgegat_N600",
+    "root": "paper",
+    "arch": "edgegat",
+    "edge_feature_mode": "cpsd_full",
+    "shape_target_mode": "signed",
+    "N": 600,
+    "best_epoch": 141,
+    "epochs": 5000,
+    "seed": 123,
+    "device": "cpu",
+    "train_time_h": 4.221494666602877,
+    "modes_module": "t_edge_modes"
+  },
+  "edgegat_geomorient_N600": {
+    "run": "edgegat_geomorient_N600",
+    "root": "paper",
+    "arch": "edgegat",
+    "edge_feature_mode": "geom_orient",
+    "shape_target_mode": "signed",
+    "N": 600,
+    "best_epoch": 477,
+    "epochs": 5000,
+    "seed": 123,
+    "device": "cpu",
+    "train_time_h": 4.271447346607844,
+    "modes_module": "t_edge_modes"
+  },
+  "edgegat_N2000": {
+    "run": "edgegat_N2000",
+    "root": "paper",
+    "arch": "edgegat",
+    "edge_feature_mode": "cpsd_full",
+    "shape_target_mode": "signed",
+    "N": 2000,
+    "best_epoch": 591,
+    "epochs": 5000,
+    "seed": 123,
+    "device": "cpu",
+    "train_time_h": 9.46762109524674,
+    "modes_module": "t_edge_modes"
+  },
+  "ec_varexc_edgegat_N600": {
+    "run": "ec_varexc_edgegat_N600",
+    "root": "ec",
+    "arch": "edgegat",
+    "edge_feature_mode": "cpsd_full",
+    "shape_target_mode": "signed",
+    "N": 600,
+    "best_epoch": 83,
+    "epochs": 5000,
+    "seed": 123,
+    "device": "cpu",
+    "train_time_h": 2.4205225334564844,
+    "modes_module": "t_edge_modes"
+  },
+  "ec_varexc_edgegat_geomorient_N600": {
+    "run": "ec_varexc_edgegat_geomorient_N600",
+    "root": "ec",
+    "arch": "edgegat",
+    "edge_feature_mode": "geom_orient",
+    "shape_target_mode": "signed",
+    "N": 600,
+    "best_epoch": 790,
+    "epochs": 5000,
+    "seed": 123,
+    "device": "cpu",
+    "train_time_h": 2.8064285536607105,
+    "modes_module": "t_edge_modes"
+  }
+}

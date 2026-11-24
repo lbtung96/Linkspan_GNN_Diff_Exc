@@ -1,0 +1,8 @@
+{
+ "n": {
+  "val": 300,
+  "test": 500
+ },
+ "matched_freq_maxdiff_hz": 6.177859113165596e-09,
+ "class_sets_complete": 800
+}
