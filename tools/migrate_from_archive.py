@@ -20,6 +20,7 @@ import json
 import os
 import shutil
 import stat
+import subprocess
 import sys
 from pathlib import Path
 
@@ -79,6 +80,7 @@ POP_ROOT_FILES = ["generation_config.json", "summary.csv", "filtered_summary.csv
                   "failures.log"]
 EC_RUNS_KEEP_PREFIXES = ("ec_t13_coh", "ec_t13_orient", "ec_t16_", "ec_t17_", "ec_varexc_edgegat")
 LATE_RUNS_PREFIX = "ec_t20_"  # still training at migration time: copied by a second batch (--late)
+LATE_RESULTS = "T20_deck_forcing"  # batch 1 copied its draft; --late replaces it with the finished folder
 SKIP_NAMES = {"__pycache__"}
 
 
@@ -111,6 +113,7 @@ def build_plan(late: bool = False) -> Plan:
         for run in sorted((EC / "runs").iterdir()):
             if run.is_dir() and run.name.startswith(LATE_RUNS_PREFIX):
                 P.copy_tree(run, f"runs/ec/{run.name}")
+        P.copy_tree(EC / "pipeline" / "results" / LATE_RESULTS, f"results/{LATE_RESULTS}")
         return P
     for f in LIBRARY:
         P.copy(OLD / f, f)
@@ -176,7 +179,8 @@ def main() -> int:
           f" linked {sum(v['MB'] for k, v in tally.items() if k.startswith('link')):.0f} MB")
     if a.dry_run:
         return 0
-    clash = [o for o in ops if o[2].exists()]
+    may_replace = (NEW / "results" / LATE_RESULTS) if a.late else None
+    clash = [o for o in ops if o[2].exists() and not (may_replace and may_replace in o[2].parents)]
     if clash:
         print(f"refusing: {len(clash)} destination(s) exist, e.g. {clash[0][2]}")
         return 1
@@ -189,7 +193,9 @@ def main() -> int:
             os.chmod(dst, stat.S_IREAD)
     log = NEW / "docs" / "migration_log.json"
     prev = json.loads(log.read_text(encoding="utf-8")) if log.exists() else {"batches": []}
-    prev["batches"].append({"archive": OLD.name, "archive_commit": "f4e1ad5", "only": a.only, "late": a.late,
+    commit = subprocess.run(["git", "-C", str(OLD), "rev-parse", "--short", "HEAD"], capture_output=True,
+                            text=True, check=True).stdout.strip()
+    prev["batches"].append({"archive": OLD.name, "archive_commit": commit, "only": a.only, "late": a.late,
                             "tally": tally, "n_ops": len(ops)})
     log.parent.mkdir(parents=True, exist_ok=True)
     log.write_text(json.dumps(prev, indent=1), encoding="utf-8")

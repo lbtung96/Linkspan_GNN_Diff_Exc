@@ -1,0 +1,17 @@
+{
+  "ec_t20_deck_cohorient_signinv_N2000_s123": {
+    "rc": 0,
+    "wall_s": 5562.2,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T20_train_ec_t20_deck_cohorient_signinv_N2000_s123.log"
+  },
+  "ec_t20_walk_cohorient_signinv_N2000_s123": {
+    "rc": 0,
+    "wall_s": 6516.3,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T20_train_ec_t20_walk_cohorient_signinv_N2000_s123.log"
+  },
+  "ec_t20_walk_cohorient_signinv_N2000_s124": {
+    "rc": 0,
+    "wall_s": 6516.3,
+    "log": "Final_results_for_paper\\EC_comments\\logs\\T20_train_ec_t20_walk_cohorient_signinv_N2000_s124.log"
+  }
+}

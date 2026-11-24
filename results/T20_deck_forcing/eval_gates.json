@@ -1,0 +1,26 @@
+{
+  "synthetic_t17": {
+    "max_abs_diff": 0.0,
+    "pass": true
+  },
+  "real_t17": {
+    "rows": 108,
+    "max_abs_diff": 0.0,
+    "pass": true
+  },
+  "_info": {
+    "real_deck_minus_supports": {
+      "mean": -0.248546361830849,
+      "lo": -0.31177900436825706,
+      "hi": -0.19191746531683762,
+      "bridges_better": 0
+    },
+    "real_walk_minus_supports": {
+      "mean": -0.3134304503668219,
+      "lo": -0.36762764309988605,
+      "hi": -0.2637545055612386,
+      "bridges_better": 0
+    }
+  },
+  "pass": true
+}

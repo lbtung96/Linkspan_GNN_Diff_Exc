@@ -732,6 +732,23 @@
     }
    },
    "n_ops": 51074
+  },
+  {
+   "archive": "Linkspan_GNN_OMA",
+   "archive_commit": "6d14d11",
+   "only": null,
+   "late": true,
+   "tally": {
+    "copy runs/ec": {
+     "files": 72,
+     "MB": 10.934972000000002
+    },
+    "copy results/T20_deck_forcing": {
+     "files": 16,
+     "MB": 5.953670000000001
+    }
+   },
+   "n_ops": 88
   }
  ]
 }
