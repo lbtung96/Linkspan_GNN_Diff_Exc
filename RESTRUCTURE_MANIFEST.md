@@ -1,7 +1,12 @@
 # Restructure manifest: from `Linkspan_GNN_OMA` to `Linkspan_GNN_OMA_Diff_Exc` (2026-11-24)
 
-**Status: inventory only.** Nothing has been copied, moved or deleted yet. Every action below waits for the
-author's approval of this manifest.
+**Status (2026-11-24): built.** This file is the plan as approved; what was actually copied, linked and
+changed, and the evidence that it reproduces, are in [PROVENANCE.md](PROVENANCE.md). Of the decisions in §5,
+the author settled 4 (library edits: yes, as real code, additive and proven bit-identical) and 11 (the
+environment is pinned in `requirements_lock.txt`). T20 has since finished and bears on 1: training on deck
+forcing or walkers with a fitted noise floor transferred *worse* to the real bridges than support excitation
+(0.276 / 0.212 against 0.525 vs SSI, no bridge better), with the floor and the excitation changed together
+(`results/T20_deck_forcing/`). The other decisions are open.
 
 **Plan agreed with the author (2026-11-24).**
 - `Linkspan_GNN_OMA` stays untouched as a frozen archive.
@@ -291,7 +296,8 @@ each covers.
    - deck white noise + a noise floor;
    - walkers + ambient + a noise floor.
 
-   T18 found deck forcing more field-like; T20 (running) tests whether it transfers better. **This decides which
+   T18 found deck forcing more field-like; T20 tested whether it transfers better, and it did not (status
+   note at the top). **This decides which
    own-record datasets are promoted and whether every set is re-simulated.**
 2. **Protocol of the final main network.**
    - Epochs: T17 used 1000, the paper 5000.

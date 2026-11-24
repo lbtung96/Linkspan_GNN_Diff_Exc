@@ -31,6 +31,12 @@ from phase3_utils import BANDPASS_F_HIGH, BANDPASS_F_LOW, bandpass_filter, load_
 
 C = E.C
 OUT = E.EC_RESULTS / "T10_channel_order"
+# T10 is history: it ran on the paper's inputs BEFORE Phase P (sensors 7 and 9 interchanged) and gated against
+# the s5 table of that time.  Phase P moved both (s5 now reads data/field_inputs_v2), so the re-run pins them:
+# the pre-P features (fr_common.LEGACY_REAL_FEATURES) and the pre-P s5_zeroshot.csv, recovered byte for byte
+# from the archive's commit before Phase P (9c1f5da^) into this folder.
+PRE_P_FEATURES = C.LEGACY_REAL_FEATURES
+PRE_P_S5 = OUT / "s5_zeroshot_preP.csv"
 DATA = E.EC_DATA / "T10"
 I6, I8 = 6, 8
 
@@ -63,7 +69,7 @@ def main() -> int:
     torch.set_num_threads(int(json.loads((C.RESULTS / "s5_gates.json").read_text())["torch_threads"]))
     DATA.mkdir(parents=True, exist_ok=True)
     grid = B.training_freq_grid()
-    data = S5.load_structures()
+    data = S5.load_structures(PRE_P_FEATURES)
     checks: dict = {"torch_threads": int(torch.get_num_threads())}
     v_un, v_sw = {}, {}
     for s, d in data.items():
@@ -84,7 +90,7 @@ def main() -> int:
         for r in S5.evaluate(run, "best_model", dd, "broadband", C.SEED):
             rows.append({"variant": v, **r})
     # SSI with rows swapped, scored against the stored-input prediction is in t10_zeroshot_rescore.csv
-    ref = list(csv.DictReader((C.RESULTS / "s5_zeroshot.csv").open(encoding="utf-8")))
+    ref = list(csv.DictReader(PRE_P_S5.open(encoding="utf-8")))
     num = [k for k in ref[0] if k not in ("arm", "seed", "checkpoint", "structure", "mode", "N")]
     mine = [r for r in rows if r["variant"] == "unswapped_rebuild"]
     md = max(abs(float(a[k]) - float(b[k])) for a, b in zip(mine, ref) for k in num)

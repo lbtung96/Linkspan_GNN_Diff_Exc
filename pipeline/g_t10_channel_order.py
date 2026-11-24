@@ -42,6 +42,12 @@ import s5_zeroshot as S5  # noqa: E402
 C = E.C
 REPO = E.REPO
 OUT = E.EC_RESULTS / "T10_channel_order"
+# T10 is history: it ran on the paper's inputs BEFORE Phase P (sensors 7 and 9 interchanged) and gated against
+# the s5 table of that time.  Phase P moved both (s5 now reads data/field_inputs_v2), so the re-run pins them:
+# the pre-P features (fr_common.LEGACY_REAL_FEATURES) and the pre-P s5_zeroshot.csv, recovered byte for byte
+# from the archive's commit before Phase P (9c1f5da^) into this folder.
+PRE_P_FEATURES = C.LEGACY_REAL_FEATURES
+PRE_P_S5 = OUT / "s5_zeroshot_preP.csv"
 OUT.mkdir(parents=True, exist_ok=True)
 MODES = S5.MODES
 I6, I8 = 6, 8
@@ -77,7 +83,7 @@ def roughness(vals: np.ndarray, x: np.ndarray) -> float:
 def main() -> int:
     torch.set_num_threads(int(json.loads((C.RESULTS / "s5_gates.json").read_text())["torch_threads"]))
     checks: dict = {"torch_threads": int(torch.get_num_threads())}
-    data = S5.load_structures()
+    data = S5.load_structures(PRE_P_FEATURES)
     geo_rows, pos_rows = [], []
     for s, d in data.items():
         g = np.load(S5.GRAPH_ROOT / s / "graph_package.npz", allow_pickle=False)
@@ -150,7 +156,7 @@ def main() -> int:
     # --- zero-shot rescoring (s5 path) ------------------------------------------------------------------------
     run = C.RUNS / C.sweep_run_name(C.MAIN_N)
     rows5 = S5.evaluate(run, "best_model", data, "broadband", C.SEED)
-    ref = list(csv.DictReader((C.RESULTS / "s5_zeroshot.csv").open(encoding="utf-8")))
+    ref = list(csv.DictReader(PRE_P_S5.open(encoding="utf-8")))
     num = [k for k in ref[0] if k not in ("arm", "seed", "checkpoint", "structure", "mode", "N")]
     md = max(abs(float(a[k]) - float(b[k])) for a, b in zip(rows5, ref) for k in num)
     same = [(a["structure"], a["mode"]) for a in rows5] == [(b["structure"], b["mode"]) for b in ref]
