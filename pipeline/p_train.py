@@ -46,10 +46,10 @@ def note(name: str) -> str:
 def run_arm(name: str, threads: int, epochs: int | None, run_root: Path | None = None, arm: dict | None = None) -> int:
     import k_train
     a = arm or P.ARMS[name]
-    P.install_for(a)
     pools = list(P.POOLS_K4)
     return k_train.run_one(name, threads, epochs, run_root or K.EC_RUNS, pools[0], pools, K.TRAIN600, K.VAL600,
-                           a["edge"], 600, note(name) if name in P.ARMS else "T16 trainer check")
+                           a["edge"], 600, note(name) if name in P.ARMS else "T16 trainer check",
+                           shape_loss=P.shape_loss(a), node_feature_mode=P.node_feature_mode(a))
 
 
 # ------------------------------------------------------------------ checks

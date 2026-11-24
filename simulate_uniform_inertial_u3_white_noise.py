@@ -288,7 +288,16 @@ def simulate_white_noise_from_modal_model(
     return_time_series=False,
     use_all_modes: bool = False,
     bandpass_hz: tuple[float, float] | None = None,
+    seed=None,
 ) -> dict[str, Any]:
+    """White-noise support excitation of the modal model; absolute accelerations, Welch PSD, mode shapes.
+
+    seed: the excitation record.  Anything np.random.default_rng accepts; the pipeline passes
+    np.random.SeedSequence([base, structure_index]) so that every structure gets its own record.
+    None falls back to the module's SEED = 12345: the archived paper's single record, shared by
+    every structure it simulated (the defect found in EC T5).  Only the history stages that study
+    that record (T5's fresh tests, T12's plots) still rely on the fallback.
+    """
     Phi_full = np.asarray(Phi_full, dtype=float)
     freq_hz = np.asarray(freq_hz, dtype=float).reshape(-1)
     matched_mode_indices = np.asarray(matched_mode_indices, dtype=int).reshape(-1)
@@ -341,7 +350,7 @@ def simulate_white_noise_from_modal_model(
     if nt < 2:
         raise ValueError(f"Time discretization too short: nt={nt} from t_total={t_total}, dt={dt}.")
     t = np.arange(nt, dtype=float) * dt
-    rng = np.random.default_rng(SEED)
+    rng = np.random.default_rng(SEED if seed is None else seed)
     ag_inputs = sigma_ag_mmps2 * rng.standard_normal((int(R.shape[1]), nt))
     v_inputs = np.zeros_like(ag_inputs)
     u_inputs = np.zeros_like(ag_inputs)

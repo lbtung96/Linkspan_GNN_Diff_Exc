@@ -94,11 +94,7 @@ def sim_job(task: tuple) -> dict:
     sensor_idx = pkg["sensor_node_indices"].astype(int)
     nearest_fe = pkg["nearest_fe_node_idx"].astype(int)
 
-    SIM.SEED = record_seed(s, rec)
-    try:
-        bp, raw = S6.simulate_real(s, params)
-    finally:
-        SIM.SEED = PAPER_SEED
+    bp, raw = S6.simulate_real(s, params, seed=record_seed(s, rec))   # (archive: SIM.SEED set for the call)
     if not np.array_equal(bp["edge_index"], det_ei):
         raise RuntimeError(f"{s}: simulated graph differs from the deterministic payload")
     fs = bp["fs"]

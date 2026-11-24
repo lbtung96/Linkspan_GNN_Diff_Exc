@@ -1,6 +1,12 @@
-"""Resumable trainer for every network in Final_results_for_paper.
+"""Resumable trainer for every network in this repository (and, through jobs(), the archived paper's).
 
-    python pipeline/fr_train.py --job edgegat_N600 [--threads 4]
+    python pipeline/fr_train.py --job edgegat_N600 [--threads 4]     # a registered (paper) job
+    fr_train.train(Job(...), pools=[...], ...)                         # what the stage wrappers call
+
+Since the 2026-11-24 restructure, what the archive installed in memory before calling main() is code:
+the sign-invariant loss and the node input (Job.shape_loss, Job.node_feature_mode), the 802-d and
+orientation edge modes (library), and several excitation records per structure (train(pools=...),
+records.py).  Each run's config.json and run_summary.json record all of them.
 
 It reproduces `EdgeGATConv_Modal_GNN.train_one_run` and
 `GraphSAGE_Modal_GNN.train_one_run` epoch for epoch - the same dataset classes,
@@ -43,15 +49,16 @@ class Job:
     name: str
     arch: str                     # "edgegat" | "graphsage"
     n: int                        # population size the manifests were cut for
-    edge_feature_mode: str        # edgegat: cpsd_full | geom_orient | zero ;
+    edge_feature_mode: str        # edgegat: cpsd_full | cpsd_full_orient | geom_orient | zero ;
                                   # graphsage: zero | cpsd | cpsd_full | geom_orient | geom
-                                  # (every mode but edgegat cpsd_full and graphsage zero/cpsd/geom
-                                  # comes from fr_edge_modes)
+                                  # (all library modes since the 2026-11-24 restructure)
     shape_target_mode: str = "signed"
     epochs: int = C.EPOCHS
     seed: int = C.SEED
     note: str = ""
     extra: dict = field(default_factory=dict, compare=False, hash=False)
+    shape_loss: str = "mse"       # "mse" | "signinv" (GraphSAGE_Modal_GNN.signinv_shape_loss)
+    node_feature_mode: str = "psd"  # "psd" | "amp" (EdgeGATConv_Modal_GNN.NODE_FEATURE_MODES)
 
 
 def jobs() -> dict[str, Job]:
@@ -106,7 +113,9 @@ def manifest_paths(n: int) -> tuple[Path, Path]:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="Resumable trainer (Final_results_for_paper).")
+    """CLI for the registered jobs (the archived paper's networks).  Every other network is trained by a
+    stage wrapper calling train() with its own Job."""
+    ap = argparse.ArgumentParser(description="Resumable trainer.")
     ap.add_argument("--job", required=True, choices=sorted(jobs()))
     ap.add_argument("--threads", type=int, default=None, help="torch intra-op threads")
     ap.add_argument("--resume-every", type=int, default=25)
@@ -118,7 +127,31 @@ def main() -> int:
     ap.add_argument("--stop-after", type=int, default=None,
                     help="exit after this many epochs in this invocation (resume tests only)")
     args = ap.parse_args()
+    return train(jobs()[args.job], threads=args.threads, resume_every=args.resume_every, epochs=args.epochs,
+                 run_root=args.run_root, train_list=args.train_list, val_list=args.val_list, pool=args.pool,
+                 stop_after=args.stop_after)
 
+
+def train(job: Job, *, threads: int | None = None, resume_every: int = 25, epochs: int | None = None,
+          run_root: Path = C.RUNS, train_list: Path | None = None, val_list: Path | None = None,
+          pool: Path | None = None, pools: list[Path] | None = None, epoch_seed: int | None = None,
+          stop_after: int | None = None) -> int:
+    """Train one job; resumable; returns 0.
+
+    pool    the folder the manifests' file names are read from (default: the population)
+    pools   record pools: pools[0] is `pool`, pools[1:] hold the same structures under other excitation
+            records; each epoch draws one record per structure (records.py).  None = one record.
+            (Archive: k_train.install_augmentation, installed in memory before fr_train.main().)
+    The job's shape_loss and node_feature_mode, and the record pools, are written to config.json and
+    run_summary.json.
+    """
+    if pools is not None:
+        pools = [Path(p) for p in pools]
+        pool = pools[0] if pool is None else Path(pool)
+        if Path(pool).resolve() != pools[0].resolve():
+            raise ValueError(f"pool {pool} must be pools[0] {pools[0]}")
+    args = argparse.Namespace(threads=threads, resume_every=resume_every, epochs=epochs, run_root=Path(run_root),
+                              train_list=train_list, val_list=val_list, pool=pool, stop_after=stop_after)
     if args.threads:
         os.environ.setdefault("OMP_NUM_THREADS", str(args.threads))
         os.environ.setdefault("MKL_NUM_THREADS", str(args.threads))
@@ -130,15 +163,19 @@ def main() -> int:
 
     import GraphSAGE_Modal_GNN as gs
     import EdgeGATConv_Modal_GNN as eg
-    import fr_edge_modes
+    import records as R
 
-    fr_edge_modes.install()
     if args.threads:
         torch.set_num_threads(int(args.threads))
     C.keep_awake()
     DEVICE = gs.DEVICE
+    if job.shape_loss not in gs.SHAPE_LOSSES:
+        raise ValueError(f"{job.name}: shape_loss {job.shape_loss!r} not in {gs.SHAPE_LOSSES}")
+    if job.node_feature_mode != "psd" and job.arch != "edgegat":
+        raise ValueError(f"{job.name}: node_feature_mode {job.node_feature_mode!r} is an EdgeGAT option")
+    eg.set_node_feature_mode(job.node_feature_mode)
+    epoch_seed = R.EPOCH_SEED if epoch_seed is None else int(epoch_seed)
 
-    job = jobs()[args.job]
     epochs = int(args.epochs or job.epochs)
     pool = Path(args.pool) if args.pool else C.POP_BROADBAND
     tr_m, va_m = manifest_paths(job.n)
@@ -176,16 +213,22 @@ def main() -> int:
             freq_loss_weight=0.25, disable_freq_multitask=False, enable_freq_multitask=True)
         gs._validate_split_fractions(cfg.train_frac, cfg.val_frac, cfg.test_frac)
         gs.set_global_seed(cfg.seed)
-        train_set = eg.Phase2AEdgeDataset(train_paths, edge_feature_mode=cfg.edge_feature_mode,
-                                          shape_target_mode=cfg.shape_target_mode,
-                                          expected_n_modes=cfg.expected_n_modes_out)
-        val_set = eg.Phase2AEdgeDataset(val_paths, edge_feature_mode=cfg.edge_feature_mode,
-                                        shape_target_mode=cfg.shape_target_mode,
-                                        expected_n_modes=cfg.expected_n_modes_out)
+        ds_kw = dict(edge_feature_mode=cfg.edge_feature_mode, shape_target_mode=cfg.shape_target_mode,
+                     expected_n_modes=cfg.expected_n_modes_out)
+        if pools is not None:
+            # the epoch the record draw starts from: that of the resume state, read again below
+            start_peek = (int(torch.load(resume_path, map_location="cpu", weights_only=False)["epoch_completed"]) + 1
+                          if resume_path.exists() else 0)
+            train_set = R.build_variant_set(eg.Phase2AEdgeDataset, train_paths, pools, run_dir=run_dir,
+                                            start_epoch=start_peek, epoch_seed=epoch_seed, **ds_kw)
+        else:
+            train_set = eg.Phase2AEdgeDataset(train_paths, **ds_kw)
+        val_set = eg.Phase2AEdgeDataset(val_paths, **ds_kw)
         cfg.node_feat_dim = int(train_set.node_feat_dim or 0)
         cfg.edge_feat_dim = int(train_set.edge_feat_dim or 0)
         freq_stats = gs.compute_frequency_normalization_stats(train_set.labels, eps=cfg.freq_std_eps)
-        train_loader = GraphDataLoader(train_set, batch_size=cfg.batch_size, shuffle=True, drop_last=False)
+        loader_cls = R.EpochLoader if pools is not None else GraphDataLoader
+        train_loader = loader_cls(train_set, batch_size=cfg.batch_size, shuffle=True, drop_last=False)
         val_loader = GraphDataLoader(val_set, batch_size=cfg.batch_size, shuffle=False, drop_last=False)
         model = eg.EdgeGATModalGNN(
             node_feat_dim=cfg.node_feat_dim, edge_feat_dim=cfg.edge_feat_dim, hidden_dim=cfg.hidden_dim,
@@ -197,6 +240,8 @@ def main() -> int:
         n_epoch_field = cfg.epochs
         seed_field = cfg.seed
     elif job.arch == "graphsage":
+        if pools is not None or job.shape_loss != "mse":
+            raise ValueError(f"{job.name}: record pools and the sign-invariant loss are EdgeGAT options here")
         cfg = gs.TrainingConfig(
             data_source="phase1_npz", phase1_dir=pool, runs_dir=Path(args.run_root), run_name=job.name,
             expected_n_freq=400, expected_n_modes_out=4, batch_size=16, n_epoch=epochs, lr=1e-3,
@@ -230,6 +275,13 @@ def main() -> int:
 
     loss_fn = nn.MSELoss()
     gs._save_run_config(ctx, cfg)
+    options = {"shape_loss": job.shape_loss, "node_feature_mode": job.node_feature_mode,
+               "record_pools": [str(p) for p in pools] if pools is not None else None,
+               "epoch_seed": epoch_seed if pools is not None else None}
+    cfg_path = run_dir / "config.json"
+    cfg_json = json.loads(cfg_path.read_text(encoding="utf-8")) if cfg_path.exists() else {}
+    cfg_path.write_text(json.dumps({**cfg_json, "pipeline_options": options}, indent=2, sort_keys=True),
+                        encoding="utf-8")
     gs._save_split_artifacts(ctx, gs.SplitArtifacts(
         train_ids=[p.name for p in train_paths], val_ids=[p.name for p in val_paths],
         test_ids=[s.strip() for s in (C.SPLITS / "test.txt").read_text(encoding="utf-8").splitlines()
@@ -288,7 +340,8 @@ def main() -> int:
             outputs = model(g_batch, g_batch.ndata["x"], g_batch.edata["edge_x"])
             loss_total, loss_shape, loss_freq, pred_freq_hz = gs._compute_multitask_loss(
                 outputs, g_batch.ndata["y"], freq_target_hz, loss_fn=loss_fn,
-                enable_freq_multitask=True, freq_loss_weight=cfg.freq_loss_weight, freq_stats=freq_stats)
+                enable_freq_multitask=True, freq_loss_weight=cfg.freq_loss_weight, freq_stats=freq_stats,
+                shape_loss=job.shape_loss, batch_num_nodes=g_batch.batch_num_nodes())
             opt.zero_grad()
             loss_total.backward()
             opt.step()
@@ -310,7 +363,8 @@ def main() -> int:
                 outputs = model(g_batch, g_batch.ndata["x"], g_batch.edata["edge_x"])
                 loss_total, loss_shape, loss_freq, pred_freq_hz = gs._compute_multitask_loss(
                     outputs, g_batch.ndata["y"], freq_target_hz, loss_fn=loss_fn,
-                    enable_freq_multitask=True, freq_loss_weight=cfg.freq_loss_weight, freq_stats=freq_stats)
+                    enable_freq_multitask=True, freq_loss_weight=cfg.freq_loss_weight, freq_stats=freq_stats,
+                    shape_loss=job.shape_loss, batch_num_nodes=g_batch.batch_num_nodes())
                 va_tot += float(loss_total.detach().item())
                 va_shape += float(loss_shape.detach().item())
                 va_freq += float(loss_freq.detach().item())
@@ -360,6 +414,7 @@ def main() -> int:
         "train_time_s": train_time_s,
         "freq_mean_hz": freq_stats.freq_mean_hz.tolist(), "freq_std_hz": freq_stats.freq_std_hz.tolist(),
         "checkpoint_rule": "best_model.pt = lowest validation total loss (strict <), as in train_one_run",
+        **options,
     }
     (run_dir / "run_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(f"[done] {job.name}: best epoch {best_epoch}, best val {best_val_loss:.6e}, {train_time_s:.0f}s")

@@ -1,27 +1,17 @@
-"""Edge-feature modes the library modules lack, added in memory for two ablation arms.
+"""Edge-feature modes - library code since the 2026-11-24 restructure; this module is kept for its callers.
 
-The flat library modules stay unmodified (CLAUDE.md rule 3, and the regression
-contract): as s0_generate_population.py does for the generator, the two modes are
-patched into the imported modules, by fr_train.py before it builds a dataset and by
-s4_indomain.py before it evaluates.  Added 2026-09-28, with the author:
+In the archive, this module patched four modes into the imported library modules in memory
+(2026-09-28/29): GraphSAGE "cpsd_full" (800-d coherency) and "geom_orient"; EdgeGAT "geom_orient" and
+"zero".  EC T16 then patched in EdgeGAT's 802-d "cpsd_full_orient" (p_common.install_cohorient).  All
+five are now ordinary modes of GraphSAGE_Modal_GNN / EdgeGATConv_Modal_GNN, with the same arithmetic:
 
-  GraphSAGE  "cpsd_full"    the full-spectrum complex coherency EdgeGATConv reads
-                            (edge_attr_cpsd_full, 800-d), so the two architectures
-                            are compared on identical inputs.  GraphSAGE's edge
-                            encoder maps it to one positive weight per edge
-                            (sigmoid, then EdgeWeightNorm), as for every other mode.
-  EdgeGAT    "geom_orient"  edge orientation only: (cos theta, sin theta) of the
-                            stored edge angle (edge_attr_geom[:, 1]).  No phase and
-                            no length - raw lengths in mm (up to ~20 000) are what
-                            made the GraphSAGE geometry arm unrunnable.
-Added 2026-09-29, completing a two-layer x three-feature grid (none | orientation |
-full coherency):
-  GraphSAGE  "geom_orient"  the same orientation features; bounded in [-1, 1], so the
-                            sigmoid edge weight cannot underflow to zero
-  EdgeGAT    "zero"         no edge information: zeros of GraphSAGE's "zero" shape
-                            (E, 2), so every edge gets the same learned embedding
+  geom_orient        (cos theta, sin theta) of the stored edge angle edge_attr_geom[:, 1], float32
+  zero (EdgeGAT)     zeros of shape (E, 2): every edge gets the same learned embedding
+  cpsd_full (GS)     edge_attr_cpsd_full, 800-d, mapped by GraphSAGE's encoder to one positive weight
+  cpsd_full_orient   hstack(edge_attr_cpsd_full, orientation), 802-d, float32
 
-Every existing mode is delegated to the library's own function, unchanged.
+install() is now a check that the library carries them; orientation() is the library's
+edge_orientation().
 """
 
 from __future__ import annotations
@@ -38,47 +28,16 @@ ORIENT_DIM = 2
 
 def orientation(data) -> np.ndarray:
     """(cos theta, sin theta) per directed edge, float32, from the stored edge angle."""
-    theta = np.asarray(data["edge_attr_geom"], dtype=np.float64)[:, 1]
-    return np.column_stack([np.cos(theta), np.sin(theta)]).astype(np.float32)
+    import GraphSAGE_Modal_GNN as gs
+    return gs.edge_orientation(data)
 
 
 def install() -> None:
-    """Patch both modes into the imported library modules; safe to call more than once."""
+    """No patching: assert the library carries every mode this module used to add."""
     import EdgeGATConv_Modal_GNN as eg
     import GraphSAGE_Modal_GNN as gs
 
-    if getattr(gs, "_fr_edge_modes_installed", False):
-        return
-    gs_resolve, gs_dim, eg_resolve = gs._resolve_edge_attr_array, gs._edge_feature_dim_for_mode, eg._resolve_edge_attr_array
-
-    def gs_resolve_ext(data, edge_feature_mode: str) -> np.ndarray:
-        if edge_feature_mode == GS_CPSD_FULL:
-            a = np.asarray(data["edge_attr_cpsd_full"], dtype=np.float32)
-            n_edges = np.asarray(data["edge_index"]).shape[1]
-            if a.shape != (n_edges, CPSD_FULL_DIM):
-                raise ValueError(f"edge_attr_cpsd_full must have shape ({n_edges}, {CPSD_FULL_DIM}), got {a.shape}")
-            return a
-        if edge_feature_mode == GS_GEOM_ORIENT:
-            return orientation(data)
-        return gs_resolve(data, edge_feature_mode)
-
-    def gs_dim_ext(edge_feature_mode: str) -> int:
-        if edge_feature_mode == GS_CPSD_FULL:
-            return CPSD_FULL_DIM
-        if edge_feature_mode == GS_GEOM_ORIENT:
-            return ORIENT_DIM
-        return gs_dim(edge_feature_mode)
-
-    def eg_resolve_ext(data, edge_feature_mode: str) -> np.ndarray:
-        if edge_feature_mode == EG_GEOM_ORIENT:
-            return orientation(data)
-        if edge_feature_mode == EG_ZERO:
-            return np.zeros((np.asarray(data["edge_index"]).shape[1], ORIENT_DIM), dtype=np.float32)
-        return eg_resolve(data, edge_feature_mode)
-
-    gs._resolve_edge_attr_array = gs_resolve_ext
-    gs._edge_feature_dim_for_mode = gs_dim_ext
-    gs.EDGE_FEATURE_MODES = (*gs.EDGE_FEATURE_MODES, GS_CPSD_FULL, GS_GEOM_ORIENT)
-    eg._resolve_edge_attr_array = eg_resolve_ext
-    eg.EDGE_FEATURE_MODES = (*eg.EDGE_FEATURE_MODES, EG_GEOM_ORIENT, EG_ZERO)
-    gs._fr_edge_modes_installed = True
+    missing = [m for m in (GS_CPSD_FULL, GS_GEOM_ORIENT) if m not in gs.EDGE_FEATURE_MODES]
+    missing += [m for m in (EG_GEOM_ORIENT, EG_ZERO, "cpsd_full_orient") if m not in eg.EDGE_FEATURE_MODES]
+    if missing:
+        raise RuntimeError(f"library edge modes missing: {missing}")

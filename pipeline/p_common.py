@@ -7,8 +7,8 @@ record (mirroring the record assignment flips 100 % of their torsion predictions
 structure (T11, T13) that cue is gone and coherency networks output T1 ~ 0 - the squared-error answer
 to an undetermined sign.  T16 trains six arms on T13's data (N = 600, four own records per training
 structure, one drawn per epoch; validation the 92 N600 validation structures with record r0), 400
-epochs, seed 123, EdgeGAT, fr_train unchanged (through k_train.run_one), with three in-memory
-additions (library modules unedited):
+epochs, seed 123, EdgeGAT, through k_train.run_one, with three additions (in-memory patches in the
+archive; library and fr_train.Job options since the 2026-11-24 restructure, see the end of this file):
 
   loss "signinv"  per structure and per mode, min(||p - y||^2, ||p + y||^2) summed over its nodes,
                   divided by the element count, i.e. MSE when every sign matches.  MAC (the metric) is
@@ -69,100 +69,43 @@ REFS = {"ec_t13_coh_K4_N600": {"edge": "cpsd_full", "loss": "mse", "amp": False,
         "ec_t13_orient_K4_N600": {"edge": "geom_orient", "loss": "mse", "amp": False, "label": "orientation, MSE (T13)"}}
 ALL = {**ARMS, **REFS}
 
-_STATE = {"bnn": None, "installed": set()}
+# ------------------------------------------------------------------ the three T16 options: library code now
+# The archive installed these in memory (install_signinv / install_cohorient / install_amp).  Since the
+# 2026-11-24 restructure they are options of the library and of fr_train.Job:
+#   loss "signinv"           GraphSAGE_Modal_GNN.signinv_shape_loss, via Job(shape_loss="signinv")
+#   edge "cpsd_full_orient"  an EdgeGATConv_Modal_GNN edge mode
+#   node "amp"               EdgeGATConv_Modal_GNN.amp_node_features, via Job(node_feature_mode="amp") or
+#                            EdgeGATConv_Modal_GNN.set_node_feature_mode("amp") for inference
+# The names below stay for the callers (checks, reports).
 
 
-# ------------------------------------------------------------------ sign-invariant loss
 def signinv_shape_loss(pred, target, bnn):
-    import torch
-    bnn = torch.as_tensor(bnn, dtype=torch.int64, device=pred.device)
-    if int(bnn.sum()) != pred.shape[0]:
-        raise RuntimeError(f"batch has {pred.shape[0]} nodes, batch_num_nodes sums to {int(bnn.sum())}")
-    seg = torch.repeat_interleave(torch.arange(bnn.numel(), device=pred.device), bnn)
-    sp = torch.zeros(bnn.numel(), pred.shape[1], dtype=pred.dtype, device=pred.device).index_add_(0, seg, (pred - target) ** 2)
-    sm = torch.zeros(bnn.numel(), pred.shape[1], dtype=pred.dtype, device=pred.device).index_add_(0, seg, (pred + target) ** 2)
-    return torch.minimum(sp, sm).sum() / pred.numel()
-
-
-def install_signinv() -> None:
-    """Make gs._compute_multitask_loss use the sign-invariant shape loss; the batch's node counts come
-    from the model's forward (patched to record graph.batch_num_nodes())."""
-    import EdgeGATConv_Modal_GNN as eg
     import GraphSAGE_Modal_GNN as gs
-
-    if "signinv" in _STATE["installed"]:
-        return
-    orig_fwd = eg.EdgeGATModalGNN.forward
-
-    def fwd(self, graph, node_x, edge_x):
-        _STATE["bnn"] = graph.batch_num_nodes()
-        return orig_fwd(self, graph, node_x, edge_x)
-
-    def multitask(outputs, shape_target, freq_target_hz, *, loss_fn, enable_freq_multitask, freq_loss_weight, freq_stats):
-        loss_shape = signinv_shape_loss(outputs.pred_mode_shape_abs, shape_target, _STATE["bnn"])
-        freq_target_z = gs.normalize_frequency_targets(freq_target_hz, freq_stats)
-        loss_freq = loss_fn(outputs.pred_freq, freq_target_z)
-        loss_total = loss_shape + float(freq_loss_weight) * loss_freq
-        return loss_total, loss_shape, loss_freq, gs.denormalize_frequency_predictions(outputs.pred_freq, freq_stats)
-
-    eg.EdgeGATModalGNN.forward = fwd
-    gs._compute_multitask_loss = multitask
-    _STATE["installed"].add("signinv")
+    return gs.signinv_shape_loss(pred, target, bnn)
 
 
-# ------------------------------------------------------------------ coherency + orientation edges
-def install_cohorient() -> None:
-    import EdgeGATConv_Modal_GNN as eg
-    import fr_edge_modes
-
-    fr_edge_modes.install()
-    if "cohorient" in _STATE["installed"]:
-        return
-    prev = eg._resolve_edge_attr_array
-
-    def resolve(data, edge_feature_mode: str):
-        if edge_feature_mode == COH_ORIENT:
-            return np.hstack([prev(data, "cpsd_full"), fr_edge_modes.orientation(data)]).astype(np.float32)
-        return prev(data, edge_feature_mode)
-
-    eg._resolve_edge_attr_array = resolve
-    eg.EDGE_FEATURE_MODES = (*eg.EDGE_FEATURE_MODES, COH_ORIENT)
-    _STATE["installed"].add("cohorient")
-
-
-# ------------------------------------------------------------------ amplitude-keeping node input
 def amp_features(x_psd: np.ndarray, row_scale: np.ndarray, edge_index: np.ndarray) -> np.ndarray:
-    P = np.asarray(x_psd, np.float64) * np.asarray(row_scale, np.float64).reshape(-1, 1)
-    A = np.sqrt(np.maximum(P, 0.0))
-    deg = np.bincount(np.asarray(edge_index)[0], minlength=A.shape[0])
-    sup = deg == 1
-    out = np.empty_like(A)
-    out[~sup] = A[~sup] / A[~sup].max()
-    out[sup] = A[sup] / np.maximum(A[sup].max(axis=1, keepdims=True), 1e-300)
-    return out.astype(np.float32)
-
-
-def install_amp() -> None:
     import EdgeGATConv_Modal_GNN as eg
+    return eg.amp_node_features(x_psd, row_scale, edge_index)
 
-    if "amp" in _STATE["installed"]:
-        return
-    prev = eg.build_phase2a_graph_from_payload
 
-    def build(payload, *, edge_feature_mode, shape_target_mode):
-        p = dict(payload)
-        p["x_psd"] = amp_features(p["x_psd"], p["x_psd_row_scale"], p["edge_index"])
-        return prev(p, edge_feature_mode=edge_feature_mode, shape_target_mode=shape_target_mode)
+def shape_loss(arm: dict) -> str:
+    return "signinv" if arm["loss"] == "signinv" else "mse"
 
-    eg.build_phase2a_graph_from_payload = build
-    _STATE["installed"].add("amp")
+
+def node_feature_mode(arm: dict) -> str:
+    return "amp" if arm["amp"] else "psd"
+
+
+def install_cohorient() -> None:
+    """No patching: the 802-d mode is a library mode (kept as a check for the callers)."""
+    import fr_edge_modes
+    fr_edge_modes.install()
 
 
 def install_for(arm: dict) -> None:
-    import fr_edge_modes
-    fr_edge_modes.install()
-    install_cohorient()            # harmless for other modes
-    if arm["loss"] == "signinv":
-        install_signinv()
-    if arm["amp"]:
-        install_amp()
+    """Select the arm's node input for every graph this process builds (training or inference).
+    Loss and edge mode need no installing: the loss is a Job option, the edge mode a library mode."""
+    import EdgeGATConv_Modal_GNN as eg
+    install_cohorient()
+    eg.set_node_feature_mode(node_feature_mode(arm))

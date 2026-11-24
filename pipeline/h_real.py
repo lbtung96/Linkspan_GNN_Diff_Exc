@@ -197,11 +197,7 @@ def ceiling_job(job: tuple) -> dict:
                                                for k in range(N_VAR_RECORDS)]
     rows = []
     for rec, seed in records:
-        SIM.SEED = seed
-        try:
-            bp, _raw = S6.simulate_real(s, params)
-        finally:
-            SIM.SEED = H.PAPER_EXC_SEED
+        bp, _raw = S6.simulate_real(s, params, seed=seed)    # (archive: SIM.SEED set for the call)
         assert np.array_equal(bp["edge_index"], det_ei)
         x = bp["Paa_norm"][:, :S6.PHASE1_FREQ_BINS].astype(np.float32)
         e = S6.build_cpsd_full_edge_payload(edge_index=det_ei, freq_bins_hz=bp["freq_bins"][:S6.PHASE1_FREQ_BINS],

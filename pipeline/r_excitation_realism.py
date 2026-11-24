@@ -245,16 +245,11 @@ def bridge_job(s: str) -> dict:
     ss = np.random.SeedSequence([BASE, pos, 0])
     ag = sig * np.random.default_rng(ss).standard_normal((R_all.shape[1], nt))
     sims["supports"] = base(sup, ag)
-    SIM_seed = SIM.SEED
-    SIM.SEED = ss
-    try:
-        sim_model = dict(model)
-        sim_model["M_full"] = M
-        ref = SIM.simulate_white_noise_from_modal_model(sim_model, Phi, freqs, np.arange(4), zeta=zeta, plot=False,
-                                                        return_time_series=True, use_all_modes=True, bandpass_hz=None,
-                                                        t_total=T)
-    finally:
-        SIM.SEED = SIM_seed
+    sim_model = dict(model)
+    sim_model["M_full"] = M
+    ref = SIM.simulate_white_noise_from_modal_model(sim_model, Phi, freqs, np.arange(4), zeta=zeta, plot=False,
+                                                    return_time_series=True, use_all_modes=True, bandpass_hz=None,
+                                                    t_total=T, seed=ss)   # (archive: SIM.SEED set for the call)
     ref_a = np.asarray(ref["a3_abs"], float)[sens_ids - 1]
     gate_rel = float(np.abs(ref_a - sims["supports"]).max() / np.abs(ref_a).max())
     g1 = rng(1).standard_normal((3, nt)) * sig

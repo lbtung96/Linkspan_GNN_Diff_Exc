@@ -50,11 +50,43 @@ from GraphSAGE_Modal_GNN import (
     compute_frequency_metrics,
     compute_frequency_normalization_stats,
     denormalize_frequency_predictions,
+    edge_orientation,
     normalize_frequency_targets,
     set_global_seed,
 )
 
-EDGE_FEATURE_MODES = ("cpsd_full", "cpsd_resonance")
+# Library modes since the 2026-11-24 restructure (the archive patched them in memory):
+#   geom_orient        (cos, sin) of the stored edge angle, 2-d       [fr_edge_modes, 2026-09-28]
+#   zero               zeros of shape (E, 2): no edge information     [fr_edge_modes, 2026-09-29]
+#   cpsd_full_orient   800-d complex coherency + the 2-d orientation  [p_common.install_cohorient, T16]
+EDGE_FEATURE_MODES = ("cpsd_full", "cpsd_resonance", "geom_orient", "zero", "cpsd_full_orient")
+# Node input.  "psd": the row-normalised Welch PSD x_psd (every network).  "amp": sqrt of the
+# un-normalised PSD, deck nodes scaled by the deck-wide maximum and support nodes by their own row
+# maximum (EC T16's amplitude arm only; archive: p_common.install_amp).
+NODE_FEATURE_MODES = ("psd", "amp")
+NODE_FEATURE_MODE = "psd"   # module default read by build_phase2a_graph_from_payload; set_node_feature_mode()
+
+
+def set_node_feature_mode(mode: str) -> None:
+    """Select the node input for every graph this module builds from now on (training and inference).
+    The pipeline records the mode in each run's config.json (fr_train) and sets it from there."""
+    global NODE_FEATURE_MODE
+    if mode not in NODE_FEATURE_MODES:
+        raise ValueError(f"Unsupported node_feature_mode={mode!r}. Expected one of {NODE_FEATURE_MODES}.")
+    NODE_FEATURE_MODE = mode
+
+
+def amp_node_features(x_psd: np.ndarray, row_scale: np.ndarray, edge_index: np.ndarray) -> np.ndarray:
+    """The "amp" node input: sqrt(x_psd * row scale); deck rows / their joint maximum, support rows
+    (degree 1) / their own maximum.  float32."""
+    P = np.asarray(x_psd, np.float64) * np.asarray(row_scale, np.float64).reshape(-1, 1)
+    A = np.sqrt(np.maximum(P, 0.0))
+    deg = np.bincount(np.asarray(edge_index)[0], minlength=A.shape[0])
+    sup = deg == 1
+    out = np.empty_like(A)
+    out[~sup] = A[~sup] / A[~sup].max()
+    out[sup] = A[sup] / np.maximum(A[sup].max(axis=1, keepdims=True), 1e-300)
+    return out.astype(np.float32)
 SHAPE_TARGET_MODES = ("abs", "signed")
 DEFAULT_DATASET_ROOT = Path("population_dataset_modes4") / "samples_phase2a"
 DEFAULT_RUN_ROOT = Path("runs_phase2") / "EdgeGATConv"
@@ -215,6 +247,12 @@ def _edge_attr_field_name(edge_feature_mode: str) -> str:
 
 
 def _resolve_edge_attr_array(data: Any, edge_feature_mode: str) -> np.ndarray:
+    if edge_feature_mode == "geom_orient":
+        return edge_orientation(data)
+    if edge_feature_mode == "zero":
+        return np.zeros((np.asarray(data["edge_index"]).shape[1], 2), dtype=np.float32)
+    if edge_feature_mode == "cpsd_full_orient":
+        return np.hstack([_resolve_edge_attr_array(data, "cpsd_full"), edge_orientation(data)]).astype(np.float32)
     field_name = _edge_attr_field_name(edge_feature_mode)
     if field_name in data:
         return np.asarray(data[field_name], dtype=np.float32)
@@ -267,7 +305,15 @@ def build_phase2a_graph_from_payload(
     *,
     edge_feature_mode: str,
     shape_target_mode: str,
+    node_feature_mode: str | None = None,
 ) -> tuple[dgl.DGLGraph, torch.Tensor]:
+    """node_feature_mode: "psd" or "amp"; None = the module's NODE_FEATURE_MODE (set_node_feature_mode)."""
+    node_feature_mode = NODE_FEATURE_MODE if node_feature_mode is None else node_feature_mode
+    if node_feature_mode == "amp":
+        payload = dict(payload)
+        payload["x_psd"] = amp_node_features(payload["x_psd"], payload["x_psd_row_scale"], payload["edge_index"])
+    elif node_feature_mode != "psd":
+        raise ValueError(f"Unsupported node_feature_mode={node_feature_mode!r}. Expected one of {NODE_FEATURE_MODES}.")
     graph_node_ids = np.asarray(payload["graph_node_ids"], dtype=np.int64).reshape(-1)
     edge_index = np.asarray(payload["edge_index"], dtype=np.int64)
     x_psd = np.asarray(payload["x_psd"], dtype=np.float32)

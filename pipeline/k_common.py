@@ -132,19 +132,10 @@ def exc_seed(base: int, index: int) -> np.random.SeedSequence:
 
 
 def resimulate(sample_path: Path, seed, t_total: float = PAPER_T_TOTAL) -> dict:
-    """h_common.resimulate_payload with SIM.T_TOTAL = t_total for the one call (60.0 restored)."""
-    import generate_population_dataset_modes4 as gen
+    """h_common.resimulate_payload with a record of t_total seconds (archive: SIM.T_TOTAL patched for the call)."""
     import simulate_uniform_inertial_u3_white_noise as SIM
 
-    if gen.simulate_white_noise_from_modal_model.__globals__ is not SIM.__dict__:
-        raise RuntimeError("the generator's simulate function does not read the simulator module's T_TOTAL")
-    if SIM.T_TOTAL != PAPER_T_TOTAL:
-        raise RuntimeError(f"simulator T_TOTAL is {SIM.T_TOTAL!r} on entry, expected 60.0")
-    SIM.T_TOTAL = float(t_total)
-    try:
-        res = H.resimulate_payload(sample_path, seed)
-    finally:
-        SIM.T_TOTAL = PAPER_T_TOTAL
+    res = H.resimulate_payload(sample_path, seed, t_total=float(t_total))
     nt_expected = int(round(float(t_total) / SIM.DT))
     if res["a3"].shape[1] != nt_expected:
         raise RuntimeError(f"record has {res['a3'].shape[1]} samples, expected {nt_expected} for {t_total} s")

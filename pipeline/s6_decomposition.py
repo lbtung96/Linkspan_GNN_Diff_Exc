@@ -104,13 +104,14 @@ def mac(u, v) -> float:
     return float(np.abs(np.dot(u, v)) ** 2 / (np.dot(u, u) * np.dot(v, v) + 1e-30))
 
 
-def simulate_real(structure: str, params_user: dict) -> tuple[dict, dict]:
+def simulate_real(structure: str, params_user: dict, seed=None) -> tuple[dict, dict]:
     """E6/task2's resimulate_deterministic, with all FE modes simulated (broadband).
 
     Solve, match and graph exactly as there; the change is use_all_modes=True.
     One eigensolve, two simulations of the same excitation realisation: with the
     training bandpass inside the simulator (the ceiling) and unfiltered (the
-    'measurement' the propagation-only control starts from)."""
+    'measurement' the propagation-only control starts from).
+    seed: the excitation record (None: the simulator's module SEED, the archived paper's record)."""
     params = deepcopy(params_user)
     params["nmodes"] = N_CANDIDATE_MODES
     params.pop("mode_col_swap", None)                 # label-only corrections: not simulation inputs
@@ -135,7 +136,7 @@ def simulate_real(structure: str, params_user: dict) -> tuple[dict, dict]:
         sim = simulate_white_noise_from_modal_model(
             sim_model, solve_res.phi_full, solve_res.freq_all_hz, selected_idx,
             zeta=PHASE1_ZETA, plot=False, return_time_series=True, use_all_modes=True,
-            bandpass_hz=(BANDPASS_F_LOW, BANDPASS_F_HIGH) if bandpass else None)
+            bandpass_hz=(BANDPASS_F_LOW, BANDPASS_F_HIGH) if bandpass else None, seed=seed)
         out.append({"a3": np.asarray(sim["a3_abs"], dtype=np.float64)[rows, :],
                     "Paa_norm": np.asarray(sim["Paa_norm"], dtype=np.float64)[rows, :],
                     "freq_bins": np.asarray(sim["freq_bins_hz"], dtype=np.float64).reshape(-1),

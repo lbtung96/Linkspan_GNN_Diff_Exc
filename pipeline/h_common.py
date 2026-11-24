@@ -9,14 +9,13 @@ of the 5500 paper structures was excited by the same white-noise record.  On a n
 networks collapse (main network 0.934 -> 0.377).  T11 asks whether training with a DIFFERENT
 record per structure fixes that.
 
-Excitation seeding.  `simulate_white_noise_from_modal_model` reads the module global `SEED`
-at call time (its __globals__ is the simulator module's dict - checked), and
-`np.random.default_rng` accepts a `SeedSequence`.  So, as s0/c_gen_fresh_test patch module
-globals in memory, T11 sets
+Excitation seeding.  Each structure's simulation gets its own record,
 
-    SIM.SEED = np.random.SeedSequence([base, sample_index])
+    seed = np.random.SeedSequence([base, sample_index])
 
-immediately before each structure's simulation (and restores 12345 after).  `sample_index`
+passed to `simulate_white_noise_from_modal_model(..., seed=seed)` (in the archive: the module
+global SIM.SEED was set to it just before the call and 12345 restored after - the same
+default_rng(SeedSequence) either way).  `sample_index`
 is the paper's global structure index (the 4 digits of `sample_XXXX_...npz`).  Bases:
 
     20261125   N = 600 training and validation structures   (TRAIN_EXC_BASE)
@@ -119,20 +118,22 @@ def seed_repr(seed) -> str:
     return str(seed)
 
 
-def resimulate_payload(sample_path: Path, seed) -> dict:
+def resimulate_payload(sample_path: Path, seed, t_total: float | None = None) -> dict:
     """Re-simulate one stored sample with excitation `seed` (12345 = the paper's record).
 
     The generator's broadband assemble path, line for line for everything the excitation
     touches.  Returns the five excitation-dependent arrays, the re-solved label quantities
-    (for the label check) and the graph rows' absolute acceleration (for the record checks)."""
+    (for the label check) and the graph rows' absolute acceleration (for the record checks).
+    seed and t_total are passed to the simulator (archive: the module globals SIM.SEED and
+    SIM.T_TOTAL were set for the call and restored after); t_total None = the simulator's 60 s."""
     import generate_population_dataset_modes4 as gen
     import simulate_uniform_inertial_u3_white_noise as SIM
     from export_projected_graph import build_projected_graph_from_model
 
-    if gen.simulate_white_noise_from_modal_model.__globals__ is not SIM.__dict__:
-        raise RuntimeError("the generator's simulate function does not read the simulator module's SEED")
-    if SIM.SEED != PAPER_EXC_SEED:
-        raise RuntimeError(f"simulator SEED is {SIM.SEED!r} on entry, expected the paper's 12345")
+    if gen.simulate_white_noise_from_modal_model is not SIM.simulate_white_noise_from_modal_model:
+        raise RuntimeError("the generator's simulate function is not the simulator module's")
+    if seed is None:
+        raise ValueError("resimulate_payload needs an explicit excitation seed")
     with np.load(sample_path, allow_pickle=True) as d:
         sampled = gen._parse_params_json(d)
         st = {k: d[k] for k in ("graph_node_ids", "edge_index", "edge_attr_cpsd_matched_freq_hz",
@@ -143,14 +144,10 @@ def resimulate_payload(sample_path: Path, seed) -> dict:
     graph_payload = build_projected_graph_from_model(solve_res.model, include_sensor_map=False)
     sim_model = dict(solve_res.model)
     sim_model["M_full"] = solve_res.M_full
-    SIM.SEED = seed
-    try:
-        sim = gen.simulate_white_noise_from_modal_model(
-            sim_model, solve_res.phi_full, solve_res.freq_all_hz, sel,
-            zeta=gen.PHASE1_ZETA, plot=False, return_time_series=True,
-            use_all_modes=True, bandpass_hz=(1.5, 20.0))
-    finally:
-        SIM.SEED = PAPER_EXC_SEED
+    sim = gen.simulate_white_noise_from_modal_model(
+        sim_model, solve_res.phi_full, solve_res.freq_all_hz, sel,
+        zeta=gen.PHASE1_ZETA, plot=False, return_time_series=True,
+        use_all_modes=True, bandpass_hz=(1.5, 20.0), seed=seed, t_total=t_total)
     gids = np.asarray(graph_payload["graph_node_ids"], dtype=np.int64)
     rows = gids - 1
     ei = np.asarray(graph_payload["edge_index"], dtype=np.int64)

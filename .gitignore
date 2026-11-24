@@ -17,3 +17,6 @@ __pycache__/
 # Scratch
 *.tmp
 _scratch/
+
+# Local reviews of the archive repos (paths and sizes of this machine)
+manifest/cleanup_*.md

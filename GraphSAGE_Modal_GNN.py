@@ -85,9 +85,23 @@ DEFAULT_PHASE1_DIR = Path("population_dataset_modes4") / "samples_phase2a"
 # branch - every run uses `phase1_npz`.
 DEFAULT_MAT_PATH: Path | None = None
 DEFAULT_RUNS_DIR = Path("runs_phase2")
-EDGE_FEATURE_MODES = ("geom", "zero", "cpsd")
+# "cpsd_full" and "geom_orient" were patched in by the archive's fr_edge_modes.py (2026-09-28/29);
+# they are library modes here, with the same arithmetic.
+EDGE_FEATURE_MODES = ("geom", "zero", "cpsd", "cpsd_full", "geom_orient")
 SHAPE_TARGET_MODES = ("abs", "signed")
+SHAPE_LOSSES = ("mse", "signinv")
 CPSD_EDGE_FEATURE_DIM = 8
+CPSD_FULL_EDGE_FEATURE_DIM = 800
+ORIENT_EDGE_FEATURE_DIM = 2
+
+
+def edge_orientation(data: Any) -> np.ndarray:
+    """(cos theta, sin theta) per directed edge, float32, from the stored edge angle edge_attr_geom[:, 1].
+
+    No length, no phase: bounded in [-1, 1].  Shared by both architectures' "geom_orient" mode and by
+    EdgeGAT's 802-d "cpsd_full_orient" mode."""
+    theta = np.asarray(data["edge_attr_geom"], dtype=np.float64)[:, 1]
+    return np.column_stack([np.cos(theta), np.sin(theta)]).astype(np.float32)
 
 
 @dataclass
@@ -287,12 +301,25 @@ def _edge_feature_dim_for_mode(edge_feature_mode: str) -> int:
         return 2
     if edge_feature_mode == "cpsd":
         return CPSD_EDGE_FEATURE_DIM
+    if edge_feature_mode == "cpsd_full":
+        return CPSD_FULL_EDGE_FEATURE_DIM
+    if edge_feature_mode == "geom_orient":
+        return ORIENT_EDGE_FEATURE_DIM
     raise ValueError(
         f"Unsupported edge_feature_mode={edge_feature_mode!r}. Expected one of {EDGE_FEATURE_MODES}."
     )
 
 
 def _resolve_edge_attr_array(data: Any, edge_feature_mode: str) -> np.ndarray:
+    if edge_feature_mode == "cpsd_full":
+        a = np.asarray(data["edge_attr_cpsd_full"], dtype=np.float32)
+        n_edges = np.asarray(data["edge_index"]).shape[1]
+        if a.shape != (n_edges, CPSD_FULL_EDGE_FEATURE_DIM):
+            raise ValueError(f"edge_attr_cpsd_full must have shape ({n_edges}, {CPSD_FULL_EDGE_FEATURE_DIM}), "
+                             f"got {a.shape}")
+        return a
+    if edge_feature_mode == "geom_orient":
+        return edge_orientation(data)
     edge_attr_geom = np.asarray(data["edge_attr_geom"], dtype=np.float32)
     if edge_feature_mode == "geom":
         return np.asarray(edge_attr_geom, dtype=np.float32)
@@ -844,6 +871,24 @@ def compute_frequency_metrics(
     return metrics
 
 
+def signinv_shape_loss(pred: torch.Tensor, target: torch.Tensor, batch_num_nodes) -> torch.Tensor:
+    """Sign-invariant shape loss: sum over graphs and modes of min(||p - y||^2, ||p + y||^2), / numel.
+
+    A mode shape is defined up to its sign, and the population's labels carry a sign convention the
+    inputs cannot always reveal (EC T13-T16: the B1 label sign flips with Ng; torsion's sign is
+    undetermined without a left/right cue).  MSE on such a target pulls the prediction to zero; this
+    loss scores each graph's mode against whichever sign of the label is closer.  batch_num_nodes:
+    graph.batch_num_nodes() of the batched graph, so each graph's nodes are summed separately.
+    (Archive: p_common.signinv_shape_loss, installed in memory by p_common.install_signinv.)"""
+    bnn = torch.as_tensor(batch_num_nodes, dtype=torch.int64, device=pred.device)
+    if int(bnn.sum()) != pred.shape[0]:
+        raise RuntimeError(f"batch has {pred.shape[0]} nodes, batch_num_nodes sums to {int(bnn.sum())}")
+    seg = torch.repeat_interleave(torch.arange(bnn.numel(), device=pred.device), bnn)
+    sp = torch.zeros(bnn.numel(), pred.shape[1], dtype=pred.dtype, device=pred.device).index_add_(0, seg, (pred - target) ** 2)
+    sm = torch.zeros(bnn.numel(), pred.shape[1], dtype=pred.dtype, device=pred.device).index_add_(0, seg, (pred + target) ** 2)
+    return torch.minimum(sp, sm).sum() / pred.numel()
+
+
 def _compute_multitask_loss(
     outputs: ModalGNNOutput,
     shape_target: torch.Tensor,
@@ -853,8 +898,19 @@ def _compute_multitask_loss(
     enable_freq_multitask: bool,
     freq_loss_weight: float,
     freq_stats: FrequencyNormalizationStats | None,
+    shape_loss: str = "mse",
+    batch_num_nodes=None,
 ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor | None]:
-    loss_shape = loss_fn(outputs.pred_mode_shape_abs, shape_target)
+    """Shape loss (loss_fn, or the sign-invariant loss when shape_loss == "signinv", which needs the
+    batch's batch_num_nodes) plus freq_loss_weight x loss_fn on z-scored frequencies."""
+    if shape_loss == "signinv":
+        if batch_num_nodes is None:
+            raise ValueError("shape_loss='signinv' needs batch_num_nodes (graph.batch_num_nodes())")
+        loss_shape = signinv_shape_loss(outputs.pred_mode_shape_abs, shape_target, batch_num_nodes)
+    elif shape_loss == "mse":
+        loss_shape = loss_fn(outputs.pred_mode_shape_abs, shape_target)
+    else:
+        raise ValueError(f"Unsupported shape_loss={shape_loss!r}. Expected one of {SHAPE_LOSSES}.")
     zero = torch.zeros((), dtype=loss_shape.dtype, device=loss_shape.device)
     if not enable_freq_multitask:
         return loss_shape, loss_shape, zero, None

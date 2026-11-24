@@ -3,18 +3,17 @@
     python tools/run_stage.py pipeline/k_train.py --launch gate
     python tools/run_stage.py pipeline/k_train.py --launch arms
 
-Every arm runs fr_train.main() unchanged, as T11's h_train.py does: fr_train.jobs() returns only
-the job (EdgeGAT hyperparameters, seed 123, epochs 400), fr_train's own --pool / --train-list /
---val-list / --run-root options are set, 2 torch threads.  Best-validation rule, resume, logging:
+Every arm runs fr_train.train() (EdgeGAT hyperparameters, seed 123, epochs 400) with its own pool,
+train / validation lists and run root, 2 torch threads.  Best-validation rule, resume, logging:
 fr_train's.
 
-Augmentation (K > 1) is two in-memory substitutions, nothing else:
-  * EdgeGATConv_Modal_GNN.Phase2AEdgeDataset: called with the training manifest's paths, it
-    returns a VariantSet holding K library datasets, one per record folder (pools[k]); every
-    other call (validation) is the library class unchanged.
-  * dgl.dataloading.GraphDataLoader (fr_train imports it at call time): a subclass whose
-    __iter__ first calls VariantSet.set_epoch(epoch).  fr_train iterates the training loader
-    exactly once per epoch, so this is the per-epoch draw of T4's sp_train:
+Augmentation (K > 1): fr_train.train(pools=...) uses records.py (in the archive, two in-memory
+substitutions installed before fr_train.main(), with the same code):
+  * the training set is a records.VariantSet holding K library datasets, one per record folder
+    (pools[k]); the validation set is the library class unchanged.
+  * the training loader is records.EpochLoader, whose __iter__ first calls VariantSet.set_epoch().
+    fr_train iterates the training loader exactly once per epoch, so this is the per-epoch draw of
+    T4's sp_train:
         slot[i] = default_rng([20261130, epoch]).integers(0, K, n_train)
     a numpy Generator of its own - torch's stream (shuffling, dropout) and the global numpy /
     python RNGs are untouched.  VariantSet[i] = the library dataset of record slot[i], item i.
@@ -52,99 +51,24 @@ C, H = K.C, K.H
 THREADS = 2
 
 
-def install_augmentation(pools: list[Path], train_list: Path, run_dir: Path) -> dict:
-    """The two in-memory substitutions (see the module docstring).  Returns a state dict."""
-    import numpy as np
-    import torch
-    import dgl.dataloading as dl
-    import EdgeGATConv_Modal_GNN as eg
-
-    lib_ds, lib_loader = eg.Phase2AEdgeDataset, dl.GraphDataLoader
-    names = K.read_list(train_list)
-    state = {"built": 0, "set": None}
-    resume = run_dir / "checkpoints" / "resume.pt"
-    start = 0
-    if resume.exists():
-        start = int(torch.load(resume, map_location="cpu", weights_only=False)["epoch_completed"]) + 1
-    draws_path = run_dir / "variant_draws.csv"
-    kk = len(pools)
-
-    class VariantSet(torch.utils.data.Dataset):
-        def __init__(self, sets):
-            self.sets = sets
-            base = sets[0]
-            self.labels, self.graphs = base.labels, base.graphs
-            self.node_feat_dim, self.edge_feat_dim = base.node_feat_dim, base.edge_feat_dim
-            for s in sets[1:]:
-                if not torch.equal(s.labels, base.labels):
-                    raise RuntimeError("frequency labels differ between record folders")
-                for ga, gb in zip(base.graphs, s.graphs):
-                    ea, eb = ga.edges(), gb.edges()
-                    if not (torch.equal(ea[0], eb[0]) and torch.equal(ea[1], eb[1])
-                            and torch.equal(ga.ndata["y"], gb.ndata["y"])
-                            and torch.equal(ga.ndata["graph_node_id"], gb.ndata["graph_node_id"])):
-                        raise RuntimeError("graphs / node labels differ between record folders")
-            self.slots = np.zeros(len(base), dtype=np.int64)
-            self.epoch = start
-
-        def set_epoch(self):
-            if kk == 1:
-                self.slots = np.zeros(len(self.sets[0]), dtype=np.int64)
-            else:
-                self.slots = np.random.default_rng([K.EPOCH_SEED, self.epoch]).integers(0, kk, size=len(self.sets[0]))
-            new = not draws_path.exists()
-            with draws_path.open("a", newline="", encoding="utf-8") as fh:
-                w = csv.writer(fh)
-                if new:
-                    w.writerow(["epoch"] + [f"n_k{k}" for k in range(kk)] + ["slots_head"])
-                w.writerow([self.epoch] + [int(np.sum(self.slots == k)) for k in range(kk)]
-                           + ["".join(str(int(s)) for s in self.slots[:24])])
-            self.epoch += 1
-
-        def __getitem__(self, idx):
-            return self.sets[int(self.slots[idx])][idx]
-
-        def __len__(self):
-            return len(self.sets[0])
-
-    def factory(sample_paths, **kw):
-        paths = list(sample_paths)
-        if [Path(p).name for p in paths] == names and state["set"] is None:
-            sets = [lib_ds(paths, **kw)]
-            for pool in pools[1:]:
-                sets.append(lib_ds([Path(pool) / Path(p).name for p in paths], **kw))
-            state["set"] = VariantSet(sets)
-            state["built"] += 1
-            return state["set"]
-        return lib_ds(paths, **kw)
-
-    class EpochLoader(lib_loader):
-        def __iter__(self):
-            if isinstance(self.dataset, VariantSet):
-                self.dataset.set_epoch()
-            return super().__iter__()
-
-    eg.Phase2AEdgeDataset = factory
-    dl.GraphDataLoader = EpochLoader
-    return state
-
-
 def run_one(name: str, threads: int, epochs: int | None, run_root: Path, pool0: Path, pools: list[Path] | None,
-            train_list: Path, val_list: Path, edge: str, n: int, note: str) -> int:
+            train_list: Path, val_list: Path, edge: str, n: int, note: str, *, seed: int | None = None,
+            shape_loss: str = "mse", node_feature_mode: str = "psd", job_epochs: int | None = None) -> int:
+    """One EdgeGAT run through fr_train.train.  pools: the K record folders (pools[0] == pool0), or None
+    for one record.  (Archive: fr_train.main() with fr_train.jobs and sys.argv replaced, and the record
+    draw installed in memory by install_augmentation - now records.py, used by fr_train.train.)"""
     os.environ.setdefault("OMP_NUM_THREADS", str(threads))
     os.environ.setdefault("MKL_NUM_THREADS", str(threads))
     import fr_train
 
     if Path(run_root).resolve() == C.RUNS.resolve():
         raise SystemExit("refusing to train into the paper's runs/")
-    job = fr_train.Job(name, "edgegat", n, edge, epochs=K.EPOCHS, note=note)
-    fr_train.jobs = lambda: {job.name: job}
-    if pools is not None:
-        install_augmentation(pools, train_list, Path(run_root) / name)
-    sys.argv = ["fr_train.py", "--job", job.name, "--threads", str(threads), "--resume-every", "25",
-                "--run-root", str(run_root), "--train-list", str(train_list), "--val-list", str(val_list),
-                "--pool", str(pool0)] + (["--epochs", str(epochs)] if epochs else [])
-    return fr_train.main()
+    job = fr_train.Job(name, "edgegat", n, edge, epochs=K.EPOCHS if job_epochs is None else int(job_epochs),
+                       seed=C.SEED if seed is None else int(seed), note=note, shape_loss=shape_loss,
+                       node_feature_mode=node_feature_mode)
+    return fr_train.train(job, threads=threads, resume_every=25, epochs=epochs, run_root=Path(run_root),
+                          train_list=train_list, val_list=val_list, pool=Path(pool0),
+                          pools=list(pools) if pools is not None else None, epoch_seed=K.EPOCH_SEED)
 
 
 def arm_note(name: str) -> str:

@@ -31,19 +31,14 @@ def run(name: str, arm: dict, seed: int, n: int, pools: list[Path], train: Path,
         run_root: Path, note: str) -> int:
     os.environ.setdefault("OMP_NUM_THREADS", str(THREADS))
     os.environ.setdefault("MKL_NUM_THREADS", str(THREADS))
-    import fr_train
     import k_train
 
     if Path(run_root).resolve() == C.RUNS.resolve():
         raise SystemExit("refusing to train into the paper's runs/")
-    P.install_for(arm)
-    job = fr_train.Job(name, "edgegat", n, arm["edge"], epochs=epochs, seed=seed, note=note)
-    fr_train.jobs = lambda: {job.name: job}
-    k_train.install_augmentation(list(pools), train, Path(run_root) / name)
-    sys.argv = ["fr_train.py", "--job", job.name, "--threads", str(THREADS), "--resume-every", "25",
-                "--run-root", str(run_root), "--train-list", str(train), "--val-list", str(val),
-                "--pool", str(pools[0]), "--epochs", str(epochs)]
-    return fr_train.main()
+    # (archive: P.install_for(arm) + fr_train.jobs / sys.argv replaced + k_train.install_augmentation)
+    return k_train.run_one(name, THREADS, epochs, Path(run_root), Path(pools[0]), list(pools), train, val,
+                           arm["edge"], n, note, seed=seed, shape_loss=P.shape_loss(arm),
+                           node_feature_mode=P.node_feature_mode(arm), job_epochs=epochs)
 
 
 def run_job(name: str) -> int:

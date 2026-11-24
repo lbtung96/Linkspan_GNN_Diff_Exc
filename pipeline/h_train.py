@@ -71,11 +71,9 @@ def run_one(name: str, threads: int, epochs: int | None, gate: bool) -> int:
             raise SystemExit(f"{pool}: {have} samples, need {n_tr + n_va} (run h_prepare.py --part data)")
     if Path(run_root).resolve() == C.RUNS.resolve():
         raise SystemExit("refusing to train into the paper's runs/")
-    fr_train.jobs = lambda: {job.name: job}
-    sys.argv = ["fr_train.py", "--job", job.name, "--threads", str(threads), "--resume-every", "25",
-                "--run-root", str(run_root), "--train-list", str(H.TRAIN_LIST), "--val-list", str(H.VAL_LIST),
-                "--pool", str(pool)] + (["--epochs", str(epochs)] if epochs else [])
-    return fr_train.main()
+    # (archive: fr_train.jobs replaced by this job and sys.argv rewritten before fr_train.main())
+    return fr_train.train(job, threads=threads, resume_every=25, epochs=epochs, run_root=Path(run_root),
+                          train_list=H.TRAIN_LIST, val_list=H.VAL_LIST, pool=Path(pool))
 
 
 def launch(names: list[str], gate: bool, epochs: int | None) -> dict:
