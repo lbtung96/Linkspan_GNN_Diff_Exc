@@ -1,6 +1,6 @@
 """T18 - excitation realism: which synthetic excitation makes the nine bridges' FE twins look like their field recordings?
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/r_excitation_realism.py [--workers 9]
+    python tools/run_stage.py pipeline/r_excitation_realism.py [--workers 9]
 
 No network.  For each LOOCV bridge: the FE twin (s6_decomposition's solve: the deterministic parameters,
 all 15 candidate modes, PHASE1_ZETA), simulated for exactly the field record's length, read at the field

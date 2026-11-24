@@ -1,6 +1,6 @@
 """Gates for the EC T1-T3 trainer wrapper, run before the training queue.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/t_gates.py [--parts a b c ram] [--workers 4]
+    python tools/run_stage.py pipeline/t_gates.py [--parts a b c ram] [--workers 4]
 
   a  bit-identity: the paper's edgegat_N600 and graphsage_cpsdfull_signed_N600, trained
      through t_train.py (--paper-job) for 3 epochs into a scratch folder, must give a
@@ -18,7 +18,7 @@
   ram  peak working set of one training process at N = 600, 2000 and 5000 (1-2 epochs
      with t_train.py, 2 threads); fitted a + b*N is what t_jobs.RAM_* should hold.
 
-Scratch runs go to EC_comments/runs/_gates/ (deleted and re-made per gate).  Results:
+Scratch runs go to runs/ec/_gates/ (deleted and re-made per gate).  Results:
 results/T1_ablation_seeds_phase/t_gates_training.json and t_gates_ram.csv.
 """
 

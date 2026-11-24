@@ -1,6 +1,6 @@
 """T10 - sensor channel order: SSI labels (sensors 7 and 9 swapped by the MATLAB SSI scripts) vs GNN field inputs (raw order).
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/g_t10_channel_order.py
+    python tools/run_stage.py pipeline/g_t10_channel_order.py
 
 Read-only.  Nothing is trained; the only network call is s5's inference over the stored corrected features.
 Sensor index convention below: 0-based rows of the sensor arrays.  Rows 6 and 8 = sensors 7 and 9 (1-based) =
@@ -31,6 +31,7 @@ import ec_common as E  # noqa: I001  (sets sys.path)
 import csv
 import json
 import sys
+from pathlib import Path
 
 import numpy as np
 import scipy.io as sio
@@ -83,11 +84,14 @@ def main() -> int:
         xy = g["node_coords_xy_mm"].astype(float); si = g["sensor_node_indices"].astype(int)
         near = g["nearest_fe_node_idx"].astype(int); pid = g["sensor_physical_ids"].astype(int)
         ds = np.load(REPO / "phase3_real_graphs" / s / "phase3_dataset.npz", allow_pickle=False)
-        field = np.load(REPO / "field_modal_filtering_outputs" / s / "data" / "field_modal_filtering_outputs.npz",
+        field = np.load(C.LEGACY_FIELD_OUTPUTS / s / "data" / "field_modal_filtering_outputs.npz",
                         allow_pickle=False)
         # --- provenance: GNN raw order = raw .mat column order (ch3 of each triple, no reorder) ---------------
-        raw_path = json.loads((REPO / "field_modal_filtering_outputs" / s / "logs" / "structure_summary.json")
-                              .read_text(encoding="utf-8"))["raw_file"]
+        # (the summary names the archive's external copy; field_measurements_raw/ holds the same bytes,
+        # checked at migration; the recorded string is kept as it was)
+        raw_rec = json.loads((C.LEGACY_FIELD_OUTPUTS / s / "logs" / "structure_summary.json")
+                             .read_text(encoding="utf-8"))["raw_file"]
+        raw_path = str(C.FIELD_RAW_MAT_DIR / Path(raw_rec).name)
         raw = sio.loadmat(raw_path)
         names = [str(n[0]) for n in raw["Names"].ravel()]
         full = field["raw_u3_timeseries_full"]
@@ -98,7 +102,7 @@ def main() -> int:
         phi = ssi_mat["phi_sorted"][2::3].astype(float)
         y = d["y_ssi"]
         checks[s] = {
-            "raw_file": raw_path,
+            "raw_file": raw_rec,
             "raw_u3_full_equals_raw_mat_Data_ch3_in_column_order": same,
             "u3_channel_indices_zero_based": field["u3_channel_indices_zero_based"].tolist(),
             "raw_names_rows_6_8": [names[3 * I6 + 2], names[3 * I8 + 2]],

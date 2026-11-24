@@ -23,7 +23,7 @@ import pandas as pd  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent
-sys.path.insert(0, str(REPO / "Final_results_for_paper" / "pipeline"))
+sys.path.insert(0, str(REPO / "pipeline"))
 import fr_common as C  # noqa: E402
 
 M = list(C.MODE_NAMES)

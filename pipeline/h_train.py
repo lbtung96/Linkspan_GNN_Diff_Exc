@@ -1,7 +1,7 @@
 """T11 step 2 - train the two varied-excitation arms with the paper's own trainer.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/h_train.py --launch gate
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/h_train.py --launch arms
+    python tools/run_stage.py pipeline/h_train.py --launch gate
+    python tools/run_stage.py pipeline/h_train.py --launch arms
 
 As T1's t_train.py does, fr_train.main() is called unchanged with in-memory substitutions:
 fr_train.jobs() returns only the job, and fr_train's own options --pool (the sample folder),
@@ -16,10 +16,10 @@ both on data/T11/trainval_varexc/samples (the same 508 + 92 structures, a new ex
 record per structure; h_prepare.py).
 
 --launch gate: the paper's jobs edgegat_N600 and edgegat_geomorient_N600, through this
-wrapper, on the paper's own pool, 3 epochs, into EC_comments/runs/ec_varexc_gates/; their
+wrapper, on the paper's own pool, 3 epochs, into runs/ec/ec_varexc_gates/; their
 training_history.csv must equal the first 3 epochs of the paper runs' number for number
 (T1's t_gates.same_history: every column but n_epochs).  -> results/.../train_gate.json
---launch arms: both arms in parallel, 2 torch threads each (CLAUDE.md), logs in EC_comments/logs.
+--launch arms: both arms in parallel, 2 torch threads each (CLAUDE.md), logs in logs.
 --job NAME: one training in this process (what --launch runs as a subprocess).
 """
 

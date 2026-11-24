@@ -1,18 +1,18 @@
-"""Shared paths for the EC-comment runs (co-author review of the 2026-11-16 draft).
+"""Shared paths for the pipeline stages (the archive's EC_comments chain, T5 and T10-T20).
 
-Every script under EC_comments/pipeline/ imports this first.  Run everything from the
-repository root (CLAUDE.md rule 1), through tools/run_stage.py.
+Every stage script under pipeline/ imports this first (directly or through its task's common
+module).  Run everything from the repository root, through tools/run_stage.py.
 
-    Final_results_for_paper/EC_comments/
-        pipeline/            scripts (owner prefix per task) + ec_common.py
-        pipeline/results/    one subfolder per task, T1_... to T9_...  (tracked tables)
-        data/                generated data (gitignored)
-        runs/                checkpoints (gitignored)
+    pipeline/            stage scripts (prefix per task, see README.md) + the paper modules they import
+    results/<task>/      one folder per task (tracked tables); results/paper/ = the archived paper's
+                         tables, read as gate references only
+    data/                inputs and generated data (gitignored; DATA.md)
+    runs/ec/             networks trained with a record per structure (gitignored)
+    runs/paper/          the archived paper's networks, shared excitation record: history only
+    logs/                stage logs (gitignored)
 
-These results answer review comments. They are NOT part of
-Final_results_for_paper/pipeline/results/PAPER_RESULTS.md and must not be quoted beside
-it until the author decides how to use them.  Nothing here may write into
-Final_results_for_paper/pipeline/, data/ or runs/, or edit a library module.
+In the archive these were Final_results_for_paper/EC_comments/{pipeline, pipeline/results, data,
+runs, logs}.  Task-folder names (T5_..., T10_..., T20_...) are unchanged.
 """
 
 from __future__ import annotations
@@ -20,21 +20,22 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-EC_PIPELINE = Path(__file__).resolve().parent          # .../EC_comments/pipeline
-EC = EC_PIPELINE.parent                                # .../EC_comments
-FINAL = EC.parent                                      # .../Final_results_for_paper
-REPO = FINAL.parent                                    # repository root (three parents up)
-FR_PIPELINE = FINAL / "pipeline"                       # the paper pipeline (read-only from here)
+EC_PIPELINE = Path(__file__).resolve().parent          # <repo>/pipeline
+REPO = EC_PIPELINE.parent                              # repository root (one parent up; three in the archive)
+EC = REPO                                              # logs/ lives at the root (EC.EC / "logs")
+FINAL = REPO
+FR_PIPELINE = EC_PIPELINE                              # the paper modules share pipeline/ with the EC chain
 
-for _p in (REPO, FR_PIPELINE, EC_PIPELINE):
+for _p in (REPO, EC_PIPELINE):
     if str(_p) not in sys.path:
         sys.path.insert(0, str(_p))
 
 import fr_common as C  # noqa: E402  (the paper pipeline's constants, re-exported)
 
-EC_DATA = EC / "data"
-EC_RUNS = EC / "runs"
-EC_RESULTS = EC_PIPELINE / "results"
+# archive: Final_results_for_paper/EC_comments/{data, runs, pipeline/results}
+EC_DATA = REPO / "data"
+EC_RUNS = REPO / "runs" / "ec"
+EC_RESULTS = REPO / "results"
 
 TASK_DIRS = {
     "T1": "T1_ablation_seeds_phase",

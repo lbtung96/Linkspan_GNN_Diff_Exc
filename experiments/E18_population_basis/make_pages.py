@@ -40,7 +40,7 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent
 E19 = REPO / "experiments" / "E19_mode_identification"
 PAGES = HERE / "pages"
-for p in (REPO / "Final_results_for_paper" / "pipeline", REPO / "experiments" / "E17_real_holdout", HERE, E19):
+for p in (REPO / "pipeline", REPO / "experiments" / "E17_real_holdout", HERE, E19):
     sys.path.insert(0, str(p))
 
 import stage1_holdout as E17  # noqa: E402  (puts the pipeline on sys.path)

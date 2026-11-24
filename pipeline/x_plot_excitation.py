@@ -1,6 +1,6 @@
 """Plot the synthetic support excitation exactly as the simulator draws it (EC_comments, T12).
 
-    python Final_results_for_paper/EC_comments/pipeline/x_plot_excitation.py
+    python pipeline/x_plot_excitation.py
 
 simulate_uniform_inertial_u3_white_noise.simulate_white_noise_from_modal_model draws
     rng = np.random.default_rng(SEED)                              # line 344

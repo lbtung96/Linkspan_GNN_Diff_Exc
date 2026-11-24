@@ -1,7 +1,7 @@
 """T13 step 2 - train the five feasibility arms (400 epochs) with the paper's own trainer.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/k_train.py --launch gate
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/k_train.py --launch arms
+    python tools/run_stage.py pipeline/k_train.py --launch gate
+    python tools/run_stage.py pipeline/k_train.py --launch arms
 
 Every arm runs fr_train.main() unchanged, as T11's h_train.py does: fr_train.jobs() returns only
 the job (EdgeGAT hyperparameters, seed 123, epochs 400), fr_train's own --pool / --train-list /
@@ -30,7 +30,7 @@ Augmentation (K > 1) is two in-memory substitutions, nothing else:
       trainer with K = 1, and with K = 4 where all four folders are the same one (so the
       draws switch datasets but the data are equal): history equal number for number, and
       best_model.pt / last_model.pt weights bit-identical.
---launch arms  all five arms in parallel, 2 threads each, logs in EC_comments/logs.
+--launch arms  all five arms in parallel, 2 threads each, logs in logs.
 --job NAME     one arm in this process (what --launch runs).
 """
 
@@ -228,7 +228,7 @@ def gate() -> int:
             continue
         cmp = t_gates.same_history(K.GATE_ROOT / n / "training_history.csv", C.RUNS / ref / "training_history.csv",
                                    ep) if res[n]["rc"] == 0 else {"pass": False}
-        out["d_paper_history"][n] = {**res[n], "reference": f"Final_results_for_paper/runs/{ref}", **cmp}
+        out["d_paper_history"][n] = {**res[n], "reference": f"runs/paper/{ref}", **cmp}
     t11 = json.loads((H.T11_RESULTS / "train_gate.json").read_text(encoding="utf-8"))
     out["d_t11_gate_reused"] = {"pass": t11["pass"], "runs": {k: v["pass"] for k, v in t11["runs"].items()},
                                 "source": "results/T11_varied_excitation_pilot/train_gate.json"}

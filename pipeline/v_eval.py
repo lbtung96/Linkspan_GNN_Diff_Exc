@@ -1,6 +1,6 @@
 """T20 step 4 - score the deck-forcing networks beside T17's, across excitations and on the real bridges.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/v_eval.py [--workers 8]
+    python tools/run_stage.py pipeline/v_eval.py [--workers 8]
 
 Networks: the six T20 runs (deck, walk x seeds 123-125) and T17's three coherency + orientation runs (support
 excitation), all coherency + orientation, sign-invariant, N 2000, 1000 epochs.

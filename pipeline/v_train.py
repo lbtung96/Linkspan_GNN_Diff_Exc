@@ -1,12 +1,12 @@
 """T20 step 3 - train T17's best arm on deck forcing + noise: 2 excitations x 3 seeds, N 2000, 1000 epochs.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/v_train.py --launch
+    python tools/run_stage.py pipeline/v_train.py --launch
 
 coherency + orientation edges (802-d), sign-invariant loss (p_common, in memory), four records per training
 structure drawn one per epoch (k_train's augmentation), validation on pool 0, best-validation checkpoint - T17's
 set-up exactly, through T17's own wrapper (q_train.run, whose trainer check passed: T17 train_check.json),
 with only the record pools changed to v_common.pools(exc).
---launch: all six in parallel, 2 threads each; logs EC_comments/logs/T20_train_<run>.log;
+--launch: all six in parallel, 2 threads each; logs logs/T20_train_<run>.log;
           results/T20_deck_forcing/train_launch.json.  Refuses to start unless prepare_summary.json passes.
 """
 

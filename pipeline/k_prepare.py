@@ -1,8 +1,8 @@
 """T13 step 1 - gates (a)-(c), then the new excitation records.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/k_prepare.py --part gate --workers 10
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/k_prepare.py --part data --workers 10 [--sets ...]
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/k_prepare.py --part crosscheck
+    python tools/run_stage.py pipeline/k_prepare.py --part gate --workers 10
+    python tools/run_stage.py pipeline/k_prepare.py --part data --workers 10 [--sets ...]
+    python tools/run_stage.py pipeline/k_prepare.py --part crosscheck
 
 --part gate (results/T13_feasibility/prepare_gates.json)
   (a) T11's gate (h_prepare --part gate: 40 structures, SEED 12345, T_TOTAL 60 reproduce the

@@ -1,6 +1,6 @@
 """T5 (EC-25) - conventional FDD and the class template on the same simulated records.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_fdd.py \
+    python tools/run_stage.py pipeline/c_fdd.py \
         --sets val paper fresh_test --workers 4
 
 Per deck (the main network's 300 validation decks - for tuning only -, the paper's 500 test

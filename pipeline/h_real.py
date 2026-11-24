@@ -1,7 +1,7 @@
 """T11 step 4 - the nine real bridges: zero-shot (s5's path) and the FE-simulated ceiling (s6 case a).
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/h_real.py --part zeroshot
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/h_real.py --part ceiling --workers 5
+    python tools/run_stage.py pipeline/h_real.py --part zeroshot
+    python tools/run_stage.py pipeline/h_real.py --part ceiling --workers 5
 
 zeroshot  s5_zeroshot.load_structures() and s5_zeroshot.evaluate(), imported and called unchanged,
           torch's default thread count (as s5).  The inputs are what s5 reads through fr_common:

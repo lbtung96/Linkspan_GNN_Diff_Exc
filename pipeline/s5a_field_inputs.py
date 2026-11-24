@@ -1,13 +1,13 @@
 """Stage 5a - the paper's real-bridge inputs, in the sensor order of the SSI labels.
 
-    python tools/run_stage.py Final_results_for_paper/pipeline/s5a_field_inputs.py
+    python tools/run_stage.py pipeline/s5a_field_inputs.py
 
 The loggers x40131 and x40133 (0-based sensor rows 6 and 8) are interchanged in the
 raw field records of all nine bridges; every SSI script swaps them back before
 identification ("% Swap 131 and 133"), the GNN field path never did (fr_common,
 FIELD_SENSOR_SWAP; PROVENANCE Phase P; EC_comments T10).  This stage regenerates the
 field outputs with that reorder and rebuilds the corrected real-bridge features from
-them, into Final_results_for_paper/data/field_inputs_v2/:
+them, into data/field_inputs_v2/:
 
   field_modal_filtering_outputs/<S>/   process_field_modal_filtering.process_structure,
                                        imported and called with explicit file paths and
@@ -98,7 +98,10 @@ def produce(s: str, out_root: Path, reorder: list[int] | None, save_png: bool) -
     raw_name, ssi_name = C.FIELD_RAW_FILES[s]
     raw_file, ssi_file = C.FIELD_RAW_MAT_DIR / raw_name, C.FIELD_RAW_MAT_DIR / ssi_name
     leg_summary = json.loads((legacy_logs / "structure_summary.json").read_text(encoding="utf-8"))
-    assert Path(leg_summary["raw_file"]) == raw_file and Path(leg_summary["ssi_file"]) == ssi_file, s
+    # the legacy summary names the archive's external copy ("For GNN"); this repository's
+    # field_measurements_raw/ holds the same files (byte-identical, checked at migration)
+    assert (Path(leg_summary["raw_file"]).name == raw_file.name
+            and Path(leg_summary["ssi_file"]).name == ssi_file.name), s
 
     settings = P.build_default_settings()
     settings.output_root = out_root
@@ -114,7 +117,7 @@ def produce(s: str, out_root: Path, reorder: list[int] | None, save_png: bool) -
     # the mode assignment the legacy run used (its store keys Stranda as "Stranda_Walk")
     mapping = json.loads((legacy_logs / "mode_assignment_used.json").read_text(encoding="utf-8"))
     pair = P.PairCandidate(structure_key=s.lower(), structure_name=s, raw_file=raw_file, ssi_file=ssi_file,
-                           notes=["explicit pairing, Final_results_for_paper/pipeline/s5a_field_inputs.py"])
+                           notes=["explicit pairing, pipeline/s5a_field_inputs.py"])
     P.process_structure(pair, settings, None, {s: mapping})
     return {"settings_diff_vs_legacy": settings_diff, "settings": mine}
 
@@ -210,7 +213,7 @@ def main() -> int:
                   f"{diff_field} features {diff_feat}", flush=True)
 
     P.save_json(C.FIELD_OUTPUTS / "run_summary.json",
-                {"mode": "Final_results_for_paper/pipeline/s5a_field_inputs.py", "field_sensor_swap": list(C.FIELD_SENSOR_SWAP),
+                {"mode": "pipeline/s5a_field_inputs.py", "field_sensor_swap": list(C.FIELD_SENSOR_SWAP),
                  "settings": r_sw["settings"], "structures": summaries})
     checks["pass"] = all(c["pass"] for c in checks["per_structure"].values())
     (C.RESULTS / "s5a_field_inputs_checks.json").write_text(json.dumps(checks, indent=2, default=P._json_default),

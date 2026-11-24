@@ -1,6 +1,6 @@
 """Stage 6 - where the transfer gap comes from (paper §7.3-7.5), broadband.
 
-    python tools/run_stage.py Final_results_for_paper/pipeline/s6_decomposition.py
+    python tools/run_stage.py pipeline/s6_decomposition.py
 
 One network (edgegat_N{MAIN_N}, best_model), nine real geometries, three layers:
 

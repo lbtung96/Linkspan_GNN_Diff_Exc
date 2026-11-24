@@ -1,6 +1,6 @@
 """T11 step 3 - score the two new arms and three paper networks on four synthetic test sets.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/h_eval.py [--runs ...] [--sets ...] --workers 4
+    python tools/run_stage.py pipeline/h_eval.py [--runs ...] [--sets ...] --workers 4
 
 Scoring code: T5's c_rescore.evaluate, imported and called unchanged (s4_indomain.evaluate's
 path: CPU, 2 torch threads, the library datasets and per-sample metrics, best-validation
@@ -90,7 +90,7 @@ def paired(rows_a: list[dict], rows_b: list[dict], col: str) -> tuple[float, flo
 def gate_fresh(summ: list[dict]) -> dict:
     ref = {(r["test_set"], r["run"]): r for r in H.read_csv(H.EC.task_dir("T5") / "rescore_summary.csv")
            if r["checkpoint"] == "best_model"}
-    out = {"reference": "EC_comments/pipeline/results/T5_fresh_test_baselines/rescore_summary.csv",
+    out = {"reference": "results/T5_fresh_test_baselines/rescore_summary.csv",
            "rule": "every shared numeric column equal (==)", "rows": {}}
     for s in summ:
         k = (s["test_set"], s["run"])

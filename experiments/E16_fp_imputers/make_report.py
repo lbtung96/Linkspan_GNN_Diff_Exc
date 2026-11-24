@@ -24,8 +24,8 @@ from scipy import stats  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent
-S8 = REPO / "Final_results_for_paper" / "pipeline" / "results"
-sys.path.insert(0, str(REPO / "Final_results_for_paper" / "pipeline"))
+S8 = REPO / "results" / "paper"
+sys.path.insert(0, str(REPO / "pipeline"))
 import fr_common as C  # noqa: E402
 
 M = list(C.MODE_NAMES)
@@ -363,7 +363,7 @@ def main() -> int:
     A.append(
         f"The main network (`{C.sweep_run_name(C.MAIN_N)}`, best-validation checkpoint) on the fixed "
         f"test set ({g['structures']} structures, 125 per girder count), exactly as "
-        "`Final_results_for_paper/pipeline/s8_sensor_sweep.py` runs it, except for the operator that fills "
+        "`pipeline/s8_sensor_sweep.py` runs it, except for the operator that fills "
         "the unmeasured nodes. s8 uses the production Feature Propagation (Rossi et al. 2022; "
         "D^-1/2 A D^-1/2, 50 iterations, measured rows reset). Here every model-free imputer benchmarked "
         "in [lbtung96/Feature-propagation](https://github.com/lbtung96/Feature-propagation) takes its "

@@ -1,7 +1,7 @@
 """Stage 0 - generate the paper population, one response arm per invocation.
 
-    python tools/run_stage.py Final_results_for_paper/pipeline/s0_generate_population.py --arm broadband
-    python tools/run_stage.py Final_results_for_paper/pipeline/s0_generate_population.py --arm narrowband
+    python tools/run_stage.py pipeline/s0_generate_population.py --arm broadband
+    python tools/run_stage.py pipeline/s0_generate_population.py --arm narrowband
 
 Both arms draw the same 5500 structures (generator seed 20260507, per-Ng random
 streams) and differ only in the synthesised response:
@@ -15,7 +15,7 @@ The production generator is never edited.  It is imported, and five of its
 module-level names are replaced before main() runs; main() looks every one of
 them up as a global at call time:
 
-  OUT_DIR                  -> Final_results_for_paper/data/pop_<arm>
+  OUT_DIR                  -> data/pop_<arm>
   N_STRUCTURES_TOTAL       -> 5500  (1375 per Ng)
   sample_params_for_ng     -> girder spacing for Ng >= 3 drawn up to 3000 mm
                               (was 2500 mm), so the five real bridges at 3000 mm

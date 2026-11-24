@@ -1,6 +1,6 @@
 """T5 (EC-15) - checks on the fresh test sets: novelty, distribution, rejections, cost.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_fresh_checks.py
+    python tools/run_stage.py pipeline/c_fresh_checks.py
 
   1. count and balance: 500 structures, 125 per Ng, in each fresh set;
   2. the two fresh sets hold the same structures (identical params_json, FE targets and

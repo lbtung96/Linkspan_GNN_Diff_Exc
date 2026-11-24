@@ -1,6 +1,6 @@
 """T13 step 3 - score the five arms and T11's two 5000-epoch arms on the new-excitation test sets.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/k_eval.py --workers 6
+    python tools/run_stage.py pipeline/k_eval.py --workers 6
 
 Scoring code: T5's c_rescore.evaluate, imported and called unchanged (s4_indomain's path, CPU,
 2 torch threads, best-validation checkpoint), as T11's h_eval.py.  Module globals re-pointed in
@@ -95,7 +95,7 @@ def paired(rows_a, rows_b, col):
 
 def gate_t11(summ: list[dict]) -> dict:
     ref = {(r["test_set"], r["run"]): r for r in K.read_csv(H.T11_RESULTS / "eval_summary.csv")}
-    out = {"reference": "EC_comments/pipeline/results/T11_varied_excitation_pilot/eval_summary.csv",
+    out = {"reference": "results/T11_varied_excitation_pilot/eval_summary.csv",
            "rule": "every shared numeric column equal (==)", "rows": {}}
     for s in summ:
         k = (s["test_set"], s["run"])

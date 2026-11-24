@@ -1,6 +1,6 @@
 """T19 - where the real-bridge gap of the T17 networks comes from (s6's decomposition, own records).
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/u_decomposition.py [--workers 8]
+    python tools/run_stage.py pipeline/u_decomposition.py [--workers 8]
 
 s6_decomposition.py's layers, for the six T17 networks (q_common.RUNS).  s6's own code is imported, not
 copied: simulate_real, the deterministic FE payload, the corrected real-data builders, propagate.

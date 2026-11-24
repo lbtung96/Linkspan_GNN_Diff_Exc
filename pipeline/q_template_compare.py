@@ -1,6 +1,6 @@
 """T17 step 4 - the scale-up networks against the class template and FDD, paired, on the same deck nodes.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/q_template_compare.py [--workers 8]
+    python tools/run_stage.py pipeline/q_template_compare.py [--workers 8]
 
 T5 (c_fdd.py) scores the class template and FDD on deck nodes (every graph node except the Ng + 2
 supports, whose records are the injected excitation); q_eval's network MAC is over every graph node.

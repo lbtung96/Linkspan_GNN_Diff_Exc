@@ -1,6 +1,6 @@
 """T17 step 1 - records 1-3 for the 1700 N2000 training structures.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/q_prepare.py [--workers 14]
+    python tools/run_stage.py pipeline/q_prepare.py [--workers 14]
 
 Structures that T13 already simulated (its rec1..rec3, the N600 training list) are hard-linked
 (npz and check file) - the same seed, so the same file; every other one goes through T13's own

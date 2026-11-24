@@ -58,7 +58,7 @@ from scipy.signal import get_window  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent
-sys.path.insert(0, str(REPO / "Final_results_for_paper" / "pipeline"))
+sys.path.insert(0, str(REPO / "pipeline"))
 sys.path.insert(0, str(REPO / "experiments" / "E14_corner_sensors"))
 sys.path.insert(0, str(REPO / "experiments" / "E16_fp_imputers"))
 sys.path.insert(0, str(HERE))

@@ -1,13 +1,13 @@
 """T17 step 2 - train the six scale-up runs (2 arms x 3 seeds, N = 2000, 1000 epochs, own records x4).
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/q_train.py --check
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/q_train.py --launch
+    python tools/run_stage.py pipeline/q_train.py --check
+    python tools/run_stage.py pipeline/q_train.py --launch
 
 As T16's p_train (fr_train unchanged; T13's augmentation wrapper; p_common's sign-invariant loss and
 coherency+orientation edges installed in memory), with the training seed as a parameter.
 --check: the seed-parameterised wrapper, seed 123, MSE coherency, T13's N600 K4 pools, 2 epochs,
          reproduces T13's ec_t13_coh_K4_N600 history number for number (results/T17_scale_up/train_check.json).
---launch: all six in parallel, 2 threads each; logs EC_comments/logs/T17_train_<run>.log.
+--launch: all six in parallel, 2 threads each; logs logs/T17_train_<run>.log.
 """
 
 from __future__ import annotations
@@ -71,7 +71,7 @@ def check() -> int:
     if rc == 0:
         cmp = t_gates.same_history(root / name / "training_history.csv",
                                    K.EC_RUNS / "ec_t13_coh_K4_N600" / "training_history.csv", 2)
-        out = {"rc": rc, "reference": "EC_comments/runs/ec_t13_coh_K4_N600", **cmp}
+        out = {"rc": rc, "reference": "runs/ec/ec_t13_coh_K4_N600", **cmp}
     Q.T17_RESULTS.mkdir(parents=True, exist_ok=True)
     K.write_json(Q.T17_RESULTS / "train_check.json", out)
     print(json.dumps(out, indent=1))

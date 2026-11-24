@@ -1,9 +1,9 @@
 """T5 (EC-15) - score any trained network on the paper's fixed test set and/or the fresh ones.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_rescore.py \
+    python tools/run_stage.py pipeline/c_rescore.py \
         [--runs NAME_OR_PATH ...] [--sets paper fresh_test fresh_test_paperexc] [--workers 4]
 
-Runs are found by name in Final_results_for_paper/runs/ first, then in EC_comments/runs/
+Runs are found by name in runs/paper/ first, then in runs/ec/
 (any depth: a name may be a relative path such as T1/edgegat_N600_s124), or given as a
 directory path.  Default: the 14 paper runs (fr_train.jobs()).  A run is usable when its
 folder has run_summary.json (arch, edge_feature_mode, shape_target_mode are read from it)
@@ -24,7 +24,7 @@ Writes (results/T5_fresh_test_baselines/):
                            rows of (set, run, checkpoint) re-scored now replace the old ones)
   rescore_summary.csv      s4's summary columns, per test set x run x checkpoint
   rescore_by_ng.csv        the same per girder count
-and predictions to EC_comments/data/T5/predictions/<set>/<run-key>__<checkpoint>.npz
+and predictions to data/T5/predictions/<set>/<run-key>__<checkpoint>.npz
 (per structure: pred, target, freq_pred, freq_true; plus forward-pass seconds).
 """
 
@@ -187,7 +187,7 @@ def write_csv(path: Path, rows: list[dict]) -> None:
 
 def gate(summ: list[dict]) -> dict:
     ref = {r["run"]: r for r in read_csv(C.RESULTS / "s4_indomain_summary.csv") if r["checkpoint"] == "best_model"}
-    out = {"reference": "Final_results_for_paper/pipeline/results/s4_indomain_summary.csv (best_model rows)",
+    out = {"reference": "results/paper/s4_indomain_summary.csv (best_model rows)",
            "rule": "every shared numeric column equal (==)", "runs": {}}
     for s in summ:
         if s["test_set"] != "paper" or s["checkpoint"] != "best_model" or s["run"] not in ref:

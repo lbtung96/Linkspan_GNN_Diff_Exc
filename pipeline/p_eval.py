@@ -1,6 +1,6 @@
 """T16 - score the six sign-test arms and T13's two references.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/p_eval.py [--workers 8]
+    python tools/run_stage.py pipeline/p_eval.py [--workers 8]
 
 Synthetic (best-validation checkpoint, CPU, 2 torch threads, one process per (net, set) so an arm's
 in-memory input patch never leaks into another's):

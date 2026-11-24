@@ -1,6 +1,6 @@
 """T15 - mirror test: is the excitation record the only thing that tells the network left from right?
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/n_mirror_test.py [--workers 6] [--per-ng 25]
+    python tools/run_stage.py pipeline/n_mirror_test.py [--workers 6] [--per-ng 25]
 
 Hypothesis (T13): a GNN without coordinates cannot tell a deck's left half from its right, and the
 signed targets follow a template convention (`compute_reference_sign_alignment`: dot product with a
@@ -27,7 +27,7 @@ test establishes is (i) that the record assignment is the ONLY left/right cue in
 by the swap, and (iii) which supports carry the label (partial swaps).
 
 Metric: per mode, MAC and the signed cosine between prediction and target (MAC = cos^2; the sign of
-the cosine is what MAC cannot see).  Writes to EC_comments/pipeline/results/T15_mirror_test/.
+the cosine is what MAC cannot see).  Writes to results/T15_mirror_test/.
 """
 
 from __future__ import annotations

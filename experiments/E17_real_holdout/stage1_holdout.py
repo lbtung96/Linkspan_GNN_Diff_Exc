@@ -76,7 +76,7 @@ from scipy.signal import csd, get_window, welch  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent
-sys.path.insert(0, str(REPO / "Final_results_for_paper" / "pipeline"))
+sys.path.insert(0, str(REPO / "pipeline"))
 sys.path.insert(0, str(REPO / "experiments" / "E16_fp_imputers"))
 
 import fr_common as C  # noqa: E402
@@ -98,7 +98,7 @@ from simulate_uniform_inertial_u3_white_noise import (  # noqa: E402
     normalize_rows_by_max_abs,
 )
 
-FIELD_ROOT = REPO / "field_modal_filtering_outputs"
+FIELD_ROOT = REPO / "data" / "legacy_preP" / "field_modal_filtering_outputs"  # pre-P, as in the archive
 RUN = C.RUNS / C.sweep_run_name(C.MAIN_N)
 IMPUTERS = ("FP", "FP-rw", "Harmonic", "Tikhonov", "PCFI", "NeighborMean", "Mean")
 FILL_LAYOUTS = ("single", "front_pair", "front_mid", "alternate", "one_line", "loso")

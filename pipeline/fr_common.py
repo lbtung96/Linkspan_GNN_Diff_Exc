@@ -25,19 +25,26 @@ import sys
 from pathlib import Path
 
 PIPELINE = Path(__file__).resolve().parent
-FINAL = PIPELINE.parent                      # Final_results_for_paper/
-REPO = FINAL.parent                          # repository root (two parents up)
+REPO = PIPELINE.parent                       # repository root (one parent up; it was two in the archive)
+FINAL = REPO                                 # the archive's Final_results_for_paper/ level no longer exists
 if str(REPO) not in sys.path:
     sys.path.insert(0, str(REPO))
 if str(PIPELINE) not in sys.path:
     sys.path.insert(0, str(PIPELINE))
 
-DATA = FINAL / "data"
-RUNS = FINAL / "runs"
-RESULTS = PIPELINE / "results"
+# Layout of this repository (the archive's paths in brackets):
+#   data/population/   the 5500 structures       [Final_results_for_paper / data / pop_broadband]
+#   data/splits/                                  [Final_results_for_paper / data / splits]
+#   runs/paper/        the paper's networks, trained on the shared record: history and gates only
+#                                                 [Final_results_for_paper / runs]
+#   results/paper/     the paper's tables, read as gate references only
+#                                                 [Final_results_for_paper / pipeline / results]
+DATA = REPO / "data"
+RUNS = REPO / "runs" / "paper"
+RESULTS = REPO / "results" / "paper"
 
-POP_BROADBAND_ROOT = DATA / "pop_broadband"      # generator OUT_DIR, broadband arm
-POP_NARROWBAND_ROOT = DATA / "pop_narrowband"    # generator OUT_DIR, narrowband arm
+POP_BROADBAND_ROOT = DATA / "population"         # generator OUT_DIR, broadband arm
+POP_NARROWBAND_ROOT = DATA / "pop_narrowband"    # not carried over (never trained on)
 POP_BROADBAND = POP_BROADBAND_ROOT / "samples_phase2_bandpass"
 POP_NARROWBAND = POP_NARROWBAND_ROOT / "samples_phase2"
 SPLITS = DATA / "splits"                     # manifests written by s2_make_splits.py
@@ -121,14 +128,16 @@ def field_channel_reorder(n_channels: int) -> list[int]:
 
 # raw field records and SSI-picked files the GNN field path was produced from
 # (field_modal_filtering_outputs/<S>/logs/structure_summary.json raw_file / ssi_file)
-FIELD_RAW_MAT_DIR = (REPO.parents[2] / "System identification code" / "Field measurements 26_270625"
-                     / "For GNN")
+# (the archive read "System identification code/Field measurements 26_270625/For GNN" outside the
+# repository; field_measurements_raw/ holds the same files, checked byte-identical by s5a's re-run)
+FIELD_RAW_MAT_DIR = REPO / "field_measurements_raw"
 FIELD_RAW_FILES = {s: (f"{s}.mat", f"{s}_Data_picked.mat") for s in LOOCV}
 FIELD_RAW_FILES["Eidsdal"] = ("Eidsdal.mat", "Eisdal_Data_picked.mat")
 FIELD_RAW_FILES["Stranda"] = ("Stranda_Walk.mat", "Stranda_Data_picked.mat")
 # legacy, raw sensor order: what experiments/ (E2, E5, E8, E10, E11, E17-E19) ran on
-LEGACY_FIELD_OUTPUTS = REPO / "field_modal_filtering_outputs"
-LEGACY_REAL_FEATURES = REPO / "experiments" / "E5_real_transfer" / "phase3_corrected"
+# (pre-Phase-P, sensors 7 and 9 interchanged: kept only for T10's history re-run and s5a's legacy gate)
+LEGACY_FIELD_OUTPUTS = DATA / "legacy_preP" / "field_modal_filtering_outputs"
+LEGACY_REAL_FEATURES = DATA / "legacy_preP" / "E5_phase3_corrected"
 # the paper's field inputs since Phase P, written by s5a_field_inputs.py
 FIELD_INPUTS = DATA / "field_inputs_v2"
 FIELD_OUTPUTS = FIELD_INPUTS / "field_modal_filtering_outputs"

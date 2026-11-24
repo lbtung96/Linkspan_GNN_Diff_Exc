@@ -1,6 +1,6 @@
 """T5 - analysis tables and README.md, generated from the stage CSVs (never hand-edited).
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_report.py
+    python tools/run_stage.py pipeline/c_report.py
 
 Reads rescore_*.csv, ec23_*.csv, freq_baselines.csv, fdd_rows.csv, fdd_timing.csv,
 fdd_checks.json, fresh_checks.json, rescore_gate.json and the stored predictions; writes
@@ -562,21 +562,21 @@ def main() -> int:
     # --- how to run
     w("## What ran\n")
     w("```bash")
-    w("python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_gen_fresh_test.py --set fresh_test")
-    w("python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_gen_fresh_test.py --set fresh_test_paperexc")
-    w("python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_fresh_checks.py")
-    w("python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_rescore.py --sets paper fresh_test fresh_test_paperexc --workers 3")
-    w("python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_ec23_metrics.py")
-    w("python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_freq_baselines.py")
-    w("python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_fdd.py --sets val paper --workers 2")
-    w("python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_fdd.py --sets fresh_test --workers 3")
-    w("python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_excitation_diag.py")
-    w("python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_report.py")
+    w("python tools/run_stage.py pipeline/c_gen_fresh_test.py --set fresh_test")
+    w("python tools/run_stage.py pipeline/c_gen_fresh_test.py --set fresh_test_paperexc")
+    w("python tools/run_stage.py pipeline/c_fresh_checks.py")
+    w("python tools/run_stage.py pipeline/c_rescore.py --sets paper fresh_test fresh_test_paperexc --workers 3")
+    w("python tools/run_stage.py pipeline/c_ec23_metrics.py")
+    w("python tools/run_stage.py pipeline/c_freq_baselines.py")
+    w("python tools/run_stage.py pipeline/c_fdd.py --sets val paper --workers 2")
+    w("python tools/run_stage.py pipeline/c_fdd.py --sets fresh_test --workers 3")
+    w("python tools/run_stage.py pipeline/c_excitation_diag.py")
+    w("python tools/run_stage.py pipeline/c_report.py")
     w("```\n")
-    w("**Re-scoring networks trained later** (e.g. into `EC_comments/runs/`): any folder with `run_summary.json` and "
+    w("**Re-scoring networks trained later** (e.g. into `runs/ec/`): any folder with `run_summary.json` and "
       "`checkpoints/best_model.pt` is accepted, by name or path; new edge modes come from `t_edge_modes.py`:\n")
     w("```bash")
-    w("python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_rescore.py --runs <name-or-path> ... --sets paper fresh_test")
+    w("python tools/run_stage.py pipeline/c_rescore.py --runs <name-or-path> ... --sets paper fresh_test")
     w("```\n")
     w("Rows accumulate in `rescore_per_sample.csv` / `rescore_summary.csv` (a re-scored (set, run, checkpoint) replaces "
       "its old rows); add `--runs` to `c_ec23_metrics.py` for the EC-23 metrics of a new run, then re-run `c_report.py`.\n")
@@ -587,7 +587,7 @@ def main() -> int:
         except ValueError:
             continue
         st = str(e.get("stage", "")).replace("\\", "/")
-        if "/EC_comments/pipeline/c_" in st and e.get("exit_code") == 0 and "--per-ng" not in e.get("args", []):
+        if "/pipeline/c_" in st and e.get("exit_code") == 0 and "--per-ng" not in e.get("args", []):
             led[(st.rsplit("/", 1)[-1], " ".join(e.get("args", [])))] = e["seconds"]
     if led:
         w("**Compute time** (wall clock of the last successful run of each stage and arguments, from "

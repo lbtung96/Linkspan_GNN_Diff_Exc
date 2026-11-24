@@ -1,6 +1,6 @@
 """Resumable trainer for every network in Final_results_for_paper.
 
-    python Final_results_for_paper/pipeline/fr_train.py --job edgegat_N600 [--threads 4]
+    python pipeline/fr_train.py --job edgegat_N600 [--threads 4]
 
 It reproduces `EdgeGATConv_Modal_GNN.train_one_run` and
 `GraphSAGE_Modal_GNN.train_one_run` epoch for epoch - the same dataset classes,

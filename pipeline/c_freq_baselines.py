@@ -1,6 +1,6 @@
 """T5 (EC-25a) - frequency baselines that never look at a response record.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_freq_baselines.py
+    python tools/run_stage.py pipeline/c_freq_baselines.py
 
 Fitted on the main network's training split only (data/splits/N2000_train.txt: 1700 decks;
 never its validation or a test set), scored on the paper's fixed test set and the fresh one:

@@ -1,7 +1,7 @@
 """T16 - train the six sign-test arms (400 epochs) through T13's trainer wrapper.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/p_train.py --check
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/p_train.py --launch
+    python tools/run_stage.py pipeline/p_train.py --check
+    python tools/run_stage.py pipeline/p_train.py --launch
 
 --check   (results/T16_sign_test/train_checks.json), must pass before --launch:
   1. sign-invariant loss: equals a brute-force min over the 2^(graphs x modes) sign choices on a random
@@ -13,7 +13,7 @@
   4. trainer unchanged when nothing is switched on: an MSE coherency K4 job through this wrapper
      (with the edge-mode patch installed), 2 epochs, gives T13's ec_t13_coh_K4_N600 history for
      those epochs number for number.
---launch  the six arms in parallel, 2 threads each, logs in EC_comments/logs/T16_train_<arm>.log.
+--launch  the six arms in parallel, 2 threads each, logs in logs/T16_train_<arm>.log.
 --job     one arm in this process (what --launch runs).
 """
 
@@ -122,7 +122,7 @@ def check_trainer() -> dict:
     if rc:
         return {"rc": rc, "pass": False}
     cmp = t_gates.same_history(root / name / "training_history.csv", K.EC_RUNS / "ec_t13_coh_K4_N600" / "training_history.csv", 2)
-    return {"rc": rc, "reference": "EC_comments/runs/ec_t13_coh_K4_N600", **cmp}
+    return {"rc": rc, "reference": "runs/ec/ec_t13_coh_K4_N600", **cmp}
 
 
 def checks() -> int:

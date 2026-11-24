@@ -1,6 +1,6 @@
 """Stage 4 - in-domain performance of every trained network on the fixed test set.
 
-    python tools/run_stage.py Final_results_for_paper/pipeline/s4_indomain.py [--runs ...]
+    python tools/run_stage.py pipeline/s4_indomain.py [--runs ...]
 
 Every network is scored on the same 500 held-out structures (125 per girder
 count, never trained or validated on), on CPU, from its best-validation

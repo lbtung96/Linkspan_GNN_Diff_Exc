@@ -66,13 +66,16 @@ from structures import LOOCV  # single source of truth
 
 STRUCTURES = list(LOOCV)
 N_PROP_ITER = 50                      # same constant as the production builders
-FIELD_ROOT = REPO / "field_modal_filtering_outputs"
+# Default field root: the PRE-Phase-P outputs (sensors 7 and 9 interchanged), as in the archive.
+# s5a and s6 pass the post-P root (fr_common.FIELD_OUTPUTS) explicitly; only T10's history re-run
+# relies on this default.
+FIELD_ROOT = REPO / "data" / "legacy_preP" / "field_modal_filtering_outputs"
 GRAPH_ROOT = REPO / "phase3_real_graphs"
 OUT_ROOT = Path(__file__).resolve().parent / "phase3_corrected"
-# samples_phase2/ is empty in the current working tree, so the training grid is
-# read from an equally valid source; both datasets carry the identical grid
-# (verified: 400 bins, df = 0.09765625 Hz, span 0 - 38.96484 Hz).
-TRAIN_GRID_SAMPLE = (REPO / "population_dataset_modes4" / "samples_phase2_bandpass"
+# The training grid: any population sample carries it (400 bins, df = 0.09765625 Hz, span
+# 0 - 38.96484 Hz).  The archive read population_dataset_modes4's sample_0000; this one is
+# byte-identical in freq_bins_hz (checked at migration, 2026-11-24).
+TRAIN_GRID_SAMPLE = (REPO / "data" / "population" / "samples_phase2_bandpass"
                      / "sample_0000_Ng2_phase1_gnn.npz")
 
 

@@ -1,6 +1,6 @@
 """T13 step 4b - what do the nets predict for the torsion modes?  (stored predictions only)
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/k_diag.py
+    python tools/run_stage.py pipeline/k_diag.py
 
 Reads the predictions k_eval.py stored (data/T13/predictions/<set>/<run>__best_model.npz: per
 structure the predicted and target signed shapes on every graph node).  Per net, set and mode:

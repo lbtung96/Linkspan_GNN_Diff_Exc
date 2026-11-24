@@ -1,7 +1,7 @@
 """T20 step 2 - simulate the N = 2000 population and the paper's test structures under deck forcing + noise.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/v_prepare.py --check
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/v_prepare.py --run [--workers 16]
+    python tools/run_stage.py pipeline/v_prepare.py --check
+    python tools/run_stage.py pipeline/v_prepare.py --run [--workers 16]
 
 One job per structure: re-solve it once (v_common.solve: the generator's solver from the stored parameters),
 then simulate every record it needs for both excitations (v_common.simulate, noise ALPHA from noise_fit.json):

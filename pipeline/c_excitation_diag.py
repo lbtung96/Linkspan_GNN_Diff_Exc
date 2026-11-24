@@ -1,6 +1,6 @@
 """T5 - why the networks fail on a new excitation realisation: swap inputs between paired sets.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_excitation_diag.py
+    python tools/run_stage.py pipeline/c_excitation_diag.py
 
 fresh_test and fresh_test_paperexc hold the same 500 structures (same graphs, targets) and
 differ only in the excitation seed (20261124 vs the paper's 12345).  For a network, every

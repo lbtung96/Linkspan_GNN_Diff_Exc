@@ -1,7 +1,7 @@
 """Stage 5 - zero-shot mode shapes and frequencies on the nine real bridges, and
 transfer against population size.
 
-    python tools/run_stage.py Final_results_for_paper/pipeline/s5_zeroshot.py
+    python tools/run_stage.py pipeline/s5_zeroshot.py
 
 Inputs that do not depend on the synthetic population: the corrected real
 features in the sensor order of the SSI labels (fr_common.REAL_FEATURES, written

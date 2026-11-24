@@ -83,7 +83,7 @@ def feature_propagation(
 def load_training_freq_grid(
     # samples_phase2/ is empty (see CLAUDE.md); samples_phase2_bandpass/ carries a
     # byte-identical 400-bin grid (df = 0.09765625 Hz, 0 - 38.96484 Hz), verified 2026-08-31.
-    synth_sample: str = "population_dataset_modes4/samples_phase2_bandpass/sample_0000_Ng2_phase1_gnn.npz",
+    synth_sample: str = "data/population/samples_phase2_bandpass/sample_0000_Ng2_phase1_gnn.npz",
     n_freq: int = 400,
 ) -> np.ndarray:
     """Return the 400-bin frequency grid used during synthetic training."""

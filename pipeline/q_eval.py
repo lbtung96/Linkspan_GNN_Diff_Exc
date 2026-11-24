@@ -1,6 +1,6 @@
 """T17 step 3 - score the six scale-up runs (synthetic and real), seed by seed and across seeds.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/q_eval.py [--workers 8]
+    python tools/run_stage.py pipeline/q_eval.py [--workers 8]
 
 T16's p_eval scoring (score / summarise / real_zeroshot), unchanged, with the T17 runs added to the
 arm table in memory.  T16's two N600 counterparts are re-scored beside them; gate: their synthetic means

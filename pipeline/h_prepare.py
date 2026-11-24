@@ -1,7 +1,7 @@
 """T11 step 1 - gates, then the varied-excitation training/validation and test samples.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/h_prepare.py --part gate --workers 10
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/h_prepare.py --part data --workers 10
+    python tools/run_stage.py pipeline/h_prepare.py --part gate --workers 10
+    python tools/run_stage.py pipeline/h_prepare.py --part data --workers 10
 
 --part gate (results/T11_varied_excitation_pilot/prepare_gates.json)
   (a) reproduction: with the patch disabled (SEED 12345) the re-simulation reproduces the

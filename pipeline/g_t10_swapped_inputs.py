@@ -1,7 +1,7 @@
 """T10 (3b) - zero-shot with the field inputs re-ordered: raw sensor rows 6 and 8 (0-based; serials x40131 / x40133)
 swapped before the feature builder, as the MATLAB SSI scripts do ("Swap 131 and 133").
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/g_t10_swapped_inputs.py
+    python tools/run_stage.py pipeline/g_t10_swapped_inputs.py
 
 The builder is experiments/E5_real_transfer/build_phase3_features_corrected.py, imported unmodified; its
 build_structure body is reproduced here for order A only (the variant s5 scores, x_psd and edge_attr_cpsd_full)

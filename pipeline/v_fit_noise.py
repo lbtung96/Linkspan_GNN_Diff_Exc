@@ -1,6 +1,6 @@
 """T20 step 1 - fit the measurement-noise floor ALPHA for the two deck excitations on the nine FE twins.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/v_fit_noise.py
+    python tools/run_stage.py pipeline/v_fit_noise.py
 
 T18's setting: each LOOCV bridge's FE twin (s6's deterministic solve, all 15 modes), simulated for the field
 record's length, read at the field sensors.  For each excitation (v_common: deck, walk) the response is

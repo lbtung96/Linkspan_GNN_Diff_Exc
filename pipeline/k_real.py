@@ -1,6 +1,6 @@
 """T13 step 4 - zero-shot on the nine real bridges for every arm, through the paper's s5 path.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/k_real.py
+    python tools/run_stage.py pipeline/k_real.py
 
 T11's h_real.part_zeroshot, imported and called unchanged, with h_common.T11_RESULTS re-pointed
 in memory to results/T13_feasibility so its outputs (real_zeroshot.csv, real_gates.json) land

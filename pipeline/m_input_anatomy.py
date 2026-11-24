@@ -1,7 +1,7 @@
 """T14 - input anatomy: how do the network inputs differ between the paper's one-record population and
 a population with a record per structure?  No training, no network (see m_occlusion.py for that).
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/m_input_anatomy.py [--workers 6]
+    python tools/run_stage.py pipeline/m_input_anatomy.py [--workers 6]
 
 Data (all already on disk, nothing simulated here):
   the 508 N600 training structures under FIVE records -
@@ -27,7 +27,7 @@ Inputs: x_psd (row-normalised Welch PSD, 400 bins; analysed as log10) and edge_a
     inputs; a fixed template (mean over the training structures of each Ng) scored on the test
     structures: the fraction whose asymmetry points the same way as the template.
 
-Writes to EC_comments/pipeline/results/T14_input_anatomy/.
+Writes to results/T14_input_anatomy/.
 """
 
 from __future__ import annotations

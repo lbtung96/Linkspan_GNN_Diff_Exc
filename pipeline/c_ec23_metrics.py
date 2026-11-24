@@ -1,6 +1,6 @@
 """T5 (EC-23) - shape metrics beyond MAC: sign-aligned error, success rates, cross-MAC.
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_ec23_metrics.py \
+    python tools/run_stage.py pipeline/c_ec23_metrics.py \
         [--runs ...] [--sets paper fresh_test]
 
 Reads the predictions c_rescore.py stored (data/T5/predictions/<set>/<run>__best_model.npz;

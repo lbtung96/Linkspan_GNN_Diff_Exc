@@ -1,6 +1,6 @@
 """T14 (part e) - which frequency bins of the edge coherency does the paper network depend on?
 
-    python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/m_occlusion.py
+    python tools/run_stage.py pipeline/m_occlusion.py
 
 The 500 paper test structures exist under the paper record (data/pop_broadband) and under a record
 of their own (T11 paper_varexc, same graphs and targets).  T5 showed that swapping the EDGE inputs
