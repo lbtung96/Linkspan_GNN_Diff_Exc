@@ -1,0 +1,996 @@
+{
+ "results/T11_varied_excitation_pilot/README.md": {
+  "verdict": "text",
+  "differing_lines": 50,
+  "first": [
+   "-> EC-comment analysis, **not part of `Final_results_for_paper/pipeline/results/PAPER_RESULTS.md`**. Author-approved pilot (2026-11-23); every other EC task stays paused.",
+   "+> EC-comment analysis, **not part of `results/paper/PAPER_RESULTS.md`**. Author-approved pilot (2026-11-23); every other EC task stays paused.",
+   "-| (a) re-simulation with the patch disabled (12345) reproduces the stored features | True | 40 structures (train 16, val 8, test 16; 10 per Ng); worst x_psd 2.9e-09, coherency 6.0e-08, 8-d 6.0e-08, row scale (rel.) 2.7e-09, labels f 2.4e-10 Hz / shape 1.4e-09; graphs identical (tol 1e-5) |",
+   "-| (b) records: shared under 12345, independent with the patch, deterministic | True | support-joint records (graph degree-1 nodes, ~20-40x louder than any deck node) of two different decks: max abs corr 1.000 (Ng2-Ng2) and 1.000 (Ng2-Ng4) under 12345; with the patch 0.049 / 0.040; patched vs paper record of one deck 0.037; train base vs test base 0.054 (60 s records band-passed: ~0.02 sd for independent ones); RNG draw bit-identical for the same seed: True; same deck re-simulated twice: record 4.1e-12 x rms, features 6.0e-08 |",
+   "+| (a) re-simulation with the patch disabled (12345) reproduces the stored features | True | 40 structures (train 16, val 8, test 16; 10 per Ng); worst x_psd 3.6e-09, coherency 6.0e-08, 8-d 6.0e-08, row scale (rel.) 3.6e-09, labels f 9.7e-10 Hz / shape 4.8e-10; graphs identical (tol 1e-5) |",
+   "+| (b) records: shared under 12345, independent with the patch, deterministic | True | support-joint records (graph degree-1 nodes, ~20-40x louder than any deck node) of two different decks: max abs corr 1.000 (Ng2-Ng2) and 1.000 (Ng2-Ng4) under 12345; with the patch 0.049 / 0.040; patched vs paper record of one deck 0.037; train base vs test base 0.054 (60 s records band-passed: ~0.02 sd for independent ones); RNG draw bit-identical for the same seed: True; same deck re-simulated twice: record 2.2e-11 x rms, features 6.0e-08 |"
+  ]
+ },
+ "results/T11_varied_excitation_pilot/eval_gates.json": {
+  "timing_keys_differing": [],
+  "max_abs_diff": 0.0,
+  "n_numbers_differing": 0,
+  "examples": [],
+  "strings": [
+   [
+    "/fresh_vs_T5_rescore/reference",
+    "EC_comments/pipeline/results/T5_fresh_test_baselines/rescore_summary.csv",
+    "results/T5_fresh_test_baselines/rescore_summary.csv"
+   ],
+   [
+    "/paper_vs_s4_indomain/reference",
+    "Final_results_for_paper/pipeline/results/s4_indomain_summary.csv (best_model rows)",
+    "results/paper/s4_indomain_summary.csv (best_model rows)"
+   ]
+  ],
+  "n_strings_differing": 2,
+  "verdict": "strings-only"
+ },
+ "results/T11_varied_excitation_pilot/eval_per_sample.csv": {
+  "rows": 10000,
+  "reordered": false,
+  "timing_columns_differing": [
+   "forward_s"
+  ],
+  "max_abs_diff": {},
+  "strings": {},
+  "verdict": "timing-only"
+ },
+ "results/T11_varied_excitation_pilot/eval_runs.json": {
+  "timing_keys_differing": [],
+  "max_abs_diff": 0.0,
+  "n_numbers_differing": 0,
+  "examples": [],
+  "strings": [
+   [
+    "/ec_varexc_edgegat_N600/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/ec_varexc_edgegat_geomorient_N600/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/edgegat_N2000/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/edgegat_N600/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/edgegat_geomorient_N600/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ]
+  ],
+  "n_strings_differing": 5,
+  "verdict": "strings-only"
+ },
+ "results/T11_varied_excitation_pilot/prepare_gate_a.csv": {
+  "rows": 40,
+  "reordered": false,
+  "timing_columns_differing": [
+   "seconds"
+  ],
+  "max_abs_diff": {
+   "label_freq_maxdiff_hz": 8.68693117439534e-10,
+   "label_shape_abs_maxdiff": 1.0628400382017844e-09,
+   "x_psd_maxdiff": 1.7959173315151844e-09,
+   "x_psd_row_scale_relmax": 1.4320463567208225e-09,
+   "edge_cpsd8_maxdiff": 5.21540641784668e-08,
+   "edge_cpsd_res_maxdiff": 5.21540641784668e-08,
+   "edge_full_maxdiff": 2.9802322387695312e-08
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T11_varied_excitation_pilot/prepare_gates.json": {
+  "timing_keys_differing": [
+   "/a_reproduction_paper_seed/seconds_median",
+   "/wall_s"
+  ],
+  "max_abs_diff": 9.74298752787206e-10,
+  "n_numbers_differing": 8,
+  "examples": [
+   "/a_reproduction_paper_seed/worst/label_shape_abs_maxdiff",
+   "/a_reproduction_paper_seed/worst/x_psd_row_scale_relmax",
+   "/a_reproduction_paper_seed/worst/label_freq_maxdiff_hz",
+   "/a_reproduction_paper_seed/worst/x_psd_maxdiff",
+   "/b_records/same_structure_same_seed_record_maxdiff_rel_rms"
+  ],
+  "strings": [],
+  "n_strings_differing": 0,
+  "verdict": "numeric<=tol"
+ },
+ "results/T11_varied_excitation_pilot/real_ceiling.csv": {
+  "rows": 720,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "mac_vs_fe_all_fe_nodes": 1.0839434402831749e-07,
+   "mac_vs_ssi_sensor_nodes": 2.91052841661088e-07,
+   "pred_freq_hz": 9.5367431640625e-07
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T11_varied_excitation_pilot/real_ceiling_pretrain_gate.csv": {
+  "rows": 432,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "mac_vs_fe_all_fe_nodes": 2.381508626414508e-07,
+   "mac_vs_ssi_sensor_nodes": 3.0122391170284146e-07,
+   "pred_freq_hz": 9.5367431640625e-07
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T11_varied_excitation_pilot/real_gates.json": {
+  "timing_keys_differing": [
+   "/ceiling/orientation_fe_edges/per_structure/Eidsdal/seconds",
+   "/ceiling/orientation_fe_edges/per_structure/Festoya/seconds",
+   "/ceiling/orientation_fe_edges/per_structure/Hellesylt/seconds",
+   "/ceiling/orientation_fe_edges/per_structure/Hundeidvik/seconds",
+   "/ceiling/orientation_fe_edges/per_structure/Leknes/seconds",
+   "/ceiling/orientation_fe_edges/per_structure/Liabygda/seconds",
+   "/ceiling/orientation_fe_edges/per_structure/Linge/seconds",
+   "/ceiling/orientation_fe_edges/per_structure/Saebo/seconds",
+   "/ceiling/orientation_fe_edges/per_structure/Stranda/seconds",
+   "/ceiling/wall_s"
+  ],
+  "max_abs_diff": 4.76837158203125e-07,
+  "n_numbers_differing": 5,
+  "examples": [
+   "/ceiling_pretrain_gate/s6_ceiling_edgegat_N2000_paper_record/max_abs_diff/pred_freq_hz",
+   "/ceiling/s6_ceiling_edgegat_N2000_paper_record/max_abs_diff/mac_vs_fe_all_fe_nodes",
+   "/ceiling_pretrain_gate/s6_ceiling_edgegat_N2000_paper_record/max_abs_diff/mac_vs_fe_all_fe_nodes",
+   "/ceiling_pretrain_gate/s6_ceiling_edgegat_N2000_paper_record/max_abs_diff/mac_vs_ssi_sensor_nodes",
+   "/ceiling/s6_ceiling_edgegat_N2000_paper_record/max_abs_diff/mac_vs_ssi_sensor_nodes"
+  ],
+  "strings": [
+   [
+    "/zeroshot/inputs",
+    "Final_results_for_paper/data/field_inputs_v2/phase3_corrected",
+    "data/field_inputs_v2/phase3_corrected"
+   ],
+   [
+    "/zeroshot_pretrain_gate/inputs",
+    "Final_results_for_paper/data/field_inputs_v2/phase3_corrected",
+    "data/field_inputs_v2/phase3_corrected"
+   ]
+  ],
+  "n_strings_differing": 2,
+  "verdict": "numeric<=tol"
+ },
+ "results/T11_varied_excitation_pilot/train_gate.json": {
+  "timing_keys_differing": [
+   "/runs/edgegat_N600/wall_s",
+   "/runs/edgegat_geomorient_N600/wall_s"
+  ],
+  "max_abs_diff": 0.0,
+  "n_numbers_differing": 0,
+  "examples": [],
+  "strings": [
+   [
+    "/runs/edgegat_N600/log",
+    "Final_results_for_paper\\EC_comments\\logs\\T11_train_gate_edgegat_N600.log",
+    "logs\\T11_train_gate_edgegat_N600.log"
+   ],
+   [
+    "/runs/edgegat_geomorient_N600/log",
+    "Final_results_for_paper\\EC_comments\\logs\\T11_train_gate_edgegat_geomorient_N600.log",
+    "logs\\T11_train_gate_edgegat_geomorient_N600.log"
+   ]
+  ],
+  "n_strings_differing": 2,
+  "verdict": "strings-only"
+ },
+ "results/T13_feasibility/README.md": {
+  "verdict": "text",
+  "differing_lines": 42,
+  "first": [
+   "-> EC-comment analysis, **not part of `Final_results_for_paper/pipeline/results/PAPER_RESULTS.md`**. Author-approved feasibility round (2026-11-23).",
+   "+> EC-comment analysis, **not part of `results/paper/PAPER_RESULTS.md`**. Author-approved feasibility round (2026-11-23).",
+   "-| (a) re-simulation path reproduces stored features (SEED 12345, T_TOTAL 60) | True | T11's gate reused (40 structures, pass True, worst x_psd 2.9e-09, coherency 6.0e-08); here through the T_TOTAL patch: 8 N2000 structures T11 never touched, worst x_psd 5.0e-09, coherency 6.0e-08; base 20261125 vs T11's stored samples (4): worst coherency 1.2e-07 (tol 1e-5) |",
+   "-| (b) distinct records per (structure, k), deterministic on repeat | True | support-joint records of two decks, k = 0..3 and 120 s: worst pairwise max |corr| 0.078 (< 0.2); same seed twice: record 4.3e-12 x rms, features 3.0e-08 (120 s: 3.6e-11 / 6.0e-08); records 12000 / 24000 samples = 10 / 22 Welch segments; x_psd differs between records by >= 0.70 |",
+   "-| (c) labels re-solved at 60 s and 120 s equal the stored ones | True | worst frequency 1.9e-10 Hz, shape 2.3e-10; graphs identical |",
+   "+| (a) re-simulation path reproduces stored features (SEED 12345, T_TOTAL 60) | True | T11's gate reused (40 structures, pass True, worst x_psd 3.6e-09, coherency 6.0e-08); here through the T_TOTAL patch: 8 N2000 structures T11 never touched, worst x_psd 4.8e-09, coherency 6.0e-08; base 20261125 vs T11's stored samples (4): worst coherency 1.2e-07 (tol 1e-5) |"
+  ]
+ },
+ "results/T13_feasibility/eval_gates.json": {
+  "timing_keys_differing": [],
+  "max_abs_diff": 0.0,
+  "n_numbers_differing": 0,
+  "examples": [],
+  "strings": [
+   [
+    "/t11_arms_vs_t11_eval_summary/reference",
+    "EC_comments/pipeline/results/T11_varied_excitation_pilot/eval_summary.csv",
+    "results/T11_varied_excitation_pilot/eval_summary.csv"
+   ]
+  ],
+  "n_strings_differing": 1,
+  "verdict": "strings-only"
+ },
+ "results/T13_feasibility/eval_per_sample.csv": {
+  "rows": 10500,
+  "reordered": false,
+  "timing_columns_differing": [
+   "forward_s"
+  ],
+  "max_abs_diff": {},
+  "strings": {},
+  "verdict": "timing-only"
+ },
+ "results/T13_feasibility/eval_runs.json": {
+  "timing_keys_differing": [],
+  "max_abs_diff": 0.0,
+  "n_numbers_differing": 0,
+  "examples": [],
+  "strings": [
+   [
+    "/ec_t13_coh_K1_N2000/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/ec_t13_coh_K1_N600/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/ec_t13_coh_K1_N600_T120/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/ec_t13_coh_K4_N600/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/ec_t13_orient_K4_N600/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/ec_varexc_edgegat_N600/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/ec_varexc_edgegat_geomorient_N600/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ]
+  ],
+  "n_strings_differing": 7,
+  "verdict": "strings-only"
+ },
+ "results/T13_feasibility/prepare_gate_a.csv": {
+  "rows": 12,
+  "reordered": false,
+  "timing_columns_differing": [
+   "seconds"
+  ],
+  "max_abs_diff": {
+   "label_freq_maxdiff_hz": 2.410436295008367e-10,
+   "label_shape_abs_maxdiff": 1.654935077866071e-10,
+   "x_psd_maxdiff": 1.1044092307344044e-09,
+   "x_psd_row_scale_relmax": 1.1845640350711743e-09,
+   "edge_cpsd8_maxdiff": 5.587935447692871e-08,
+   "edge_cpsd_res_maxdiff": 5.587935447692871e-08,
+   "edge_full_maxdiff": 4.470348358154297e-08
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T13_feasibility/prepare_gates.json": {
+  "timing_keys_differing": [
+   "/wall_s"
+  ],
+  "max_abs_diff": 2.9802322387695312e-08,
+  "n_numbers_differing": 68,
+  "examples": [
+   "/b_records/same_seed_twice_feature_maxdiff_60s",
+   "/a_reproduction/t11_gate_reused/worst/label_shape_abs_maxdiff",
+   "/a_reproduction/t11_gate_reused/worst/x_psd_row_scale_relmax",
+   "/a_reproduction/t11_gate_reused/worst/label_freq_maxdiff_hz",
+   "/a_reproduction/t11_gate_reused/worst/x_psd_maxdiff"
+  ],
+  "strings": [],
+  "n_strings_differing": 0,
+  "verdict": "numeric<=tol"
+ },
+ "results/T13_feasibility/real_gates.json": {
+  "timing_keys_differing": [
+   "/zeroshot/wall_s"
+  ],
+  "max_abs_diff": 0.0,
+  "n_numbers_differing": 0,
+  "examples": [],
+  "strings": [
+   [
+    "/zeroshot/inputs",
+    "Final_results_for_paper/data/field_inputs_v2/phase3_corrected",
+    "data/field_inputs_v2/phase3_corrected"
+   ]
+  ],
+  "n_strings_differing": 1,
+  "verdict": "strings-only"
+ },
+ "results/T13_feasibility/train_gate.json": {
+  "timing_keys_differing": [
+   "/d_paper_history/d_aug_K1_edgegat_N600/wall_s",
+   "/d_paper_history/d_edgegat_N2000/wall_s",
+   "/d_paper_history/d_edgegat_N600/wall_s",
+   "/e_augmentation_vs_plain/e_aug_K1/wall_s",
+   "/e_augmentation_vs_plain/e_aug_K4_same/wall_s"
+  ],
+  "max_abs_diff": 0.0,
+  "n_numbers_differing": 0,
+  "examples": [],
+  "strings": [
+   [
+    "/d_paper_history/d_aug_K1_edgegat_N600/log",
+    "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_d_aug_K1_edgegat_N600.log",
+    "logs\\T13_train_gate_d_aug_K1_edgegat_N600.log"
+   ],
+   [
+    "/d_paper_history/d_aug_K1_edgegat_N600/reference",
+    "Final_results_for_paper/runs/edgegat_N600",
+    "runs/paper/edgegat_N600"
+   ],
+   [
+    "/d_paper_history/d_edgegat_N2000/log",
+    "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_d_edgegat_N2000.log",
+    "logs\\T13_train_gate_d_edgegat_N2000.log"
+   ],
+   [
+    "/d_paper_history/d_edgegat_N2000/reference",
+    "Final_results_for_paper/runs/edgegat_N2000",
+    "runs/paper/edgegat_N2000"
+   ],
+   [
+    "/d_paper_history/d_edgegat_N600/log",
+    "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_d_edgegat_N600.log",
+    "logs\\T13_train_gate_d_edgegat_N600.log"
+   ],
+   [
+    "/d_paper_history/d_edgegat_N600/reference",
+    "Final_results_for_paper/runs/edgegat_N600",
+    "runs/paper/edgegat_N600"
+   ],
+   [
+    "/e_augmentation_vs_plain/e_aug_K1/log",
+    "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_e_aug_K1.log",
+    "logs\\T13_train_gate_e_aug_K1.log"
+   ],
+   [
+    "/e_augmentation_vs_plain/e_aug_K4_same/log",
+    "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_e_aug_K4_same.log",
+    "logs\\T13_train_gate_e_aug_K4_same.log"
+   ]
+  ],
+  "n_strings_differing": 8,
+  "verdict": "strings-only"
+ },
+ "results/T15_mirror_test/gates.json": {
+  "timing_keys_differing": [],
+  "max_abs_diff": 8.940696716308594e-08,
+  "n_numbers_differing": 5,
+  "examples": [
+   "/paper_reproduces_stored_e_max",
+   "/stored_vs_resimulated_paper_mac_maxdiff",
+   "/mirror_equals_permuted_stored_e_max",
+   "/mirror_equals_permuted_stored_x_max",
+   "/paper_reproduces_stored_x_max"
+  ],
+  "strings": [],
+  "n_strings_differing": 0,
+  "verdict": "numeric<=tol"
+ },
+ "results/T15_mirror_test/per_sample.csv": {
+  "rows": 2320,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "cos_B1": 3.1853775206425183e-07,
+   "mac_B1": 6.120008205767746e-07,
+   "cos_T1": 3.816623118102491e-07,
+   "mac_T1": 6.560881045114542e-07,
+   "cos_T2": 2.7257321932872003e-07,
+   "mac_T2": 5.059447385491467e-07,
+   "pnorm_B1": 7.357757086934313e-08,
+   "pnorm_T2": 7.188590633866454e-08,
+   "freq_mae_hz": 4.76837158203125e-07,
+   "pnorm_T1": 6.261178631117303e-08,
+   "cos_B2": 2.550890130237349e-07,
+   "mac_B2": 4.976918596133473e-07,
+   "pnorm_B2": 8.971413312242049e-08
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T15_mirror_test/sign_flips.csv": {
+  "rows": 30,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "mean_cos_relative_to_paper_sign": 2.031017630466092e-08
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T15_mirror_test/sim_checks.csv": {
+  "rows": 400,
+  "reordered": false,
+  "timing_columns_differing": [
+   "seconds"
+  ],
+  "max_abs_diff": {
+   "x_maxdiff_vs_stored": 1.5700713063004912e-08,
+   "x_maxdiff_vs_stored_mirrored": 1.8461349116094539e-09,
+   "e_maxdiff_vs_stored_mirrored": 3.725290298461914e-08,
+   "e_maxdiff_vs_stored": 8.940696716308594e-08
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T15_mirror_test/summary.csv": {
+  "rows": 25,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "mac_B1": 2.2536836064013244e-08,
+   "cos_B1": 1.2144010019810025e-08,
+   "mac_T1": 3.187561947726181e-08,
+   "cos_T1": 1.6129889091054395e-08,
+   "mac_B2": 3.123653202763421e-08,
+   "cos_B2": 1.7480255132262812e-08,
+   "mac_T2": 2.7823767401180532e-08,
+   "cos_T2": 1.1136656152821445e-08,
+   "mac_mean": 1.4280672533395489e-08,
+   "freq_mae_hz": 2.1674416261774354e-08
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T16_sign_test/train_checks.json": {
+  "timing_keys_differing": [],
+  "max_abs_diff": 0.0,
+  "n_numbers_differing": 0,
+  "examples": [],
+  "strings": [
+   [
+    "/trainer/reference",
+    "EC_comments/runs/ec_t13_coh_K4_N600",
+    "runs/ec/ec_t13_coh_K4_N600"
+   ]
+  ],
+  "n_strings_differing": 1,
+  "verdict": "strings-only"
+ },
+ "results/T17_scale_up/baseline_compare.csv": {
+  "rows": 30,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "baseline_mac": 8.684164498617974e-13,
+   "d_mean": 8.6852747216426e-13,
+   "d_mean_lo": 2.0797391586668823e-12,
+   "d_mean_hi": 1.7169668464767085e-12,
+   "d_B1": 1.623437495545943e-12,
+   "d_T1": 1.7041229538605762e-12,
+   "d_B2": 9.593853489420212e-13,
+   "d_T2": 8.129052986305396e-13,
+   "d_mean_seed_min": 8.685135943764521e-13,
+   "d_mean_seed_max": 8.685135943764521e-13
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T17_scale_up/train_check.json": {
+  "timing_keys_differing": [],
+  "max_abs_diff": 0.0,
+  "n_numbers_differing": 0,
+  "examples": [],
+  "strings": [
+   [
+    "/reference",
+    "EC_comments/runs/ec_t13_coh_K4_N600",
+    "runs/ec/ec_t13_coh_K4_N600"
+   ]
+  ],
+  "n_strings_differing": 1,
+  "verdict": "strings-only"
+ },
+ "results/T18_excitation_realism/checks.csv": {
+  "rows": 9,
+  "reordered": false,
+  "timing_columns_differing": [
+   "seconds"
+  ],
+  "max_abs_diff": {
+   "mass_normalisation_maxdev": 2.220446049250313e-16,
+   "supports_vs_simulator_max_rel": 2.1048988082168528e-17
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T18_excitation_realism/distance_to_field.csv": {
+  "rows": 6,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "band_L1": 2.6852742252003736e-11,
+   "mode_share_L1": 1.4857115537836307e-10,
+   "log_peak_to_bg": 6.423089837781504e-11,
+   "coh_bg_diff": 3.301445228309774e-11,
+   "coh_mode_diff": 9.612824425353494e-12,
+   "sensor_corr": 2.2860935366963986e-11,
+   "log_sensor_spread": 2.1739055000580265e-11
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T18_excitation_realism/gates.json": {
+  "timing_keys_differing": [],
+  "max_abs_diff": 2.220446049250313e-16,
+  "n_numbers_differing": 2,
+  "examples": [
+   "/mass_normalisation_maxdev",
+   "/supports_reproduces_simulator_max_rel"
+  ],
+  "strings": [],
+  "n_strings_differing": 0,
+  "verdict": "numeric<=tol"
+ },
+ "results/T18_excitation_realism/per_bridge.csv": {
+  "rows": 63,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "band_1.5_4": 1.043382047427599e-10,
+   "band_4_8": 1.51707979512139e-10,
+   "band_8_12": 2.6150470677777093e-11,
+   "band_12_20": 5.772621269883871e-11,
+   "share_B1": 3.161464423584448e-10,
+   "share_T1": 5.362559840627057e-10,
+   "share_B2": 2.077774619024808e-10,
+   "share_T2": 2.563552148338033e-10,
+   "peak_to_bg": 1.7051922895916505e-07,
+   "sensor_spread": 1.1481084527531493e-08,
+   "coh_mode": 7.009570701654866e-11,
+   "coh_bg": 3.0062963229937623e-10,
+   "sensor_corr_vs_field": 1.2116663228312063e-10
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T18_excitation_realism/summary.csv": {
+  "rows": 7,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "band_1.5_4": 4.110239926191639e-12,
+   "band_4_8": 1.5214052240253295e-11,
+   "band_8_12": 3.502670375965522e-12,
+   "band_12_20": 1.2571277352435573e-11,
+   "share_B1": 3.0431879238790316e-11,
+   "share_T1": 8.58434989758905e-11,
+   "share_B2": 3.389415137444729e-11,
+   "share_T2": 5.886649501185559e-11,
+   "peak_to_bg": 2.2513631847687066e-08,
+   "sensor_spread": 1.68776992381936e-09,
+   "coh_mode": 1.1069256622420198e-11,
+   "coh_bg": 3.3014480038673355e-11,
+   "sensor_corr_vs_field": 2.2860935366963986e-11
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T19_decomposition/decomposition.csv": {
+  "rows": 2556,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "mac_vs_fe_all_fe_nodes": 8.396836309321198e-07,
+   "mac_vs_ssi_sensor_nodes": 1.0020395425636153e-06,
+   "pred_freq_hz": 1.9073486328125e-06
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T19_decomposition/gates.json": {
+  "timing_keys_differing": [],
+  "max_abs_diff": 2.7274680292066478e-09,
+  "n_numbers_differing": 18,
+  "examples": [
+   "/records_distinct/min_rel_max_diff/Liabygda",
+   "/records_distinct/min_rel_max_diff/Eidsdal",
+   "/records_distinct/min_rel_max_diff/Linge",
+   "/records_distinct/min_rel_max_diff/Festoya",
+   "/records_distinct/min_rel_max_diff/Saebo"
+  ],
+  "strings": [],
+  "n_strings_differing": 0,
+  "verdict": "numeric<=tol"
+ },
+ "results/T19_decomposition/sim_checks.csv": {
+  "rows": 36,
+  "reordered": false,
+  "timing_columns_differing": [
+   "wall_s"
+  ],
+  "max_abs_diff": {
+   "ceiling_vs_builder_node_maxdiff": 5.960464477539063e-08
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T19_decomposition/summary.csv": {
+  "rows": 14,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "ceiling": 3.297275230629282e-09,
+   "ceiling_B1": 1.010063577222553e-08,
+   "ceiling_T1": 6.790319750926699e-09,
+   "ceiling_B2": 4.559792099456672e-09,
+   "ceiling_T2": 3.512387936055461e-09,
+   "prop_fegraph": 1.3542514554210072e-08,
+   "prop_fegraph_B1": 1.0497392122221783e-07,
+   "prop_fegraph_T1": 3.439151680106889e-08,
+   "prop_fegraph_B2": 3.756826683076753e-08,
+   "prop_fegraph_T2": 9.548937751624464e-08,
+   "prop_hybrid": 5.7526893582071637e-08,
+   "prop_hybrid_B1": 7.25305464577275e-08,
+   "prop_hybrid_T1": 1.7750731623467075e-07,
+   "prop_hybrid_B2": 4.49095513277431e-08,
+   "prop_hybrid_T2": 8.022125283502213e-08,
+   "zeroshot_hybrid": 2.153499600865416e-11,
+   "zeroshot_hybrid_B1": 4.268807529683727e-12,
+   "zeroshot_hybrid_T1": 1.3590906178251316e-11,
+   "zeroshot_hybrid_B2": 8.996242639724983e-11,
+   "zeroshot_hybrid_T2": 2.4555912858659212e-12,
+   "zeroshot_fegraph": 1.8761187048355055e-11,
+   "zeroshot_fegraph_B1": 3.946509785635044e-12,
+   "zeroshot_fegraph_T1": 1.5640932993221668e-11,
+   "zeroshot_fegraph_B2": 7.467260143556587e-11,
+   "zeroshot_fegraph_T2": 2.026045997638448e-12,
+   "share_sensors[prop_fegraph]": 2.7245331657432814e-08,
+   "share_sensors[prop_hybrid]": 1.2642196767220781e-07,
+   "freq_mae_vs_fe_ceiling": 2.6490953319857624e-08
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T19_decomposition/summary_arms.csv": {
+  "rows": 4,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "ceiling": 5.414122483671235e-10,
+   "ceiling_sd": 4.415025636750336e-10,
+   "ceiling_B1": 1.309446329145203e-09,
+   "ceiling_B1_sd": 3.9483820726826657e-10,
+   "ceiling_T1": 4.278709941907266e-09,
+   "ceiling_T1_sd": 3.619608024765797e-09,
+   "ceiling_B2": 1.8327920292549038e-09,
+   "ceiling_B2_sd": 6.099502361522902e-10,
+   "ceiling_T2": 5.720162121747308e-10,
+   "ceiling_T2_sd": 2.3861035924888085e-09,
+   "prop_fegraph": 2.445473268331e-09,
+   "prop_fegraph_sd": 6.158675333600705e-09,
+   "prop_fegraph_B1": 2.764927509169013e-09,
+   "prop_fegraph_B1_sd": 3.9205562615829415e-09,
+   "prop_fegraph_T1": 5.044892614769481e-09,
+   "prop_fegraph_T1_sd": 1.2546513550315552e-08,
+   "prop_fegraph_B2": 3.1947873235793622e-09,
+   "prop_fegraph_B2_sd": 3.660565489616019e-09,
+   "prop_fegraph_T2": 3.1586870896660457e-09,
+   "prop_fegraph_T2_sd": 5.254206361660074e-09,
+   "prop_hybrid": 2.1815091955090793e-09,
+   "prop_hybrid_sd": 5.641442812898134e-09,
+   "prop_hybrid_B1": 1.775331992526219e-09,
+   "prop_hybrid_B1_sd": 2.314309188733432e-09,
+   "prop_hybrid_T1": 4.079468207685011e-09,
+   "prop_hybrid_T1_sd": 9.984139626162403e-09,
+   "prop_hybrid_B2": 4.360634908717742e-09,
+   "prop_hybrid_B2_sd": 1.4866832764859339e-08,
+   "prop_hybrid_T2": 2.7149290593442288e-09,
+   "prop_hybrid_T2_sd": 2.8301849822054415e-09,
+   "zeroshot_hybrid": 5.59469137684232e-12,
+   "zeroshot_hybrid_sd": 6.609365832410674e-12,
+   "zeroshot_hybrid_B1": 2.981948021840708e-12,
+   "zeroshot_hybrid_B1_sd": 8.307035614940617e-13,
+   "zeroshot_hybrid_T1": 5.615508058554042e-12,
+   "zeroshot_hybrid_T1_sd": 7.342602220683503e-12,
+   "zeroshot_hybrid_B2": 2.6252444662588914e-11,
+   "zeroshot_hybrid_B2_sd": 2.5882199161664232e-11,
+   "zeroshot_hybrid_T2": 1.5347723092418164e-12,
+   "zeroshot_hybrid_T2_sd": 8.848338728384419e-13,
+   "zeroshot_fegraph": 3.456956942926581e-12,
+   "zeroshot_fegraph_sd": 4.303855882792362e-12,
+   "zeroshot_fegraph_B1": 2.7075008901533693e-12,
+   "zeroshot_fegraph_B1_sd": 2.2356075324303504e-13,
+   "zeroshot_fegraph_T1": 5.034417327465235e-12,
+   "zeroshot_fegraph_T1_sd": 8.260780948177171e-12,
+   "zeroshot_fegraph_B2": 1.5091511373910294e-11,
+   "zeroshot_fegraph_B2_sd": 2.4657087135948608e-11,
+   "zeroshot_fegraph_T2": 1.747602063062459e-12,
+   "zeroshot_fegraph_T2_sd": 4.215169879806524e-13,
+   "share_sensors[prop_fegraph]": 5.527517277226224e-09,
+   "share_sensors[prop_fegraph]_sd": 1.7576629096627272e-08,
+   "share_sensors[prop_hybrid]": 4.853057011811046e-09,
+   "share_sensors[prop_hybrid]_sd": 1.9715216292848226e-08,
+   "freq_mae_vs_fe_ceiling": 1.2509616786893218e-08,
+   "freq_mae_vs_fe_ceiling_sd": 6.982078228079391e-09
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T20_deck_forcing/noise_fit.json": {
+  "timing_keys_differing": [
+   "/seconds"
+  ],
+  "max_abs_diff": 3.3571097901585745e-08,
+  "n_numbers_differing": 10,
+  "examples": [
+   "/fit/walk/median_at_alpha0",
+   "/gates/t18_reproduced/max_rel_diff",
+   "/fit/deck/median_at_alpha0",
+   "/alpha/deck",
+   "/fit/deck/alpha"
+  ],
+  "strings": [],
+  "n_strings_differing": 0,
+  "verdict": "numeric<=tol"
+ },
+ "results/T20_deck_forcing/noise_fit_bridges.csv": {
+  "rows": 18,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "alpha": 1.9554136088117957e-10,
+   "peak_to_bg_alpha0": 2.729475170326623e-07,
+   "peak_to_bg_fitted": 2.2308944380711182e-07,
+   "ambient_scale": 2.041942614994241e-09
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T20_deck_forcing/noise_fit_stats.csv": {
+  "rows": 18,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "band_1.5_4": 2.705990986839879e-11,
+   "band_4_8": 7.87624132581044e-11,
+   "band_8_12": 3.523983049813495e-10,
+   "band_12_20": 2.5826829563868614e-10,
+   "share_B1": 5.50936907206534e-10,
+   "share_T1": 1.7949264297101308e-09,
+   "share_B2": 4.888223159582594e-10,
+   "share_T2": 2.624743866697088e-09,
+   "peak_to_bg": 2.2308944380711182e-07,
+   "sensor_spread": 1.8343282448540776e-09,
+   "coh_mode": 1.2225918055719376e-09,
+   "coh_bg": 1.0562181684825589e-10
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T20_deck_forcing/prepare_check.json": {
+  "timing_keys_differing": [
+   "/est_hours_16_workers",
+   "/rows[0]/seconds_supports",
+   "/rows[0]/seconds_two_deck_records",
+   "/rows[1]/seconds_supports",
+   "/rows[1]/seconds_two_deck_records",
+   "/rows[2]/seconds_supports",
+   "/rows[2]/seconds_two_deck_records",
+   "/rows[3]/seconds_supports",
+   "/rows[3]/seconds_two_deck_records",
+   "/rows[4]/seconds_supports"
+  ],
+  "max_abs_diff": 5.21540641784668e-08,
+  "n_numbers_differing": 96,
+  "examples": [
+   "/gates/supports_reproduce_t13/edge_full_max",
+   "/rows[6]/edge_attr_cpsd_full_maxdiff",
+   "/rows[7]/edge_attr_cpsd_maxdiff",
+   "/rows[7]/edge_attr_cpsd_resonance_maxdiff",
+   "/rows[2]/edge_attr_cpsd_maxdiff"
+  ],
+  "strings": [],
+  "n_strings_differing": 0,
+  "verdict": "numeric<=tol"
+ },
+ "results/T5_fresh_test_baselines/README.md": {
+  "verdict": "text",
+  "differing_lines": 38,
+  "first": [
+   "-FDD runs on the **same simulated records** the network's features come from: every deck is re-simulated from its params_json with the set's own excitation seed, and the re-simulated node PSDs equal the stored network inputs (max |diff| fresh_test 3.6e-08, paper 1.2e-07, val 3.0e-08). The records are noise-free apart from the excitation (the generator adds no measurement noise), so the noise level is matched by construction. FDD and labelling are E19's (`ident.py`, imported): peaks of the first singular value of the kept nodes' cross-spectral matrix, labelled bend1/tors1/bend2/tors2; *population* uses E18's class shape prior and a geometry-conditioned frequency prior from the training split (rank: phase and order only, no population information). Each shape is the deflection at the picked peak, scored with the Hermitian MAC on the deck nodes (supports excluded: their records are the injected excitation). Settings were chosen on the 300 validation decks (outer layouts: E19's own choice; every-node layout: rank theta 0.8, pop-shape theta 0.3, population theta 0.3, lam 3.0). The class template uses no record: the leading shape of E18's class prior for the deck's girder count, with the class read from the true shape.",
+   "-",
+   "-**Gates.** On the paper's test set the two- and four-sensor rows reproduce E19's `test.csv` (20000 of 20000 rows, max |MAC diff| 1.1e-08, max |f diff| 0.0e+00 Hz, 0 disagreements on correctness): **PASS**. Template mean MAC on the paper test set 0.9461 = E19's 0.946: **PASS**.",
+   "+FDD runs on the **same simulated records** the network's features come from: every deck is re-simulated from its params_json with the set's own excitation seed, and the re-simulated node PSDs equal the stored network inputs (max |diff| fresh_test 3.5e-08, paper 9.7e-08, val 3.3e-08). The records are noise-free apart from the excitation (the generator adds no measurement noise), so the noise level is matched by construction. FDD and labelling are E19's (`ident.py`, imported): peaks of the first singular value of the kept nodes' cross-spectral matrix, labelled bend1/tors1/bend2/tors2; *population* uses E18's class shape prior and a geometry-conditioned frequency prior from the training split (rank: phase and order only, no population information). Each shape is the deflection at the picked peak, scored with the Hermitian MAC on the deck nodes (supports excluded: their records are the injected excitation). Settings were chosen on the 300 validation decks (outer layouts: E19's own choice; every-node layout: rank theta 0.8, pop-shape theta 0.3, population theta 0.3, lam 3.0). The class template uses no record: the leading shape of E18's class prior for the deck's girder count, with the class read from the true shape.",
+   "+",
+   "+**Gates.** On the paper's test set the two- and four-sensor rows reproduce E19's `test.csv` (20000 of 20000 rows, max |MAC diff| 3.0e-08, max |f diff| 0.0e+00 Hz, 0 disagreements on correctness): **PASS**. Template mean MAC on the paper test set 0.9461 = E19's 0.946: **PASS**."
+  ]
+ },
+ "results/T5_fresh_test_baselines/fdd_checks.json": {
+  "timing_keys_differing": [],
+  "max_abs_diff": 2.1346591050352983e-08,
+  "n_numbers_differing": 10,
+  "examples": [
+   "/reproduction/paper/x_psd_maxdiff",
+   "/paper_outer_reproduces_E19_test_csv/max_abs_mac_diff",
+   "/reproduction/paper/freq_maxdiff_hz",
+   "/reproduction/val/x_psd_maxdiff",
+   "/reproduction/fresh_test/freq_maxdiff_hz"
+  ],
+  "strings": [],
+  "n_strings_differing": 0,
+  "verdict": "numeric<=tol"
+ },
+ "results/T5_fresh_test_baselines/fdd_rows.csv": {
+  "rows": 60000,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "mac": 1.769932847922595e-07
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T5_fresh_test_baselines/fdd_summary.csv": {
+  "rows": 30,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "mac": 9.039113901820883e-11
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T5_fresh_test_baselines/fdd_summary_by_mode.csv": {
+  "rows": 120,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "mac": 3.5333380665747427e-10
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T5_fresh_test_baselines/fdd_timing.csv": {
+  "rows": 1300,
+  "reordered": false,
+  "timing_columns_differing": [
+   "deck_total_s",
+   "fdd_all_s",
+   "net_edge_s",
+   "net_features_s",
+   "net_psd_s",
+   "sim_s"
+  ],
+  "max_abs_diff": {
+   "x_psd_maxdiff": 7.18201910721028e-08,
+   "freq_maxdiff_hz": 8.948024987631698e-09
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ },
+ "results/T5_fresh_test_baselines/rescore_gate.json": {
+  "timing_keys_differing": [],
+  "max_abs_diff": 0.0,
+  "n_numbers_differing": 0,
+  "examples": [],
+  "strings": [
+   [
+    "/reference",
+    "Final_results_for_paper/pipeline/results/s4_indomain_summary.csv (best_model rows)",
+    "results/paper/s4_indomain_summary.csv (best_model rows)"
+   ]
+  ],
+  "n_strings_differing": 1,
+  "verdict": "strings-only"
+ },
+ "results/T5_fresh_test_baselines/rescore_per_sample.csv": {
+  "rows": 21000,
+  "reordered": false,
+  "timing_columns_differing": [
+   "forward_s"
+  ],
+  "max_abs_diff": {},
+  "strings": {},
+  "verdict": "timing-only"
+ },
+ "results/T5_fresh_test_baselines/rescore_runs.json": {
+  "timing_keys_differing": [],
+  "max_abs_diff": 0.0,
+  "n_numbers_differing": 0,
+  "examples": [],
+  "strings": [
+   [
+    "/edgegat_N100/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/edgegat_N1000/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/edgegat_N200/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/edgegat_N2000/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/edgegat_N400/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/edgegat_N5000/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/edgegat_N600/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ],
+   [
+    "/edgegat_N800/modes_module",
+    "t_edge_modes",
+    "fr_edge_modes"
+   ]
+  ],
+  "n_strings_differing": 14,
+  "verdict": "strings-only"
+ },
+ "results/T5_fresh_test_baselines/rescore_summary.csv": {
+  "rows": 42,
+  "reordered": false,
+  "timing_columns_differing": [
+   "forward_ms_median"
+  ],
+  "max_abs_diff": {},
+  "strings": {},
+  "verdict": "timing-only"
+ },
+ "results/T5_fresh_test_baselines/shape_baselines.csv": {
+  "rows": 16,
+  "reordered": false,
+  "timing_columns_differing": [],
+  "max_abs_diff": {
+   "B1": 4.8163029120473766e-11,
+   "T1": 6.883937864188283e-12,
+   "B2": 1.1106227049140216e-11,
+   "T2": 4.947253717801914e-11,
+   "mean": 1.5588308421854435e-11
+  },
+  "strings": {},
+  "verdict": "numeric<=tol"
+ }
+}

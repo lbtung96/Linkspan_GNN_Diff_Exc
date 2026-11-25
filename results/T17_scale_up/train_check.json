@@ -1,6 +1,6 @@
 {
   "rc": 0,
-  "reference": "EC_comments/runs/ec_t13_coh_K4_N600",
+  "reference": "runs/ec/ec_t13_coh_K4_N600",
   "pass": true,
   "epochs_compared": 2,
   "n_diffs": 0,

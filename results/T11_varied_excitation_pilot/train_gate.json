@@ -4,8 +4,8 @@
   "runs": {
     "edgegat_N600": {
       "rc": 0,
-      "wall_s": 29.8,
-      "log": "Final_results_for_paper\\EC_comments\\logs\\T11_train_gate_edgegat_N600.log",
+      "wall_s": 19.7,
+      "log": "logs\\T11_train_gate_edgegat_N600.log",
       "pass": true,
       "epochs_compared": 3,
       "n_diffs": 0,
@@ -13,8 +13,8 @@
     },
     "edgegat_geomorient_N600": {
       "rc": 0,
-      "wall_s": 29.8,
-      "log": "Final_results_for_paper\\EC_comments\\logs\\T11_train_gate_edgegat_geomorient_N600.log",
+      "wall_s": 19.7,
+      "log": "logs\\T11_train_gate_edgegat_geomorient_N600.log",
       "pass": true,
       "epochs_compared": 3,
       "n_diffs": 0,

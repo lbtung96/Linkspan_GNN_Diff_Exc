@@ -1,0 +1,25 @@
+{
+ "per_ng": 10,
+ "tolerance": 1e-05,
+ "sets": {
+  "fresh_test": {
+   "rc": 0,
+   "structures": 40,
+   "max_abs_diff": 5.960464477539063e-08,
+   "modes_raw_sign_differs": 83,
+   "modes_total": 160,
+   "failures": [],
+   "pass": true
+  },
+  "fresh_test_paperexc": {
+   "rc": 0,
+   "structures": 40,
+   "max_abs_diff": 1.4901161193847656e-07,
+   "modes_raw_sign_differs": 82,
+   "modes_total": 160,
+   "failures": [],
+   "pass": true
+  }
+ },
+ "pass": true
+}

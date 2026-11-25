@@ -1,0 +1,31 @@
+{
+  "tolerance": 1e-05,
+  "records": 26024,
+  "fails": 0,
+  "limit_per_set": null,
+  "sets": {
+    "T11/paper_varexc": true,
+    "T11/trainval_varexc": true,
+    "T13/paper_varexc_T120": true,
+    "T13/rec1": true,
+    "T13/rec2": true,
+    "T13/rec3": true,
+    "T13/trainval_N2000": true,
+    "T13/trainval_T120": true,
+    "T17/rec1_N2000": true,
+    "T17/rec2_N2000": true,
+    "T17/rec3_N2000": true,
+    "T20/deck_p0": true,
+    "T20/deck_p1": true,
+    "T20/deck_p2": true,
+    "T20/deck_p3": true,
+    "T20/deck_test": true,
+    "T20/walk_p0": true,
+    "T20/walk_p1": true,
+    "T20/walk_p2": true,
+    "T20/walk_p3": true,
+    "T20/walk_test": true
+  },
+  "pass": true,
+  "seconds": 5104.2
+}

@@ -1,0 +1,77 @@
+{
+ "ec_varexc_edgegat_geomorient_N600": {
+  "rc": 0,
+  "wall_s": 190.0,
+  "log": "logs/repro_prefix_ec_varexc_edgegat_geomorient_N600.log"
+ },
+ "ec_varexc_edgegat_N600": {
+  "rc": 0,
+  "wall_s": 210.1,
+  "log": "logs/repro_prefix_ec_varexc_edgegat_N600.log"
+ },
+ "ec_t13_coh_K1_N600": {
+  "rc": 0,
+  "wall_s": 210.0,
+  "log": "logs/repro_prefix_ec_t13_coh_K1_N600.log"
+ },
+ "ec_t13_coh_K4_N600": {
+  "rc": 0,
+  "wall_s": 245.1,
+  "log": "logs/repro_prefix_ec_t13_coh_K4_N600.log"
+ },
+ "ec_t13_coh_K1_N600_T120": {
+  "rc": 0,
+  "wall_s": 175.0,
+  "log": "logs/repro_prefix_ec_t13_coh_K1_N600_T120.log"
+ },
+ "ec_t13_orient_K4_N600": {
+  "rc": 0,
+  "wall_s": 185.0,
+  "log": "logs/repro_prefix_ec_t13_orient_K4_N600.log"
+ },
+ "ec_t16_coh_signinv": {
+  "rc": 0,
+  "wall_s": 200.0,
+  "log": "logs/repro_prefix_ec_t16_coh_signinv.log"
+ },
+ "ec_t16_none_signinv": {
+  "rc": 0,
+  "wall_s": 190.0,
+  "log": "logs/repro_prefix_ec_t16_none_signinv.log"
+ },
+ "ec_t16_cohorient": {
+  "rc": 0,
+  "wall_s": 210.0,
+  "log": "logs/repro_prefix_ec_t16_cohorient.log"
+ },
+ "ec_t16_cohorient_signinv": {
+  "rc": 0,
+  "wall_s": 210.0,
+  "log": "logs/repro_prefix_ec_t16_cohorient_signinv.log"
+ },
+ "ec_t16_orient_signinv": {
+  "rc": 0,
+  "wall_s": 185.0,
+  "log": "logs/repro_prefix_ec_t16_orient_signinv.log"
+ },
+ "ec_t13_coh_K1_N2000": {
+  "rc": 0,
+  "wall_s": 560.1,
+  "log": "logs/repro_prefix_ec_t13_coh_K1_N2000.log"
+ },
+ "ec_t16_coh_signinv_amp": {
+  "rc": 0,
+  "wall_s": 200.0,
+  "log": "logs/repro_prefix_ec_t16_coh_signinv_amp.log"
+ },
+ "ec_t20_deck_cohorient_signinv_N2000_s123": {
+  "rc": 0,
+  "wall_s": 725.1,
+  "log": "logs/repro_prefix_ec_t20_deck_cohorient_signinv_N2000_s123.log"
+ },
+ "ec_t20_walk_cohorient_signinv_N2000_s123": {
+  "rc": 0,
+  "wall_s": 780.1,
+  "log": "logs/repro_prefix_ec_t20_walk_cohorient_signinv_N2000_s123.log"
+ }
+}

@@ -5,10 +5,10 @@
     "pass": true,
     "worst": {
       "freq_bins_maxdiff": 0.0,
-      "label_freq_maxdiff_hz": 2.439488611116758e-10,
-      "label_shape_abs_maxdiff": 1.4497525957501978e-09,
-      "x_psd_maxdiff": 2.92046176131322e-09,
-      "x_psd_row_scale_relmax": 2.6582517917492516e-09,
+      "label_freq_maxdiff_hz": 9.662608491112223e-10,
+      "label_shape_abs_maxdiff": 4.754538429629918e-10,
+      "x_psd_maxdiff": 3.5906281281583574e-09,
+      "x_psd_row_scale_relmax": 3.580141967741843e-09,
       "edge_cpsd8_maxdiff": 5.960464477539063e-08,
       "edge_cpsd_res_maxdiff": 5.960464477539063e-08,
       "edge_full_maxdiff": 5.960464477539063e-08
@@ -25,7 +25,7 @@
       "val": 8,
       "test": 16
     },
-    "seconds_median": 3.55
+    "seconds_median": 5.0649999999999995
   },
   "b_records": {
     "structures": {
@@ -60,12 +60,12 @@
     },
     "paper_seed_A_vs_B_max_abs_corr": 1.0000000000000002,
     "paper_seed_A_vs_C_max_abs_corr": 1.0000000000000002,
-    "varied_A_vs_B_max_abs_corr": 0.04926997023503597,
+    "varied_A_vs_B_max_abs_corr": 0.04926997023469033,
     "varied_A_vs_C_max_abs_corr": 0.04006804427958621,
-    "varied_A_vs_paper_A_max_abs_corr": 0.03715994315703017,
-    "train_base_vs_test_base_A_max_abs_corr": 0.05379982311885597,
+    "varied_A_vs_paper_A_max_abs_corr": 0.037159943157156636,
+    "train_base_vs_test_base_A_max_abs_corr": 0.053799823118925276,
     "rng_draw_reproducible_bit_identical": true,
-    "same_structure_same_seed_record_maxdiff_rel_rms": 4.1405446121213664e-12,
+    "same_structure_same_seed_record_maxdiff_rel_rms": 2.2465233709612122e-11,
     "same_structure_same_seed_feature_maxdiff": 5.960464477539063e-08,
     "varied_vs_paper_A_x_psd_maxdiff": 0.8523619472422681,
     "varied_vs_paper_A_edge_full_maxdiff": 1.0853091776371002,
@@ -78,5 +78,5 @@
     }
   },
   "pass": true,
-  "wall_s": 19.4
+  "wall_s": 30.2
 }

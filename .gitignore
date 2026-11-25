@@ -20,3 +20,6 @@ _scratch/
 
 # Local reviews of the archive repos (paths and sizes of this machine)
 manifest/cleanup_*.md
+
+# A verify_records run in progress (removed when it completes)
+results/reproduction/_records_partial*

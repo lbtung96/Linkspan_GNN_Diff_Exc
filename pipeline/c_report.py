@@ -574,7 +574,7 @@ def main() -> int:
     w("python tools/run_stage.py pipeline/c_report.py")
     w("```\n")
     w("**Re-scoring networks trained later** (e.g. into `runs/ec/`): any folder with `run_summary.json` and "
-      "`checkpoints/best_model.pt` is accepted, by name or path; new edge modes come from `t_edge_modes.py`:\n")
+      "`checkpoints/best_model.pt` is accepted, by name or path; edge modes are library options (`EdgeGATConv_Modal_GNN.py`):\n")
     w("```bash")
     w("python tools/run_stage.py pipeline/c_rescore.py --runs <name-or-path> ... --sets paper fresh_test")
     w("```\n")

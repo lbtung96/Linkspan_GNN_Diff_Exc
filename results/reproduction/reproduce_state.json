@@ -1,0 +1,559 @@
+{
+ "steps": [
+  {
+   "i": 4,
+   "task": "T10",
+   "script": "g_t10_channel_order.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795541460.4837263,
+   "minutes": 0.18613801002502442
+  },
+  {
+   "i": 5,
+   "task": "T10",
+   "script": "g_t10_swapped_inputs.py",
+   "args": [],
+   "rc": 1,
+   "t0": 1795541471.653008,
+   "minutes": 0.4940241813659668
+  },
+  {
+   "i": 4,
+   "task": "T10",
+   "script": "g_t10_channel_order.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795541568.8485703,
+   "minutes": 0.16270546515782675
+  },
+  {
+   "i": 5,
+   "task": "T10",
+   "script": "g_t10_swapped_inputs.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795541578.6118994,
+   "minutes": 0.5240644454956055
+  },
+  {
+   "i": 22,
+   "task": "T12",
+   "script": "x_plot_excitation.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795541610.055766,
+   "minutes": 0.10719452301661174
+  },
+  {
+   "i": 0,
+   "task": "T5",
+   "script": "c_fresh_checks.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795549666.1696002,
+   "minutes": 0.34063746134440104
+  },
+  {
+   "i": 1,
+   "task": "T5",
+   "script": "c_rescore.py",
+   "args": [
+    "--sets",
+    "paper",
+    "--workers",
+    "3"
+   ],
+   "rc": 0,
+   "t0": 1795549686.608847,
+   "minutes": 1.640937038262685
+  },
+  {
+   "i": 2,
+   "task": "T5",
+   "script": "c_ec23_metrics.py",
+   "args": [
+    "--sets",
+    "paper"
+   ],
+   "rc": 0,
+   "t0": 1795549785.0670753,
+   "minutes": 0.06922810475031535
+  },
+  {
+   "i": 3,
+   "task": "T5",
+   "script": "c_fdd.py",
+   "args": [
+    "--sets",
+    "val",
+    "paper",
+    "--workers",
+    "2"
+   ],
+   "rc": 0,
+   "t0": 1795549789.2207615,
+   "minutes": 38.19832014640172
+  },
+  {
+   "i": 6,
+   "task": "T5",
+   "script": "c_rescore.py",
+   "args": [
+    "--sets",
+    "fresh_test",
+    "fresh_test_paperexc",
+    "--workers",
+    "3"
+   ],
+   "rc": 0,
+   "t0": 1795552081.1199703,
+   "minutes": 1.793658967812856
+  },
+  {
+   "i": 7,
+   "task": "T5",
+   "script": "c_ec23_metrics.py",
+   "args": [
+    "--sets",
+    "paper",
+    "fresh_test",
+    "fresh_test_paperexc"
+   ],
+   "rc": 0,
+   "t0": 1795552188.740513,
+   "minutes": 0.12182041009267171
+  },
+  {
+   "i": 8,
+   "task": "T5",
+   "script": "c_freq_baselines.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795552196.0497377,
+   "minutes": 0.05597973267237345
+  },
+  {
+   "i": 9,
+   "task": "T5",
+   "script": "c_fdd.py",
+   "args": [
+    "--sets",
+    "fresh_test",
+    "--workers",
+    "3"
+   ],
+   "rc": 0,
+   "t0": 1795552199.4085217,
+   "minutes": 15.613617785771687
+  },
+  {
+   "i": 10,
+   "task": "T5",
+   "script": "c_excitation_diag.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795553136.2255888,
+   "minutes": 1.9446953852971396
+  },
+  {
+   "i": 11,
+   "task": "T5",
+   "script": "c_report.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795553252.9112453,
+   "minutes": 0.2007056951522827
+  },
+  {
+   "i": 12,
+   "task": "T11",
+   "script": "h_prepare.py",
+   "args": [
+    "--part",
+    "gate",
+    "--workers",
+    "10"
+   ],
+   "rc": 0,
+   "t0": 1795553264.953587,
+   "minutes": 0.5108388264973959
+  },
+  {
+   "i": 13,
+   "task": "T11",
+   "script": "h_train.py",
+   "args": [
+    "--launch",
+    "gate"
+   ],
+   "rc": 0,
+   "t0": 1795553295.6049185,
+   "minutes": 0.33591459194819134
+  },
+  {
+   "i": 14,
+   "task": "T11",
+   "script": "h_eval.py",
+   "args": [
+    "--runs",
+    "edgegat_N600",
+    "edgegat_geomorient_N600",
+    "edgegat_N2000",
+    "--sets",
+    "paper",
+    "fresh_test",
+    "fresh_test_paperexc",
+    "--workers",
+    "4"
+   ],
+   "rc": 0,
+   "t0": 1795553315.759794,
+   "minutes": 0.7208239118258158
+  },
+  {
+   "i": 15,
+   "task": "T11",
+   "script": "h_real.py",
+   "args": [
+    "--part",
+    "zeroshot",
+    "--nets",
+    "edgegat_N600",
+    "edgegat_geomorient_N600"
+   ],
+   "rc": 0,
+   "t0": 1795553359.0092287,
+   "minutes": 0.0940149466196696
+  },
+  {
+   "i": 16,
+   "task": "T11",
+   "script": "h_real.py",
+   "args": [
+    "--part",
+    "ceiling",
+    "--workers",
+    "9",
+    "--nets",
+    "edgegat_N600",
+    "edgegat_geomorient_N600",
+    "edgegat_N2000"
+   ],
+   "rc": 0,
+   "t0": 1795553364.6501255,
+   "minutes": 0.7245146830876669
+  },
+  {
+   "i": 17,
+   "task": "T11",
+   "script": "h_eval.py",
+   "args": [
+    "--runs",
+    "edgegat_N600",
+    "edgegat_geomorient_N600",
+    "edgegat_N2000",
+    "--sets",
+    "paper_varexc",
+    "--workers",
+    "3"
+   ],
+   "rc": 0,
+   "t0": 1795553408.1220076,
+   "minutes": 0.37013223965962727
+  },
+  {
+   "i": 18,
+   "task": "T11",
+   "script": "h_eval.py",
+   "args": [
+    "--runs",
+    "ec_varexc_edgegat_N600",
+    "ec_varexc_edgegat_geomorient_N600",
+    "--workers",
+    "4"
+   ],
+   "rc": 0,
+   "t0": 1795553430.3309422,
+   "minutes": 0.7366989493370056
+  },
+  {
+   "i": 19,
+   "task": "T11",
+   "script": "h_real.py",
+   "args": [
+    "--part",
+    "zeroshot"
+   ],
+   "rc": 0,
+   "t0": 1795553474.532879,
+   "minutes": 0.1732345501581828
+  },
+  {
+   "i": 20,
+   "task": "T11",
+   "script": "h_real.py",
+   "args": [
+    "--part",
+    "ceiling",
+    "--workers",
+    "9"
+   ],
+   "rc": 0,
+   "t0": 1795553484.928705,
+   "minutes": 1.089031732082367
+  },
+  {
+   "i": 21,
+   "task": "T11",
+   "script": "h_report.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795553550.2732828,
+   "minutes": 0.015519062678019205
+  },
+  {
+   "i": 23,
+   "task": "T13",
+   "script": "k_prepare.py",
+   "args": [
+    "--part",
+    "gate",
+    "--workers",
+    "10"
+   ],
+   "rc": 0,
+   "t0": 1795553551.2084677,
+   "minutes": 0.4930447022120158
+  },
+  {
+   "i": 24,
+   "task": "T13",
+   "script": "k_prepare.py",
+   "args": [
+    "--part",
+    "crosscheck",
+    "--workers",
+    "8"
+   ],
+   "rc": 0,
+   "t0": 1795553580.7911499,
+   "minutes": 0.5003071149190267
+  },
+  {
+   "i": 25,
+   "task": "T13",
+   "script": "k_train.py",
+   "args": [
+    "--launch",
+    "gate"
+   ],
+   "rc": 0,
+   "t0": 1795553610.8115776,
+   "minutes": 1.5788578271865845
+  },
+  {
+   "i": 26,
+   "task": "T13",
+   "script": "k_eval.py",
+   "args": [
+    "--runs",
+    "ec_varexc_edgegat_N600",
+    "ec_varexc_edgegat_geomorient_N600",
+    "--workers",
+    "3"
+   ],
+   "rc": 0,
+   "t0": 1795553705.5464594,
+   "minutes": 0.9413477222124735
+  },
+  {
+   "i": 27,
+   "task": "T13",
+   "script": "k_eval.py",
+   "args": [
+    "--workers",
+    "7"
+   ],
+   "rc": 0,
+   "t0": 1795553762.0273228,
+   "minutes": 1.7200207591056824
+  },
+  {
+   "i": 28,
+   "task": "T13",
+   "script": "k_real.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795553865.2285683,
+   "minutes": 0.24146316846211752
+  },
+  {
+   "i": 29,
+   "task": "T13",
+   "script": "k_diag.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795553879.7183697,
+   "minutes": 0.10726297299067179
+  },
+  {
+   "i": 30,
+   "task": "T13",
+   "script": "k_report.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795553886.158436,
+   "minutes": 0.007993638515472412
+  },
+  {
+   "i": 32,
+   "task": "T14",
+   "script": "m_input_anatomy.py",
+   "args": [
+    "--workers",
+    "6"
+   ],
+   "rc": 0,
+   "t0": 1795553886.6435578,
+   "minutes": 0.7008806228637695
+  },
+  {
+   "i": 33,
+   "task": "T14",
+   "script": "m_occlusion.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795553928.6963952,
+   "minutes": 2.6963624238967894
+  },
+  {
+   "i": 34,
+   "task": "T16",
+   "script": "p_train.py",
+   "args": [
+    "--check"
+   ],
+   "rc": 0,
+   "t0": 1795554090.4781406,
+   "minutes": 1.0316410541534424
+  },
+  {
+   "i": 35,
+   "task": "T16",
+   "script": "p_eval.py",
+   "args": [
+    "--workers",
+    "8"
+   ],
+   "rc": 0,
+   "t0": 1795554152.3766038,
+   "minutes": 2.2375698328018188
+  },
+  {
+   "i": 36,
+   "task": "T17",
+   "script": "q_train.py",
+   "args": [
+    "--check"
+   ],
+   "rc": 0,
+   "t0": 1795554286.6307938,
+   "minutes": 0.8621924797693888
+  },
+  {
+   "i": 37,
+   "task": "T18",
+   "script": "r_excitation_realism.py",
+   "args": [
+    "--workers",
+    "9"
+   ],
+   "rc": 0,
+   "t0": 1795554338.3623426,
+   "minutes": 0.6032182892163594
+  },
+  {
+   "i": 38,
+   "task": "T17",
+   "script": "q_eval.py",
+   "args": [
+    "--workers",
+    "8"
+   ],
+   "rc": 0,
+   "t0": 1795554374.5574515,
+   "minutes": 2.319469960530599
+  },
+  {
+   "i": 39,
+   "task": "T17",
+   "script": "q_template_compare.py",
+   "args": [
+    "--workers",
+    "8"
+   ],
+   "rc": 0,
+   "t0": 1795554513.7266903,
+   "minutes": 1.3754342675209046
+  },
+  {
+   "i": 40,
+   "task": "T19",
+   "script": "u_decomposition.py",
+   "args": [
+    "--workers",
+    "4"
+   ],
+   "rc": 0,
+   "t0": 1795554596.2590873,
+   "minutes": 4.766675615310669
+  },
+  {
+   "i": 41,
+   "task": "T20",
+   "script": "v_fit_noise.py",
+   "args": [],
+   "rc": 0,
+   "t0": 1795554882.2596242,
+   "minutes": 2.0960280696551004
+  },
+  {
+   "i": 42,
+   "task": "T20",
+   "script": "v_prepare.py",
+   "args": [
+    "--check"
+   ],
+   "rc": 0,
+   "t0": 1795555008.0233207,
+   "minutes": 0.468565833568573
+  },
+  {
+   "i": 43,
+   "task": "T20",
+   "script": "v_eval.py",
+   "args": [
+    "--workers",
+    "8"
+   ],
+   "rc": 0,
+   "t0": 1795555036.1372707,
+   "minutes": 3.0329789956410727
+  },
+  {
+   "i": 31,
+   "task": "T15",
+   "script": "n_mirror_test.py",
+   "args": [
+    "--per-ng",
+    "25",
+    "--workers",
+    "6"
+   ],
+   "rc": 0,
+   "t0": 1795555246.3500738,
+   "minutes": 6.274157571792602
+  }
+ ]
+}

@@ -3,7 +3,7 @@
 Guidance for Claude Code working in this repository.
 
 This is the **main pipeline since 2026-11-24**: every simulated structure has **its own excitation record**.
-It was built from the frozen archive `../Linkspan_GNN_OMA` (commit `f4e1ad5`), whose paper pipeline gave
+It was built from the frozen archive `../Linkspan_GNN_OMA` (commit `f4e1ad5`; T20 at `6d14d11`), whose paper pipeline gave
 every structure the same record (the defect found in the co-author review, EC T5). What was kept, what was
 archived and why: [RESTRUCTURE_MANIFEST.md](RESTRUCTURE_MANIFEST.md). What reproduces, and how faithfully:
 [PROVENANCE.md](PROVENANCE.md). The archive's own rules are in `docs/history/CLAUDE_archive.md` — read
@@ -98,12 +98,19 @@ the Ng = 2 balcony label swap — RESTRUCTURE_MANIFEST.md §5). Do not present T
   that re-solves the FE model (`eigsh`, no fixed start vector) reproduces to about 1e-7; use 1e-5.
 - **`results/paper/` and `runs/paper/`** are the archived paper's tables and networks (shared record). They are
   gate references and history, never baselines for a new claim.
+- **Never use `ProcessPoolExecutor(max_tasks_per_child=...)` here.** On this Python 3.11 / Windows setup it
+  stopped replacing workers after ~1500 tasks and waited for ever, with no error (verify_records, 2026-11-24). Use
+  a fresh pool per batch, as `tools/verify_records.py` now does, and write partial results as you go.
+- **Re-run result files differ from the committed ones in timing columns** (`forward_ms_median`, `forward_s`,
+  `*_s`, compute-time tables in generated READMEs). That is not a change in a result; `tools/compare_results.py`
+  separates it from one.
 
 ## Verification
 
 ```bash
 python tools/reproduce.py --list            # every analysis stage behind the carried-over results
 python tools/reproduce.py --report          # results/reproduction/RESULTS_REPRODUCED.md
+python tools/compare_results.py             # how each changed result file differs: timing / strings / numbers
 python tools/verify_records.py              # every stored record re-simulated in memory (1e-5)
 python tools/verify_training.py --report    # retrained networks vs the archived runs
 ```

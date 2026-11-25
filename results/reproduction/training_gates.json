@@ -1,0 +1,26 @@
+{
+  "runs": {
+    "prefix/ec_t13_coh_K1_N2000": true,
+    "prefix/ec_t13_coh_K1_N600": true,
+    "prefix/ec_t13_coh_K1_N600_T120": true,
+    "prefix/ec_t13_coh_K4_N600": true,
+    "prefix/ec_t13_orient_K4_N600": true,
+    "prefix/ec_t16_coh_signinv": true,
+    "prefix/ec_t16_coh_signinv_amp": true,
+    "prefix/ec_t16_cohorient": true,
+    "prefix/ec_t16_cohorient_signinv": true,
+    "prefix/ec_t16_none_signinv": true,
+    "prefix/ec_t16_orient_signinv": true,
+    "prefix/ec_t20_deck_cohorient_signinv_N2000_s123": true,
+    "prefix/ec_t20_walk_cohorient_signinv_N2000_s123": true,
+    "prefix/ec_varexc_edgegat_geomorient_N600": true,
+    "prefix/ec_varexc_edgegat_N600": true,
+    "full/ec_t17_cohorient_signinv_N2000_s123": true,
+    "full/ec_t17_cohorient_signinv_N2000_s124": true,
+    "full/ec_t17_cohorient_signinv_N2000_s125": true,
+    "full/ec_t17_orient_signinv_N2000_s123": true,
+    "full/ec_t17_orient_signinv_N2000_s124": true,
+    "full/ec_t17_orient_signinv_N2000_s125": true
+  },
+  "pass": true
+}

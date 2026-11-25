@@ -9,7 +9,8 @@ archive ran it (its ledger), with the same arguments, and writes into results/<t
 from the archive and committed unchanged in migration batch 1.  So after a run:
 
     rewritten and unchanged in git   reproduced (bit-identical file)
-    rewritten and changed in git     a difference: read `git diff results/<task>` (the report lists them)
+    rewritten and changed in git     a difference, classified by tools/compare_results.py (timing column,
+                                     path or module string, reordered rows, numbers within 1e-5, or DIFFERENT)
     not rewritten                    not produced by any step here (listed: archive-only, or produced by a
                                      data / training stage that is verified by tools/verify_*.py instead)
 
@@ -31,6 +32,8 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 PY = sys.executable
+sys.path.insert(0, str(REPO / "tools"))
+import compare_results as CR  # noqa: E402
 
 # (task, script, args) - the archive ledger's order (2026-11-23 .. 24); smoke runs and failed attempts dropped
 PLAN: list[tuple[str, str, list[str]]] = [
@@ -104,7 +107,7 @@ def report() -> int:
              "| step | task | stage | exit | minutes |", "|---|---|---|---|---|"]
     for i, s in enumerate(st["steps"]):
         lines.append(f"| {i} | {s['task']} | `{s['script']} {' '.join(s['args'])}` | {s['rc']} | {s['minutes']:.1f} |")
-    lines += ["", "| task | files | rewritten, identical | rewritten, DIFFERENT | not rewritten |", "|---|---|---|---|---|"]
+    lines += ["", "| task | files | rewritten, identical | rewritten, changed (verdicts below) | not rewritten |", "|---|---|---|---|---|"]
     detail = []
     for t, d in TASK_DIR.items():
         files = [p for p in (REPO / "results" / d).rglob("*") if p.is_file()]
@@ -116,7 +119,12 @@ def report() -> int:
         lines.append(f"| {t} | {len(files)} | {len(same)} | {len(diff)} | {len(notr)} |")
         if diff or notr:
             detail.append(f"### {t}")
-            detail += [f"- DIFFERENT: `{rel[p]}`" for p in diff]
+            for p in diff:  # how it differs: timing / strings / numbers (tools/compare_results.py)
+                r = CR.compare_file(rel[p], "HEAD", 1e-5)
+                kind = r["verdict"]
+                extra = r.get("why") or ", ".join(r.get("timing_columns_differing") or r.get("timing_keys_differing")
+                                                 or [])
+                detail.append(f"- changed ({kind}{': ' + extra if extra else ''}): `{rel[p]}`")
             detail += [f"- not rewritten: `{rel[p]}`" for p in notr]
             detail.append("")
     out = REPO / "results" / "reproduction" / "RESULTS_REPRODUCED.md"

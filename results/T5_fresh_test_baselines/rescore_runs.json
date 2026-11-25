@@ -11,7 +11,7 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 0.8891278462939792,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  },
  "edgegat_N200": {
   "run": "edgegat_N200",
@@ -25,7 +25,7 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 1.4659234486023585,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  },
  "edgegat_N400": {
   "run": "edgegat_N400",
@@ -39,7 +39,7 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 2.795853554142846,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  },
  "edgegat_N600": {
   "run": "edgegat_N600",
@@ -53,7 +53,7 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 4.221494666602877,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  },
  "edgegat_N800": {
   "run": "edgegat_N800",
@@ -67,7 +67,7 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 5.579479731453789,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  },
  "edgegat_N1000": {
   "run": "edgegat_N1000",
@@ -81,7 +81,7 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 6.686133526033825,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  },
  "edgegat_N2000": {
   "run": "edgegat_N2000",
@@ -95,7 +95,7 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 9.46762109524674,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  },
  "edgegat_N5000": {
   "run": "edgegat_N5000",
@@ -109,7 +109,7 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 16.360013724101915,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  },
  "graphsage_noedge_signed_N600": {
   "run": "graphsage_noedge_signed_N600",
@@ -123,7 +123,7 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 3.2929275214009817,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  },
  "graphsage_cpsd8_signed_N600": {
   "run": "graphsage_cpsd8_signed_N600",
@@ -137,7 +137,7 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 3.3093531643682055,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  },
  "graphsage_cpsdfull_signed_N600": {
   "run": "graphsage_cpsdfull_signed_N600",
@@ -151,7 +151,7 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 2.68693342394299,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  },
  "edgegat_geomorient_N600": {
   "run": "edgegat_geomorient_N600",
@@ -165,7 +165,7 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 4.271447346607844,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  },
  "graphsage_geomorient_signed_N600": {
   "run": "graphsage_geomorient_signed_N600",
@@ -179,7 +179,7 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 1.6817090840472115,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  },
  "edgegat_noedge_N600": {
   "run": "edgegat_noedge_N600",
@@ -193,6 +193,6 @@
   "seed": 123,
   "device": "cpu",
   "train_time_h": 2.913375713361634,
-  "modes_module": "t_edge_modes"
+  "modes_module": "fr_edge_modes"
  }
 }

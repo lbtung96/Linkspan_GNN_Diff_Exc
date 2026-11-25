@@ -1,5 +1,5 @@
 {
- "reference": "Final_results_for_paper/pipeline/results/s4_indomain_summary.csv (best_model rows)",
+ "reference": "results/paper/s4_indomain_summary.csv (best_model rows)",
  "rule": "every shared numeric column equal (==)",
  "runs": {
   "edgegat_N100": {

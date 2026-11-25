@@ -1,6 +1,6 @@
 {
   "paper_vs_s4_indomain": {
-    "reference": "Final_results_for_paper/pipeline/results/s4_indomain_summary.csv (best_model rows)",
+    "reference": "results/paper/s4_indomain_summary.csv (best_model rows)",
     "rule": "every shared numeric column equal (==)",
     "runs": {
       "edgegat_N600": {
@@ -23,7 +23,7 @@
     "pass": true
   },
   "fresh_vs_T5_rescore": {
-    "reference": "EC_comments/pipeline/results/T5_fresh_test_baselines/rescore_summary.csv",
+    "reference": "results/T5_fresh_test_baselines/rescore_summary.csv",
     "rule": "every shared numeric column equal (==)",
     "rows": {
       "fresh_test/edgegat_N600": {

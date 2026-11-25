@@ -47,7 +47,9 @@ Data, networks and the field recordings are not in this public repository (DATA.
 
 ## Status
 
-- Reproduction of every carried-over result (T5, T10–T20) by this repository's code:
-  `results/reproduction/` and PROVENANCE.md.
+- **Every carried-over result (T5, T10–T20) reproduces with this repository's code** (2026-11-24): all 44
+  analysis stages re-run, every number equal or within 1e-5 (the FE re-solve); the six T17 networks retrained
+  bit-identical; every stored excitation record re-simulated. Evidence: [PROVENANCE.md](PROVENANCE.md) and
+  `results/reproduction/`.
 - Open decisions before the next paper version (final protocol, excitation model, unseen test set, the
   Ng = 2 balcony label swap, fine-tuning loss): RESTRUCTURE_MANIFEST.md §5.

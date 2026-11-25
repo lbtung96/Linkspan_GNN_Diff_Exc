@@ -21,12 +21,18 @@ under data/.
     T20/{deck,walk}_test     paper test (500)                    SeedSequence([v_common.TEST_BASE[e], idx]) 60 s
     (idx = the 4-digit structure index of the file name)
 
-Tolerance 1e-5 absolute on every array (the FE model is re-solved and eigsh has no fixed start vector; the
-archive measured up to 1.2e-7 on the float32 coherency).  Also checked byte-identical against the population
+Tolerance 1e-5 (the FE model is re-solved and eigsh has no fixed start vector; the archive measured up to 1.2e-7
+on the float32 coherency): absolute on the four normalised arrays, relative above 1 on x_psd_row_scale, the one
+key in physical units (each node's PSD peak: about 10 under deck forcing, up to 5e5 under the T20 walkers).  The
+first full run (2026-11-24) applied 1e-5 absolute to it as well and flagged 578 walker records (absolute differences
+up to 5.7e-3 on values up to 4.8e5); that rule was wrong for this key.  All T20 records were re-simulated under this
+one (largest relative difference 2.9e-7).  Also checked byte-identical against the population
 file: edge_index, y_mode_shape_signed, y_freq_hz (the labels and graph the record was written with).
 
 Writes results/reproduction/records_per_sample.csv.gz (one row per record: max |diff| per key) and
-results/reproduction/records_summary.csv / records_gates.json.
+results/reproduction/records_summary.csv / records_gates.json.  Rows are appended to
+results/reproduction/_records_partial.jsonl batch by batch, so an interrupted run resumes where it stopped
+(--fresh starts over); the partial file is removed when the run completes.
 """
 
 from __future__ import annotations
@@ -55,8 +61,11 @@ import v_common as V  # noqa: E402
 
 K, H, C = Q.K, Q.H, Q.C
 OUT = REPO / "results" / "reproduction"
+PARTIAL = OUT / "_records_partial.jsonl"  # rows of a run in progress; removed when the run completes
+PARTIAL_META = OUT / "_records_partial_args.json"
 TOL = 1e-5
 LABEL_KEYS = ("edge_index", "y_mode_shape_signed", "y_freq_hz")
+SCALED = "x_psd_row_scale"
 
 
 def hk_sets() -> dict:
@@ -93,8 +102,13 @@ def _load(p: Path) -> dict:
 def _cmp(feats: dict, stored: dict, pop: dict) -> dict:
     r = {f"d_{k}": float(np.abs(np.asarray(feats[k], np.float64) - np.asarray(stored[k], np.float64)).max())
          for k in H.EXC_KEYS}
+    # x_psd_row_scale is the one un-normalised key (each node's PSD peak, in physical units; up to ~5e5 under the
+    # T20 walkers): judged at TOL relative above 1, element by element.  Every other key is normalised (|.| <= 1).
+    a, s = np.asarray(feats[SCALED], np.float64), np.asarray(stored[SCALED], np.float64)
+    r[f"rel_{SCALED}"] = float((np.abs(a - s) / np.maximum(1.0, np.abs(s))).max())
     r["labels_identical"] = all(np.array_equal(stored[k], pop[k]) and stored[k].dtype == pop[k].dtype for k in LABEL_KEYS)
-    r["pass"] = bool(max(r[f"d_{k}"] for k in H.EXC_KEYS) <= TOL and r["labels_identical"])
+    r["pass"] = bool(max(r[f"d_{k}"] for k in H.EXC_KEYS if k != SCALED) <= TOL and r[f"rel_{SCALED}"] <= TOL
+                     and r["labels_identical"])
     return r
 
 
@@ -128,6 +142,7 @@ def main() -> int:
     ap.add_argument("--workers", type=int, default=16)
     ap.add_argument("--sets", nargs="+", default=["T11", "T13", "T17", "T20"])
     ap.add_argument("--limit", type=int, default=None, help="first N structures per set (smoke test)")
+    ap.add_argument("--fresh", action="store_true", help="ignore the rows of an interrupted run")
     a = ap.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
@@ -141,17 +156,44 @@ def main() -> int:
     t20_tasks = list(t20_plan().items())[: a.limit] if "T20" in a.sets else []
     print(f"[verify] {len(hk_tasks)} T11/T13/T17 records, {sum(len(r) for _, r in t20_tasks)} T20 records "
           f"({len(t20_tasks)} structures), {a.workers} workers", flush=True)
-    with ProcessPoolExecutor(max_workers=a.workers, max_tasks_per_child=50) as ex:
-        for i, r in enumerate(ex.map(job_hk, hk_tasks, chunksize=4), 1):
-            rows.append(r)
-            if i % 500 == 0 or i == len(hk_tasks):
-                print(f"[hk] {i}/{len(hk_tasks)}  fails so far {sum(not x['pass'] for x in rows)}  "
-                      f"{time.time() - t0:.0f} s", flush=True)
-        for i, rr in enumerate(ex.map(job_t20, t20_tasks, chunksize=2), 1):
-            rows += rr
-            if i % 200 == 0 or i == len(t20_tasks):
-                print(f"[t20] {i}/{len(t20_tasks)} structures  fails so far {sum(not x['pass'] for x in rows)}  "
-                      f"{time.time() - t0:.0f} s", flush=True)
+    # Resume: rows already verified by an interrupted run (same --sets / --limit) are read back, not redone.
+    meta = {"sets": sorted(a.sets), "limit": a.limit}
+    if a.fresh or PARTIAL_META.exists() and json.loads(PARTIAL_META.read_text(encoding="utf-8")) != meta:
+        PARTIAL.unlink(missing_ok=True)
+    PARTIAL_META.write_text(json.dumps(meta), encoding="utf-8")
+    if PARTIAL.exists():
+        rows = [json.loads(l) for l in PARTIAL.read_text(encoding="utf-8").splitlines() if l.strip()]
+        # Rows written before rel_x_psd_row_scale existed (2026-11-24 first run, absolute 1e-5 on every key):
+        # T11/T13/T17 rows met the stricter absolute rule, and their absolute difference bounds the relative one;
+        # T20 rows are dropped and re-simulated (the absolute rule failed 578 walker records on values up to 4.8e5).
+        old = [r for r in rows if f"rel_{SCALED}" not in r]
+        rows = [r for r in rows if f"rel_{SCALED}" in r or not r["set"].startswith("T20/")]
+        for r in rows:
+            r.setdefault(f"rel_{SCALED}", r[f"d_{SCALED}"])
+        if old:
+            PARTIAL.write_bytes("".join(json.dumps(r) + chr(10) for r in rows).encode("utf-8"))
+            print(f"[verify] {len(old)} rows predate the relative row-scale rule: "
+                  f"{sum(r['set'].startswith('T20/') for r in old)} T20 rows dropped", flush=True)
+    done = {(r["set"], r["sample"]) for r in rows}
+    hk_todo = [t for t in hk_tasks if (t[0], t[2]) not in done]
+    t20_todo = [t for t in t20_tasks if not all((f"T20/{k}", t[0]) in done for k, _, _ in t[1])]
+    print(f"[verify] resumed {len(rows)} rows; to do: {len(hk_todo)} records, {len(t20_todo)} T20 structures",
+          flush=True)
+    # A fresh pool per batch.  One long-lived pool with max_tasks_per_child deadlocked here (Python 3.11, Windows:
+    # the pool stopped replacing workers after ~1500 records and waited for ever); a new pool per batch also
+    # releases each worker's memory.
+    for label, fn, todo, per_batch, chunk in (("hk", job_hk, hk_todo, 50 * a.workers, 4),
+                                             ("t20", job_t20, t20_todo, 8 * a.workers, 2)):
+        for b in range(0, len(todo), per_batch):
+            with ProcessPoolExecutor(max_workers=a.workers) as ex:
+                res = list(ex.map(fn, todo[b:b + per_batch], chunksize=chunk))
+            new = [r for x in res for r in (x if isinstance(x, list) else [x])]
+            with PARTIAL.open("a", encoding="utf-8", newline="\n") as fh:
+                fh.writelines(json.dumps(r) + "\n" for r in new)
+            rows += new
+            print(f"[{label}] {min(b + per_batch, len(todo))}/{len(todo)}  rows {len(rows)}  "
+                  f"fails so far {sum(not x['pass'] for x in rows)}  {time.time() - t0:.0f} s", flush=True)
+    rows.sort(key=lambda r: (r["set"], r["sample"]))
     keys = list(rows[0]) if rows else []
     with gzip.open(OUT / "records_per_sample.csv.gz", "wt", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=keys)
@@ -161,6 +203,7 @@ def main() -> int:
     for s in sorted({r["set"] for r in rows}):
         g = [r for r in rows if r["set"] == s]
         summ.append({"set": s, "records": len(g), **{f"max_d_{k}": max(r[f"d_{k}"] for r in g) for k in H.EXC_KEYS},
+                     f"max_rel_{SCALED}": max(r[f"rel_{SCALED}"] for r in g),
                      "labels_identical": all(r["labels_identical"] for r in g), "fails": sum(not r["pass"] for r in g),
                      "pass": all(r["pass"] for r in g)})
     K.write_csv(OUT / "records_summary.csv", summ)
@@ -172,6 +215,8 @@ def main() -> int:
         print(f"{s['set']:<26} {s['records']:6d}  max x_psd {s['max_d_x_psd']:.1e}  max coh {s['max_d_edge_attr_cpsd_full']:.1e}"
               f"  labels {s['labels_identical']}  {'PASS' if s['pass'] else 'FAIL'}")
     print("RECORDS PASS" if gates["pass"] else "RECORDS FAIL")
+    PARTIAL.unlink(missing_ok=True)
+    PARTIAL_META.unlink(missing_ok=True)
     return 0 if gates["pass"] else 1
 
 

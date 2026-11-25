@@ -3,9 +3,9 @@
   "d_paper_history": {
     "d_edgegat_N600": {
       "rc": 0,
-      "wall_s": 28.1,
-      "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_d_edgegat_N600.log",
-      "reference": "Final_results_for_paper/runs/edgegat_N600",
+      "wall_s": 47.5,
+      "log": "logs\\T13_train_gate_d_edgegat_N600.log",
+      "reference": "runs/paper/edgegat_N600",
       "pass": true,
       "epochs_compared": 3,
       "n_diffs": 0,
@@ -13,9 +13,9 @@
     },
     "d_edgegat_N2000": {
       "rc": 0,
-      "wall_s": 44.4,
-      "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_d_edgegat_N2000.log",
-      "reference": "Final_results_for_paper/runs/edgegat_N2000",
+      "wall_s": 90.1,
+      "log": "logs\\T13_train_gate_d_edgegat_N2000.log",
+      "reference": "runs/paper/edgegat_N2000",
       "pass": true,
       "epochs_compared": 3,
       "n_diffs": 0,
@@ -23,9 +23,9 @@
     },
     "d_aug_K1_edgegat_N600": {
       "rc": 0,
-      "wall_s": 44.4,
-      "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_d_aug_K1_edgegat_N600.log",
-      "reference": "Final_results_for_paper/runs/edgegat_N600",
+      "wall_s": 90.1,
+      "log": "logs\\T13_train_gate_d_aug_K1_edgegat_N600.log",
+      "reference": "runs/paper/edgegat_N600",
       "pass": true,
       "epochs_compared": 3,
       "n_diffs": 0,
@@ -35,8 +35,8 @@
   "e_augmentation_vs_plain": {
     "e_aug_K1": {
       "rc": 0,
-      "wall_s": 44.4,
-      "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_e_aug_K1.log",
+      "wall_s": 90.0,
+      "log": "logs\\T13_train_gate_e_aug_K1.log",
       "history": {
         "pass": true,
         "epochs_compared": 2,
@@ -79,8 +79,8 @@
     },
     "e_aug_K4_same": {
       "rc": 0,
-      "wall_s": 44.4,
-      "log": "Final_results_for_paper\\EC_comments\\logs\\T13_train_gate_e_aug_K4_same.log",
+      "wall_s": 90.0,
+      "log": "logs\\T13_train_gate_e_aug_K4_same.log",
       "history": {
         "pass": true,
         "epochs_compared": 2,

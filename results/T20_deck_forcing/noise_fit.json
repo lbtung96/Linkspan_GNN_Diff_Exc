@@ -1,31 +1,31 @@
 {
   "target_field_median_peak_to_bg": 23.445870100084957,
   "alpha": {
-    "deck": 0.8399156537957424,
-    "walk": 1.597033418497631
+    "deck": 0.839915653600201,
+    "walk": 1.5970334183539308
   },
   "fit": {
     "deck": {
-      "alpha": 0.8399156537957424,
-      "median_at_alpha0": 34.53956866681612,
-      "median_at_alpha": 23.44587010008277
+      "alpha": 0.839915653600201,
+      "median_at_alpha0": 34.53956866249207,
+      "median_at_alpha": 23.44587010008739
     },
     "walk": {
-      "alpha": 1.597033418497631,
-      "median_at_alpha0": 101.07182230335407,
-      "median_at_alpha": 23.445870100074224
+      "alpha": 1.5970334183539308,
+      "median_at_alpha0": 101.07182233692517,
+      "median_at_alpha": 23.44587010010106
     }
   },
   "gates": {
     "t18_reproduced": {
-      "max_rel_diff": 8.691749072629314e-09,
+      "max_rel_diff": 9.71222350528548e-10,
       "pass": true
     },
     "fit": {
-      "max_rel_miss": 4.577671026001899e-13,
+      "max_rel_miss": 6.868779464040584e-13,
       "pass": true
     }
   },
   "pass": true,
-  "seconds": 105.5
+  "seconds": 123.6
 }

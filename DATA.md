@@ -41,7 +41,7 @@ read-only; "copied" ones are independent copies. `tools/migrate_from_archive.py`
 | `runs/ec/ec_t16_*` | T16 sign-test arms (400 epochs) |
 | `runs/ec/ec_t17_*` | **T17: the main-network candidates** (N2000, 1000 epochs, seeds 123–125) |
 | `runs/ec/ec_t20_*` | T20: deck forcing / walkers + noise floor (N2000, 1000 epochs, seeds 123–125) |
-| `runs/paper/` | the archived paper's 15 networks (shared record): history and gate references |
+| `runs/paper/` | the archived paper's 14 networks (shared record) and its trainer-check run: history and gate references |
 | `runs/repro/` | retrainings made by `tools/verify_training.py` to prove reproduction |
 
 ## Seed registry
@@ -67,4 +67,7 @@ Never reuse a base. Records are `np.random.SeedSequence([base, structure_index])
 
 ## Folder sizes and hashes
 
-See [data_summary.csv](data_summary.csv).
+Hashed on 2026-11-24 after the reproduction runs: **51,774 files, 48.2 GB**, in 100 folders. Per folder (file
+count, bytes, folder hash): [data_summary.csv](data_summary.csv). Per file: [DATA_MANIFEST.tsv.gz](DATA_MANIFEST.tsv.gz).
+The derived folders and the gate runs (`runs/ec/*_gates`) were rewritten by the reproduction itself, so their
+hashes are those of this repository's runs. `runs/repro/` (the retrainings) is not hashed.

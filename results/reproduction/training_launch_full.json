@@ -1,0 +1,32 @@
+{
+ "ec_t17_cohorient_signinv_N2000_s123": {
+  "rc": 0,
+  "wall_s": 7995.8,
+  "log": "logs/repro_full_ec_t17_cohorient_signinv_N2000_s123.log"
+ },
+ "ec_t17_cohorient_signinv_N2000_s124": {
+  "rc": 0,
+  "wall_s": 7995.8,
+  "log": "logs/repro_full_ec_t17_cohorient_signinv_N2000_s124.log"
+ },
+ "ec_t17_orient_signinv_N2000_s123": {
+  "rc": 0,
+  "wall_s": 9245.9,
+  "log": "logs/repro_full_ec_t17_orient_signinv_N2000_s123.log"
+ },
+ "ec_t17_cohorient_signinv_N2000_s125": {
+  "rc": 0,
+  "wall_s": 9821.0,
+  "log": "logs/repro_full_ec_t17_cohorient_signinv_N2000_s125.log"
+ },
+ "ec_t17_orient_signinv_N2000_s125": {
+  "rc": 0,
+  "wall_s": 9351.4,
+  "log": "logs/repro_full_ec_t17_orient_signinv_N2000_s125.log"
+ },
+ "ec_t17_orient_signinv_N2000_s124": {
+  "rc": 0,
+  "wall_s": 9751.5,
+  "log": "logs/repro_full_ec_t17_orient_signinv_N2000_s124.log"
+ }
+}

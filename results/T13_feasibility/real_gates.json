@@ -1,7 +1,7 @@
 {
   "zeroshot": {
     "torch_threads": 14,
-    "inputs": "Final_results_for_paper/data/field_inputs_v2/phase3_corrected",
+    "inputs": "data/field_inputs_v2/phase3_corrected",
     "s5_main_edgegat_N2000": {
       "pass": true,
       "rows": 36,
@@ -158,7 +158,7 @@
       "worst_structure": 0.28290017980622223
     },
     "pass": true,
-    "wall_s": 2.2,
+    "wall_s": 4.1,
     "t11_arms_reproduce_t11": {
       "pass": true,
       "per_net": {

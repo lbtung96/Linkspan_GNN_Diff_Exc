@@ -5,10 +5,10 @@
       "n_structures": 40,
       "worst": {
         "freq_bins_maxdiff": 0.0,
-        "label_freq_maxdiff_hz": 2.439488611116758e-10,
-        "label_shape_abs_maxdiff": 1.4497525957501978e-09,
-        "x_psd_maxdiff": 2.92046176131322e-09,
-        "x_psd_row_scale_relmax": 2.6582517917492516e-09,
+        "label_freq_maxdiff_hz": 9.662608491112223e-10,
+        "label_shape_abs_maxdiff": 4.754538429629918e-10,
+        "x_psd_maxdiff": 3.5906281281583574e-09,
+        "x_psd_row_scale_relmax": 3.580141967741843e-09,
         "edge_cpsd8_maxdiff": 5.960464477539063e-08,
         "edge_cpsd_res_maxdiff": 5.960464477539063e-08,
         "edge_full_maxdiff": 5.960464477539063e-08
@@ -20,10 +20,10 @@
       "pass": true,
       "worst": {
         "freq_bins_maxdiff": 0.0,
-        "label_freq_maxdiff_hz": 1.5951293619309581e-09,
-        "label_shape_abs_maxdiff": 8.601152047538196e-10,
-        "x_psd_maxdiff": 5.022392529641095e-09,
-        "x_psd_row_scale_relmax": 2.6878428270303646e-09,
+        "label_freq_maxdiff_hz": 1.5131496056142169e-09,
+        "label_shape_abs_maxdiff": 7.366220793059153e-10,
+        "x_psd_maxdiff": 4.759599381287671e-09,
+        "x_psd_row_scale_relmax": 2.458073225897917e-09,
         "edge_cpsd8_maxdiff": 5.960464477539063e-08,
         "edge_cpsd_res_maxdiff": 5.960464477539063e-08,
         "edge_full_maxdiff": 5.960464477539063e-08
@@ -34,10 +34,10 @@
       "pass": true,
       "worst": {
         "freq_bins_maxdiff": 0.0,
-        "label_freq_maxdiff_hz": 1.4420198368725323e-10,
-        "label_shape_abs_maxdiff": 1.9891222002854647e-10,
-        "x_psd_maxdiff": 5.697805949278489e-09,
-        "x_psd_row_scale_relmax": 2.408142745050341e-09,
+        "label_freq_maxdiff_hz": 3.852456131880899e-10,
+        "label_shape_abs_maxdiff": 1.8778933963403688e-10,
+        "x_psd_maxdiff": 5.329953312038782e-09,
+        "x_psd_row_scale_relmax": 2.140284138686023e-09,
         "edge_cpsd8_maxdiff": 5.960464477539063e-08,
         "edge_cpsd_res_maxdiff": 5.960464477539063e-08,
         "edge_full_maxdiff": 1.1920928955078125e-07
@@ -52,50 +52,50 @@
       "B": "sample_2750_Ng4_phase1_gnn.npz"
     },
     "max_abs_corr_pairs": {
-      "A_k0~A_k1": 0.055975925732949995,
-      "A_k0~A_k2": 0.055675877120195005,
-      "A_k0~A_k3": 0.04343058398276822,
+      "A_k0~A_k1": 0.055975925732987625,
+      "A_k0~A_k2": 0.055675877120204616,
+      "A_k0~A_k3": 0.043430583982758675,
       "A_k0~B_k0": 0.04006804427958621,
-      "A_k0~B_k1": 0.03992089464522005,
-      "A_k0~B_k2": 0.04863507987894751,
-      "A_k0~B_k3": 0.04509343958019909,
-      "A_k1~A_k2": 0.05266093742473925,
-      "A_k1~A_k3": 0.0391162787403855,
-      "A_k1~B_k0": 0.036853963402168635,
-      "A_k1~B_k1": 0.0464952702634947,
-      "A_k1~B_k2": 0.07758549015398068,
-      "A_k1~B_k3": 0.04838895745754264,
+      "A_k0~B_k1": 0.03992089464522016,
+      "A_k0~B_k2": 0.04863507987896501,
+      "A_k0~B_k3": 0.04509343958506325,
+      "A_k1~A_k2": 0.05266093742470267,
+      "A_k1~A_k3": 0.03911627874041032,
+      "A_k1~B_k0": 0.036853963402175074,
+      "A_k1~B_k1": 0.046495270263288556,
+      "A_k1~B_k2": 0.07758549015390878,
+      "A_k1~B_k3": 0.0483889574575493,
       "A_k2~A_k3": 0.033062771086482284,
-      "A_k2~B_k0": 0.06853872143994624,
-      "A_k2~B_k1": 0.047606048463968716,
-      "A_k2~B_k2": 0.047626497571762336,
-      "A_k2~B_k3": 0.06695585844339283,
+      "A_k2~B_k0": 0.06853872143994316,
+      "A_k2~B_k1": 0.047606048463965,
+      "A_k2~B_k2": 0.04762649756905282,
+      "A_k2~B_k3": 0.06695585844342103,
       "A_k3~B_k0": 0.05944313869275239,
-      "A_k3~B_k1": 0.04807253113409724,
+      "A_k3~B_k1": 0.04807253113403934,
       "A_k3~B_k2": 0.06094972405981586,
-      "A_k3~B_k3": 0.04550124268466048,
-      "B_k0~B_k1": 0.07771172788980513,
-      "B_k0~B_k2": 0.05710220139448496,
-      "B_k0~B_k3": 0.03821132562742175,
+      "A_k3~B_k3": 0.04550124269380762,
+      "B_k0~B_k1": 0.07771172790077235,
+      "B_k0~B_k2": 0.05710220139449451,
+      "B_k0~B_k3": 0.038211325627539115,
       "B_k1~B_k2": 0.06766474773576572,
       "B_k1~B_k3": 0.04981385782105498,
-      "B_k2~B_k3": 0.07637139657145472,
+      "B_k2~B_k3": 0.07637139657908734,
       "A_k0_120s[:60s]~A_k0_60s": 0.05342215627766432,
-      "A_k0_120s[:60s]~B_k0_120s[:60s]": 0.03876756170714012,
-      "A_k0_120s[:60s]~A_k1": 0.03426858831893478,
-      "A_k0_120s[:60s]~A_k2": 0.052396107955929055,
+      "A_k0_120s[:60s]~B_k0_120s[:60s]": 0.03876756170740455,
+      "A_k0_120s[:60s]~A_k1": 0.034268588318918554,
+      "A_k0_120s[:60s]~A_k2": 0.05239610795610438,
       "A_k0_120s[:60s]~A_k3": 0.03722668561749149
     },
-    "worst_pair_corr": 0.07771172788980513,
-    "same_seed_twice_record_maxdiff_rel_rms_60s": 4.2744939997483406e-12,
-    "same_seed_twice_feature_maxdiff_60s": 2.9802322387695312e-08,
-    "same_seed_twice_record_maxdiff_rel_rms_120s": 3.5724859167968065e-11,
+    "worst_pair_corr": 0.07771172790077235,
+    "same_seed_twice_record_maxdiff_rel_rms_60s": 4.058132311286822e-12,
+    "same_seed_twice_feature_maxdiff_60s": 5.960464477539063e-08,
+    "same_seed_twice_record_maxdiff_rel_rms_120s": 4.128021244174791e-12,
     "same_seed_twice_feature_maxdiff_120s": 5.960464477539063e-08,
     "record_samples_60s": 12000,
     "record_samples_120s": 24000,
     "welch_segments_60s": 10,
     "welch_segments_120s": 22,
-    "features_differ_between_records_x_psd_min": 0.6959287282955203,
+    "features_differ_between_records_x_psd_min": 0.6959287282956728,
     "threshold_independent_corr_lt": 0.2,
     "tol": 1e-05,
     "pass": true
@@ -108,104 +108,104 @@
         "k": 0,
         "t_total": 60.0,
         "graph_equal": true,
-        "label_freq_maxdiff_hz": 9.945821943802002e-12,
-        "label_shape_abs_maxdiff": 2.1567747587880604e-11
+        "label_freq_maxdiff_hz": 2.901678897160309e-12,
+        "label_shape_abs_maxdiff": 1.6762591315000464e-11
       },
       {
         "name": "sample_0000_Ng2_phase1_gnn.npz",
         "k": 1,
         "t_total": 60.0,
         "graph_equal": true,
-        "label_freq_maxdiff_hz": 3.1947777756613505e-12,
-        "label_shape_abs_maxdiff": 8.217426739065559e-12
+        "label_freq_maxdiff_hz": 1.4202861109424703e-11,
+        "label_shape_abs_maxdiff": 4.887462656810726e-11
       },
       {
         "name": "sample_0000_Ng2_phase1_gnn.npz",
         "k": 2,
         "t_total": 60.0,
         "graph_equal": true,
-        "label_freq_maxdiff_hz": 2.248157215944957e-11,
-        "label_shape_abs_maxdiff": 3.544697868562707e-11
+        "label_freq_maxdiff_hz": 3.3071323457534163e-12,
+        "label_shape_abs_maxdiff": 5.764944077668588e-12
       },
       {
         "name": "sample_0000_Ng2_phase1_gnn.npz",
         "k": 3,
         "t_total": 60.0,
         "graph_equal": true,
-        "label_freq_maxdiff_hz": 1.369304669651683e-11,
-        "label_shape_abs_maxdiff": 3.034922313460697e-11
+        "label_freq_maxdiff_hz": 2.5873525544284348e-11,
+        "label_shape_abs_maxdiff": 3.644012869230551e-11
       },
       {
         "name": "sample_0000_Ng2_phase1_gnn.npz",
         "k": 1,
         "t_total": 60.0,
         "graph_equal": true,
-        "label_freq_maxdiff_hz": 1.0541789663420786e-11,
-        "label_shape_abs_maxdiff": 8.930189920874909e-12
+        "label_freq_maxdiff_hz": 7.640998944680177e-12,
+        "label_shape_abs_maxdiff": 4.5389247915750275e-12
       },
       {
         "name": "sample_2750_Ng4_phase1_gnn.npz",
         "k": 0,
         "t_total": 60.0,
         "graph_equal": true,
-        "label_freq_maxdiff_hz": 1.7743850833085162e-10,
-        "label_shape_abs_maxdiff": 2.2702162372212342e-10
+        "label_freq_maxdiff_hz": 2.219788797219735e-10,
+        "label_shape_abs_maxdiff": 1.654132386619267e-10
       },
       {
         "name": "sample_2750_Ng4_phase1_gnn.npz",
         "k": 1,
         "t_total": 60.0,
         "graph_equal": true,
-        "label_freq_maxdiff_hz": 2.929567699538893e-11,
-        "label_shape_abs_maxdiff": 3.9385383843182353e-11
+        "label_freq_maxdiff_hz": 1.5639223249763745e-10,
+        "label_shape_abs_maxdiff": 1.476777589104472e-10
       },
       {
         "name": "sample_2750_Ng4_phase1_gnn.npz",
         "k": 2,
         "t_total": 60.0,
         "graph_equal": true,
-        "label_freq_maxdiff_hz": 6.363087834415637e-11,
-        "label_shape_abs_maxdiff": 7.248956990224542e-11
+        "label_freq_maxdiff_hz": 3.865530118218885e-11,
+        "label_shape_abs_maxdiff": 2.5335789022307154e-11
       },
       {
         "name": "sample_2750_Ng4_phase1_gnn.npz",
         "k": 3,
         "t_total": 60.0,
         "graph_equal": true,
-        "label_freq_maxdiff_hz": 6.626521553698694e-11,
-        "label_shape_abs_maxdiff": 5.571465511167162e-11
+        "label_freq_maxdiff_hz": 1.2441070396107534e-10,
+        "label_shape_abs_maxdiff": 4.488887039855172e-11
       },
       {
         "name": "sample_0000_Ng2_phase1_gnn.npz",
         "k": 0,
         "t_total": 120.0,
         "graph_equal": true,
-        "label_freq_maxdiff_hz": 1.928839310494368e-10,
-        "label_shape_abs_maxdiff": 3.9019676378870827e-11
+        "label_freq_maxdiff_hz": 3.0166980025114754e-12,
+        "label_shape_abs_maxdiff": 4.866773650746836e-12
       },
       {
         "name": "sample_0000_Ng2_phase1_gnn.npz",
         "k": 0,
         "t_total": 120.0,
         "graph_equal": true,
-        "label_freq_maxdiff_hz": 2.4786839247781245e-11,
-        "label_shape_abs_maxdiff": 4.934608277551433e-12
+        "label_freq_maxdiff_hz": 1.020872275603324e-11,
+        "label_shape_abs_maxdiff": 5.479616760339923e-12
       },
       {
         "name": "sample_2750_Ng4_phase1_gnn.npz",
         "k": 0,
         "t_total": 120.0,
         "graph_equal": true,
-        "label_freq_maxdiff_hz": 6.693934295753934e-11,
-        "label_shape_abs_maxdiff": 2.449307423546543e-11
+        "label_freq_maxdiff_hz": 6.609113256672572e-11,
+        "label_shape_abs_maxdiff": 6.018519016492974e-11
       }
     ],
-    "worst_label_freq_maxdiff_hz": 1.928839310494368e-10,
-    "worst_label_shape_abs_maxdiff": 2.2702162372212342e-10,
+    "worst_label_freq_maxdiff_hz": 2.219788797219735e-10,
+    "worst_label_shape_abs_maxdiff": 1.654132386619267e-10,
     "pass": true
   },
   "pass": true,
-  "wall_s": 22.1,
+  "wall_s": 28.8,
   "c_labels_crosscheck": {
     "rule": "every key outside h_common.EXC_KEYS (graph, labels, matcher record, parameters) byte-identical (dtype, shape, values) between the paper sample, T11's samples and every T13 variant (records k = 1..3, 120 s, N2000)",
     "structures": 2500,

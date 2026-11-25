@@ -1,6 +1,6 @@
 {
   "t11_arms_vs_t11_eval_summary": {
-    "reference": "EC_comments/pipeline/results/T11_varied_excitation_pilot/eval_summary.csv",
+    "reference": "results/T11_varied_excitation_pilot/eval_summary.csv",
     "rule": "every shared numeric column equal (==)",
     "rows": {
       "paper_varexc/ec_varexc_edgegat_N600": {

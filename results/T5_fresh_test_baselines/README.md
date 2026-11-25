@@ -210,9 +210,9 @@ Per girder count: `freq_baselines.csv`; per structure: `freq_baselines_per_sampl
 
 ### (b, c) Shapes: template, FDD on the same records, and the network
 
-FDD runs on the **same simulated records** the network's features come from: every deck is re-simulated from its params_json with the set's own excitation seed, and the re-simulated node PSDs equal the stored network inputs (max |diff| fresh_test 3.6e-08, paper 1.2e-07, val 3.0e-08). The records are noise-free apart from the excitation (the generator adds no measurement noise), so the noise level is matched by construction. FDD and labelling are E19's (`ident.py`, imported): peaks of the first singular value of the kept nodes' cross-spectral matrix, labelled bend1/tors1/bend2/tors2; *population* uses E18's class shape prior and a geometry-conditioned frequency prior from the training split (rank: phase and order only, no population information). Each shape is the deflection at the picked peak, scored with the Hermitian MAC on the deck nodes (supports excluded: their records are the injected excitation). Settings were chosen on the 300 validation decks (outer layouts: E19's own choice; every-node layout: rank theta 0.8, pop-shape theta 0.3, population theta 0.3, lam 3.0). The class template uses no record: the leading shape of E18's class prior for the deck's girder count, with the class read from the true shape.
+FDD runs on the **same simulated records** the network's features come from: every deck is re-simulated from its params_json with the set's own excitation seed, and the re-simulated node PSDs equal the stored network inputs (max |diff| fresh_test 3.5e-08, paper 9.7e-08, val 3.3e-08). The records are noise-free apart from the excitation (the generator adds no measurement noise), so the noise level is matched by construction. FDD and labelling are E19's (`ident.py`, imported): peaks of the first singular value of the kept nodes' cross-spectral matrix, labelled bend1/tors1/bend2/tors2; *population* uses E18's class shape prior and a geometry-conditioned frequency prior from the training split (rank: phase and order only, no population information). Each shape is the deflection at the picked peak, scored with the Hermitian MAC on the deck nodes (supports excluded: their records are the injected excitation). Settings were chosen on the 300 validation decks (outer layouts: E19's own choice; every-node layout: rank theta 0.8, pop-shape theta 0.3, population theta 0.3, lam 3.0). The class template uses no record: the leading shape of E18's class prior for the deck's girder count, with the class read from the true shape.
 
-**Gates.** On the paper's test set the two- and four-sensor rows reproduce E19's `test.csv` (20000 of 20000 rows, max |MAC diff| 1.1e-08, max |f diff| 0.0e+00 Hz, 0 disagreements on correctness): **PASS**. Template mean MAC on the paper test set 0.9461 = E19's 0.946: **PASS**.
+**Gates.** On the paper's test set the two- and four-sensor rows reproduce E19's `test.csv` (20000 of 20000 rows, max |MAC diff| 3.0e-08, max |f diff| 0.0e+00 Hz, 0 disagreements on correctness): **PASS**. Template mean MAC on the paper test set 0.9461 = E19's 0.946: **PASS**.
 
 **fixed (paper) test set** - mean MAC per mode; *fail*: share of mode slots with MAC < 0.5, or (FDD) not identified or MAC < 0.5; *f err*: mean |f - f_true| (Hz) including wrong picks:
 
@@ -246,10 +246,10 @@ Per mode (identification rate, failure rate, frequency error): `fdd_summary_by_m
 
 | step | median s | 90th pct s |
 |---|---:|---:|
-| network input features from the records (node Welch PSD + 800-d edge coherency; E14's functions) | 0.909 | 1.296 |
-| network forward pass (main network, CPU, 2 threads; c_rescore) | 0.0169 |  |
-| FDD on every deck node + population labelling + shape read (one setting) | 0.585 | 1.308 |
-| (re-simulation: FE solve + response, needed by both, not counted) | 3.43 | 4.42 |
+| network input features from the records (node Welch PSD + 800-d edge coherency; E14's functions) | 0.389 | 0.634 |
+| network forward pass (main network, CPU, 2 threads; c_rescore) | 0.0096 |  |
+| FDD on every deck node + population labelling + shape read (one setting) | 0.255 | 0.677 |
+| (re-simulation: FE solve + response, needed by both, not counted) | 1.48 | 2.02 |
 
 Wall-clock on a shared machine (up to four of these jobs and other agents' runs side by side); compare orders of magnitude, not digits. `fdd_timing.csv` has every deck.
 
@@ -272,22 +272,22 @@ Not retrained. The ablation arm **GraphSAGE / no edge features** (`graphsage_noe
 ## What ran
 
 ```bash
-python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_gen_fresh_test.py --set fresh_test
-python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_gen_fresh_test.py --set fresh_test_paperexc
-python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_fresh_checks.py
-python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_rescore.py --sets paper fresh_test fresh_test_paperexc --workers 3
-python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_ec23_metrics.py
-python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_freq_baselines.py
-python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_fdd.py --sets val paper --workers 2
-python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_fdd.py --sets fresh_test --workers 3
-python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_excitation_diag.py
-python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_report.py
+python tools/run_stage.py pipeline/c_gen_fresh_test.py --set fresh_test
+python tools/run_stage.py pipeline/c_gen_fresh_test.py --set fresh_test_paperexc
+python tools/run_stage.py pipeline/c_fresh_checks.py
+python tools/run_stage.py pipeline/c_rescore.py --sets paper fresh_test fresh_test_paperexc --workers 3
+python tools/run_stage.py pipeline/c_ec23_metrics.py
+python tools/run_stage.py pipeline/c_freq_baselines.py
+python tools/run_stage.py pipeline/c_fdd.py --sets val paper --workers 2
+python tools/run_stage.py pipeline/c_fdd.py --sets fresh_test --workers 3
+python tools/run_stage.py pipeline/c_excitation_diag.py
+python tools/run_stage.py pipeline/c_report.py
 ```
 
-**Re-scoring networks trained later** (e.g. into `EC_comments/runs/`): any folder with `run_summary.json` and `checkpoints/best_model.pt` is accepted, by name or path; new edge modes come from `t_edge_modes.py`:
+**Re-scoring networks trained later** (e.g. into `runs/ec/`): any folder with `run_summary.json` and `checkpoints/best_model.pt` is accepted, by name or path; edge modes are library options (`EdgeGATConv_Modal_GNN.py`):
 
 ```bash
-python tools/run_stage.py Final_results_for_paper/EC_comments/pipeline/c_rescore.py --runs <name-or-path> ... --sets paper fresh_test
+python tools/run_stage.py pipeline/c_rescore.py --runs <name-or-path> ... --sets paper fresh_test
 ```
 
 Rows accumulate in `rescore_per_sample.csv` / `rescore_summary.csv` (a re-scored (set, run, checkpoint) replaces its old rows); add `--runs` to `c_ec23_metrics.py` for the EC-23 metrics of a new run, then re-run `c_report.py`.

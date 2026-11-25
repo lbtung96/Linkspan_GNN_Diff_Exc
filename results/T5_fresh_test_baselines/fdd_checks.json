@@ -4,19 +4,19 @@
    "theta": 0.8,
    "lam": -1.0,
    "val_correct": 0.7608333333333334,
-   "val_mac": 0.8645411920459961
+   "val_mac": 0.8645411920310782
   },
   "all/pop-shape": {
    "theta": 0.3,
    "lam": 0.0,
    "val_correct": 0.9083333333333333,
-   "val_mac": 0.9572516662570322
+   "val_mac": 0.9572516662560744
   },
   "all/population": {
    "theta": 0.3,
    "lam": 3.0,
    "val_correct": 0.9325,
-   "val_mac": 0.9678943187050053
+   "val_mac": 0.9678943187061888
   },
   "outer1/rank": {
    "theta": 0.8,
@@ -65,18 +65,18 @@
  },
  "reproduction": {
   "fresh_test": {
-   "x_psd_maxdiff": 3.566372708263543e-08,
-   "freq_maxdiff_hz": 6.39711128513909e-09,
+   "x_psd_maxdiff": 3.5082999283453375e-08,
+   "freq_maxdiff_hz": 4.7837822592100565e-09,
    "n": 500
   },
   "paper": {
-   "x_psd_maxdiff": 1.1841572800097568e-07,
-   "freq_maxdiff_hz": 3.170496754023588e-09,
+   "x_psd_maxdiff": 9.706913695062269e-08,
+   "freq_maxdiff_hz": 9.683729373932692e-09,
    "n": 500
   },
   "val": {
-   "x_psd_maxdiff": 3.034220152908773e-08,
-   "freq_maxdiff_hz": 3.6508720491212902e-09,
+   "x_psd_maxdiff": 3.269959880647377e-08,
+   "freq_maxdiff_hz": 4.861614666396008e-09,
    "n": 300
   }
  },
@@ -84,7 +84,7 @@
  "paper_outer_reproduces_E19_test_csv": {
   "rows_matched": 20000,
   "rows_E19": 20000,
-  "max_abs_mac_diff": 1.0918853154961994e-08,
+  "max_abs_mac_diff": 3.0462295901034775e-08,
   "max_abs_fhat_diff": 0.0,
   "correct_disagreements": 0,
   "pass": true

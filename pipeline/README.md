@@ -17,7 +17,7 @@ and arguments in which they produced those tables.
 | `s0_generate_population.py` | the archived paper's generator wrapper (generator patches; T5 uses it) |
 | `s4_indomain.py`, `s5_zeroshot.py`, `s6_decomposition.py` | scoring: synthetic test sets, real-bridge zero-shot, real-gap decomposition |
 | `s5a_field_inputs.py` | builds `data/field_inputs_v2` (Phase P sensor order) from the raw recordings |
-| `t_gates.py` | `same_history`: training histories compared number for number |
+| `t_gates.py` | `same_history`: training histories compared number for number (its other functions belong to the archived T1 and import `t_edge_modes`, which is not here; nothing calls them) |
 
 ## Main chain: a record per structure
 

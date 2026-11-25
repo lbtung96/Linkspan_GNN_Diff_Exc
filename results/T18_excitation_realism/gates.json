@@ -1,7 +1,7 @@
 {
-  "supports_reproduces_simulator_max_rel": 4.209797616424748e-17,
+  "supports_reproduces_simulator_max_rel": 6.314696424641601e-17,
   "field_column_order_mac_median_min": 0.9892165518950868,
   "field_column_order_mac_min": 0.7638418057477812,
-  "mass_normalisation_maxdev": 8.881784197001252e-16,
+  "mass_normalisation_maxdev": 1.1102230246251565e-15,
   "pass": true
 }
